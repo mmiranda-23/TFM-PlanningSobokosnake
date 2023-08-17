@@ -1,0 +1,1164 @@
+INFO     Running translator.
+INFO     translator inputs: ['/home/maria/Documents/team2/problem-6-4/domain.pddl', '/home/maria/Documents/team2/problem-6-4/problem-6-4.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.000s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 137 rules.
+Computing model... [0.160s CPU, 0.179s wall-clock]
+8341 relevant atoms
+3674 auxiliary atoms
+12015 final queue length
+43183 total queue pushes
+Completing instantiation... [0.740s CPU, 0.761s wall-clock]
+Instantiating: [0.910s CPU, 0.957s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.030s CPU, 0.025s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+136 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.030s CPU, 0.028s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.050s CPU, 0.047s wall-clock]
+Translating task: [0.970s CPU, 0.971s wall-clock]
+17584 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+34 operators removed
+1 propositions removed
+Detecting unreachable propositions: [0.130s CPU, 0.125s wall-clock]
+Translator variables: 138
+Translator derived variables: 0
+Translator facts: 375
+Translator goal facts: 14
+Translator mutex groups: 3
+Translator total mutex groups size: 170
+Translator operators: 10144
+Translator axioms: 0
+Translator task size: 109817
+Translator peak memory: 104664 KB
+Writing output... [0.120s CPU, 0.136s wall-clock]
+Done! [2.200s CPU, 2.266s wall-clock]
+INFO     Running preprocessor.
+INFO     preprocessor input: output.sas
+INFO     preprocessor arguments: ['--h2-time-limit', '30']
+Building causal graph...
+The causal graph is not acyclic.
+138 variables of 138 necessary
+1 of 3 mutex groups necessary.
+10144 of 10144 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 375 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=19044, notReached=113251, spurious=8330
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=113945, notReached=18350, spurious=8330
+2756 operators are spurious because were not triggered
+Unreachable proposition: Atom thinsnake(pos0-0)
+Unreachable proposition: Atom thinsnake(pos0-1)
+Unreachable proposition: Atom thinsnake(pos0-2)
+Unreachable proposition: Atom thinsnake(pos1-0)
+Unreachable proposition: Atom thinsnake(pos1-1)
+Unreachable proposition: Atom thinsnake(pos2-0)
+Unreachable proposition: Atom thinsnake(pos2-1)
+Unreachable proposition: Atom thinsnake(pos2-2)
+Unreachable proposition: Atom thinsnake(pos3-0)
+Unreachable proposition: Atom thinsnake(pos3-1)
+Unreachable proposition: Atom thinsnake(pos3-4)
+Unreachable proposition: Atom thinsnake(pos3-5)
+Unreachable proposition: Atom thinsnake(pos4-3)
+Unreachable proposition: Atom thinsnake(pos4-4)
+Unreachable proposition: Atom thinsnake(pos4-5)
+Unreachable proposition: Atom thinsnake(pos5-2)
+Unreachable proposition: Atom thinsnake(pos5-3)
+Unreachable proposition: Atom thinsnake(pos5-4)
+Unreachable proposition: Atom thinsnake(pos6-2)
+Unreachable proposition: Atom thinsnake(pos6-3)
+Unreachable proposition: Atom thinsnake(pos6-4)
+Unreachable proposition: Atom thinsnake(pos6-5)
+H^2 mutexes added fw: 6316, unreachable: 22
+402 of 7388 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=101272, notReached=12673, spurious=26680
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=113945, notReached=0, spurious=26680
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 0, unreachable: 0
+0 of 6986 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=19044, notReached=94901, spurious=26680
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=113945, notReached=0, spurious=26680
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 0, unreachable: 0
+0 of 6986 operators detected as spurious
+Total mutex and disambiguation time: 2.51072 iterations: 3
+3159 of 3159 mutex groups necessary.
+6986 of 10144 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 6986
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 138
+3159 of 3159 mutex groups necessary.
+6986 of 6986 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+138 variables of 138 of 138 necessary
+The causal graph is not acyclic.
+138 variables of 138 necessary
+3159 of 3159 mutex groups necessary.
+6986 of 6986 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 138
+Preprocessor facts: 353
+Preprocessor derived variables: 0
+Preprocessor operators: 6986
+Preprocessor mutex groups: 3159
+Preprocessor task size: 83680
+Writing output...
+done
+INFO     Running search.
+INFO     search input: output
+INFO     search executable: /planner/src/search/downward-release
+INFO     search portfolio: /planner/src/driver/portfolios/seq_sat_ds.py
+External time limits: 1800, 1800
+Internal time limit: 1800
+External memory limits: 8589934592, 8589934592
+Internal memory limit: 8000000000
+remaining time at start: 1793.42
+remaining time: 1793.42
+config 0: relative time 100, remaining 1800
+g bound: infinity
+next plan number: 1
+args: ['/planner/src/search/downward-release', '--decoupling', 'fork(search_type=sat, pruning=cost_frontier(irrelevance=TRANSITIONS), max_leaf_size=1000000)', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 99.63 -> (100, 101)
+using frontier pruning method
+performing irrelevance analysis in leaf factors
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using fork factoring profile
+reading input... [t=0.01s]
+Simplifying transitions... done!
+done reading input! [t=0.51s]
+building causal graph...done! [t=0.52s]
+factoring time 0s
+Error while factoring planning task!
+No factoring found!
+Search stopped without finding a solution.
+Peak memory: 38020 KB
+returncode: 5
+
+remaining time: 1792.87
+config 1: relative time 1000, remaining 1700
+g bound: infinity
+next plan number: 1
+args: ['/planner/src/search/downward-release', '--decoupling', 'portfolio(fallback_on_abstain=true, overwrite_options=true, choose_max_leaves=true,          factorings=[fork(search_type=sat, max_leaf_size=1000000), ifork(search_type=sat, max_leaf_size=1000000), incarcs(search_type=sat, max_leaf_size=100000)])', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity, symmetry=symmetry_state_pruning(lex_prices=false, lex_num_states=false, lex_goal_cost=false))', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 1054.63 -> (1055, 1056)
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using inverted-fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 100000
+using default pruning method: BasicPruning
+using incident-arcs factoring profile
+performing Star Decoupled A* search
+using default pruning method: BasicPruning
+using factoring portfolio
+reading input... [t=0s]
+Simplifying transitions... done!
+done reading input! [t=0.44s]
+building causal graph...done! [t=0.46s]
+factoring time 0.01s
+No factoring found, falling back to standard search.
+Variables: 138
+Bytes per state: 20
+done! [t=0.47s]
+done initalizing global data [t=0.47s]
+Creating symmetry graph stabilizing goal only and using orbit search.
+Initializing symmetry 
+Using Bliss to find group generators
+Got 0 group generators, time step: [t=0.48s]
+Number of generators: 0
+done initializing symmetries [t=0.48s]
+Conducting lazy best first search, (real) bound = 2147483647
+Initializing FF heuristic...
+Initializing additive heuristic...
+Simplifying 39668 unary operators... done! [39668 unary operators]
+Best heuristic value: 30 [g=0, 1 evaluated, 0 expanded, t=0.63s, 54640 KB]
+Best heuristic value: 29 [g=6, 11 evaluated, 10 expanded, t=0.65s, 54640 KB]
+Best heuristic value: 27 [g=9, 15 evaluated, 14 expanded, t=0.65s, 54640 KB]
+Best heuristic value: 26 [g=10, 17 evaluated, 16 expanded, t=0.65s, 54640 KB]
+Best heuristic value: 25 [g=13, 21 evaluated, 20 expanded, t=0.66s, 54640 KB]
+Best heuristic value: 24 [g=14, 22 evaluated, 21 expanded, t=0.66s, 54640 KB]
+Best heuristic value: 23 [g=15, 23 evaluated, 22 expanded, t=0.66s, 54640 KB]
+Best heuristic value: 22 [g=19, 88 evaluated, 85 expanded, t=0.71s, 54640 KB]
+Best heuristic value: 21 [g=20, 89 evaluated, 86 expanded, t=0.71s, 54640 KB]
+Best heuristic value: 20 [g=21, 90 evaluated, 87 expanded, t=0.71s, 54640 KB]
+Best heuristic value: 19 [g=22, 91 evaluated, 88 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 18 [g=23, 92 evaluated, 89 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 16 [g=24, 93 evaluated, 90 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 15 [g=26, 95 evaluated, 92 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 14 [g=27, 96 evaluated, 93 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 13 [g=28, 97 evaluated, 94 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 12 [g=29, 98 evaluated, 95 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 11 [g=30, 99 evaluated, 96 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 10 [g=32, 103 evaluated, 100 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 9 [g=33, 104 evaluated, 101 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 8 [g=34, 105 evaluated, 102 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 7 [g=35, 106 evaluated, 103 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 6 [g=36, 107 evaluated, 104 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 5 [g=37, 108 evaluated, 105 expanded, t=0.72s, 54640 KB]
+Best heuristic value: 4 [g=38, 109 evaluated, 106 expanded, t=0.73s, 54640 KB]
+Best heuristic value: 3 [g=39, 110 evaluated, 107 expanded, t=0.73s, 54640 KB]
+Best heuristic value: 2 [g=40, 111 evaluated, 108 expanded, t=0.73s, 54640 KB]
+Switch from bucket-based to heap-based queue at key = 510, num_pushes = 430
+Best heuristic value: 1 [g=64, 12649 evaluated, 10147 expanded, t=10.48s, 54640 KB]
+Solution found!
+Actual search time: 10s [t=10.48s]
+move-thin-snake pos1-7 pos2-7 dir-down (1)
+move-thin-snake pos2-7 pos3-7 dir-down (1)
+move-thin-snake pos3-7 pos4-7 dir-down (1)
+move-thin-snake pos4-7 pos5-7 dir-down (1)
+move-thin-snake pos5-7 pos5-6 dir-left (1)
+move-thin-snake pos5-6 pos5-5 dir-left (1)
+move-thin-snake-and-first-eat pos5-5 pos5-4 dir-left (1)
+move-fat-snake pos5-4 pos4-4 pos5-5 pos5-4 dir-up (1)
+move-and-eat pos4-4 pos4-3 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos5-4 pos4-4 dir-down (1)
+move-fat-snake pos5-3 pos5-4 pos4-4 pos4-3 dir-right (1)
+move-fat-snake pos5-4 pos6-4 pos4-3 pos5-3 dir-down (1)
+move-and-eat pos6-4 pos6-5 dir-right (1)
+move-fat-snake pos6-5 pos5-5 pos5-3 pos5-4 dir-up (1)
+move-fat-snake pos5-5 pos5-6 pos5-4 pos6-4 dir-right (1)
+move-fat-snake pos5-6 pos5-7 pos6-4 pos6-5 dir-right (1)
+move-fat-snake pos5-7 pos4-7 pos6-5 pos5-5 dir-up (1)
+move-fat-snake pos4-7 pos3-7 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos3-7 pos2-7 pos5-6 pos5-7 dir-up (1)
+move-fat-snake pos2-7 pos1-7 pos5-7 pos4-7 dir-up (1)
+move-fat-snake pos1-7 pos1-6 pos4-7 pos3-7 dir-left (1)
+move-fat-snake pos1-6 pos1-5 pos3-7 pos2-7 dir-left (1)
+move-fat-snake pos1-5 pos1-4 pos2-7 pos1-7 dir-left (1)
+move-fat-snake pos1-4 pos1-3 pos1-7 pos1-6 dir-left (1)
+move-fat-snake pos1-3 pos1-2 pos1-6 pos1-5 dir-left (1)
+move-and-eat pos1-2 pos0-2 dir-up (1)
+move-fat-snake pos0-2 pos0-1 pos1-5 pos1-4 dir-left (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-4 pos1-3 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos1-3 pos1-2 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos1-2 pos0-2 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos0-2 pos0-1 dir-up (1)
+move-and-eat pos2-1 pos2-2 dir-right (1)
+move-fat-snake pos2-2 pos1-2 pos0-1 pos0-0 dir-up (1)
+move-and-eat pos1-2 pos1-1 dir-left (1)
+move-fat-snake pos1-1 pos0-1 pos0-0 pos1-0 dir-up (1)
+move-fat-snake pos0-1 pos0-0 pos1-0 pos2-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos3-0 pos3-1 dir-down (1)
+move-fat-snake pos2-0 pos3-0 pos3-1 pos2-1 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos2-1 pos2-2 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos2-2 pos1-2 dir-up (1)
+move-fat-snake pos2-1 pos2-2 pos1-2 pos1-1 dir-right (1)
+move-fat-snake pos2-2 pos1-2 pos1-1 pos0-1 dir-up (1)
+move-fat-snake pos1-2 pos1-3 pos0-1 pos0-0 dir-right (1)
+move-fat-snake pos1-3 pos1-4 pos0-0 pos1-0 dir-right (1)
+move-fat-snake pos1-4 pos1-5 pos1-0 pos2-0 dir-right (1)
+move-fat-snake pos1-5 pos1-6 pos2-0 pos3-0 dir-right (1)
+move-fat-snake pos1-6 pos1-7 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-7 pos2-7 pos3-1 pos2-1 dir-down (1)
+move-fat-snake pos2-7 pos3-7 pos2-1 pos2-2 dir-down (1)
+move-fat-snake pos3-7 pos4-7 pos2-2 pos1-2 dir-down (1)
+move-fat-snake pos4-7 pos5-7 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos5-7 pos5-6 pos1-3 pos1-4 dir-left (1)
+move-fat-snake pos5-6 pos5-5 pos1-4 pos1-5 dir-left (1)
+move-and-eat pos5-5 pos4-5 dir-up (1)
+move-and-eat pos4-5 pos3-5 dir-up (1)
+move-and-eat pos3-5 pos3-4 dir-left (1)
+move-fat-snake pos3-4 pos4-4 pos1-5 pos1-6 dir-down (1)
+move-fat-snake pos4-4 pos4-3 pos1-6 pos1-7 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos1-7 pos2-7 dir-down (1)
+move-and-eat pos5-3 pos5-2 dir-left (1)
+move-and-eat pos5-2 pos6-2 dir-down (1)
+move-and-eat pos6-2 pos6-3 dir-right (1)
+Plan length: 65 step(s).
+Plan cost: 65
+Initial state h value: 30.
+Expanded 10148 state(s).
+Reopened 0 state(s).
+Evaluated 12650 state(s).
+Evaluations: 12650
+Generated 14430 state(s).
+Dead ends: 2501 state(s).
+Number of registered states: 12650
+Search time: 10.01s
+Total time: 10.48s
+Solution found.
+Peak memory: 54640 KB
+returncode: 0
+
+plan manager: found new plan with cost 65
+remaining time: 1782.37
+config 2: relative time 700, remaining 700
+g bound: 65
+next plan number: 2
+args: ['/planner/src/search/downward-release', '--heuristic', 'hlm1,hff1=lm_ff_syn(lm_rhw(reasonable_orders=true,                           lm_cost_type=one,cost_type=one))', '--search', 'lazy_greedy([hff1,hlm1],preferred=[hff1,hlm1], cost_type=one, reopen_closed=false, bound=65)', '--internal-previous-portfolio-plans', '1', '--internal-plan-file', 'sas_plan']
+timeout: 1782.37 -> (1783, 1784)
+reading input... [t=0s]
+Simplifying transitions... done!
+done reading input! [t=0.45s]
+building causal graph...done! [t=0.45s]
+Variables: 138
+Bytes per state: 20
+done! [t=0.45s]
+done initalizing global data [t=0.45s]
+Initializing Exploration...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.172792s
+Discovered 48 landmarks, of which 6 are disjunctive and 0 are conjunctive 
+34 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+28 initial landmarks, 14 goal landmarks
+Conducting lazy best first search, (real) bound = 65
+Best heuristic value: 20/30 [g=0, 1 evaluated, 0 expanded, t=0.64s, 45184 KB]
+Best heuristic value: 19/29 [g=6, 11 evaluated, 10 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 18/28 [g=7, 12 evaluated, 11 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 17/27 [g=8, 13 evaluated, 12 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 17/26 [g=9, 14 evaluated, 13 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 16/26 [g=10, 15 evaluated, 14 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 16/25 [g=11, 16 evaluated, 15 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 15/25 [g=12, 19 evaluated, 18 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 14/25 [g=14, 22 evaluated, 21 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 13/25 [g=15, 26 evaluated, 25 expanded, t=0.67s, 45184 KB]
+Best heuristic value: 13/24 [g=16, 32 evaluated, 30 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/23 [g=17, 33 evaluated, 31 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/22 [g=18, 34 evaluated, 32 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/21 [g=19, 35 evaluated, 33 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/20 [g=20, 36 evaluated, 34 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/19 [g=21, 37 evaluated, 35 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/18 [g=22, 38 evaluated, 36 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/17 [g=23, 39 evaluated, 37 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/16 [g=24, 40 evaluated, 38 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/15 [g=25, 41 evaluated, 39 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 13/14 [g=26, 42 evaluated, 40 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 13/13 [g=27, 43 evaluated, 41 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 13/12 [g=28, 44 evaluated, 42 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 13/11 [g=29, 45 evaluated, 43 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 11/11 [g=31, 47 evaluated, 45 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 9/10 [g=32, 48 evaluated, 46 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 8/9 [g=33, 49 evaluated, 47 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 8/8 [g=34, 50 evaluated, 48 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 7/7 [g=35, 51 evaluated, 49 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 6/6 [g=36, 52 evaluated, 50 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 4/5 [g=37, 53 evaluated, 51 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 3/4 [g=38, 54 evaluated, 52 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 2/3 [g=39, 55 evaluated, 53 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 2/2 [g=40, 56 evaluated, 54 expanded, t=0.7s, 45184 KB]
+Best heuristic value: 1/2 [g=52, 3879 evaluated, 3006 expanded, t=4.39s, 45184 KB]
+Switch from bucket-based to heap-based queue at key = 604, num_pushes = 600
+Best heuristic value: 1/1 [g=64, 17068 evaluated, 13483 expanded, t=16.48s, 47208 KB]
+Solution found!
+Actual search time: 15.87s [t=16.51s]
+move-thin-snake pos1-7 pos2-7 dir-down (1)
+move-thin-snake pos2-7 pos3-7 dir-down (1)
+move-thin-snake pos3-7 pos4-7 dir-down (1)
+move-thin-snake pos4-7 pos5-7 dir-down (1)
+move-thin-snake pos5-7 pos5-6 dir-left (1)
+move-thin-snake pos5-6 pos5-5 dir-left (1)
+move-thin-snake-and-first-eat pos5-5 pos4-5 dir-up (1)
+move-fat-snake pos4-5 pos4-4 pos5-5 pos4-5 dir-left (1)
+move-and-eat pos4-4 pos4-3 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos4-5 pos4-4 dir-down (1)
+move-and-eat pos5-3 pos5-4 dir-right (1)
+move-fat-snake pos5-4 pos5-5 pos4-4 pos4-3 dir-right (1)
+move-fat-snake pos5-5 pos5-6 pos4-3 pos5-3 dir-right (1)
+move-fat-snake pos5-6 pos5-7 pos5-3 pos5-4 dir-right (1)
+move-fat-snake pos5-7 pos4-7 pos5-4 pos5-5 dir-up (1)
+move-fat-snake pos4-7 pos3-7 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos3-7 pos2-7 pos5-6 pos5-7 dir-up (1)
+move-fat-snake pos2-7 pos1-7 pos5-7 pos4-7 dir-up (1)
+move-fat-snake pos1-7 pos1-6 pos4-7 pos3-7 dir-left (1)
+move-fat-snake pos1-6 pos1-5 pos3-7 pos2-7 dir-left (1)
+move-fat-snake pos1-5 pos1-4 pos2-7 pos1-7 dir-left (1)
+move-fat-snake pos1-4 pos1-3 pos1-7 pos1-6 dir-left (1)
+move-fat-snake pos1-3 pos1-2 pos1-6 pos1-5 dir-left (1)
+move-and-eat pos1-2 pos0-2 dir-up (1)
+move-fat-snake pos0-2 pos0-1 pos1-5 pos1-4 dir-left (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-4 pos1-3 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos1-3 pos1-2 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos1-2 pos0-2 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos0-2 pos0-1 dir-up (1)
+move-and-eat pos2-1 pos2-2 dir-right (1)
+move-fat-snake pos2-2 pos1-2 pos0-1 pos0-0 dir-up (1)
+move-and-eat pos1-2 pos1-1 dir-left (1)
+move-fat-snake pos1-1 pos0-1 pos0-0 pos1-0 dir-up (1)
+move-fat-snake pos0-1 pos0-0 pos1-0 pos2-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos3-0 pos3-1 dir-down (1)
+move-fat-snake pos2-0 pos3-0 pos3-1 pos2-1 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos2-1 pos2-2 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos2-2 pos1-2 dir-up (1)
+move-fat-snake pos2-1 pos2-2 pos1-2 pos1-1 dir-right (1)
+move-fat-snake pos2-2 pos1-2 pos1-1 pos0-1 dir-up (1)
+move-fat-snake pos1-2 pos1-3 pos0-1 pos0-0 dir-right (1)
+move-fat-snake pos1-3 pos1-4 pos0-0 pos1-0 dir-right (1)
+move-fat-snake pos1-4 pos1-5 pos1-0 pos2-0 dir-right (1)
+move-fat-snake pos1-5 pos1-6 pos2-0 pos3-0 dir-right (1)
+move-fat-snake pos1-6 pos1-7 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-7 pos2-7 pos3-1 pos2-1 dir-down (1)
+move-fat-snake pos2-7 pos3-7 pos2-1 pos2-2 dir-down (1)
+move-fat-snake pos3-7 pos4-7 pos2-2 pos1-2 dir-down (1)
+move-fat-snake pos4-7 pos5-7 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos5-7 pos5-6 pos1-3 pos1-4 dir-left (1)
+move-fat-snake pos5-6 pos5-5 pos1-4 pos1-5 dir-left (1)
+move-and-eat pos5-5 pos6-5 dir-down (1)
+move-fat-snake pos6-5 pos6-4 pos1-5 pos1-6 dir-left (1)
+move-and-eat pos6-4 pos6-3 dir-left (1)
+move-and-eat pos6-3 pos6-2 dir-left (1)
+move-and-eat pos6-2 pos5-2 dir-up (1)
+move-fat-snake pos5-2 pos5-3 pos1-6 pos1-7 dir-right (1)
+move-fat-snake pos5-3 pos4-3 pos1-7 pos2-7 dir-up (1)
+move-fat-snake pos4-3 pos4-4 pos2-7 pos3-7 dir-right (1)
+move-and-eat pos4-4 pos3-4 dir-up (1)
+move-and-eat pos3-4 pos3-5 dir-right (1)
+Plan length: 64 step(s).
+Plan cost: 64
+Initial state h value: 20/30.
+Expanded 13530 state(s).
+Reopened 0 state(s).
+Evaluated 17124 state(s).
+Evaluations: 34248
+Generated 19605 state(s).
+Dead ends: 3593 state(s).
+Number of registered states: 17124
+Search time: 15.87s
+Total time: 16.51s
+Solution found.
+Peak memory: 47208 KB
+returncode: 0
+
+plan manager: found new plan with cost 64
+Abort portfolio and run final config.
+remaining time: 1765.84
+config 0: relative time 1, remaining 1
+g bound: 64
+next plan number: 3
+args: ['/planner/src/search/downward-release', '--heuristic', 'hlm,hff=lm_ff_syn(lm_rhw(reasonable_orders=true,                         lm_cost_type=one,cost_type=one))', '--search', 'iterated([\n                     lazy_greedy([hff,hlm],preferred=[hff,hlm],\n                                 cost_type=one,reopen_closed=false),\n                     lazy_greedy([hff,hlm],preferred=[hff,hlm],\n                                 reopen_closed=false),\n                     lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),\n                     lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),\n                     lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),\n                     lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)\n                     ],repeat_last=true,continue_on_fail=true, bound=64)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+timeout: 1765.84 -> (1766, 1767)
+reading input... [t=0s]
+Simplifying transitions... done!
+done reading input! [t=0.45s]
+building causal graph...done! [t=0.46s]
+Variables: 138
+Bytes per state: 20
+done! [t=0.46s]
+done initalizing global data [t=0.46s]
+Initializing Exploration...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.161978s
+Discovered 48 landmarks, of which 6 are disjunctive and 0 are conjunctive 
+34 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+28 initial landmarks, 14 goal landmarks
+Starting search: lazy_greedy(list(hff, hlm), preferred = list(hff, hlm), cost_type = one, reopen_closed = false)
+Conducting lazy best first search, (real) bound = 64
+Best heuristic value: 20/30 [g=0, 1 evaluated, 0 expanded, t=0.64s, 45184 KB]
+Best heuristic value: 19/29 [g=6, 11 evaluated, 10 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 18/28 [g=7, 12 evaluated, 11 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 17/27 [g=8, 13 evaluated, 12 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 17/26 [g=9, 14 evaluated, 13 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 16/26 [g=10, 15 evaluated, 14 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 16/25 [g=11, 16 evaluated, 15 expanded, t=0.65s, 45184 KB]
+Best heuristic value: 15/25 [g=12, 19 evaluated, 18 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 14/25 [g=14, 22 evaluated, 21 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 13/25 [g=15, 26 evaluated, 25 expanded, t=0.66s, 45184 KB]
+Best heuristic value: 13/24 [g=16, 32 evaluated, 30 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/23 [g=17, 33 evaluated, 31 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/22 [g=18, 34 evaluated, 32 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/21 [g=19, 35 evaluated, 33 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/20 [g=20, 36 evaluated, 34 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/19 [g=21, 37 evaluated, 35 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/18 [g=22, 38 evaluated, 36 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/17 [g=23, 39 evaluated, 37 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/16 [g=24, 40 evaluated, 38 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/15 [g=25, 41 evaluated, 39 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/14 [g=26, 42 evaluated, 40 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/13 [g=27, 43 evaluated, 41 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/12 [g=28, 44 evaluated, 42 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 13/11 [g=29, 45 evaluated, 43 expanded, t=0.68s, 45184 KB]
+Best heuristic value: 11/11 [g=31, 47 evaluated, 45 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 9/10 [g=32, 48 evaluated, 46 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 8/9 [g=33, 49 evaluated, 47 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 8/8 [g=34, 50 evaluated, 48 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 7/7 [g=35, 51 evaluated, 49 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 6/6 [g=36, 52 evaluated, 50 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 4/5 [g=37, 53 evaluated, 51 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 3/4 [g=38, 54 evaluated, 52 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 2/3 [g=39, 55 evaluated, 53 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 2/2 [g=40, 56 evaluated, 54 expanded, t=0.69s, 45184 KB]
+Best heuristic value: 1/2 [g=52, 3879 evaluated, 3006 expanded, t=4.28s, 45184 KB]
+Switch from bucket-based to heap-based queue at key = 604, num_pushes = 600
+Best heuristic value: 1/1 [g=63, 17084 evaluated, 13492 expanded, t=16.63s, 47232 KB]
+Solution found!
+Actual search time: 21.56s [t=22.2s]
+move-thin-snake pos1-7 pos2-7 dir-down (1)
+move-thin-snake pos2-7 pos3-7 dir-down (1)
+move-thin-snake pos3-7 pos4-7 dir-down (1)
+move-thin-snake pos4-7 pos5-7 dir-down (1)
+move-thin-snake pos5-7 pos5-6 dir-left (1)
+move-thin-snake pos5-6 pos5-5 dir-left (1)
+move-thin-snake-and-first-eat pos5-5 pos5-4 dir-left (1)
+move-fat-snake pos5-4 pos5-3 pos5-5 pos5-4 dir-left (1)
+move-and-eat pos5-3 pos6-3 dir-down (1)
+move-fat-snake pos6-3 pos6-4 pos5-4 pos5-3 dir-right (1)
+move-and-eat pos6-4 pos6-5 dir-right (1)
+move-fat-snake pos6-5 pos5-5 pos5-3 pos6-3 dir-up (1)
+move-fat-snake pos5-5 pos5-6 pos6-3 pos6-4 dir-right (1)
+move-fat-snake pos5-6 pos5-7 pos6-4 pos6-5 dir-right (1)
+move-fat-snake pos5-7 pos4-7 pos6-5 pos5-5 dir-up (1)
+move-fat-snake pos4-7 pos3-7 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos3-7 pos2-7 pos5-6 pos5-7 dir-up (1)
+move-fat-snake pos2-7 pos1-7 pos5-7 pos4-7 dir-up (1)
+move-fat-snake pos1-7 pos1-6 pos4-7 pos3-7 dir-left (1)
+move-fat-snake pos1-6 pos1-5 pos3-7 pos2-7 dir-left (1)
+move-fat-snake pos1-5 pos1-4 pos2-7 pos1-7 dir-left (1)
+move-fat-snake pos1-4 pos1-3 pos1-7 pos1-6 dir-left (1)
+move-fat-snake pos1-3 pos1-2 pos1-6 pos1-5 dir-left (1)
+move-and-eat pos1-2 pos0-2 dir-up (1)
+move-fat-snake pos0-2 pos0-1 pos1-5 pos1-4 dir-left (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-4 pos1-3 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos1-3 pos1-2 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos1-2 pos0-2 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos0-2 pos0-1 dir-up (1)
+move-and-eat pos2-1 pos2-2 dir-right (1)
+move-fat-snake pos2-2 pos1-2 pos0-1 pos0-0 dir-up (1)
+move-and-eat pos1-2 pos1-1 dir-left (1)
+move-fat-snake pos1-1 pos0-1 pos0-0 pos1-0 dir-up (1)
+move-fat-snake pos0-1 pos0-0 pos1-0 pos2-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos3-0 pos3-1 dir-down (1)
+move-fat-snake pos2-0 pos3-0 pos3-1 pos2-1 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos2-1 pos2-2 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos2-2 pos1-2 dir-up (1)
+move-fat-snake pos2-1 pos2-2 pos1-2 pos1-1 dir-right (1)
+move-fat-snake pos2-2 pos1-2 pos1-1 pos0-1 dir-up (1)
+move-fat-snake pos1-2 pos1-3 pos0-1 pos0-0 dir-right (1)
+move-fat-snake pos1-3 pos1-4 pos0-0 pos1-0 dir-right (1)
+move-fat-snake pos1-4 pos1-5 pos1-0 pos2-0 dir-right (1)
+move-fat-snake pos1-5 pos1-6 pos2-0 pos3-0 dir-right (1)
+move-fat-snake pos1-6 pos1-7 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-7 pos2-7 pos3-1 pos2-1 dir-down (1)
+move-fat-snake pos2-7 pos3-7 pos2-1 pos2-2 dir-down (1)
+move-fat-snake pos3-7 pos4-7 pos2-2 pos1-2 dir-down (1)
+move-fat-snake pos4-7 pos5-7 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos5-7 pos5-6 pos1-3 pos1-4 dir-left (1)
+move-fat-snake pos5-6 pos5-5 pos1-4 pos1-5 dir-left (1)
+move-and-eat pos5-5 pos4-5 dir-up (1)
+move-and-eat pos4-5 pos3-5 dir-up (1)
+move-and-eat pos3-5 pos3-4 dir-left (1)
+move-fat-snake pos3-4 pos4-4 pos1-5 pos1-6 dir-down (1)
+move-and-eat pos4-4 pos4-3 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos1-6 pos1-7 dir-down (1)
+move-and-eat pos5-3 pos5-2 dir-left (1)
+move-and-eat pos5-2 pos6-2 dir-down (1)
+Plan length: 62 step(s).
+Plan cost: 62
+Initial state h value: 20/30.
+Expanded 18134 state(s).
+Reopened 0 state(s).
+Evaluated 22684 state(s).
+Evaluations: 45368
+Generated 26132 state(s).
+Dead ends: 4549 state(s).
+Number of registered states: 22684
+Best solution cost so far: 62
+Solution found - keep searching
+Starting search: lazy_greedy(list(hff, hlm), preferred = list(hff, hlm), reopen_closed = false)
+Conducting lazy best first search, (real) bound = 62
+Best heuristic value: 20/28 [g=0, 1 evaluated, 0 expanded, t=22.2s, 48968 KB]
+Best heuristic value: 19/28 [g=6, 10 evaluated, 9 expanded, t=22.21s, 48968 KB]
+Best heuristic value: 18/28 [g=7, 11 evaluated, 10 expanded, t=22.22s, 48968 KB]
+Best heuristic value: 17/28 [g=8, 12 evaluated, 11 expanded, t=22.22s, 48968 KB]
+Best heuristic value: 17/27 [g=9, 13 evaluated, 12 expanded, t=22.22s, 48968 KB]
+Best heuristic value: 16/27 [g=10, 14 evaluated, 13 expanded, t=22.22s, 48968 KB]
+Best heuristic value: 16/26 [g=11, 15 evaluated, 14 expanded, t=22.22s, 48968 KB]
+Best heuristic value: 15/26 [g=12, 18 evaluated, 17 expanded, t=22.23s, 48968 KB]
+Best heuristic value: 14/26 [g=14, 21 evaluated, 20 expanded, t=22.23s, 48968 KB]
+Best heuristic value: 13/26 [g=15, 25 evaluated, 24 expanded, t=22.24s, 48968 KB]
+Best heuristic value: 13/24 [g=16, 31 evaluated, 29 expanded, t=22.25s, 48968 KB]
+Best heuristic value: 13/23 [g=18, 33 evaluated, 31 expanded, t=22.25s, 48968 KB]
+Best heuristic value: 13/22 [g=19, 34 evaluated, 32 expanded, t=22.25s, 48968 KB]
+Best heuristic value: 13/20 [g=20, 35 evaluated, 33 expanded, t=22.25s, 48968 KB]
+Best heuristic value: 13/19 [g=21, 36 evaluated, 34 expanded, t=22.25s, 48968 KB]
+Best heuristic value: 13/18 [g=23, 38 evaluated, 36 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 13/17 [g=24, 39 evaluated, 37 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 13/16 [g=25, 40 evaluated, 38 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 13/15 [g=27, 42 evaluated, 40 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 13/13 [g=28, 43 evaluated, 41 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 13/12 [g=29, 44 evaluated, 42 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 11/11 [g=31, 46 evaluated, 44 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 9/10 [g=32, 47 evaluated, 45 expanded, t=22.26s, 48968 KB]
+Best heuristic value: 8/9 [g=33, 48 evaluated, 46 expanded, t=22.27s, 48968 KB]
+Best heuristic value: 8/8 [g=34, 49 evaluated, 47 expanded, t=22.27s, 48968 KB]
+Best heuristic value: 7/7 [g=35, 50 evaluated, 48 expanded, t=22.27s, 49100 KB]
+Best heuristic value: 6/6 [g=36, 51 evaluated, 49 expanded, t=22.27s, 49100 KB]
+Best heuristic value: 4/5 [g=37, 52 evaluated, 50 expanded, t=22.27s, 49100 KB]
+Best heuristic value: 3/4 [g=38, 53 evaluated, 51 expanded, t=22.27s, 49100 KB]
+Best heuristic value: 2/3 [g=39, 54 evaluated, 52 expanded, t=22.27s, 49100 KB]
+Best heuristic value: 2/2 [g=40, 55 evaluated, 53 expanded, t=22.27s, 49100 KB]
+Best heuristic value: 1/2 [g=41, 3580 evaluated, 2753 expanded, t=25.68s, 49232 KB]
+Best heuristic value: 1/1 [g=61, 19684 evaluated, 15735 expanded, t=44.99s, 49892 KB]
+Completely explored state space -- no solution!
+Actual search time: 53.04s [t=75.24s]
+Initial state h value: 20/28.
+Expanded 37548 state(s).
+Reopened 0 state(s).
+Evaluated 45122 state(s).
+Evaluations: 90244
+Generated 52982 state(s).
+Dead ends: 7574 state(s).
+Number of registered states: 45661
+Best solution cost so far: 62
+No solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 5)
+Conducting lazy best first search, (real) bound = 62
+Best heuristic value: 20/28 [g=0, 1 evaluated, 0 expanded, t=75.25s, 55052 KB]
+Best heuristic value: 19/28 [g=6, 11 evaluated, 10 expanded, t=75.26s, 55052 KB]
+Best heuristic value: 18/28 [g=7, 12 evaluated, 11 expanded, t=75.27s, 55052 KB]
+Best heuristic value: 17/28 [g=8, 13 evaluated, 12 expanded, t=75.27s, 55052 KB]
+Best heuristic value: 17/27 [g=9, 14 evaluated, 13 expanded, t=75.27s, 55052 KB]
+Best heuristic value: 16/27 [g=10, 15 evaluated, 14 expanded, t=75.27s, 55052 KB]
+Best heuristic value: 16/26 [g=11, 16 evaluated, 15 expanded, t=75.27s, 55052 KB]
+Best heuristic value: 15/26 [g=12, 19 evaluated, 18 expanded, t=75.27s, 55052 KB]
+Best heuristic value: 14/26 [g=13, 22 evaluated, 21 expanded, t=75.27s, 55052 KB]
+Best heuristic value: 13/26 [g=15, 30 evaluated, 28 expanded, t=75.28s, 55052 KB]
+Best heuristic value: 13/24 [g=16, 38 evaluated, 35 expanded, t=75.3s, 55052 KB]
+Best heuristic value: 13/23 [g=18, 40 evaluated, 37 expanded, t=75.3s, 55052 KB]
+Best heuristic value: 13/22 [g=19, 41 evaluated, 38 expanded, t=75.3s, 55052 KB]
+Best heuristic value: 13/20 [g=20, 42 evaluated, 39 expanded, t=75.3s, 55052 KB]
+Best heuristic value: 13/19 [g=21, 43 evaluated, 40 expanded, t=75.3s, 55052 KB]
+Best heuristic value: 13/18 [g=23, 46 evaluated, 43 expanded, t=75.31s, 55052 KB]
+Best heuristic value: 13/17 [g=24, 47 evaluated, 44 expanded, t=75.31s, 55052 KB]
+Best heuristic value: 13/16 [g=25, 48 evaluated, 45 expanded, t=75.31s, 55052 KB]
+Best heuristic value: 13/15 [g=27, 52 evaluated, 49 expanded, t=75.31s, 55052 KB]
+Best heuristic value: 13/13 [g=28, 54 evaluated, 51 expanded, t=75.31s, 55052 KB]
+Best heuristic value: 13/12 [g=29, 55 evaluated, 52 expanded, t=75.32s, 55052 KB]
+Best heuristic value: 11/11 [g=31, 59 evaluated, 56 expanded, t=75.32s, 55052 KB]
+Best heuristic value: 9/10 [g=32, 61 evaluated, 58 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 8/9 [g=33, 62 evaluated, 59 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 8/8 [g=34, 63 evaluated, 60 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 7/7 [g=35, 64 evaluated, 61 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 6/6 [g=36, 65 evaluated, 62 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 4/5 [g=37, 66 evaluated, 63 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 3/4 [g=38, 67 evaluated, 64 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 2/3 [g=39, 68 evaluated, 65 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 2/2 [g=40, 69 evaluated, 66 expanded, t=75.33s, 55052 KB]
+Best heuristic value: 1/2 [g=41, 1546 evaluated, 1413 expanded, 419 reopened, t=76.77s, 55052 KB]
+Best heuristic value: 1/1 [g=61, 16396 evaluated, 13377 expanded, 1370 reopened, t=91.46s, 55052 KB]
+Solution found!
+Actual search time: 16.36s [t=91.6s]
+move-thin-snake pos1-7 pos2-7 dir-down (1)
+move-thin-snake pos2-7 pos3-7 dir-down (1)
+move-thin-snake pos3-7 pos4-7 dir-down (1)
+move-thin-snake pos4-7 pos5-7 dir-down (1)
+move-thin-snake pos5-7 pos5-6 dir-left (1)
+move-thin-snake pos5-6 pos5-5 dir-left (1)
+move-thin-snake-and-first-eat pos5-5 pos5-4 dir-left (1)
+move-fat-snake pos5-4 pos5-3 pos5-5 pos5-4 dir-left (1)
+move-and-eat pos5-3 pos6-3 dir-down (1)
+move-fat-snake pos6-3 pos6-4 pos5-4 pos5-3 dir-right (1)
+move-and-eat pos6-4 pos6-5 dir-right (1)
+move-fat-snake pos6-5 pos5-5 pos5-3 pos6-3 dir-up (1)
+move-fat-snake pos5-5 pos5-6 pos6-3 pos6-4 dir-right (1)
+move-fat-snake pos5-6 pos5-7 pos6-4 pos6-5 dir-right (1)
+move-fat-snake pos5-7 pos4-7 pos6-5 pos5-5 dir-up (1)
+move-fat-snake pos4-7 pos3-7 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos3-7 pos2-7 pos5-6 pos5-7 dir-up (1)
+move-fat-snake pos2-7 pos1-7 pos5-7 pos4-7 dir-up (1)
+move-fat-snake pos1-7 pos1-6 pos4-7 pos3-7 dir-left (1)
+move-fat-snake pos1-6 pos1-5 pos3-7 pos2-7 dir-left (1)
+move-fat-snake pos1-5 pos1-4 pos2-7 pos1-7 dir-left (1)
+move-fat-snake pos1-4 pos1-3 pos1-7 pos1-6 dir-left (1)
+move-fat-snake pos1-3 pos1-2 pos1-6 pos1-5 dir-left (1)
+move-and-eat pos1-2 pos0-2 dir-up (1)
+move-fat-snake pos0-2 pos0-1 pos1-5 pos1-4 dir-left (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-4 pos1-3 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos1-3 pos1-2 dir-down (1)
+move-fat-snake pos2-0 pos2-1 pos1-2 pos0-2 dir-right (1)
+move-and-eat pos2-1 pos2-2 dir-right (1)
+move-fat-snake pos2-2 pos1-2 pos0-2 pos0-1 dir-up (1)
+move-fat-snake pos1-2 pos0-2 pos0-1 pos0-0 dir-up (1)
+move-fat-snake pos0-2 pos0-1 pos0-0 pos1-0 dir-left (1)
+move-fat-snake pos0-1 pos0-0 pos1-0 pos2-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos2-0 pos2-1 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos2-1 pos2-2 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos2-2 pos1-2 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos1-2 pos0-2 dir-up (1)
+move-and-eat pos2-1 pos1-1 dir-up (1)
+move-fat-snake pos1-1 pos1-2 pos0-2 pos0-1 dir-right (1)
+move-fat-snake pos1-2 pos1-3 pos0-1 pos0-0 dir-right (1)
+move-fat-snake pos1-3 pos1-4 pos0-0 pos1-0 dir-right (1)
+move-fat-snake pos1-4 pos1-5 pos1-0 pos2-0 dir-right (1)
+move-fat-snake pos1-5 pos1-6 pos2-0 pos3-0 dir-right (1)
+move-fat-snake pos1-6 pos1-7 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-7 pos2-7 pos3-1 pos2-1 dir-down (1)
+move-fat-snake pos2-7 pos3-7 pos2-1 pos1-1 dir-down (1)
+move-fat-snake pos3-7 pos4-7 pos1-1 pos1-2 dir-down (1)
+move-fat-snake pos4-7 pos5-7 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos5-7 pos5-6 pos1-3 pos1-4 dir-left (1)
+move-fat-snake pos5-6 pos5-5 pos1-4 pos1-5 dir-left (1)
+move-and-eat pos5-5 pos4-5 dir-up (1)
+move-and-eat pos4-5 pos3-5 dir-up (1)
+move-and-eat pos3-5 pos3-4 dir-left (1)
+move-fat-snake pos3-4 pos4-4 pos1-5 pos1-6 dir-down (1)
+move-and-eat pos4-4 pos4-3 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos1-6 pos1-7 dir-down (1)
+move-and-eat pos5-3 pos5-2 dir-left (1)
+move-and-eat pos5-2 pos6-2 dir-down (1)
+Plan length: 60 step(s).
+Plan cost: 60
+Initial state h value: 20/28.
+Expanded 13523 state(s).
+Reopened 1381 state(s).
+Evaluated 16574 state(s).
+Evaluations: 33148
+Generated 19354 state(s).
+Dead ends: 3050 state(s).
+Number of registered states: 45661
+Best solution cost so far: 60
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 3)
+Conducting lazy best first search, (real) bound = 60
+Best heuristic value: 20/28 [g=0, 1 evaluated, 0 expanded, t=91.6s, 56536 KB]
+Best heuristic value: 19/28 [g=6, 11 evaluated, 10 expanded, t=91.61s, 56536 KB]
+Best heuristic value: 18/28 [g=7, 13 evaluated, 12 expanded, t=91.62s, 56536 KB]
+Best heuristic value: 17/28 [g=8, 14 evaluated, 13 expanded, t=91.62s, 56536 KB]
+Best heuristic value: 17/27 [g=9, 15 evaluated, 14 expanded, t=91.62s, 56536 KB]
+Best heuristic value: 16/27 [g=10, 16 evaluated, 15 expanded, t=91.62s, 56536 KB]
+Best heuristic value: 16/26 [g=11, 17 evaluated, 16 expanded, t=91.62s, 56536 KB]
+Best heuristic value: 15/26 [g=12, 20 evaluated, 19 expanded, t=91.62s, 56536 KB]
+Best heuristic value: 14/26 [g=13, 23 evaluated, 22 expanded, t=91.63s, 56536 KB]
+Best heuristic value: 13/26 [g=15, 31 evaluated, 29 expanded, t=91.64s, 56536 KB]
+Best heuristic value: 13/24 [g=16, 39 evaluated, 36 expanded, t=91.65s, 56536 KB]
+Best heuristic value: 13/23 [g=18, 41 evaluated, 38 expanded, t=91.65s, 56536 KB]
+Best heuristic value: 13/22 [g=19, 42 evaluated, 39 expanded, t=91.65s, 56536 KB]
+Best heuristic value: 13/20 [g=20, 43 evaluated, 40 expanded, t=91.65s, 56536 KB]
+Best heuristic value: 13/19 [g=21, 44 evaluated, 41 expanded, t=91.65s, 56536 KB]
+Best heuristic value: 13/18 [g=23, 48 evaluated, 45 expanded, t=91.66s, 56536 KB]
+Best heuristic value: 13/17 [g=24, 50 evaluated, 47 expanded, t=91.66s, 56536 KB]
+Best heuristic value: 13/16 [g=25, 52 evaluated, 49 expanded, t=91.66s, 56536 KB]
+Best heuristic value: 13/15 [g=27, 55 evaluated, 52 expanded, t=91.66s, 56536 KB]
+Best heuristic value: 13/13 [g=28, 57 evaluated, 54 expanded, t=91.66s, 56536 KB]
+Best heuristic value: 13/12 [g=29, 59 evaluated, 56 expanded, t=91.66s, 56536 KB]
+Best heuristic value: 11/11 [g=31, 63 evaluated, 59 expanded, t=91.67s, 56536 KB]
+Best heuristic value: 9/10 [g=32, 65 evaluated, 61 expanded, t=91.68s, 56536 KB]
+Best heuristic value: 8/9 [g=33, 67 evaluated, 63 expanded, t=91.68s, 56536 KB]
+Best heuristic value: 8/8 [g=34, 69 evaluated, 65 expanded, t=91.68s, 56536 KB]
+Best heuristic value: 7/7 [g=35, 71 evaluated, 67 expanded, t=91.68s, 56668 KB]
+Best heuristic value: 6/6 [g=36, 73 evaluated, 69 expanded, t=91.68s, 56668 KB]
+Best heuristic value: 4/5 [g=37, 74 evaluated, 70 expanded, t=91.68s, 56668 KB]
+Best heuristic value: 3/4 [g=38, 75 evaluated, 71 expanded, t=91.68s, 56668 KB]
+Best heuristic value: 2/3 [g=39, 76 evaluated, 72 expanded, t=91.68s, 56668 KB]
+Best heuristic value: 2/2 [g=40, 77 evaluated, 73 expanded, t=91.68s, 56668 KB]
+Best heuristic value: 1/2 [g=49, 1410 evaluated, 1271 expanded, 309 reopened, t=92.9s, 56668 KB]
+Best heuristic value: 1/1 [g=58, 13398 evaluated, 10989 expanded, 1086 reopened, t=104.69s, 57196 KB]
+Solution found!
+Actual search time: 13.09s [t=104.69s]
+move-thin-snake pos1-7 pos2-7 dir-down (1)
+move-thin-snake pos2-7 pos3-7 dir-down (1)
+move-thin-snake pos3-7 pos4-7 dir-down (1)
+move-thin-snake pos4-7 pos5-7 dir-down (1)
+move-thin-snake pos5-7 pos5-6 dir-left (1)
+move-thin-snake pos5-6 pos5-5 dir-left (1)
+move-thin-snake-and-first-eat pos5-5 pos5-4 dir-left (1)
+move-fat-snake pos5-4 pos4-4 pos5-5 pos5-4 dir-up (1)
+move-and-eat pos4-4 pos4-3 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos5-4 pos4-4 dir-down (1)
+move-fat-snake pos5-3 pos5-4 pos4-4 pos4-3 dir-right (1)
+move-fat-snake pos5-4 pos5-5 pos4-3 pos5-3 dir-right (1)
+move-fat-snake pos5-5 pos5-6 pos5-3 pos5-4 dir-right (1)
+move-fat-snake pos5-6 pos5-7 pos5-4 pos5-5 dir-right (1)
+move-fat-snake pos5-7 pos4-7 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos4-7 pos3-7 pos5-6 pos5-7 dir-up (1)
+move-fat-snake pos3-7 pos2-7 pos5-7 pos4-7 dir-up (1)
+move-fat-snake pos2-7 pos1-7 pos4-7 pos3-7 dir-up (1)
+move-fat-snake pos1-7 pos1-6 pos3-7 pos2-7 dir-left (1)
+move-fat-snake pos1-6 pos1-5 pos2-7 pos1-7 dir-left (1)
+move-fat-snake pos1-5 pos1-4 pos1-7 pos1-6 dir-left (1)
+move-fat-snake pos1-4 pos1-3 pos1-6 pos1-5 dir-left (1)
+move-fat-snake pos1-3 pos1-2 pos1-5 pos1-4 dir-left (1)
+move-and-eat pos1-2 pos2-2 dir-down (1)
+move-fat-snake pos2-2 pos2-1 pos1-4 pos1-3 dir-left (1)
+move-and-eat pos2-1 pos1-1 dir-up (1)
+move-fat-snake pos1-1 pos0-1 pos1-3 pos1-2 dir-up (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-2 pos2-2 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos2-2 pos2-1 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos2-1 pos1-1 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos1-1 pos0-1 dir-up (1)
+move-fat-snake pos2-1 pos1-1 pos0-1 pos0-0 dir-up (1)
+move-fat-snake pos1-1 pos0-1 pos0-0 pos1-0 dir-up (1)
+move-and-eat pos0-1 pos0-2 dir-right (1)
+move-fat-snake pos0-2 pos1-2 pos1-0 pos2-0 dir-down (1)
+move-fat-snake pos1-2 pos1-3 pos2-0 pos3-0 dir-right (1)
+move-fat-snake pos1-3 pos1-4 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-4 pos1-5 pos3-1 pos2-1 dir-right (1)
+move-fat-snake pos1-5 pos1-6 pos2-1 pos1-1 dir-right (1)
+move-fat-snake pos1-6 pos1-7 pos1-1 pos0-1 dir-right (1)
+move-fat-snake pos1-7 pos2-7 pos0-1 pos0-2 dir-down (1)
+move-fat-snake pos2-7 pos3-7 pos0-2 pos1-2 dir-down (1)
+move-fat-snake pos3-7 pos4-7 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos4-7 pos5-7 pos1-3 pos1-4 dir-down (1)
+move-fat-snake pos5-7 pos5-6 pos1-4 pos1-5 dir-left (1)
+move-fat-snake pos5-6 pos5-5 pos1-5 pos1-6 dir-left (1)
+move-and-eat pos5-5 pos4-5 dir-up (1)
+move-and-eat pos4-5 pos3-5 dir-up (1)
+move-and-eat pos3-5 pos3-4 dir-left (1)
+move-fat-snake pos3-4 pos4-4 pos1-6 pos1-7 dir-down (1)
+move-fat-snake pos4-4 pos4-3 pos1-7 pos2-7 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos2-7 pos3-7 dir-down (1)
+move-and-eat pos5-3 pos5-2 dir-left (1)
+move-and-eat pos5-2 pos6-2 dir-down (1)
+move-and-eat pos6-2 pos6-3 dir-right (1)
+move-fat-snake pos6-3 pos6-4 pos3-7 pos4-7 dir-right (1)
+move-and-eat pos6-4 pos6-5 dir-right (1)
+Plan length: 59 step(s).
+Plan cost: 59
+Initial state h value: 20/28.
+Expanded 10990 state(s).
+Reopened 1086 state(s).
+Evaluated 13399 state(s).
+Evaluations: 26798
+Generated 15632 state(s).
+Dead ends: 2408 state(s).
+Number of registered states: 45663
+Best solution cost so far: 59
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 2)
+Conducting lazy best first search, (real) bound = 59
+Best heuristic value: 20/28 [g=0, 1 evaluated, 0 expanded, t=104.69s, 58680 KB]
+Best heuristic value: 19/28 [g=6, 11 evaluated, 10 expanded, t=104.71s, 58680 KB]
+Best heuristic value: 18/28 [g=7, 16 evaluated, 15 expanded, t=104.71s, 58680 KB]
+Best heuristic value: 17/28 [g=8, 17 evaluated, 16 expanded, t=104.72s, 58680 KB]
+Best heuristic value: 17/27 [g=9, 18 evaluated, 17 expanded, t=104.72s, 58680 KB]
+Best heuristic value: 16/27 [g=10, 20 evaluated, 19 expanded, t=104.72s, 58680 KB]
+Best heuristic value: 16/26 [g=11, 21 evaluated, 20 expanded, t=104.72s, 58680 KB]
+Best heuristic value: 15/26 [g=12, 26 evaluated, 25 expanded, t=104.72s, 58680 KB]
+Best heuristic value: 14/26 [g=13, 33 evaluated, 32 expanded, t=104.73s, 58680 KB]
+Best heuristic value: 13/26 [g=15, 44 evaluated, 42 expanded, t=104.75s, 58680 KB]
+Best heuristic value: 13/24 [g=16, 50 evaluated, 47 expanded, t=104.76s, 58680 KB]
+Best heuristic value: 13/23 [g=14, 54 evaluated, 51 expanded, t=104.76s, 58680 KB]
+Best heuristic value: 13/22 [g=15, 55 evaluated, 52 expanded, t=104.76s, 58680 KB]
+Best heuristic value: 13/20 [g=20, 74 evaluated, 70 expanded, t=104.79s, 58680 KB]
+Best heuristic value: 13/19 [g=21, 75 evaluated, 71 expanded, t=104.79s, 58680 KB]
+Best heuristic value: 13/18 [g=23, 77 evaluated, 73 expanded, t=104.79s, 58680 KB]
+Best heuristic value: 13/17 [g=24, 79 evaluated, 75 expanded, t=104.79s, 58680 KB]
+Best heuristic value: 13/16 [g=25, 81 evaluated, 76 expanded, t=104.79s, 58680 KB]
+Best heuristic value: 13/15 [g=27, 85 evaluated, 80 expanded, t=104.8s, 58680 KB]
+Best heuristic value: 13/13 [g=28, 87 evaluated, 82 expanded, t=104.8s, 58680 KB]
+Best heuristic value: 13/12 [g=29, 89 evaluated, 84 expanded, t=104.8s, 58680 KB]
+Best heuristic value: 11/11 [g=31, 93 evaluated, 88 expanded, t=104.8s, 58680 KB]
+Best heuristic value: 9/10 [g=32, 95 evaluated, 90 expanded, t=104.81s, 58680 KB]
+Best heuristic value: 8/9 [g=33, 97 evaluated, 92 expanded, t=104.81s, 58680 KB]
+Best heuristic value: 8/8 [g=34, 99 evaluated, 94 expanded, t=104.82s, 58680 KB]
+Best heuristic value: 7/7 [g=35, 101 evaluated, 96 expanded, t=104.82s, 58680 KB]
+Best heuristic value: 6/6 [g=36, 103 evaluated, 98 expanded, t=104.82s, 58680 KB]
+Best heuristic value: 4/5 [g=37, 105 evaluated, 100 expanded, t=104.82s, 58680 KB]
+Best heuristic value: 3/4 [g=38, 107 evaluated, 102 expanded, t=104.82s, 58680 KB]
+Best heuristic value: 2/3 [g=39, 109 evaluated, 104 expanded, t=104.82s, 58680 KB]
+Best heuristic value: 2/2 [g=40, 111 evaluated, 106 expanded, t=104.82s, 58680 KB]
+Best heuristic value: 1/2 [g=41, 1805 evaluated, 1614 expanded, 280 reopened, t=106.44s, 58812 KB]
+Best heuristic value: 1/1 [g=55, 13004 evaluated, 10709 expanded, 710 reopened, t=117.27s, 59340 KB]
+Solution found!
+Actual search time: 12.58s [t=117.27s]
+move-thin-snake pos1-7 pos2-7 dir-down (1)
+move-thin-snake pos2-7 pos3-7 dir-down (1)
+move-thin-snake pos3-7 pos4-7 dir-down (1)
+move-thin-snake pos4-7 pos5-7 dir-down (1)
+move-thin-snake pos5-7 pos5-6 dir-left (1)
+move-thin-snake pos5-6 pos5-5 dir-left (1)
+move-thin-snake-and-first-eat pos5-5 pos5-4 dir-left (1)
+move-fat-snake pos5-4 pos4-4 pos5-5 pos5-4 dir-up (1)
+move-and-eat pos4-4 pos4-5 dir-right (1)
+move-fat-snake pos4-5 pos5-5 pos5-4 pos4-4 dir-down (1)
+move-fat-snake pos5-5 pos5-6 pos4-4 pos4-5 dir-right (1)
+move-fat-snake pos5-6 pos5-7 pos4-5 pos5-5 dir-right (1)
+move-fat-snake pos5-7 pos4-7 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos4-7 pos3-7 pos5-6 pos5-7 dir-up (1)
+move-fat-snake pos3-7 pos2-7 pos5-7 pos4-7 dir-up (1)
+move-fat-snake pos2-7 pos1-7 pos4-7 pos3-7 dir-up (1)
+move-fat-snake pos1-7 pos1-6 pos3-7 pos2-7 dir-left (1)
+move-fat-snake pos1-6 pos1-5 pos2-7 pos1-7 dir-left (1)
+move-fat-snake pos1-5 pos1-4 pos1-7 pos1-6 dir-left (1)
+move-fat-snake pos1-4 pos1-3 pos1-6 pos1-5 dir-left (1)
+move-fat-snake pos1-3 pos1-2 pos1-5 pos1-4 dir-left (1)
+move-and-eat pos1-2 pos2-2 dir-down (1)
+move-fat-snake pos2-2 pos2-1 pos1-4 pos1-3 dir-left (1)
+move-and-eat pos2-1 pos1-1 dir-up (1)
+move-fat-snake pos1-1 pos0-1 pos1-3 pos1-2 dir-up (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-2 pos2-2 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos2-2 pos2-1 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos2-1 pos1-1 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos1-1 pos0-1 dir-up (1)
+move-fat-snake pos2-1 pos1-1 pos0-1 pos0-0 dir-up (1)
+move-fat-snake pos1-1 pos0-1 pos0-0 pos1-0 dir-up (1)
+move-and-eat pos0-1 pos0-2 dir-right (1)
+move-fat-snake pos0-2 pos1-2 pos1-0 pos2-0 dir-down (1)
+move-fat-snake pos1-2 pos1-3 pos2-0 pos3-0 dir-right (1)
+move-fat-snake pos1-3 pos1-4 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-4 pos1-5 pos3-1 pos2-1 dir-right (1)
+move-fat-snake pos1-5 pos1-6 pos2-1 pos1-1 dir-right (1)
+move-fat-snake pos1-6 pos1-7 pos1-1 pos0-1 dir-right (1)
+move-fat-snake pos1-7 pos2-7 pos0-1 pos0-2 dir-down (1)
+move-fat-snake pos2-7 pos3-7 pos0-2 pos1-2 dir-down (1)
+move-fat-snake pos3-7 pos4-7 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos4-7 pos5-7 pos1-3 pos1-4 dir-down (1)
+move-fat-snake pos5-7 pos5-6 pos1-4 pos1-5 dir-left (1)
+move-fat-snake pos5-6 pos5-5 pos1-5 pos1-6 dir-left (1)
+move-and-eat pos5-5 pos6-5 dir-down (1)
+move-fat-snake pos6-5 pos6-4 pos1-6 pos1-7 dir-left (1)
+move-and-eat pos6-4 pos6-3 dir-left (1)
+move-and-eat pos6-3 pos6-2 dir-left (1)
+move-and-eat pos6-2 pos5-2 dir-up (1)
+move-fat-snake pos5-2 pos5-3 pos1-7 pos2-7 dir-right (1)
+move-and-eat pos5-3 pos4-3 dir-up (1)
+move-fat-snake pos4-3 pos4-4 pos2-7 pos3-7 dir-right (1)
+move-and-eat pos4-4 pos3-4 dir-up (1)
+move-and-eat pos3-4 pos3-5 dir-right (1)
+Plan length: 56 step(s).
+Plan cost: 56
+Initial state h value: 20/28.
+Expanded 10710 state(s).
+Reopened 710 state(s).
+Evaluated 13005 state(s).
+Evaluations: 26010
+Generated 15282 state(s).
+Dead ends: 2294 state(s).
+Number of registered states: 45666
+Best solution cost so far: 56
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 1)
+Conducting lazy best first search, (real) bound = 56
+Best heuristic value: 20/28 [g=0, 1 evaluated, 0 expanded, t=117.27s, 60696 KB]
+Best heuristic value: 19/28 [g=6, 12 evaluated, 11 expanded, t=117.29s, 60696 KB]
+Best heuristic value: 18/28 [g=7, 17 evaluated, 16 expanded, t=117.29s, 60696 KB]
+Best heuristic value: 17/28 [g=8, 22 evaluated, 21 expanded, t=117.29s, 60696 KB]
+Best heuristic value: 17/27 [g=9, 29 evaluated, 28 expanded, t=117.3s, 60696 KB]
+Best heuristic value: 16/27 [g=10, 38 evaluated, 37 expanded, t=117.31s, 60696 KB]
+Best heuristic value: 15/27 [g=9, 42 evaluated, 41 expanded, t=117.32s, 60696 KB]
+Best heuristic value: 14/26 [g=11, 45 evaluated, 44 expanded, t=117.32s, 60696 KB]
+Best heuristic value: 13/25 [g=12, 48 evaluated, 47 expanded, t=117.32s, 60696 KB]
+Best heuristic value: 11/25 [g=13, 55 evaluated, 54 expanded, t=117.34s, 60828 KB]
+Best heuristic value: 10/23 [g=14, 56 evaluated, 55 expanded, t=117.34s, 60828 KB]
+Best heuristic value: 9/22 [g=15, 57 evaluated, 56 expanded, t=117.34s, 60828 KB]
+Best heuristic value: 8/21 [g=17, 75 evaluated, 72 expanded, t=117.35s, 60828 KB]
+Best heuristic value: 8/20 [g=18, 91 evaluated, 86 expanded, t=117.38s, 60828 KB]
+Best heuristic value: 7/20 [g=19, 248 evaluated, 232 expanded, t=117.57s, 60828 KB]
+Best heuristic value: 7/19 [g=21, 732 evaluated, 673 expanded, t=118.19s, 60828 KB]
+Best heuristic value: 7/18 [g=21, 824 evaluated, 753 expanded, t=118.3s, 60828 KB]
+Best heuristic value: 7/17 [g=22, 825 evaluated, 754 expanded, t=118.3s, 60828 KB]
+Best heuristic value: 7/16 [g=23, 826 evaluated, 755 expanded, t=118.3s, 60828 KB]
+Best heuristic value: 7/15 [g=25, 843 evaluated, 772 expanded, t=118.32s, 60828 KB]
+Best heuristic value: 7/13 [g=26, 851 evaluated, 779 expanded, t=118.32s, 60828 KB]
+Best heuristic value: 7/12 [g=27, 852 evaluated, 780 expanded, t=118.33s, 60828 KB]
+Best heuristic value: 7/11 [g=29, 854 evaluated, 782 expanded, t=118.33s, 60828 KB]
+Best heuristic value: 7/10 [g=30, 858 evaluated, 786 expanded, t=118.33s, 60828 KB]
+Best heuristic value: 7/9 [g=31, 864 evaluated, 792 expanded, t=118.33s, 60828 KB]
+Best heuristic value: 7/8 [g=32, 885 evaluated, 811 expanded, t=118.35s, 60828 KB]
+Best heuristic value: 7/7 [g=33, 892 evaluated, 818 expanded, t=118.36s, 60828 KB]
+Best heuristic value: 6/6 [g=34, 916 evaluated, 841 expanded, t=118.38s, 60828 KB]
+Best heuristic value: 4/5 [g=35, 923 evaluated, 848 expanded, t=118.39s, 60828 KB]
+Best heuristic value: 3/4 [g=36, 943 evaluated, 865 expanded, t=118.41s, 60828 KB]
+Best heuristic value: 2/3 [g=37, 952 evaluated, 874 expanded, t=118.41s, 60828 KB]
+Best heuristic value: 2/2 [g=38, 962 evaluated, 881 expanded, t=118.41s, 60828 KB]
+Best heuristic value: 1/2 [g=41, 4403 evaluated, 3933 expanded, 20 reopened, t=122.1s, 60960 KB]
+Best heuristic value: 1/1 [g=54, 10794 evaluated, 8955 expanded, 23 reopened, t=128.11s, 61356 KB]
+Solution found!
+Actual search time: 10.84s [t=128.11s]
+move-thin-snake pos1-7 pos2-7 dir-down (1)
+move-thin-snake pos2-7 pos3-7 dir-down (1)
+move-thin-snake pos3-7 pos4-7 dir-down (1)
+move-thin-snake pos4-7 pos5-7 dir-down (1)
+move-thin-snake pos5-7 pos5-6 dir-left (1)
+move-thin-snake pos5-6 pos5-5 dir-left (1)
+move-thin-snake-and-first-eat pos5-5 pos6-5 dir-down (1)
+move-fat-snake pos6-5 pos6-4 pos5-5 pos6-5 dir-left (1)
+move-and-eat pos6-4 pos5-4 dir-up (1)
+move-fat-snake pos5-4 pos5-5 pos6-5 pos6-4 dir-right (1)
+move-fat-snake pos5-5 pos5-6 pos6-4 pos5-4 dir-right (1)
+move-fat-snake pos5-6 pos5-7 pos5-4 pos5-5 dir-right (1)
+move-fat-snake pos5-7 pos4-7 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos4-7 pos3-7 pos5-6 pos5-7 dir-up (1)
+move-fat-snake pos3-7 pos2-7 pos5-7 pos4-7 dir-up (1)
+move-fat-snake pos2-7 pos1-7 pos4-7 pos3-7 dir-up (1)
+move-fat-snake pos1-7 pos1-6 pos3-7 pos2-7 dir-left (1)
+move-fat-snake pos1-6 pos1-5 pos2-7 pos1-7 dir-left (1)
+move-fat-snake pos1-5 pos1-4 pos1-7 pos1-6 dir-left (1)
+move-fat-snake pos1-4 pos1-3 pos1-6 pos1-5 dir-left (1)
+move-fat-snake pos1-3 pos1-2 pos1-5 pos1-4 dir-left (1)
+move-and-eat pos1-2 pos2-2 dir-down (1)
+move-fat-snake pos2-2 pos2-1 pos1-4 pos1-3 dir-left (1)
+move-and-eat pos2-1 pos1-1 dir-up (1)
+move-fat-snake pos1-1 pos0-1 pos1-3 pos1-2 dir-up (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-2 pos2-2 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos2-2 pos2-1 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos2-1 pos1-1 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos1-1 pos0-1 dir-up (1)
+move-fat-snake pos2-1 pos1-1 pos0-1 pos0-0 dir-up (1)
+move-fat-snake pos1-1 pos0-1 pos0-0 pos1-0 dir-up (1)
+move-and-eat pos0-1 pos0-2 dir-right (1)
+move-fat-snake pos0-2 pos1-2 pos1-0 pos2-0 dir-down (1)
+move-fat-snake pos1-2 pos1-3 pos2-0 pos3-0 dir-right (1)
+move-fat-snake pos1-3 pos1-4 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-4 pos1-5 pos3-1 pos2-1 dir-right (1)
+move-fat-snake pos1-5 pos1-6 pos2-1 pos1-1 dir-right (1)
+move-fat-snake pos1-6 pos1-7 pos1-1 pos0-1 dir-right (1)
+move-fat-snake pos1-7 pos2-7 pos0-1 pos0-2 dir-down (1)
+move-fat-snake pos2-7 pos3-7 pos0-2 pos1-2 dir-down (1)
+move-fat-snake pos3-7 pos4-7 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos4-7 pos5-7 pos1-3 pos1-4 dir-down (1)
+move-fat-snake pos5-7 pos5-6 pos1-4 pos1-5 dir-left (1)
+move-fat-snake pos5-6 pos5-5 pos1-5 pos1-6 dir-left (1)
+move-and-eat pos5-5 pos4-5 dir-up (1)
+move-and-eat pos4-5 pos3-5 dir-up (1)
+move-and-eat pos3-5 pos3-4 dir-left (1)
+move-fat-snake pos3-4 pos4-4 pos1-6 pos1-7 dir-down (1)
+move-and-eat pos4-4 pos4-3 dir-left (1)
+move-fat-snake pos4-3 pos5-3 pos1-7 pos2-7 dir-down (1)
+move-and-eat pos5-3 pos5-2 dir-left (1)
+move-and-eat pos5-2 pos6-2 dir-down (1)
+move-and-eat pos6-2 pos6-3 dir-right (1)
+Plan length: 55 step(s).
+Plan cost: 55
+Initial state h value: 20/28.
+Expanded 8957 state(s).
+Reopened 23 state(s).
+Evaluated 10796 state(s).
+Evaluations: 21592
+Generated 13133 state(s).
+Dead ends: 1838 state(s).
+Number of registered states: 45669
+Best solution cost so far: 55
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 1)
+Conducting lazy best first search, (real) bound = 55
+Best heuristic value: 20/28 [g=0, 1 evaluated, 0 expanded, t=128.11s, 62844 KB]
+Best heuristic value: 19/28 [g=6, 12 evaluated, 11 expanded, t=128.12s, 62844 KB]
+Best heuristic value: 18/28 [g=7, 17 evaluated, 16 expanded, t=128.14s, 62844 KB]
+Best heuristic value: 17/28 [g=8, 22 evaluated, 21 expanded, t=128.14s, 62844 KB]
+Best heuristic value: 17/27 [g=9, 29 evaluated, 28 expanded, t=128.15s, 62844 KB]
+Best heuristic value: 16/27 [g=10, 38 evaluated, 37 expanded, t=128.15s, 62844 KB]
+Best heuristic value: 15/27 [g=9, 42 evaluated, 41 expanded, t=128.16s, 62844 KB]
+Best heuristic value: 14/26 [g=11, 45 evaluated, 44 expanded, t=128.17s, 62844 KB]
+Best heuristic value: 13/25 [g=12, 48 evaluated, 47 expanded, t=128.17s, 62844 KB]
+Best heuristic value: 11/25 [g=13, 55 evaluated, 54 expanded, t=128.18s, 62844 KB]
+Best heuristic value: 10/23 [g=14, 56 evaluated, 55 expanded, t=128.18s, 62844 KB]
+Best heuristic value: 9/22 [g=15, 57 evaluated, 56 expanded, t=128.18s, 62844 KB]
+Best heuristic value: 8/21 [g=17, 75 evaluated, 72 expanded, t=128.22s, 62844 KB]
+Best heuristic value: 8/20 [g=18, 91 evaluated, 86 expanded, t=128.24s, 62844 KB]
+Best heuristic value: 7/20 [g=19, 248 evaluated, 232 expanded, t=128.48s, 62844 KB]
+Best heuristic value: 7/19 [g=21, 732 evaluated, 673 expanded, t=129.05s, 62844 KB]
+Best heuristic value: 7/18 [g=21, 824 evaluated, 753 expanded, t=129.16s, 62844 KB]
+Best heuristic value: 7/17 [g=22, 825 evaluated, 754 expanded, t=129.17s, 62844 KB]
+Best heuristic value: 7/16 [g=23, 826 evaluated, 755 expanded, t=129.17s, 62844 KB]
+Best heuristic value: 7/15 [g=25, 843 evaluated, 772 expanded, t=129.19s, 62844 KB]
+Best heuristic value: 7/13 [g=26, 851 evaluated, 779 expanded, t=129.2s, 62844 KB]
+Best heuristic value: 7/12 [g=27, 852 evaluated, 780 expanded, t=129.2s, 62844 KB]
+Best heuristic value: 7/11 [g=29, 854 evaluated, 782 expanded, t=129.2s, 62844 KB]
+Best heuristic value: 7/10 [g=30, 858 evaluated, 786 expanded, t=129.21s, 62844 KB]
+Best heuristic value: 7/9 [g=31, 864 evaluated, 792 expanded, t=129.21s, 62844 KB]
+Best heuristic value: 7/8 [g=32, 885 evaluated, 811 expanded, t=129.22s, 62844 KB]
+Best heuristic value: 7/7 [g=33, 892 evaluated, 818 expanded, t=129.24s, 62844 KB]
+Best heuristic value: 6/6 [g=34, 916 evaluated, 841 expanded, t=129.25s, 62844 KB]
+Best heuristic value: 4/5 [g=35, 923 evaluated, 848 expanded, t=129.26s, 62844 KB]
+Best heuristic value: 3/4 [g=36, 943 evaluated, 865 expanded, t=129.27s, 62844 KB]
+Best heuristic value: 2/3 [g=37, 952 evaluated, 874 expanded, t=129.28s, 62844 KB]
+Best heuristic value: 2/2 [g=38, 962 evaluated, 881 expanded, t=129.29s, 62844 KB]
+Best heuristic value: 1/2 [g=41, 4403 evaluated, 3933 expanded, 20 reopened, t=132.8s, 62976 KB]
+Best heuristic value: 1/1 [g=54, 10794 evaluated, 8955 expanded, 23 reopened, t=138.93s, 63372 KB]
+Completely explored state space -- no solution!
+Actual search time: 49.18s [t=177.29s]
+Initial state h value: 20/28.
+Expanded 39425 state(s).
+Reopened 1311 state(s).
+Evaluated 47054 state(s).
+Evaluations: 94108
+Generated 55701 state(s).
+Dead ends: 7629 state(s).
+Number of registered states: 46189
+Best solution cost so far: 55
+No solution found - keep searching
+Actual search time: 176.65s [t=177.29s]
+Cumulative statistics:
+Expanded 139287 state(s).
+Reopened 4511 state(s).
+Evaluated 168634 state(s).
+Evaluations: 337268
+Generated 198216 state(s).
+Dead ends: 0 state(s).
+Search time: 176.65s
+Total time: 177.29s
+Solution found.
+Peak memory: 64296 KB
+returncode: 0
+
+plan manager: found new plan with cost 62
+plan manager: found new plan with cost 60
+plan manager: found new plan with cost 59
+plan manager: found new plan with cost 56
+plan manager: found new plan with cost 55
+Exit codes: [5, 0, 0, 0]

@@ -1,0 +1,848 @@
+INFO     Running translator.
+INFO     translator inputs: ['/home/maria/Documents/team7/problem-2-1/domain.pddl', '/home/maria/Documents/team7/problem-2-1/problem-2-1.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.000s CPU, 0.007s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.007s wall-clock]
+Preparing model... [0.000s CPU, 0.005s wall-clock]
+Generated 137 rules.
+Computing model... [0.100s CPU, 0.100s wall-clock]
+4702 relevant atoms
+2507 auxiliary atoms
+7209 final queue length
+26176 total queue pushes
+Completing instantiation... [0.410s CPU, 0.429s wall-clock]
+Instantiating: [0.520s CPU, 0.545s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.020s CPU, 0.015s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+80 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.020s CPU, 0.018s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.030s CPU, 0.032s wall-clock]
+Translating task: [5.230s CPU, 5.333s wall-clock]
+121835 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+4195 operators removed
+0 axioms removed
+2 propositions removed
+Detecting unreachable propositions: [3.890s CPU, 3.953s wall-clock]
+Translator variables: 83
+Translator derived variables: 0
+Translator facts: 237
+Translator goal facts: 9
+Translator mutex groups: 5
+Translator total mutex groups size: 152
+Translator operators: 68830
+Translator axioms: 0
+Translator task size: 808175
+Translator peak memory: 315176 KB
+Writing output... [0.880s CPU, 0.890s wall-clock]
+Done! [10.610s CPU, 10.818s wall-clock]
+INFO     Running preprocessor.
+INFO     preprocessor input: output.sas
+INFO     preprocessor arguments: ['--h2_time_limit', '30']
+Building causal graph...
+The causal graph is not acyclic.
+83 variables of 83 necessary
+1 of 5 mutex groups necessary.
+68830 of 68830 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 237 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=6889, notReached=46270, spurious=3010
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=44727, notReached=8432, spurious=3010
+30425 operators are spurious because were not triggered
+Unreachable proposition: Atom thinsnake(pos0-0)
+Unreachable proposition: Atom thinsnake(pos0-1)
+Unreachable proposition: Atom thinsnake(pos0-2)
+Unreachable proposition: Atom thinsnake(pos0-4)
+Unreachable proposition: Atom thinsnake(pos0-5)
+Unreachable proposition: Atom thinsnake(pos0-6)
+Unreachable proposition: Atom thinsnake(pos1-1)
+Unreachable proposition: Atom thinsnake(pos1-2)
+Unreachable proposition: Atom thinsnake(pos1-3)
+Unreachable proposition: Atom thinsnake(pos1-4)
+Unreachable proposition: Atom thinsnake(pos1-5)
+Unreachable proposition: Atom thinsnake(pos1-6)
+Unreachable proposition: Atom thinsnake(pos2-0)
+Unreachable proposition: Atom thinsnake(pos2-1)
+Unreachable proposition: Atom thinsnake(pos2-2)
+Unreachable proposition: Atom thinsnake(pos2-4)
+Unreachable proposition: Atom thinsnake(pos2-5)
+Unreachable proposition: Atom thinsnake(pos2-6)
+H^2 mutexes added fw: 1934, unreachable: 18
+22 of 38405 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=40770, notReached=3957, spurious=11442
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=44719, notReached=8, spurious=11442
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 8, unreachable: 0
+0 of 38383 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=6889, notReached=37830, spurious=11450
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=44719, notReached=0, spurious=11450
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 0, unreachable: 0
+0 of 38383 operators detected as spurious
+Total mutex and disambiguation time: 4.41485 iterations: 3
+972 of 972 mutex groups necessary.
+38383 of 68830 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 38383
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 83
+972 of 972 mutex groups necessary.
+38383 of 38383 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+83 variables of 83 of 83 necessary
+The causal graph is not acyclic.
+83 variables of 83 necessary
+972 of 972 mutex groups necessary.
+38383 of 38383 operators necessary.
+0 of 0 axiom rules necessary.
+Preprocessor variables: 83
+Preprocessor facts: 219
+Preprocessor derived variables: 0
+Preprocessor operators: 38383
+Preprocessor mutex groups: 972
+Preprocessor task size: 466614
+Writing output...
+done
+INFO     Running search.
+INFO     search input: output
+INFO     search portfolio: /planner/driver/portfolios/seq_sat_saarplan.py
+External time limits: 1800, 1800
+Internal time limit: 1800
+External memory limits: 8589934592, 8589934592
+Internal memory limit: 8000000000
+remaining time at start: 1783.27
+remaining time: 1783.27
+config 0: relative time 100, remaining 1800
+g bound: infinity
+next plan number: 1
+args: ['/planner/driver/../fast-downward-decoupled/search/downward-release', '--decoupling', 'fork(search_type=sat, pruning=cost_frontier(irrelevance=TRANSITIONS), max_leaf_size=1000000)', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 99.07 -> (100, 101)
+using frontier pruning method
+performing irrelevance analysis in leaf factors
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using fork factoring profile
+reading input... [t=0.00162774s]
+done reading input! [t=0.184707s]
+building causal graph...done! [t=0.0438547s]
+factoring time 0.0485826s
+Error while factoring planning task!
+No factoring found!
+Search stopped without finding a solution.
+Peak memory: 35160 KB
+returncode: 5
+
+remaining time: 1783.01
+config 1: relative time 600, remaining 1700
+g bound: infinity
+next plan number: 1
+args: ['/planner/driver/../fast-downward-decoupled/search/downward-release', '--decoupling', 'portfolio(fallback_on_abstain=true, overwrite_options=true, choose_max_leaves=true,          factorings=[fork(search_type=sat, max_leaf_size=1000000), ifork(search_type=sat, max_leaf_size=1000000), incarcs(search_type=sat, max_leaf_size=100000)])', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity, symmetry=symmetry_state_pruning(lex_prices=false, lex_num_states=false, lex_goal_cost=false))', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 629.30 -> (630, 631)
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using inverted-fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 100000
+using default pruning method: BasicPruning
+using incident-arcs factoring profile
+performing Star Decoupled A* search
+using default pruning method: BasicPruning
+using factoring portfolio
+reading input... [t=0s]
+done reading input! [t=0.17664s]
+building causal graph...done! [t=0.050794s]
+factoring time 0.0808826s
+No factoring found, falling back to standard search.
+Variables: 83
+Bytes per state: 12
+Building successor generator...done! [t=0.300649s]
+peak memory difference for root successor generator creation: 9000 KB
+time for root successor generation creation: 0.0211026s
+done! [t=0.300649s]
+done initalizing global data [t=0.300649s]
+Creating symmetry graph stabilizing goal only and using orbit search.
+Initializing symmetry 
+Using Bliss to find group generators
+Got 2 group generators, time step: [t=0.444743s]
+Number of generators: 2
+done initializing symmetries [t=0.453989s]
+Conducting lazy best first search, (real) bound = 2147483647
+Initializing FF heuristic...
+Initializing additive heuristic...
+Simplifying 218835 unary operators... done! [218835 unary operators]
+Best heuristic value: 12 [g=0, 1 evaluated, 0 expanded, t=1.00845s, 133988 KB]
+Best heuristic value: 11 [g=4, 6 evaluated, 5 expanded, t=1.06954s, 133988 KB]
+Best heuristic value: 9 [g=8, 18 evaluated, 16 expanded, t=1.2369s, 133988 KB]
+Best heuristic value: 8 [g=9, 20 evaluated, 18 expanded, t=1.25682s, 133988 KB]
+Best heuristic value: 7 [g=12, 23 evaluated, 21 expanded, t=1.29764s, 133988 KB]
+Best heuristic value: 6 [g=13, 24 evaluated, 22 expanded, t=1.29764s, 133988 KB]
+Best heuristic value: 5 [g=16, 27 evaluated, 25 expanded, t=1.32987s, 133988 KB]
+Best heuristic value: 3 [g=17, 29 evaluated, 27 expanded, t=1.34048s, 133988 KB]
+Best heuristic value: 2 [g=18, 30 evaluated, 28 expanded, t=1.35252s, 133988 KB]
+Best heuristic value: 1 [g=19, 31 evaluated, 29 expanded, t=1.36074s, 133988 KB]
+Solution found!
+Actual search time: 0.904108s [t=1.36074s]
+move-thin-snake-and-first-eat pos1-0 pos0-0 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos1-0 pos0-0 dir-right (1)
+move-and-eat pos0-1 pos0-2 dir-right (1)
+move-fat-snake pos0-2 pos1-2 pos0-0 pos0-1 dir-down (1)
+move-and-eat pos1-2 pos2-2 dir-down (1)
+move-fat-snake pos2-2 pos2-1 pos0-1 pos0-2 dir-left (1)
+move-and-eat pos2-1 pos2-0 dir-left (1)
+move-fat-snake pos2-0 pos1-0 pos0-2 pos1-2 dir-up (1)
+move-and-eat pos1-0 pos1-1 dir-right (1)
+move-fat-snake pos1-1 pos0-1 pos1-2 pos2-2 dir-up (1)
+move-fat-snake pos0-1 pos0-2 pos2-2 pos2-1 dir-right (1)
+move-fat-snake pos0-2 pos1-2 pos2-1 pos2-0 dir-down (1)
+move-fat-snake-and-box pos1-2 pos1-3 pos2-0 pos1-0 pos1-4 dir-right (1)
+move-fat-snake-and-box pos1-3 pos1-4 pos1-0 pos1-1 pos1-5 dir-right (1)
+move-fat-snake pos1-4 pos0-4 pos1-1 pos0-1 dir-up (1)
+move-and-eat pos0-4 pos0-5 dir-right (1)
+move-box-and-eat pos0-5 pos1-5 pos2-5 dir-down (1)
+move-and-eat pos1-5 pos1-6 dir-right (1)
+move-fat-snake pos1-6 pos2-6 pos0-1 pos0-2 dir-down (1)
+move-box-and-eat pos2-6 pos2-5 pos2-4 dir-left (1)
+Plan length: 20 step(s).
+Plan cost: 20
+Initial state h value: 12.
+Expanded 30 state(s).
+Reopened 0 state(s).
+Evaluated 32 state(s).
+Evaluations: 32
+Generated 51 state(s).
+Dead ends: 1 state(s).
+Number of registered states: 46
+Search time: 1.06009s
+Total time: 1.36074s
+Solution found.
+Peak memory: 133988 KB
+returncode: 0
+
+plan manager: found new plan with cost 20
+remaining time: 1781.63
+config 2: relative time 1100, remaining 1100
+g bound: 19
+next plan number: 2
+args: ['/planner/driver/../fast-downward-conjunctions/builds/release64clangpgonative/bin/downward', '--if-unit-cost', '--heuristic', 'hcff_normalcost=cff(seed=42, cache_estimates=false, cost_type=PLUSONE)', '--heuristic', 'hn_normalcost=novelty(cache_estimates=false)', '--heuristic', 'tmp_normalcost=novelty_linker(hcff_normalcost, [hn_normalcost])', '--heuristic', 'hlm_normalcost=lmcount(lm_rhw(reasonable_orders=true))', '--search', 'ipc18_iterated([grey_initial_state_search(grey_painting=all_prefer_inv, cost_type=PLUSONE),                            ehc_cn(hcff_normalcost, preferred=hcff_normalcost, novelty=hn_normalcost, seed=42, max_growth=8, max_time=500),                            lazy_iterated_weights_c([hcff_normalcost, hlm_normalcost], preferred=[hcff_normalcost], conjunctions_heuristic=hcff_normalcost,                                                    strategy=maintain_fixed_size_probabilistic(initial_removal_mode=UNTIL_BOUND, base_probability=0.02, target_growth_ratio=1.50))                           ], delete_after_phase_heuristics=[hn_normalcost, tmp_normalcost], delete_after_phase_phases=[1, 1], continue_on_fail=true, bound=19)', '--if-non-unit-cost', '--heuristic', 'hcff=cff(seed=42, cache_estimates=false, cost_type=ONE)', '--heuristic', 'hn=novelty(cache_estimates=false)', '--heuristic', 'tmp=novelty_linker(hcff, [hn])', '--heuristic', 'hcff_normalcost=cff(seed=42, cache_estimates=false, cost_type=PLUSONE)', '--heuristic', 'hn_normalcost=novelty(cache_estimates=false)', '--heuristic', 'tmp_normalcost=novelty_linker(hcff_normalcost, [hn_normalcost])', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=ONE), cost_type=ONE)', '--heuristic', 'hlm_normalcost=lmcount(lm_rhw(reasonable_orders=true))', '--search', 'ipc18_iterated([grey_initial_state_search(grey_painting=all_prefer_inv, cost_type=ONE),                            ehc_cn(hcff, preferred=hcff, novelty=hn, seed=42, cost_type=ONE, max_growth=8, max_time=500),                            lazy_greedy_c([hcff, hlm], preferred=[hcff], conjunctions_heuristic=hcff,                                          strategy=maintain_fixed_size_probabilistic(initial_removal_mode=UNTIL_BOUND, base_probability=0.02, target_growth_ratio=1.50), cost_type=ONE),                            ehc_cn(hcff_normalcost, preferred=hcff_normalcost, novelty=hn_normalcost, seed=42, max_growth=8, max_time=100),                            lazy_iterated_weights_c([hcff_normalcost, hlm_normalcost], preferred=[hcff_normalcost], conjunctions_heuristic=hcff_normalcost,                                                    strategy=maintain_fixed_size_probabilistic(generate_initially=true, initial_removal_mode=UNTIL_BOUND, base_probability=0.02, target_growth_ratio=1.50))                           ], decision_point=1, skip_if_solved=[2], skip_if_failed=[3],                           delete_after_phase_heuristics=[hn, tmp, hcff, hlm, hn_normalcost, tmp_normalcost],                           delete_after_phase_phases=[1, 1, 2, 2, 3, 3], continue_on_fail=true, bound=19)', '--always', '--internal-previous-portfolio-plans', '1', '--internal-plan-file', 'sas_plan']
+timeout: 1781.63 -> (1782, 1783)
+reading input... [t=0.000644498s]
+done reading input! [t=0.1827s]
+packing state variables...done! [t=0.185036s]
+Variables: 83
+FactPairs: 219
+Bytes per state: 12
+Building successor generator...done! [t=0.202882s]
+done initalizing global data [t=0.210402s]
+cross context: 1
+best supporter function: h^Cadd
+no relaxed plan extraction: 0
+tie breaking: RANDOM
+Initializing CFF heuristic...
+The original task would have 218835 counters.
+Finished hcff initialization, t = 0.735312s
+Initializing novelty heuristic...
+Linking novelty heuristics to the conjunctions heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 1.85555s
+Discovered 33 landmarks, of which 3 are disjunctive and 0 are conjunctive 
+51 edges
+Starting search: grey_initial_state_search(grey_painting = all_prefer_inv, cost_type = plusone)
+Simplifying 218835 unary operators... done! [218835 unary operators]
+Initializing additive heuristic...
+Initializing Red-Black Relaxation heuristic...
+Using following red facts method for relaxed plan serialization
+Using level heuristic method for black variable selection
+Running A* instead of Dijkstra. Using the distances ignoring outside conditions for heuristic estimates.
+Preferred operators (if used) are set from relaxed plan
+Conflict costs are estimated
+Initializing extended DTGs
+Adding 38383 operators to extended DTGs
+Checking invertibility...
+Done checking invertibility
+Checking connectivity...
+Done checking connectivity
+Total number of invertible variables is 0
+building causal graph...done! [t=0.0444444s]
+Invertible variables without leafs connection status: 1
+Invertible variables with one directional connection status: 0
+Setting black variables...
+Variables order is set
+Painting procedure time (in milliseconds): 1
+---------------------------------------------------------------------------------------
+0 is not invertible, marked black [64 side effects]
+1 is not invertible, marked black [64 side effects]
+2 is not invertible, marked black [65 side effects]
+3 is not invertible, marked red [65 side effects]
+4 is not invertible, marked red [68 side effects]
+5 is not invertible, marked red [68 side effects]
+6 is not invertible, marked red [63 side effects]
+7 is not invertible, marked red [63 side effects]
+8 is not invertible, marked red [78 side effects]
+9 is not invertible, marked red [67 side effects]
+10 is not invertible, marked red [67 side effects]
+11 is not invertible, marked red [66 side effects]
+12 is not invertible, marked red [67 side effects]
+13 is not invertible, marked red [66 side effects]
+14 is not invertible, marked red [69 side effects]
+15 is not invertible, marked red [69 side effects]
+16 is not invertible, marked red [69 side effects]
+17 is not invertible, marked red [69 side effects]
+18 is not invertible, marked red [69 side effects]
+19 is not invertible, marked red [69 side effects]
+20 is not invertible, marked red [68 side effects]
+21 is not invertible, marked red [68 side effects]
+22 is not invertible, marked red [68 side effects]
+23 is not invertible, marked red [68 side effects]
+24 is not invertible, marked red [69 side effects]
+25 is not invertible, marked red [69 side effects]
+26 is not invertible, marked red [69 side effects]
+27 is not invertible, marked red [69 side effects]
+28 is not invertible, marked red [69 side effects]
+29 is not invertible, marked red [69 side effects]
+30 is not invertible, marked red [65 side effects]
+31 is not invertible, marked red [65 side effects]
+32 is not invertible, marked red [68 side effects]
+33 is not invertible, marked red [68 side effects]
+34 is not invertible, marked red [71 side effects]
+35 is not invertible, marked red [68 side effects]
+36 is not invertible, marked red [68 side effects]
+37 is not invertible, marked red [68 side effects]
+38 is not invertible, marked red [68 side effects]
+39 is not invertible, marked red [68 side effects]
+40 is not invertible, marked red [68 side effects]
+41 is not invertible, marked red [68 side effects]
+42 is not invertible, marked red [70 side effects]
+43 is not invertible, marked red [70 side effects]
+44 is not invertible, marked red [70 side effects]
+45 is not invertible, marked red [70 side effects]
+46 is not invertible, marked red [70 side effects]
+47 is not invertible, marked red [70 side effects]
+48 is not invertible, marked red [70 side effects]
+49 is not invertible, marked red [70 side effects]
+50 is not invertible, marked red [70 side effects]
+51 is not invertible, marked red [70 side effects]
+52 is not invertible, marked red [70 side effects]
+53 is not invertible, marked red [70 side effects]
+54 is not invertible, marked red [73 side effects]
+55 is not invertible, marked red [73 side effects]
+56 is not invertible, marked red [73 side effects]
+57 is not invertible, marked red [73 side effects]
+58 is not invertible, marked red [72 side effects]
+59 is not invertible, marked red [72 side effects]
+60 is not invertible, marked red [74 side effects]
+61 is not invertible, marked red [74 side effects]
+62 is not invertible, marked red [74 side effects]
+63 is not invertible, marked red [74 side effects]
+64 is not invertible, marked red [73 side effects]
+65 is not invertible, marked red [73 side effects]
+66 is not invertible, marked red [73 side effects]
+67 is not invertible, marked red [74 side effects]
+68 is not invertible, marked red [74 side effects]
+69 is not invertible, marked red [74 side effects]
+70 is not invertible, marked red [74 side effects]
+71 is not invertible, marked red [74 side effects]
+72 is not invertible, marked red [76 side effects]
+73 is not invertible, marked red [82 side effects]
+74 is not invertible, marked red [5 side effects]
+75 is not invertible, marked red [4 side effects]
+76 is not invertible, marked red [5 side effects]
+77 is not invertible, marked red [4 side effects]
+78 is not invertible, marked red [6 side effects]
+79 is not invertible, marked red [6 side effects]
+80 is not invertible, marked red [6 side effects]
+81 is not invertible, marked red [8 side effects]
+82 is not invertible, marked red [7 side effects]
+---------------------------------------------------------------------------------------
+Total number of black variables is 3
+Total number of non-invertible black variables is 3
+Total number of black root variables is 0
+Total number of variables is 83
+Total number of variables with all pairs of values connected is 0
+Total number of variables with all values connected to goal is 0
+Total number of black variables with strongly connected parents only is 0
+Maximal number of side effects for black variable is 65
+---------------------------------------------------------------------------------------
+Black DAG usage status: 0
+Removing unnecessary black data for red variable 3
+Removing unnecessary black data for red variable 4
+Removing unnecessary black data for red variable 5
+Removing unnecessary black data for red variable 6
+Removing unnecessary black data for red variable 7
+Removing unnecessary black data for red variable 8
+Removing unnecessary black data for red variable 9
+Removing unnecessary black data for red variable 10
+Removing unnecessary black data for red variable 11
+Removing unnecessary black data for red variable 12
+Removing unnecessary black data for red variable 13
+Removing unnecessary black data for red variable 14
+Removing unnecessary black data for red variable 15
+Removing unnecessary black data for red variable 16
+Removing unnecessary black data for red variable 17
+Removing unnecessary black data for red variable 18
+Removing unnecessary black data for red variable 19
+Removing unnecessary black data for red variable 20
+Removing unnecessary black data for red variable 21
+Removing unnecessary black data for red variable 22
+Removing unnecessary black data for red variable 23
+Removing unnecessary black data for red variable 24
+Removing unnecessary black data for red variable 25
+Removing unnecessary black data for red variable 26
+Removing unnecessary black data for red variable 27
+Removing unnecessary black data for red variable 28
+Removing unnecessary black data for red variable 29
+Removing unnecessary black data for red variable 30
+Removing unnecessary black data for red variable 31
+Removing unnecessary black data for red variable 32
+Removing unnecessary black data for red variable 33
+Removing unnecessary black data for red variable 34
+Removing unnecessary black data for red variable 35
+Removing unnecessary black data for red variable 36
+Removing unnecessary black data for red variable 37
+Removing unnecessary black data for red variable 38
+Removing unnecessary black data for red variable 39
+Removing unnecessary black data for red variable 40
+Removing unnecessary black data for red variable 41
+Removing unnecessary black data for red variable 42
+Removing unnecessary black data for red variable 43
+Removing unnecessary black data for red variable 44
+Removing unnecessary black data for red variable 45
+Removing unnecessary black data for red variable 46
+Removing unnecessary black data for red variable 47
+Removing unnecessary black data for red variable 48
+Removing unnecessary black data for red variable 49
+Removing unnecessary black data for red variable 50
+Removing unnecessary black data for red variable 51
+Removing unnecessary black data for red variable 52
+Removing unnecessary black data for red variable 53
+Removing unnecessary black data for red variable 54
+Removing unnecessary black data for red variable 55
+Removing unnecessary black data for red variable 56
+Removing unnecessary black data for red variable 57
+Removing unnecessary black data for red variable 58
+Removing unnecessary black data for red variable 59
+Removing unnecessary black data for red variable 60
+Removing unnecessary black data for red variable 61
+Removing unnecessary black data for red variable 62
+Removing unnecessary black data for red variable 63
+Removing unnecessary black data for red variable 64
+Removing unnecessary black data for red variable 65
+Removing unnecessary black data for red variable 66
+Removing unnecessary black data for red variable 67
+Removing unnecessary black data for red variable 68
+Removing unnecessary black data for red variable 69
+Removing unnecessary black data for red variable 70
+Removing unnecessary black data for red variable 71
+Removing unnecessary black data for red variable 72
+Removing unnecessary black data for red variable 73
+Removing unnecessary black data for red variable 74
+Removing unnecessary black data for red variable 75
+Removing unnecessary black data for red variable 76
+Removing unnecessary black data for red variable 77
+Removing unnecessary black data for red variable 78
+Removing unnecessary black data for red variable 79
+Removing unnecessary black data for red variable 80
+Removing unnecessary black data for red variable 81
+Removing unnecessary black data for red variable 82
+Keeping achieving operators for red facts..
+Initializing black variables...
+Adding edges to forward graph, for the later calculation of missing values
+Precalculating all pair shortest paths
+Storing shortest paths costs ignoring external preconditions for variable 0
+=================> Calculating shortest paths in advance for variable 0 (var38) with domain size 2
+Storing shortest paths costs ignoring external preconditions for variable 1
+=================> Calculating shortest paths in advance for variable 1 (var75) with domain size 2
+Storing shortest paths costs ignoring external preconditions for variable 2
+=================> Calculating shortest paths in advance for variable 2 (var53) with domain size 2
+Finished initializing Red-Black Relaxation heuristic at time step [t=6.75834s]
+Removing unnecessary black data for red variable 0
+=================> Freeing solution for variable 0 [var38]
+Removing unnecessary black data for red variable 1
+=================> Freeing solution for variable 1 [var75]
+Removing unnecessary black data for red variable 2
+=================> Freeing solution for variable 2 [var53]
+Removing unnecessary black data for red variable 3
+Removing unnecessary black data for red variable 4
+Removing unnecessary black data for red variable 5
+Removing unnecessary black data for red variable 6
+Removing unnecessary black data for red variable 7
+Removing unnecessary black data for red variable 8
+Removing unnecessary black data for red variable 9
+Removing unnecessary black data for red variable 10
+Removing unnecessary black data for red variable 11
+Removing unnecessary black data for red variable 12
+Removing unnecessary black data for red variable 13
+Removing unnecessary black data for red variable 14
+Removing unnecessary black data for red variable 15
+Removing unnecessary black data for red variable 16
+Removing unnecessary black data for red variable 17
+Removing unnecessary black data for red variable 18
+Removing unnecessary black data for red variable 19
+Removing unnecessary black data for red variable 20
+Removing unnecessary black data for red variable 21
+Removing unnecessary black data for red variable 22
+Removing unnecessary black data for red variable 23
+Removing unnecessary black data for red variable 24
+Removing unnecessary black data for red variable 25
+Removing unnecessary black data for red variable 26
+Removing unnecessary black data for red variable 27
+Removing unnecessary black data for red variable 28
+Removing unnecessary black data for red variable 29
+Removing unnecessary black data for red variable 30
+Removing unnecessary black data for red variable 31
+Removing unnecessary black data for red variable 32
+Removing unnecessary black data for red variable 33
+Removing unnecessary black data for red variable 34
+Removing unnecessary black data for red variable 35
+Removing unnecessary black data for red variable 36
+Removing unnecessary black data for red variable 37
+Removing unnecessary black data for red variable 38
+Removing unnecessary black data for red variable 39
+Removing unnecessary black data for red variable 40
+Removing unnecessary black data for red variable 41
+Removing unnecessary black data for red variable 42
+Removing unnecessary black data for red variable 43
+Removing unnecessary black data for red variable 44
+Removing unnecessary black data for red variable 45
+Removing unnecessary black data for red variable 46
+Removing unnecessary black data for red variable 47
+Removing unnecessary black data for red variable 48
+Removing unnecessary black data for red variable 49
+Removing unnecessary black data for red variable 50
+Removing unnecessary black data for red variable 51
+Removing unnecessary black data for red variable 52
+Removing unnecessary black data for red variable 53
+Removing unnecessary black data for red variable 54
+Removing unnecessary black data for red variable 55
+Removing unnecessary black data for red variable 56
+Removing unnecessary black data for red variable 57
+Removing unnecessary black data for red variable 58
+Removing unnecessary black data for red variable 59
+Removing unnecessary black data for red variable 60
+Removing unnecessary black data for red variable 61
+Removing unnecessary black data for red variable 62
+Removing unnecessary black data for red variable 63
+Removing unnecessary black data for red variable 64
+Removing unnecessary black data for red variable 65
+Removing unnecessary black data for red variable 66
+Removing unnecessary black data for red variable 67
+Removing unnecessary black data for red variable 68
+Removing unnecessary black data for red variable 69
+Removing unnecessary black data for red variable 70
+Removing unnecessary black data for red variable 71
+Removing unnecessary black data for red variable 72
+Removing unnecessary black data for red variable 73
+Removing unnecessary black data for red variable 74
+Removing unnecessary black data for red variable 75
+Removing unnecessary black data for red variable 76
+Removing unnecessary black data for red variable 77
+Removing unnecessary black data for red variable 78
+Removing unnecessary black data for red variable 79
+Removing unnecessary black data for red variable 80
+Removing unnecessary black data for red variable 81
+Removing unnecessary black data for red variable 82
+Actual search time: 3.93039s [t=6.77804s]
+Bytes per state: 12
+No solution found - keep searching
+Initialized conflict extraction with ranking sequence [PRIORITY, FEWEST_COUNTERS]
+Starting search: ehc_cn(hcff_normalcost, preferred = hcff_normalcost, novelty = hn_normalcost, seed = 42, max_growth = 8, max_time = 500)
+Conducting enforced hill-climbing search with explicit conjunctions, (real) bound = 19
+Using preferred operators for pruning
+Breadth first search depth bound: 2147483647
+Always reevaluate the local minimum neighborhood after adding a conjunction: 0
+Cache the heuristic results of known states: 1
+conjunctions per iteration: 1
+check relaxed plan: 1
+growth bound in the number of conjunctions (including singletons): 1
+growth bound in the number of counters: 1.79769e+308
+learning time bound: 60
+|C| = 219 (including 219 singletons)
+Total number of counters: 218835
+Conjunction growth ratio: 1
+Counter growth ratio: 1
+Counter size growth ratio: 1
+Finished initialization, t = 0s
+Learning phases: 0
+Learning time: 0s
+Max learning time: 0s
+Counter growth: 1
+Counter size growth: 1
+Counter group growth: 1
+Counter group size growth: 1
+New conjunctions: 0
+Unregressable conjunctions: 11
+Unreachable conjunctions: 0
+Evaluations per second: -nan
+EHC Phases: 0
+Average expansions per EHC phase: 0
+Dead ends during learning: 0
+Dead ends during learning or backjumping: 0
+No better state after learning: 0
+Max learning stagnation count: 0
+Average learning stagnation count: 0
+Evaluations saved by buffering: 0
+Exhausted search space: 0
+Average dead end backjump length: 0
+Total time spent on evaluating novelty: 0
+Initial heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 12
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 12
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 11
+New best heuristic value for novelty(cache_estimates = false): 0
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 10
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 9
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 8
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 7
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 6
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 5
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 3
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 2
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 1
+Actual search time: 0.0256522s [t=6.82081s]
+Expanded 66 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 111
+Generated 64 state(s).
+Dead ends: 0 state(s).
+Learning phases: 2
+Learning time: 0s
+Max learning time: 0s
+Counter growth: 1
+Counter size growth: 1
+Counter group growth: 1
+Counter group size growth: 1
+New conjunctions: 0
+Unregressable conjunctions: 11
+Unreachable conjunctions: 0
+Evaluations per second: 3144.15
+EHC Phases: 22
+Average expansions per EHC phase: 3
+Dead ends during learning: 0
+Dead ends during learning or backjumping: 0
+No better state after learning: 0
+Max learning stagnation count: 0
+Average learning stagnation count: 0
+Evaluations saved by buffering: 33
+Exhausted search space: 1
+Average dead end backjump length: 0
+Total time spent on evaluating novelty: 0
+EHC phases: 22
+Average expansions per EHC phase: 3
+EHC phases of depth 1: 12 - Avg. Expansions: 1.16667
+EHC phases of depth 2: 2 - Avg. Expansions: 2
+EHC phases of depth 3: 2 - Avg. Expansions: 10
+EHC phases of depth 4: 4 - Avg. Expansions: 6.5
+No solution found - keep searching
+Initialized conflict extraction with ranking sequence [PRIORITY, FEWEST_COUNTERS]
+Starting search: lazy_iterated_weights_c(list(hcff_normalcost, hlm_normalcost), preferred = list(hcff_normalcost), conjunctions_heuristic = hcff_normalcost, strategy = maintain_fixed_size_probabilistic(initial_removal_mode = until_bound, base_probability = 0.02, target_growth_ratio = 1.50))
+Conducting lazy best first search with online learning of conjunctions, (real) bound = 19
+18 initial landmarks, 9 goal landmarks
+|C| = 219 (including 219 singletons)
+Total number of counters: 218835
+Conjunction growth ratio: 1
+Counter growth ratio: 1
+Counter size growth ratio: 1
+Learning phases: 0
+Learning time: 0s
+Max learning time: 0s
+Counter growth: 1
+Counter size growth: 1
+Counter group growth: 1
+Counter group size growth: 1
+New conjunctions: 0
+Unregressable conjunctions: 11
+Unreachable conjunctions: 0
+Evaluations per second: -nan
+Finished initialization, t = 0s
+Initial heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 12
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 15
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 12
+[g=0, 1 evaluated, 0 expanded, t=6.83047s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 13
+[g=1, 2 evaluated, 1 expanded, t=6.83047s, 204848 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 11
+[g=3, 5 evaluated, 4 expanded, t=6.83047s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 11
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 10
+[g=4, 6 evaluated, 5 expanded, t=6.83047s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 9
+[g=5, 7 evaluated, 6 expanded, t=6.84005s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 8
+[g=6, 8 evaluated, 7 expanded, t=6.84005s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 6
+[g=7, 14 evaluated, 13 expanded, t=6.85193s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 5
+[g=8, 16 evaluated, 15 expanded, t=6.86117s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 4
+[g=10, 38 evaluated, 33 expanded, t=6.88346s, 204848 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 8
+[g=14, 49 evaluated, 41 expanded, t=6.90364s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 3
+[g=19, 55 evaluated, 47 expanded, t=6.91192s, 204848 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 7
+[g=11, 71 evaluated, 62 expanded, t=6.92295s, 204848 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 6
+[g=12, 73 evaluated, 64 expanded, t=6.93393s, 204848 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 5
+[g=13, 74 evaluated, 65 expanded, t=6.93393s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 2
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 3
+[g=17, 80 evaluated, 71 expanded, t=6.93393s, 204848 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 1
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 2
+[g=18, 81 evaluated, 72 expanded, t=6.93393s, 204848 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 1
+[g=19, 82 evaluated, 73 expanded, t=6.93393s, 204848 KB]
+Completely explored state space -- no solution!
+Actual search time: 2.50139s [t=9.33185s]
+Expanded 1551 state(s).
+Reopened 0 state(s).
+Evaluated 1849 state(s).
+Evaluations: 3400
+Generated 2330 state(s).
+Dead ends: 298 state(s).
+Learning phases: 0
+Learning time: 0.448169s
+Max learning time: 0.0126717s
+Counter growth: 1.03631
+Counter size growth: 0.969409
+Counter group growth: 1.0124
+Counter group size growth: 0.969409
+New conjunctions: 107
+Unregressable conjunctions: 13
+Unreachable conjunctions: 2
+Evaluations per second: 1359.25
+Number of registered states: 1866
+No solution found - keep searching
+Actual search time: 6.4842s [t=9.33185s]
+Cumulative statistics:
+Expanded 1617 state(s).
+Reopened 0 state(s).
+Evaluated 1849 state(s).
+Evaluations: 3511
+Generated 2394 state(s).
+Dead ends: 0 state(s).
+Search time: 6.4842s
+Total time: 9.33185s
+Search stopped without finding a solution.
+Peak memory: 204848 KB
+returncode: 5
+
+remaining time: 1772.26
+config 0: relative time 600, remaining 600
+g bound: 20
+next plan number: 2
+args: ['/planner/driver/../fast-downward-decoupled/search/downward-release', '--decoupling', 'portfolio(fallback_on_abstain=true, overwrite_options=true, choose_max_leaves=true,          factorings=[fork(search_type=sat, max_leaf_size=1000000), ifork(search_type=sat, max_leaf_size=1000000), incarcs(search_type=sat, max_leaf_size=100000)])', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=20, symmetry=symmetry_state_pruning(lex_prices=false, lex_num_states=false, lex_goal_cost=false))', '--internal-previous-portfolio-plans', '1', '--internal-plan-file', 'sas_plan']
+timeout: 1772.26 -> (1773, 1774)
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using inverted-fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 100000
+using default pruning method: BasicPruning
+using incident-arcs factoring profile
+performing Star Decoupled A* search
+using default pruning method: BasicPruning
+using factoring portfolio
+reading input... [t=0s]
+done reading input! [t=0.186991s]
+building causal graph...done! [t=0.0482399s]
+factoring time 0.0700174s
+No factoring found, falling back to standard search.
+Variables: 83
+Bytes per state: 12
+Building successor generator...done! [t=0.2819s]
+peak memory difference for root successor generator creation: 9000 KB
+time for root successor generation creation: 0.0212224s
+done! [t=0.2819s]
+done initalizing global data [t=0.2819s]
+Creating symmetry graph stabilizing goal only and using orbit search.
+Initializing symmetry 
+Using Bliss to find group generators
+Got 2 group generators, time step: [t=0.425815s]
+Number of generators: 2
+done initializing symmetries [t=0.433025s]
+Conducting lazy best first search, (real) bound = 20
+Initializing FF heuristic...
+Initializing additive heuristic...
+Simplifying 218835 unary operators... done! [218835 unary operators]
+Best heuristic value: 12 [g=0, 1 evaluated, 0 expanded, t=0.965683s, 133988 KB]
+Best heuristic value: 11 [g=4, 6 evaluated, 5 expanded, t=1.0288s, 133988 KB]
+Best heuristic value: 9 [g=8, 18 evaluated, 16 expanded, t=1.16462s, 133988 KB]
+Best heuristic value: 8 [g=9, 20 evaluated, 18 expanded, t=1.18469s, 133988 KB]
+Best heuristic value: 7 [g=12, 23 evaluated, 21 expanded, t=1.22569s, 133988 KB]
+Best heuristic value: 6 [g=13, 24 evaluated, 22 expanded, t=1.22569s, 133988 KB]
+Best heuristic value: 5 [g=16, 27 evaluated, 25 expanded, t=1.2571s, 133988 KB]
+Best heuristic value: 3 [g=17, 29 evaluated, 27 expanded, t=1.26832s, 133988 KB]
+Best heuristic value: 2 [g=18, 30 evaluated, 28 expanded, t=1.27878s, 133988 KB]
+Best heuristic value: 1 [g=19, 31 evaluated, 29 expanded, t=1.27878s, 133988 KB]
+Completely explored state space -- no solution!
+Actual search time: 8.20599s [t=8.63902s]
+Initial state h value: 12.
+Expanded 592 state(s).
+Reopened 0 state(s).
+Evaluated 685 state(s).
+Evaluations: 685
+Generated 900 state(s).
+Dead ends: 93 state(s).
+Number of registered states: 685
+Search time: 8.35712s
+Total time: 8.63902s
+Search stopped without finding a solution.
+Peak memory: 133988 KB
+returncode: 5
+
+Exit codes: [5, 0, 5, 5]

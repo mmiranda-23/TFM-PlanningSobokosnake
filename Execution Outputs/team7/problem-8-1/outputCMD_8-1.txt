@@ -1,0 +1,41 @@
+INFO     Running translator.
+INFO     translator inputs: ['/home/maria/Documents/team7/problem-8-1/domain.pddl', '/home/maria/Documents/team7/problem-8-1/problem-8-1.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.000s CPU, 0.009s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.007s wall-clock]
+Preparing model... [0.000s CPU, 0.004s wall-clock]
+Generated 137 rules.
+Computing model... [0.820s CPU, 0.829s wall-clock]
+42584 relevant atoms
+6997 auxiliary atoms
+49581 final queue length
+232253 total queue pushes
+Completing instantiation... [6.020s CPU, 6.102s wall-clock]
+Instantiating: [6.880s CPU, 6.960s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.020s CPU, 0.032s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+267 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.040s CPU, 0.040s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.290s CPU, 0.296s wall-clock]
+Command '['/planner/driver/../fast-downward-conjunctions/src/translate/translate.py', '/home/maria/Documents/team7/problem-8-1/domain.pddl', '/home/maria/Documents/team7/problem-8-1/problem-8-1.pddl']' returned non-zero exit status 1

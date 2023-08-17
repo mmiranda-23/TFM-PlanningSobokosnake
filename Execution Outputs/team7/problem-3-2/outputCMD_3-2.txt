@@ -1,0 +1,1504 @@
+INFO     Running translator.
+INFO     translator inputs: ['/home/maria/Documents/team7/problem-3-2/domain.pddl', '/home/maria/Documents/team7/problem-3-2/problem-3-2.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.010s CPU, 0.020s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.011s wall-clock]
+Preparing model... [0.000s CPU, 0.007s wall-clock]
+Generated 137 rules.
+Computing model... [1.630s CPU, 1.669s wall-clock]
+50079 relevant atoms
+7997 auxiliary atoms
+58076 final queue length
+272595 total queue pushes
+Completing instantiation... [8.540s CPU, 10.745s wall-clock]
+Instantiating: [10.210s CPU, 12.457s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.060s CPU, 0.057s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+306 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.002s wall-clock]
+Computing fact groups: [0.070s CPU, 0.069s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.002s wall-clock]
+Processing axioms: [0.460s CPU, 0.702s wall-clock]
+Translating task: [10.750s CPU, 12.098s wall-clock]
+124493 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+45 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [4.850s CPU, 4.957s wall-clock]
+Translator variables: 308
+Translator derived variables: 0
+Translator facts: 796
+Translator goal facts: 12
+Translator mutex groups: 3
+Translator total mutex groups size: 305
+Translator operators: 54622
+Translator axioms: 0
+Translator task size: 712869
+Translator peak memory: 691920 KB
+Writing output... [1.120s CPU, 1.173s wall-clock]
+Done! [27.310s CPU, 31.080s wall-clock]
+INFO     Running preprocessor.
+INFO     preprocessor input: output.sas
+INFO     preprocessor arguments: ['--h2_time_limit', '30']
+Building causal graph...
+The causal graph is not acyclic.
+308 variables of 308 necessary
+1 of 3 mutex groups necessary.
+54622 of 54622 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 796 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=94864, notReached=512154, spurious=26598
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=544727, notReached=62291, spurious=26598
+9213 operators are spurious because were not triggered
+Unreachable proposition: Atom thinsnake(pos0-10)
+Unreachable proposition: Atom thinsnake(pos0-5)
+Unreachable proposition: Atom thinsnake(pos0-6)
+Unreachable proposition: Atom thinsnake(pos0-8)
+Unreachable proposition: Atom thinsnake(pos0-9)
+Unreachable proposition: Atom thinsnake(pos1-10)
+Unreachable proposition: Atom thinsnake(pos1-4)
+Unreachable proposition: Atom thinsnake(pos1-6)
+Unreachable proposition: Atom thinsnake(pos1-8)
+Unreachable proposition: Atom thinsnake(pos1-9)
+Unreachable proposition: Atom thinsnake(pos2-10)
+Unreachable proposition: Atom thinsnake(pos2-8)
+Unreachable proposition: Atom thinsnake(pos2-9)
+Unreachable proposition: Atom thinsnake(pos3-8)
+Unreachable proposition: Atom thinsnake(pos4-2)
+Unreachable proposition: Atom thinsnake(pos4-3)
+Unreachable proposition: Atom thinsnake(pos4-8)
+Unreachable proposition: Atom thinsnake(pos5-1)
+Unreachable proposition: Atom thinsnake(pos5-2)
+Unreachable proposition: Atom thinsnake(pos5-3)
+Unreachable proposition: Atom thinsnake(pos6-0)
+Unreachable proposition: Atom thinsnake(pos6-1)
+Unreachable proposition: Atom thinsnake(pos6-2)
+Unreachable proposition: Atom thinsnake(pos6-3)
+Unreachable proposition: Atom thinsnake(pos6-4)
+Unreachable proposition: Atom thinsnake(pos7-0)
+Unreachable proposition: Atom thinsnake(pos7-1)
+Unreachable proposition: Atom thinsnake(pos7-2)
+Unreachable proposition: Atom thinsnake(pos7-3)
+H^2 mutexes added fw: 26708, unreachable: 29
+982 of 45409 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=504598, notReached=40129, spurious=88889
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=544657, notReached=70, spurious=88889
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 70, unreachable: 0
+0 of 44427 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=94864, notReached=449793, spurious=88959
+Initialize m_ops fw
+Computing mutexes...
+h^mutexes could not be computed (building time)
+Total mutex and disambiguation time: 30.6784 iterations: 3
+13390 of 13390 mutex groups necessary.
+44427 of 54622 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 44427
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 308
+13390 of 13390 mutex groups necessary.
+44427 of 44427 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+308 variables of 308 of 308 necessary
+The causal graph is not acyclic.
+308 variables of 308 necessary
+13390 of 13390 mutex groups necessary.
+44427 of 44427 operators necessary.
+0 of 0 axiom rules necessary.
+Preprocessor variables: 308
+Preprocessor facts: 767
+Preprocessor derived variables: 0
+Preprocessor operators: 44427
+Preprocessor mutex groups: 13390
+Preprocessor task size: 612059
+Writing output...
+done
+INFO     Running search.
+INFO     search input: output
+INFO     search portfolio: /planner/driver/portfolios/seq_sat_saarplan.py
+External time limits: 1800, 1800
+Internal time limit: 1800
+External memory limits: 8589934592, 8589934592
+Internal memory limit: 8000000000
+remaining time at start: 1738.35
+remaining time: 1738.35
+config 0: relative time 100, remaining 1800
+g bound: infinity
+next plan number: 1
+args: ['/planner/driver/../fast-downward-decoupled/search/downward-release', '--decoupling', 'fork(search_type=sat, pruning=cost_frontier(irrelevance=TRANSITIONS), max_leaf_size=1000000)', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 96.58 -> (97, 98)
+using frontier pruning method
+performing irrelevance analysis in leaf factors
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using fork factoring profile
+reading input... [t=0.00254727s]
+done reading input! [t=0.318879s]
+building causal graph...done! [t=0.30682s]
+factoring time 0.387357s
+Error while factoring planning task!
+No factoring found!
+Search stopped without finding a solution.
+Peak memory: 54888 KB
+returncode: 5
+
+remaining time: 1737.59
+config 1: relative time 600, remaining 1700
+g bound: infinity
+next plan number: 1
+args: ['/planner/driver/../fast-downward-decoupled/search/downward-release', '--decoupling', 'portfolio(fallback_on_abstain=true, overwrite_options=true, choose_max_leaves=true,          factorings=[fork(search_type=sat, max_leaf_size=1000000), ifork(search_type=sat, max_leaf_size=1000000), incarcs(search_type=sat, max_leaf_size=100000)])', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity, symmetry=symmetry_state_pruning(lex_prices=false, lex_num_states=false, lex_goal_cost=false))', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 613.27 -> (614, 615)
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using inverted-fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 100000
+using default pruning method: BasicPruning
+using incident-arcs factoring profile
+performing Star Decoupled A* search
+using default pruning method: BasicPruning
+using factoring portfolio
+reading input... [t=0s]
+done reading input! [t=0.353132s]
+building causal graph...done! [t=0.319527s]
+factoring time 0.508681s
+No factoring found, falling back to standard search.
+Variables: 308
+Bytes per state: 40
+Building successor generator...done! [t=0.912628s]
+peak memory difference for root successor generator creation: 8796 KB
+time for root successor generation creation: 0.0311711s
+done! [t=0.919287s]
+done initalizing global data [t=0.919287s]
+Creating symmetry graph stabilizing goal only and using orbit search.
+Initializing symmetry 
+Using Bliss to find group generators
+Got 0 group generators, time step: [t=0.976123s]
+Number of generators: 0
+done initializing symmetries [t=0.976123s]
+Conducting lazy best first search, (real) bound = 2147483647
+Initializing FF heuristic...
+Initializing additive heuristic...
+Simplifying 295221 unary operators... done! [295221 unary operators]
+Best heuristic value: 58 [g=0, 1 evaluated, 0 expanded, t=2.03538s, 204892 KB]
+Best heuristic value: 57 [g=1, 2 evaluated, 1 expanded, t=2.07358s, 204892 KB]
+Best heuristic value: 54 [g=2, 3 evaluated, 2 expanded, t=2.1132s, 204892 KB]
+Best heuristic value: 51 [g=3, 4 evaluated, 3 expanded, t=2.14407s, 204892 KB]
+Best heuristic value: 50 [g=4, 5 evaluated, 4 expanded, t=2.17557s, 204892 KB]
+Best heuristic value: 49 [g=5, 6 evaluated, 5 expanded, t=2.20688s, 204892 KB]
+Best heuristic value: 48 [g=6, 8 evaluated, 7 expanded, t=2.26737s, 204892 KB]
+Best heuristic value: 45 [g=7, 10 evaluated, 9 expanded, t=2.32879s, 204892 KB]
+Best heuristic value: 42 [g=9, 14 evaluated, 13 expanded, t=2.46554s, 204892 KB]
+Best heuristic value: 39 [g=10, 16 evaluated, 15 expanded, t=2.55398s, 204892 KB]
+Best heuristic value: 37 [g=13, 26 evaluated, 24 expanded, t=2.89999s, 204892 KB]
+Best heuristic value: 36 [g=26, 72 evaluated, 70 expanded, t=4.51897s, 204892 KB]
+Best heuristic value: 35 [g=27, 73 evaluated, 71 expanded, t=4.56091s, 204892 KB]
+Best heuristic value: 34 [g=33, 94 evaluated, 90 expanded, t=5.2454s, 204892 KB]
+Best heuristic value: 33 [g=34, 95 evaluated, 91 expanded, t=5.26575s, 204892 KB]
+Best heuristic value: 32 [g=43, 265 evaluated, 257 expanded, t=11.3374s, 204892 KB]
+Best heuristic value: 31 [g=53, 305 evaluated, 293 expanded, t=12.6226s, 204892 KB]
+Best heuristic value: 30 [g=71, 653 evaluated, 617 expanded, t=24.8409s, 204892 KB]
+Best heuristic value: 29 [g=72, 654 evaluated, 618 expanded, t=24.8709s, 204892 KB]
+Best heuristic value: 28 [g=84, 732 evaluated, 693 expanded, t=27.9622s, 204892 KB]
+Best heuristic value: 27 [g=62, 6628 evaluated, 6197 expanded, t=233.334s, 204892 KB]
+Best heuristic value: 25 [g=63, 6629 evaluated, 6198 expanded, t=233.379s, 204892 KB]
+Best heuristic value: 24 [g=64, 6630 evaluated, 6199 expanded, t=233.418s, 204892 KB]
+Best heuristic value: 23 [g=65, 6631 evaluated, 6200 expanded, t=233.45s, 204892 KB]
+Best heuristic value: 21 [g=66, 6632 evaluated, 6201 expanded, t=233.481s, 204892 KB]
+Best heuristic value: 20 [g=68, 6634 evaluated, 6203 expanded, t=233.542s, 204892 KB]
+Best heuristic value: 19 [g=69, 6635 evaluated, 6204 expanded, t=233.573s, 204892 KB]
+Best heuristic value: 18 [g=70, 6636 evaluated, 6205 expanded, t=233.616s, 204892 KB]
+Best heuristic value: 16 [g=95, 6781 evaluated, 6339 expanded, t=238.07s, 204892 KB]
+Best heuristic value: 14 [g=97, 6783 evaluated, 6341 expanded, t=238.111s, 204892 KB]
+Best heuristic value: 13 [g=98, 6784 evaluated, 6342 expanded, t=238.132s, 204892 KB]
+Best heuristic value: 12 [g=106, 24285 evaluated, 22797 expanded, t=766.557s, 204892 KB]
+Peak memory: 204892 KB
+caught signal 24 -- exiting
+returncode: -24
+
+remaining time: 717.32
+config 2: relative time 1100, remaining 1100
+g bound: infinity
+next plan number: 1
+args: ['/planner/driver/../fast-downward-conjunctions/builds/release64clangpgonative/bin/downward', '--if-unit-cost', '--heuristic', 'hcff_normalcost=cff(seed=42, cache_estimates=false, cost_type=PLUSONE)', '--heuristic', 'hn_normalcost=novelty(cache_estimates=false)', '--heuristic', 'tmp_normalcost=novelty_linker(hcff_normalcost, [hn_normalcost])', '--heuristic', 'hlm_normalcost=lmcount(lm_rhw(reasonable_orders=true))', '--search', 'ipc18_iterated([grey_initial_state_search(grey_painting=all_prefer_inv, cost_type=PLUSONE),                            ehc_cn(hcff_normalcost, preferred=hcff_normalcost, novelty=hn_normalcost, seed=42, max_growth=8, max_time=500),                            lazy_iterated_weights_c([hcff_normalcost, hlm_normalcost], preferred=[hcff_normalcost], conjunctions_heuristic=hcff_normalcost,                                                    strategy=maintain_fixed_size_probabilistic(initial_removal_mode=UNTIL_BOUND, base_probability=0.02, target_growth_ratio=1.50))                           ], delete_after_phase_heuristics=[hn_normalcost, tmp_normalcost], delete_after_phase_phases=[1, 1], continue_on_fail=true, bound=infinity)', '--if-non-unit-cost', '--heuristic', 'hcff=cff(seed=42, cache_estimates=false, cost_type=ONE)', '--heuristic', 'hn=novelty(cache_estimates=false)', '--heuristic', 'tmp=novelty_linker(hcff, [hn])', '--heuristic', 'hcff_normalcost=cff(seed=42, cache_estimates=false, cost_type=PLUSONE)', '--heuristic', 'hn_normalcost=novelty(cache_estimates=false)', '--heuristic', 'tmp_normalcost=novelty_linker(hcff_normalcost, [hn_normalcost])', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=ONE), cost_type=ONE)', '--heuristic', 'hlm_normalcost=lmcount(lm_rhw(reasonable_orders=true))', '--search', 'ipc18_iterated([grey_initial_state_search(grey_painting=all_prefer_inv, cost_type=ONE),                            ehc_cn(hcff, preferred=hcff, novelty=hn, seed=42, cost_type=ONE, max_growth=8, max_time=500),                            lazy_greedy_c([hcff, hlm], preferred=[hcff], conjunctions_heuristic=hcff,                                          strategy=maintain_fixed_size_probabilistic(initial_removal_mode=UNTIL_BOUND, base_probability=0.02, target_growth_ratio=1.50), cost_type=ONE),                            ehc_cn(hcff_normalcost, preferred=hcff_normalcost, novelty=hn_normalcost, seed=42, max_growth=8, max_time=100),                            lazy_iterated_weights_c([hcff_normalcost, hlm_normalcost], preferred=[hcff_normalcost], conjunctions_heuristic=hcff_normalcost,                                                    strategy=maintain_fixed_size_probabilistic(generate_initially=true, initial_removal_mode=UNTIL_BOUND, base_probability=0.02, target_growth_ratio=1.50))                           ], decision_point=1, skip_if_solved=[2], skip_if_failed=[3],                           delete_after_phase_heuristics=[hn, tmp, hcff, hlm, hn_normalcost, tmp_normalcost],                           delete_after_phase_phases=[1, 1, 2, 2, 3, 3], continue_on_fail=true, bound=infinity)', '--always', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 717.32 -> (718, 719)
+reading input... [t=0.00173412s]
+done reading input! [t=0.403547s]
+packing state variables...done! [t=0.409591s]
+Variables: 308
+FactPairs: 767
+Bytes per state: 40
+Building successor generator...done! [t=0.455495s]
+done initalizing global data [t=0.459415s]
+cross context: 1
+best supporter function: h^Cadd
+no relaxed plan extraction: 0
+tie breaking: RANDOM
+Initializing CFF heuristic...
+The original task would have 295221 counters.
+Finished hcff initialization, t = 0.990757s
+Initializing novelty heuristic...
+Linking novelty heuristics to the conjunctions heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 3.26028s
+Discovered 60 landmarks, of which 11 are disjunctive and 0 are conjunctive 
+181 edges
+Starting search: grey_initial_state_search(grey_painting = all_prefer_inv, cost_type = plusone)
+Simplifying 295221 unary operators... done! [295221 unary operators]
+Initializing additive heuristic...
+Initializing Red-Black Relaxation heuristic...
+Using following red facts method for relaxed plan serialization
+Using level heuristic method for black variable selection
+Running A* instead of Dijkstra. Using the distances ignoring outside conditions for heuristic estimates.
+Preferred operators (if used) are set from relaxed plan
+Conflict costs are estimated
+Initializing extended DTGs
+Adding 44427 operators to extended DTGs
+Checking invertibility...
+Done checking invertibility
+Checking connectivity...
+Done checking connectivity
+Total number of invertible variables is 0
+building causal graph...done! [t=0.366769s]
+Invertible variables without leafs connection status: 1
+Invertible variables with one directional connection status: 1
+Setting black variables...
+Variables order is set
+Painting procedure time (in milliseconds): 45
+---------------------------------------------------------------------------------------
+0 is not invertible, marked red [166 side effects]
+1 is not invertible, marked red [177 side effects]
+2 is not invertible, marked red [208 side effects]
+3 is not invertible, marked red [209 side effects]
+4 is not invertible, marked red [211 side effects]
+5 is not invertible, marked red [211 side effects]
+6 is not invertible, marked red [211 side effects]
+7 is not invertible, marked red [212 side effects]
+8 is not invertible, marked red [213 side effects]
+9 is not invertible, marked red [213 side effects]
+10 is not invertible, marked red [209 side effects]
+11 is not invertible, marked black [227 side effects]
+12 is not invertible, marked red [218 side effects]
+13 is not invertible, marked red [218 side effects]
+14 is not invertible, marked red [218 side effects]
+15 is not invertible, marked red [218 side effects]
+16 is not invertible, marked red [218 side effects]
+17 is not invertible, marked red [218 side effects]
+18 is not invertible, marked black [269 side effects]
+19 is not invertible, marked red [257 side effects]
+20 is not invertible, marked red [275 side effects]
+21 is not invertible, marked red [224 side effects]
+22 is not invertible, marked red [224 side effects]
+23 is not invertible, marked red [266 side effects]
+24 is not invertible, marked red [227 side effects]
+25 is not invertible, marked red [225 side effects]
+26 is not invertible, marked red [287 side effects]
+27 is not invertible, marked red [287 side effects]
+28 is not invertible, marked red [289 side effects]
+29 is not invertible, marked red [289 side effects]
+30 is not invertible, marked red [288 side effects]
+31 is not invertible, marked red [289 side effects]
+32 is not invertible, marked red [237 side effects]
+33 is not invertible, marked red [287 side effects]
+34 is not invertible, marked red [289 side effects]
+35 is not invertible, marked red [289 side effects]
+36 is not invertible, marked red [289 side effects]
+37 is not invertible, marked red [289 side effects]
+38 is not invertible, marked red [289 side effects]
+39 is not invertible, marked red [289 side effects]
+40 is not invertible, marked red [290 side effects]
+41 is not invertible, marked red [290 side effects]
+42 is not invertible, marked red [290 side effects]
+43 is not invertible, marked red [290 side effects]
+44 is not invertible, marked red [291 side effects]
+45 is not invertible, marked red [291 side effects]
+46 is not invertible, marked red [291 side effects]
+47 is not invertible, marked red [230 side effects]
+48 is not invertible, marked red [291 side effects]
+49 is not invertible, marked red [230 side effects]
+50 is not invertible, marked red [220 side effects]
+51 is not invertible, marked red [286 side effects]
+52 is not invertible, marked red [287 side effects]
+53 is not invertible, marked red [284 side effects]
+54 is not invertible, marked red [220 side effects]
+55 is not invertible, marked red [286 side effects]
+56 is not invertible, marked red [287 side effects]
+57 is not invertible, marked red [287 side effects]
+58 is not invertible, marked red [220 side effects]
+59 is not invertible, marked red [287 side effects]
+60 is not invertible, marked red [284 side effects]
+61 is not invertible, marked red [235 side effects]
+62 is not invertible, marked red [219 side effects]
+63 is not invertible, marked red [284 side effects]
+64 is not invertible, marked red [287 side effects]
+65 is not invertible, marked red [287 side effects]
+66 is not invertible, marked red [288 side effects]
+67 is not invertible, marked red [288 side effects]
+68 is not invertible, marked red [288 side effects]
+69 is not invertible, marked red [288 side effects]
+70 is not invertible, marked red [286 side effects]
+71 is not invertible, marked red [234 side effects]
+72 is not invertible, marked red [234 side effects]
+73 is not invertible, marked red [286 side effects]
+74 is not invertible, marked red [287 side effects]
+75 is not invertible, marked red [240 side effects]
+76 is not invertible, marked red [289 side effects]
+77 is not invertible, marked red [289 side effects]
+78 is not invertible, marked red [288 side effects]
+79 is not invertible, marked red [289 side effects]
+80 is not invertible, marked red [220 side effects]
+81 is not invertible, marked red [245 side effects]
+82 is not invertible, marked red [219 side effects]
+83 is not invertible, marked red [219 side effects]
+84 is not invertible, marked red [287 side effects]
+85 is not invertible, marked red [287 side effects]
+86 is not invertible, marked red [217 side effects]
+87 is not invertible, marked red [287 side effects]
+88 is not invertible, marked red [289 side effects]
+89 is not invertible, marked red [288 side effects]
+90 is not invertible, marked red [289 side effects]
+91 is not invertible, marked red [289 side effects]
+92 is not invertible, marked red [289 side effects]
+93 is not invertible, marked red [289 side effects]
+94 is not invertible, marked red [289 side effects]
+95 is not invertible, marked red [289 side effects]
+96 is not invertible, marked red [289 side effects]
+97 is not invertible, marked red [290 side effects]
+98 is not invertible, marked red [290 side effects]
+99 is not invertible, marked red [220 side effects]
+100 is not invertible, marked red [259 side effects]
+101 is not invertible, marked red [288 side effects]
+102 is not invertible, marked red [288 side effects]
+103 is not invertible, marked red [289 side effects]
+104 is not invertible, marked red [289 side effects]
+105 is not invertible, marked red [221 side effects]
+106 is not invertible, marked red [287 side effects]
+107 is not invertible, marked red [287 side effects]
+108 is not invertible, marked red [287 side effects]
+109 is not invertible, marked red [289 side effects]
+110 is not invertible, marked red [289 side effects]
+111 is not invertible, marked red [289 side effects]
+112 is not invertible, marked red [290 side effects]
+113 is not invertible, marked red [290 side effects]
+114 is not invertible, marked red [289 side effects]
+115 is not invertible, marked red [290 side effects]
+116 is not invertible, marked red [291 side effects]
+117 is not invertible, marked red [220 side effects]
+118 is not invertible, marked red [258 side effects]
+119 is not invertible, marked red [274 side effects]
+120 is not invertible, marked red [262 side effects]
+121 is not invertible, marked red [287 side effects]
+122 is not invertible, marked red [268 side effects]
+123 is not invertible, marked red [286 side effects]
+124 is not invertible, marked red [289 side effects]
+125 is not invertible, marked red [271 side effects]
+126 is not invertible, marked red [291 side effects]
+127 is not invertible, marked red [266 side effects]
+128 is not invertible, marked red [285 side effects]
+129 is not invertible, marked red [287 side effects]
+130 is not invertible, marked red [276 side effects]
+131 is not invertible, marked red [287 side effects]
+132 is not invertible, marked red [285 side effects]
+133 is not invertible, marked red [286 side effects]
+134 is not invertible, marked red [289 side effects]
+135 is not invertible, marked red [289 side effects]
+136 is not invertible, marked red [287 side effects]
+137 is not invertible, marked red [288 side effects]
+138 is not invertible, marked red [220 side effects]
+139 is not invertible, marked red [290 side effects]
+140 is not invertible, marked red [288 side effects]
+141 is not invertible, marked red [288 side effects]
+142 is not invertible, marked red [220 side effects]
+143 is not invertible, marked red [290 side effects]
+144 is not invertible, marked red [288 side effects]
+145 is not invertible, marked red [289 side effects]
+146 is not invertible, marked red [220 side effects]
+147 is not invertible, marked red [289 side effects]
+148 is not invertible, marked red [285 side effects]
+149 is not invertible, marked red [289 side effects]
+150 is not invertible, marked red [220 side effects]
+151 is not invertible, marked red [290 side effects]
+152 is not invertible, marked red [288 side effects]
+153 is not invertible, marked red [220 side effects]
+154 is not invertible, marked red [289 side effects]
+155 is not invertible, marked red [287 side effects]
+156 is not invertible, marked red [288 side effects]
+157 is not invertible, marked red [278 side effects]
+158 is not invertible, marked red [287 side effects]
+159 is not invertible, marked red [287 side effects]
+160 is not invertible, marked red [287 side effects]
+161 is not invertible, marked red [285 side effects]
+162 is not invertible, marked red [288 side effects]
+163 is not invertible, marked red [228 side effects]
+164 is not invertible, marked red [288 side effects]
+165 is not invertible, marked red [281 side effects]
+166 is not invertible, marked red [288 side effects]
+167 is not invertible, marked red [288 side effects]
+168 is not invertible, marked red [288 side effects]
+169 is not invertible, marked red [286 side effects]
+170 is not invertible, marked red [284 side effects]
+171 is not invertible, marked red [288 side effects]
+172 is not invertible, marked red [287 side effects]
+173 is not invertible, marked red [286 side effects]
+174 is not invertible, marked red [219 side effects]
+175 is not invertible, marked red [289 side effects]
+176 is not invertible, marked red [219 side effects]
+177 is not invertible, marked red [288 side effects]
+178 is not invertible, marked red [289 side effects]
+179 is not invertible, marked red [288 side effects]
+180 is not invertible, marked red [289 side effects]
+181 is not invertible, marked red [289 side effects]
+182 is not invertible, marked red [289 side effects]
+183 is not invertible, marked red [289 side effects]
+184 is not invertible, marked red [219 side effects]
+185 is not invertible, marked red [289 side effects]
+186 is not invertible, marked red [219 side effects]
+187 is not invertible, marked red [289 side effects]
+188 is not invertible, marked red [288 side effects]
+189 is not invertible, marked red [289 side effects]
+190 is not invertible, marked red [287 side effects]
+191 is not invertible, marked red [289 side effects]
+192 is not invertible, marked red [288 side effects]
+193 is not invertible, marked red [221 side effects]
+194 is not invertible, marked red [289 side effects]
+195 is not invertible, marked red [220 side effects]
+196 is not invertible, marked red [220 side effects]
+197 is not invertible, marked red [220 side effects]
+198 is not invertible, marked red [221 side effects]
+199 is not invertible, marked red [221 side effects]
+200 is not invertible, marked red [288 side effects]
+201 is not invertible, marked red [221 side effects]
+202 is not invertible, marked red [286 side effects]
+203 is not invertible, marked red [288 side effects]
+204 is not invertible, marked red [294 side effects]
+205 is not invertible, marked red [293 side effects]
+206 is not invertible, marked red [294 side effects]
+207 is not invertible, marked red [294 side effects]
+208 is not invertible, marked red [294 side effects]
+209 is not invertible, marked red [294 side effects]
+210 is not invertible, marked red [294 side effects]
+211 is not invertible, marked red [294 side effects]
+212 is not invertible, marked red [295 side effects]
+213 is not invertible, marked red [292 side effects]
+214 is not invertible, marked red [222 side effects]
+215 is not invertible, marked red [220 side effects]
+216 is not invertible, marked red [294 side effects]
+217 is not invertible, marked red [293 side effects]
+218 is not invertible, marked red [286 side effects]
+219 is not invertible, marked red [223 side effects]
+220 is not invertible, marked red [293 side effects]
+221 is not invertible, marked red [222 side effects]
+222 is not invertible, marked red [288 side effects]
+223 is not invertible, marked red [286 side effects]
+224 is not invertible, marked red [288 side effects]
+225 is not invertible, marked red [294 side effects]
+226 is not invertible, marked red [290 side effects]
+227 is not invertible, marked red [290 side effects]
+228 is not invertible, marked red [221 side effects]
+229 is not invertible, marked red [221 side effects]
+230 is not invertible, marked red [291 side effects]
+231 is not invertible, marked red [221 side effects]
+232 is not invertible, marked red [291 side effects]
+233 is not invertible, marked red [222 side effects]
+234 is not invertible, marked red [294 side effects]
+235 is not invertible, marked red [294 side effects]
+236 is not invertible, marked red [294 side effects]
+237 is not invertible, marked red [294 side effects]
+238 is not invertible, marked red [294 side effects]
+239 is not invertible, marked red [294 side effects]
+240 is not invertible, marked red [294 side effects]
+241 is not invertible, marked red [221 side effects]
+242 is not invertible, marked red [289 side effects]
+243 is not invertible, marked red [288 side effects]
+244 is not invertible, marked red [289 side effects]
+245 is not invertible, marked red [222 side effects]
+246 is not invertible, marked red [289 side effects]
+247 is not invertible, marked red [294 side effects]
+248 is not invertible, marked red [222 side effects]
+249 is not invertible, marked red [294 side effects]
+250 is not invertible, marked red [221 side effects]
+251 is not invertible, marked red [222 side effects]
+252 is not invertible, marked red [295 side effects]
+253 is not invertible, marked red [223 side effects]
+254 is not invertible, marked red [294 side effects]
+255 is not invertible, marked red [222 side effects]
+256 is not invertible, marked red [222 side effects]
+257 is not invertible, marked red [294 side effects]
+258 is not invertible, marked red [292 side effects]
+259 is not invertible, marked red [294 side effects]
+260 is not invertible, marked red [294 side effects]
+261 is not invertible, marked red [294 side effects]
+262 is not invertible, marked red [294 side effects]
+263 is not invertible, marked red [294 side effects]
+264 is not invertible, marked red [295 side effects]
+265 is not invertible, marked red [294 side effects]
+266 is not invertible, marked red [294 side effects]
+267 is not invertible, marked red [295 side effects]
+268 is not invertible, marked red [294 side effects]
+269 is not invertible, marked red [293 side effects]
+270 is not invertible, marked red [294 side effects]
+271 is not invertible, marked red [295 side effects]
+272 is not invertible, marked red [295 side effects]
+273 is not invertible, marked red [295 side effects]
+274 is not invertible, marked red [295 side effects]
+275 is not invertible, marked red [222 side effects]
+276 is not invertible, marked red [295 side effects]
+277 is not invertible, marked red [295 side effects]
+278 is not invertible, marked red [295 side effects]
+279 is not invertible, marked red [294 side effects]
+280 is not invertible, marked red [295 side effects]
+281 is not invertible, marked red [295 side effects]
+282 is not invertible, marked red [294 side effects]
+283 is not invertible, marked red [295 side effects]
+284 is not invertible, marked red [294 side effects]
+285 is not invertible, marked red [295 side effects]
+286 is not invertible, marked red [295 side effects]
+287 is not invertible, marked red [294 side effects]
+288 is not invertible, marked red [292 side effects]
+289 is not invertible, marked red [296 side effects]
+290 is not invertible, marked red [296 side effects]
+291 is not invertible, marked red [295 side effects]
+292 is not invertible, marked red [296 side effects]
+293 is not invertible, marked red [295 side effects]
+294 is not invertible, marked red [298 side effects]
+295 is not invertible, marked red [307 side effects]
+296 is not invertible, marked red [4 side effects]
+297 is not invertible, marked red [4 side effects]
+298 is not invertible, marked red [4 side effects]
+299 is not invertible, marked red [4 side effects]
+300 is not invertible, marked red [4 side effects]
+301 is not invertible, marked red [4 side effects]
+302 is not invertible, marked red [4 side effects]
+303 is not invertible, marked red [5 side effects]
+304 is not invertible, marked red [9 side effects]
+305 is not invertible, marked red [9 side effects]
+306 is not invertible, marked red [12 side effects]
+307 is not invertible, marked red [11 side effects]
+---------------------------------------------------------------------------------------
+Total number of black variables is 2
+Total number of non-invertible black variables is 2
+Total number of black root variables is 0
+Total number of variables is 308
+Total number of variables with all pairs of values connected is 0
+Total number of variables with all values connected to goal is 0
+Total number of black variables with strongly connected parents only is 0
+Maximal number of side effects for black variable is 269
+---------------------------------------------------------------------------------------
+Black DAG usage status: 0
+Removing unnecessary black data for red variable 0
+Removing unnecessary black data for red variable 1
+Removing unnecessary black data for red variable 2
+Removing unnecessary black data for red variable 3
+Removing unnecessary black data for red variable 4
+Removing unnecessary black data for red variable 5
+Removing unnecessary black data for red variable 6
+Removing unnecessary black data for red variable 7
+Removing unnecessary black data for red variable 8
+Removing unnecessary black data for red variable 9
+Removing unnecessary black data for red variable 10
+Removing unnecessary black data for red variable 12
+Removing unnecessary black data for red variable 13
+Removing unnecessary black data for red variable 14
+Removing unnecessary black data for red variable 15
+Removing unnecessary black data for red variable 16
+Removing unnecessary black data for red variable 17
+Removing unnecessary black data for red variable 19
+Removing unnecessary black data for red variable 20
+Removing unnecessary black data for red variable 21
+Removing unnecessary black data for red variable 22
+Removing unnecessary black data for red variable 23
+Removing unnecessary black data for red variable 24
+Removing unnecessary black data for red variable 25
+Removing unnecessary black data for red variable 26
+Removing unnecessary black data for red variable 27
+Removing unnecessary black data for red variable 28
+Removing unnecessary black data for red variable 29
+Removing unnecessary black data for red variable 30
+Removing unnecessary black data for red variable 31
+Removing unnecessary black data for red variable 32
+Removing unnecessary black data for red variable 33
+Removing unnecessary black data for red variable 34
+Removing unnecessary black data for red variable 35
+Removing unnecessary black data for red variable 36
+Removing unnecessary black data for red variable 37
+Removing unnecessary black data for red variable 38
+Removing unnecessary black data for red variable 39
+Removing unnecessary black data for red variable 40
+Removing unnecessary black data for red variable 41
+Removing unnecessary black data for red variable 42
+Removing unnecessary black data for red variable 43
+Removing unnecessary black data for red variable 44
+Removing unnecessary black data for red variable 45
+Removing unnecessary black data for red variable 46
+Removing unnecessary black data for red variable 47
+Removing unnecessary black data for red variable 48
+Removing unnecessary black data for red variable 49
+Removing unnecessary black data for red variable 50
+Removing unnecessary black data for red variable 51
+Removing unnecessary black data for red variable 52
+Removing unnecessary black data for red variable 53
+Removing unnecessary black data for red variable 54
+Removing unnecessary black data for red variable 55
+Removing unnecessary black data for red variable 56
+Removing unnecessary black data for red variable 57
+Removing unnecessary black data for red variable 58
+Removing unnecessary black data for red variable 59
+Removing unnecessary black data for red variable 60
+Removing unnecessary black data for red variable 61
+Removing unnecessary black data for red variable 62
+Removing unnecessary black data for red variable 63
+Removing unnecessary black data for red variable 64
+Removing unnecessary black data for red variable 65
+Removing unnecessary black data for red variable 66
+Removing unnecessary black data for red variable 67
+Removing unnecessary black data for red variable 68
+Removing unnecessary black data for red variable 69
+Removing unnecessary black data for red variable 70
+Removing unnecessary black data for red variable 71
+Removing unnecessary black data for red variable 72
+Removing unnecessary black data for red variable 73
+Removing unnecessary black data for red variable 74
+Removing unnecessary black data for red variable 75
+Removing unnecessary black data for red variable 76
+Removing unnecessary black data for red variable 77
+Removing unnecessary black data for red variable 78
+Removing unnecessary black data for red variable 79
+Removing unnecessary black data for red variable 80
+Removing unnecessary black data for red variable 81
+Removing unnecessary black data for red variable 82
+Removing unnecessary black data for red variable 83
+Removing unnecessary black data for red variable 84
+Removing unnecessary black data for red variable 85
+Removing unnecessary black data for red variable 86
+Removing unnecessary black data for red variable 87
+Removing unnecessary black data for red variable 88
+Removing unnecessary black data for red variable 89
+Removing unnecessary black data for red variable 90
+Removing unnecessary black data for red variable 91
+Removing unnecessary black data for red variable 92
+Removing unnecessary black data for red variable 93
+Removing unnecessary black data for red variable 94
+Removing unnecessary black data for red variable 95
+Removing unnecessary black data for red variable 96
+Removing unnecessary black data for red variable 97
+Removing unnecessary black data for red variable 98
+Removing unnecessary black data for red variable 99
+Removing unnecessary black data for red variable 100
+Removing unnecessary black data for red variable 101
+Removing unnecessary black data for red variable 102
+Removing unnecessary black data for red variable 103
+Removing unnecessary black data for red variable 104
+Removing unnecessary black data for red variable 105
+Removing unnecessary black data for red variable 106
+Removing unnecessary black data for red variable 107
+Removing unnecessary black data for red variable 108
+Removing unnecessary black data for red variable 109
+Removing unnecessary black data for red variable 110
+Removing unnecessary black data for red variable 111
+Removing unnecessary black data for red variable 112
+Removing unnecessary black data for red variable 113
+Removing unnecessary black data for red variable 114
+Removing unnecessary black data for red variable 115
+Removing unnecessary black data for red variable 116
+Removing unnecessary black data for red variable 117
+Removing unnecessary black data for red variable 118
+Removing unnecessary black data for red variable 119
+Removing unnecessary black data for red variable 120
+Removing unnecessary black data for red variable 121
+Removing unnecessary black data for red variable 122
+Removing unnecessary black data for red variable 123
+Removing unnecessary black data for red variable 124
+Removing unnecessary black data for red variable 125
+Removing unnecessary black data for red variable 126
+Removing unnecessary black data for red variable 127
+Removing unnecessary black data for red variable 128
+Removing unnecessary black data for red variable 129
+Removing unnecessary black data for red variable 130
+Removing unnecessary black data for red variable 131
+Removing unnecessary black data for red variable 132
+Removing unnecessary black data for red variable 133
+Removing unnecessary black data for red variable 134
+Removing unnecessary black data for red variable 135
+Removing unnecessary black data for red variable 136
+Removing unnecessary black data for red variable 137
+Removing unnecessary black data for red variable 138
+Removing unnecessary black data for red variable 139
+Removing unnecessary black data for red variable 140
+Removing unnecessary black data for red variable 141
+Removing unnecessary black data for red variable 142
+Removing unnecessary black data for red variable 143
+Removing unnecessary black data for red variable 144
+Removing unnecessary black data for red variable 145
+Removing unnecessary black data for red variable 146
+Removing unnecessary black data for red variable 147
+Removing unnecessary black data for red variable 148
+Removing unnecessary black data for red variable 149
+Removing unnecessary black data for red variable 150
+Removing unnecessary black data for red variable 151
+Removing unnecessary black data for red variable 152
+Removing unnecessary black data for red variable 153
+Removing unnecessary black data for red variable 154
+Removing unnecessary black data for red variable 155
+Removing unnecessary black data for red variable 156
+Removing unnecessary black data for red variable 157
+Removing unnecessary black data for red variable 158
+Removing unnecessary black data for red variable 159
+Removing unnecessary black data for red variable 160
+Removing unnecessary black data for red variable 161
+Removing unnecessary black data for red variable 162
+Removing unnecessary black data for red variable 163
+Removing unnecessary black data for red variable 164
+Removing unnecessary black data for red variable 165
+Removing unnecessary black data for red variable 166
+Removing unnecessary black data for red variable 167
+Removing unnecessary black data for red variable 168
+Removing unnecessary black data for red variable 169
+Removing unnecessary black data for red variable 170
+Removing unnecessary black data for red variable 171
+Removing unnecessary black data for red variable 172
+Removing unnecessary black data for red variable 173
+Removing unnecessary black data for red variable 174
+Removing unnecessary black data for red variable 175
+Removing unnecessary black data for red variable 176
+Removing unnecessary black data for red variable 177
+Removing unnecessary black data for red variable 178
+Removing unnecessary black data for red variable 179
+Removing unnecessary black data for red variable 180
+Removing unnecessary black data for red variable 181
+Removing unnecessary black data for red variable 182
+Removing unnecessary black data for red variable 183
+Removing unnecessary black data for red variable 184
+Removing unnecessary black data for red variable 185
+Removing unnecessary black data for red variable 186
+Removing unnecessary black data for red variable 187
+Removing unnecessary black data for red variable 188
+Removing unnecessary black data for red variable 189
+Removing unnecessary black data for red variable 190
+Removing unnecessary black data for red variable 191
+Removing unnecessary black data for red variable 192
+Removing unnecessary black data for red variable 193
+Removing unnecessary black data for red variable 194
+Removing unnecessary black data for red variable 195
+Removing unnecessary black data for red variable 196
+Removing unnecessary black data for red variable 197
+Removing unnecessary black data for red variable 198
+Removing unnecessary black data for red variable 199
+Removing unnecessary black data for red variable 200
+Removing unnecessary black data for red variable 201
+Removing unnecessary black data for red variable 202
+Removing unnecessary black data for red variable 203
+Removing unnecessary black data for red variable 204
+Removing unnecessary black data for red variable 205
+Removing unnecessary black data for red variable 206
+Removing unnecessary black data for red variable 207
+Removing unnecessary black data for red variable 208
+Removing unnecessary black data for red variable 209
+Removing unnecessary black data for red variable 210
+Removing unnecessary black data for red variable 211
+Removing unnecessary black data for red variable 212
+Removing unnecessary black data for red variable 213
+Removing unnecessary black data for red variable 214
+Removing unnecessary black data for red variable 215
+Removing unnecessary black data for red variable 216
+Removing unnecessary black data for red variable 217
+Removing unnecessary black data for red variable 218
+Removing unnecessary black data for red variable 219
+Removing unnecessary black data for red variable 220
+Removing unnecessary black data for red variable 221
+Removing unnecessary black data for red variable 222
+Removing unnecessary black data for red variable 223
+Removing unnecessary black data for red variable 224
+Removing unnecessary black data for red variable 225
+Removing unnecessary black data for red variable 226
+Removing unnecessary black data for red variable 227
+Removing unnecessary black data for red variable 228
+Removing unnecessary black data for red variable 229
+Removing unnecessary black data for red variable 230
+Removing unnecessary black data for red variable 231
+Removing unnecessary black data for red variable 232
+Removing unnecessary black data for red variable 233
+Removing unnecessary black data for red variable 234
+Removing unnecessary black data for red variable 235
+Removing unnecessary black data for red variable 236
+Removing unnecessary black data for red variable 237
+Removing unnecessary black data for red variable 238
+Removing unnecessary black data for red variable 239
+Removing unnecessary black data for red variable 240
+Removing unnecessary black data for red variable 241
+Removing unnecessary black data for red variable 242
+Removing unnecessary black data for red variable 243
+Removing unnecessary black data for red variable 244
+Removing unnecessary black data for red variable 245
+Removing unnecessary black data for red variable 246
+Removing unnecessary black data for red variable 247
+Removing unnecessary black data for red variable 248
+Removing unnecessary black data for red variable 249
+Removing unnecessary black data for red variable 250
+Removing unnecessary black data for red variable 251
+Removing unnecessary black data for red variable 252
+Removing unnecessary black data for red variable 253
+Removing unnecessary black data for red variable 254
+Removing unnecessary black data for red variable 255
+Removing unnecessary black data for red variable 256
+Removing unnecessary black data for red variable 257
+Removing unnecessary black data for red variable 258
+Removing unnecessary black data for red variable 259
+Removing unnecessary black data for red variable 260
+Removing unnecessary black data for red variable 261
+Removing unnecessary black data for red variable 262
+Removing unnecessary black data for red variable 263
+Removing unnecessary black data for red variable 264
+Removing unnecessary black data for red variable 265
+Removing unnecessary black data for red variable 266
+Removing unnecessary black data for red variable 267
+Removing unnecessary black data for red variable 268
+Removing unnecessary black data for red variable 269
+Removing unnecessary black data for red variable 270
+Removing unnecessary black data for red variable 271
+Removing unnecessary black data for red variable 272
+Removing unnecessary black data for red variable 273
+Removing unnecessary black data for red variable 274
+Removing unnecessary black data for red variable 275
+Removing unnecessary black data for red variable 276
+Removing unnecessary black data for red variable 277
+Removing unnecessary black data for red variable 278
+Removing unnecessary black data for red variable 279
+Removing unnecessary black data for red variable 280
+Removing unnecessary black data for red variable 281
+Removing unnecessary black data for red variable 282
+Removing unnecessary black data for red variable 283
+Removing unnecessary black data for red variable 284
+Removing unnecessary black data for red variable 285
+Removing unnecessary black data for red variable 286
+Removing unnecessary black data for red variable 287
+Removing unnecessary black data for red variable 288
+Removing unnecessary black data for red variable 289
+Removing unnecessary black data for red variable 290
+Removing unnecessary black data for red variable 291
+Removing unnecessary black data for red variable 292
+Removing unnecessary black data for red variable 293
+Removing unnecessary black data for red variable 294
+Removing unnecessary black data for red variable 295
+Removing unnecessary black data for red variable 296
+Removing unnecessary black data for red variable 297
+Removing unnecessary black data for red variable 298
+Removing unnecessary black data for red variable 299
+Removing unnecessary black data for red variable 300
+Removing unnecessary black data for red variable 301
+Removing unnecessary black data for red variable 302
+Removing unnecessary black data for red variable 303
+Removing unnecessary black data for red variable 304
+Removing unnecessary black data for red variable 305
+Removing unnecessary black data for red variable 306
+Removing unnecessary black data for red variable 307
+Keeping achieving operators for red facts..
+Initializing black variables...
+Adding edges to forward graph, for the later calculation of missing values
+Precalculating all pair shortest paths
+Storing shortest paths costs ignoring external preconditions for variable 11
+=================> Calculating shortest paths in advance for variable 11 (var297) with domain size 2
+Storing shortest paths costs ignoring external preconditions for variable 18
+=================> Calculating shortest paths in advance for variable 18 (var299) with domain size 2
+Finished initializing Red-Black Relaxation heuristic at time step [t=9.91197s]
+Removing unnecessary black data for red variable 0
+Removing unnecessary black data for red variable 1
+Removing unnecessary black data for red variable 2
+Removing unnecessary black data for red variable 3
+Removing unnecessary black data for red variable 4
+Removing unnecessary black data for red variable 5
+Removing unnecessary black data for red variable 6
+Removing unnecessary black data for red variable 7
+Removing unnecessary black data for red variable 8
+Removing unnecessary black data for red variable 9
+Removing unnecessary black data for red variable 10
+Removing unnecessary black data for red variable 11
+=================> Freeing solution for variable 11 [var297]
+Removing unnecessary black data for red variable 12
+Removing unnecessary black data for red variable 13
+Removing unnecessary black data for red variable 14
+Removing unnecessary black data for red variable 15
+Removing unnecessary black data for red variable 16
+Removing unnecessary black data for red variable 17
+Removing unnecessary black data for red variable 18
+=================> Freeing solution for variable 18 [var299]
+Removing unnecessary black data for red variable 19
+Removing unnecessary black data for red variable 20
+Removing unnecessary black data for red variable 21
+Removing unnecessary black data for red variable 22
+Removing unnecessary black data for red variable 23
+Removing unnecessary black data for red variable 24
+Removing unnecessary black data for red variable 25
+Removing unnecessary black data for red variable 26
+Removing unnecessary black data for red variable 27
+Removing unnecessary black data for red variable 28
+Removing unnecessary black data for red variable 29
+Removing unnecessary black data for red variable 30
+Removing unnecessary black data for red variable 31
+Removing unnecessary black data for red variable 32
+Removing unnecessary black data for red variable 33
+Removing unnecessary black data for red variable 34
+Removing unnecessary black data for red variable 35
+Removing unnecessary black data for red variable 36
+Removing unnecessary black data for red variable 37
+Removing unnecessary black data for red variable 38
+Removing unnecessary black data for red variable 39
+Removing unnecessary black data for red variable 40
+Removing unnecessary black data for red variable 41
+Removing unnecessary black data for red variable 42
+Removing unnecessary black data for red variable 43
+Removing unnecessary black data for red variable 44
+Removing unnecessary black data for red variable 45
+Removing unnecessary black data for red variable 46
+Removing unnecessary black data for red variable 47
+Removing unnecessary black data for red variable 48
+Removing unnecessary black data for red variable 49
+Removing unnecessary black data for red variable 50
+Removing unnecessary black data for red variable 51
+Removing unnecessary black data for red variable 52
+Removing unnecessary black data for red variable 53
+Removing unnecessary black data for red variable 54
+Removing unnecessary black data for red variable 55
+Removing unnecessary black data for red variable 56
+Removing unnecessary black data for red variable 57
+Removing unnecessary black data for red variable 58
+Removing unnecessary black data for red variable 59
+Removing unnecessary black data for red variable 60
+Removing unnecessary black data for red variable 61
+Removing unnecessary black data for red variable 62
+Removing unnecessary black data for red variable 63
+Removing unnecessary black data for red variable 64
+Removing unnecessary black data for red variable 65
+Removing unnecessary black data for red variable 66
+Removing unnecessary black data for red variable 67
+Removing unnecessary black data for red variable 68
+Removing unnecessary black data for red variable 69
+Removing unnecessary black data for red variable 70
+Removing unnecessary black data for red variable 71
+Removing unnecessary black data for red variable 72
+Removing unnecessary black data for red variable 73
+Removing unnecessary black data for red variable 74
+Removing unnecessary black data for red variable 75
+Removing unnecessary black data for red variable 76
+Removing unnecessary black data for red variable 77
+Removing unnecessary black data for red variable 78
+Removing unnecessary black data for red variable 79
+Removing unnecessary black data for red variable 80
+Removing unnecessary black data for red variable 81
+Removing unnecessary black data for red variable 82
+Removing unnecessary black data for red variable 83
+Removing unnecessary black data for red variable 84
+Removing unnecessary black data for red variable 85
+Removing unnecessary black data for red variable 86
+Removing unnecessary black data for red variable 87
+Removing unnecessary black data for red variable 88
+Removing unnecessary black data for red variable 89
+Removing unnecessary black data for red variable 90
+Removing unnecessary black data for red variable 91
+Removing unnecessary black data for red variable 92
+Removing unnecessary black data for red variable 93
+Removing unnecessary black data for red variable 94
+Removing unnecessary black data for red variable 95
+Removing unnecessary black data for red variable 96
+Removing unnecessary black data for red variable 97
+Removing unnecessary black data for red variable 98
+Removing unnecessary black data for red variable 99
+Removing unnecessary black data for red variable 100
+Removing unnecessary black data for red variable 101
+Removing unnecessary black data for red variable 102
+Removing unnecessary black data for red variable 103
+Removing unnecessary black data for red variable 104
+Removing unnecessary black data for red variable 105
+Removing unnecessary black data for red variable 106
+Removing unnecessary black data for red variable 107
+Removing unnecessary black data for red variable 108
+Removing unnecessary black data for red variable 109
+Removing unnecessary black data for red variable 110
+Removing unnecessary black data for red variable 111
+Removing unnecessary black data for red variable 112
+Removing unnecessary black data for red variable 113
+Removing unnecessary black data for red variable 114
+Removing unnecessary black data for red variable 115
+Removing unnecessary black data for red variable 116
+Removing unnecessary black data for red variable 117
+Removing unnecessary black data for red variable 118
+Removing unnecessary black data for red variable 119
+Removing unnecessary black data for red variable 120
+Removing unnecessary black data for red variable 121
+Removing unnecessary black data for red variable 122
+Removing unnecessary black data for red variable 123
+Removing unnecessary black data for red variable 124
+Removing unnecessary black data for red variable 125
+Removing unnecessary black data for red variable 126
+Removing unnecessary black data for red variable 127
+Removing unnecessary black data for red variable 128
+Removing unnecessary black data for red variable 129
+Removing unnecessary black data for red variable 130
+Removing unnecessary black data for red variable 131
+Removing unnecessary black data for red variable 132
+Removing unnecessary black data for red variable 133
+Removing unnecessary black data for red variable 134
+Removing unnecessary black data for red variable 135
+Removing unnecessary black data for red variable 136
+Removing unnecessary black data for red variable 137
+Removing unnecessary black data for red variable 138
+Removing unnecessary black data for red variable 139
+Removing unnecessary black data for red variable 140
+Removing unnecessary black data for red variable 141
+Removing unnecessary black data for red variable 142
+Removing unnecessary black data for red variable 143
+Removing unnecessary black data for red variable 144
+Removing unnecessary black data for red variable 145
+Removing unnecessary black data for red variable 146
+Removing unnecessary black data for red variable 147
+Removing unnecessary black data for red variable 148
+Removing unnecessary black data for red variable 149
+Removing unnecessary black data for red variable 150
+Removing unnecessary black data for red variable 151
+Removing unnecessary black data for red variable 152
+Removing unnecessary black data for red variable 153
+Removing unnecessary black data for red variable 154
+Removing unnecessary black data for red variable 155
+Removing unnecessary black data for red variable 156
+Removing unnecessary black data for red variable 157
+Removing unnecessary black data for red variable 158
+Removing unnecessary black data for red variable 159
+Removing unnecessary black data for red variable 160
+Removing unnecessary black data for red variable 161
+Removing unnecessary black data for red variable 162
+Removing unnecessary black data for red variable 163
+Removing unnecessary black data for red variable 164
+Removing unnecessary black data for red variable 165
+Removing unnecessary black data for red variable 166
+Removing unnecessary black data for red variable 167
+Removing unnecessary black data for red variable 168
+Removing unnecessary black data for red variable 169
+Removing unnecessary black data for red variable 170
+Removing unnecessary black data for red variable 171
+Removing unnecessary black data for red variable 172
+Removing unnecessary black data for red variable 173
+Removing unnecessary black data for red variable 174
+Removing unnecessary black data for red variable 175
+Removing unnecessary black data for red variable 176
+Removing unnecessary black data for red variable 177
+Removing unnecessary black data for red variable 178
+Removing unnecessary black data for red variable 179
+Removing unnecessary black data for red variable 180
+Removing unnecessary black data for red variable 181
+Removing unnecessary black data for red variable 182
+Removing unnecessary black data for red variable 183
+Removing unnecessary black data for red variable 184
+Removing unnecessary black data for red variable 185
+Removing unnecessary black data for red variable 186
+Removing unnecessary black data for red variable 187
+Removing unnecessary black data for red variable 188
+Removing unnecessary black data for red variable 189
+Removing unnecessary black data for red variable 190
+Removing unnecessary black data for red variable 191
+Removing unnecessary black data for red variable 192
+Removing unnecessary black data for red variable 193
+Removing unnecessary black data for red variable 194
+Removing unnecessary black data for red variable 195
+Removing unnecessary black data for red variable 196
+Removing unnecessary black data for red variable 197
+Removing unnecessary black data for red variable 198
+Removing unnecessary black data for red variable 199
+Removing unnecessary black data for red variable 200
+Removing unnecessary black data for red variable 201
+Removing unnecessary black data for red variable 202
+Removing unnecessary black data for red variable 203
+Removing unnecessary black data for red variable 204
+Removing unnecessary black data for red variable 205
+Removing unnecessary black data for red variable 206
+Removing unnecessary black data for red variable 207
+Removing unnecessary black data for red variable 208
+Removing unnecessary black data for red variable 209
+Removing unnecessary black data for red variable 210
+Removing unnecessary black data for red variable 211
+Removing unnecessary black data for red variable 212
+Removing unnecessary black data for red variable 213
+Removing unnecessary black data for red variable 214
+Removing unnecessary black data for red variable 215
+Removing unnecessary black data for red variable 216
+Removing unnecessary black data for red variable 217
+Removing unnecessary black data for red variable 218
+Removing unnecessary black data for red variable 219
+Removing unnecessary black data for red variable 220
+Removing unnecessary black data for red variable 221
+Removing unnecessary black data for red variable 222
+Removing unnecessary black data for red variable 223
+Removing unnecessary black data for red variable 224
+Removing unnecessary black data for red variable 225
+Removing unnecessary black data for red variable 226
+Removing unnecessary black data for red variable 227
+Removing unnecessary black data for red variable 228
+Removing unnecessary black data for red variable 229
+Removing unnecessary black data for red variable 230
+Removing unnecessary black data for red variable 231
+Removing unnecessary black data for red variable 232
+Removing unnecessary black data for red variable 233
+Removing unnecessary black data for red variable 234
+Removing unnecessary black data for red variable 235
+Removing unnecessary black data for red variable 236
+Removing unnecessary black data for red variable 237
+Removing unnecessary black data for red variable 238
+Removing unnecessary black data for red variable 239
+Removing unnecessary black data for red variable 240
+Removing unnecessary black data for red variable 241
+Removing unnecessary black data for red variable 242
+Removing unnecessary black data for red variable 243
+Removing unnecessary black data for red variable 244
+Removing unnecessary black data for red variable 245
+Removing unnecessary black data for red variable 246
+Removing unnecessary black data for red variable 247
+Removing unnecessary black data for red variable 248
+Removing unnecessary black data for red variable 249
+Removing unnecessary black data for red variable 250
+Removing unnecessary black data for red variable 251
+Removing unnecessary black data for red variable 252
+Removing unnecessary black data for red variable 253
+Removing unnecessary black data for red variable 254
+Removing unnecessary black data for red variable 255
+Removing unnecessary black data for red variable 256
+Removing unnecessary black data for red variable 257
+Removing unnecessary black data for red variable 258
+Removing unnecessary black data for red variable 259
+Removing unnecessary black data for red variable 260
+Removing unnecessary black data for red variable 261
+Removing unnecessary black data for red variable 262
+Removing unnecessary black data for red variable 263
+Removing unnecessary black data for red variable 264
+Removing unnecessary black data for red variable 265
+Removing unnecessary black data for red variable 266
+Removing unnecessary black data for red variable 267
+Removing unnecessary black data for red variable 268
+Removing unnecessary black data for red variable 269
+Removing unnecessary black data for red variable 270
+Removing unnecessary black data for red variable 271
+Removing unnecessary black data for red variable 272
+Removing unnecessary black data for red variable 273
+Removing unnecessary black data for red variable 274
+Removing unnecessary black data for red variable 275
+Removing unnecessary black data for red variable 276
+Removing unnecessary black data for red variable 277
+Removing unnecessary black data for red variable 278
+Removing unnecessary black data for red variable 279
+Removing unnecessary black data for red variable 280
+Removing unnecessary black data for red variable 281
+Removing unnecessary black data for red variable 282
+Removing unnecessary black data for red variable 283
+Removing unnecessary black data for red variable 284
+Removing unnecessary black data for red variable 285
+Removing unnecessary black data for red variable 286
+Removing unnecessary black data for red variable 287
+Removing unnecessary black data for red variable 288
+Removing unnecessary black data for red variable 289
+Removing unnecessary black data for red variable 290
+Removing unnecessary black data for red variable 291
+Removing unnecessary black data for red variable 292
+Removing unnecessary black data for red variable 293
+Removing unnecessary black data for red variable 294
+Removing unnecessary black data for red variable 295
+Removing unnecessary black data for red variable 296
+Removing unnecessary black data for red variable 297
+Removing unnecessary black data for red variable 298
+Removing unnecessary black data for red variable 299
+Removing unnecessary black data for red variable 300
+Removing unnecessary black data for red variable 301
+Removing unnecessary black data for red variable 302
+Removing unnecessary black data for red variable 303
+Removing unnecessary black data for red variable 304
+Removing unnecessary black data for red variable 305
+Removing unnecessary black data for red variable 306
+Removing unnecessary black data for red variable 307
+Actual search time: 5.14847s [t=9.9528s]
+Bytes per state: 40
+No solution found - keep searching
+Initialized conflict extraction with ranking sequence [PRIORITY, FEWEST_COUNTERS]
+Starting search: ehc_cn(hcff_normalcost, preferred = hcff_normalcost, novelty = hn_normalcost, seed = 42, max_growth = 8, max_time = 500)
+Conducting enforced hill-climbing search with explicit conjunctions, (real) bound = 2147483646
+Using preferred operators for pruning
+Breadth first search depth bound: 2147483647
+Always reevaluate the local minimum neighborhood after adding a conjunction: 0
+Cache the heuristic results of known states: 1
+conjunctions per iteration: 1
+check relaxed plan: 1
+growth bound in the number of conjunctions (including singletons): 1
+growth bound in the number of counters: 1.79769e+308
+learning time bound: 60
+|C| = 767 (including 767 singletons)
+Total number of counters: 295221
+Conjunction growth ratio: 1
+Counter growth ratio: 1
+Counter size growth ratio: 1
+Finished initialization, t = 0.0127441s
+Learning phases: 0
+Learning time: 0s
+Max learning time: 0s
+Counter growth: 1
+Counter size growth: 1
+Counter group growth: 1
+Counter group size growth: 1
+New conjunctions: 0
+Unregressable conjunctions: 33
+Unreachable conjunctions: 0
+Evaluations per second: 0
+EHC Phases: 0
+Average expansions per EHC phase: 0
+Dead ends during learning: 0
+Dead ends during learning or backjumping: 0
+No better state after learning: 0
+Max learning stagnation count: 0
+Average learning stagnation count: 0
+Evaluations saved by buffering: 0
+Exhausted search space: 0
+Average dead end backjump length: 0
+Total time spent on evaluating novelty: 0
+Initial heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 59
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 59
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 56
+New best heuristic value for novelty(cache_estimates = false): 0
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 55
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 54
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 52
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 48
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 45
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 42
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 40
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 38
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 35
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 34
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 31
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 30
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 28
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 27
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 25
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 23
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 22
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 21
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 18
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 17
+Time limit reached. Abort search.
+Actual search time: 500.011s [t=509.996s]
+Expanded 64089 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 143193
+Generated 91933 state(s).
+Dead ends: 605 state(s).
+Learning phases: 383
+Learning time: 13.3142s
+Max learning time: 0.033482s
+Counter growth: 1.0616
+Counter size growth: 1.17267
+Counter group growth: 1.19713
+Counter group size growth: 1.17267
+New conjunctions: 938
+Unregressable conjunctions: 35
+Unreachable conjunctions: 2
+Evaluations per second: 286.38
+EHC Phases: 1579
+Average expansions per EHC phase: 40.5883
+Dead ends during learning: 4
+Dead ends during learning or backjumping: 4
+No better state after learning: 50
+Max learning stagnation count: 7
+Average learning stagnation count: 4.8481
+Evaluations saved by buffering: 7780
+Exhausted search space: 44
+Average dead end backjump length: 0
+Total time spent on evaluating novelty: 5.34206
+EHC phases: 1579
+Average expansions per EHC phase: 40.5883
+EHC phases of depth 1: 424 - Avg. Expansions: 1.2783
+EHC phases of depth 2: 156 - Avg. Expansions: 3.52564
+EHC phases of depth 3: 84 - Avg. Expansions: 7.53571
+EHC phases of depth 4: 53 - Avg. Expansions: 11.4528
+EHC phases of depth 5: 60 - Avg. Expansions: 20.7833
+EHC phases of depth 6: 47 - Avg. Expansions: 26.5957
+EHC phases of depth 7: 48 - Avg. Expansions: 34.5625
+EHC phases of depth 8: 61 - Avg. Expansions: 46.0164
+EHC phases of depth 9: 51 - Avg. Expansions: 43.1765
+EHC phases of depth 10: 46 - Avg. Expansions: 53.4348
+EHC phases of depth 11: 39 - Avg. Expansions: 66.7949
+EHC phases of depth 12: 23 - Avg. Expansions: 80.6087
+EHC phases of depth 13: 19 - Avg. Expansions: 82.0526
+EHC phases of depth 14: 9 - Avg. Expansions: 102.556
+EHC phases of depth 15: 8 - Avg. Expansions: 110.625
+EHC phases of depth 16: 20 - Avg. Expansions: 99.7
+EHC phases of depth 17: 9 - Avg. Expansions: 89.3333
+EHC phases of depth 18: 9 - Avg. Expansions: 127.778
+EHC phases of depth 19: 4 - Avg. Expansions: 106.5
+EHC phases of depth 20: 6 - Avg. Expansions: 112.167
+EHC phases of depth 21: 4 - Avg. Expansions: 124
+EHC phases of depth 22: 1 - Avg. Expansions: 155
+EHC phases of depth 23: 6 - Avg. Expansions: 122.5
+EHC phases of depth 24: 4 - Avg. Expansions: 123.75
+EHC phases of depth 25: 1 - Avg. Expansions: 88
+EHC phases of depth 26: 1 - Avg. Expansions: 90
+EHC phases of depth 27: 1 - Avg. Expansions: 97
+EHC phases of depth 38: 1 - Avg. Expansions: 124
+No solution found - keep searching
+Initialized conflict extraction with ranking sequence [PRIORITY, FEWEST_COUNTERS]
+Starting search: lazy_iterated_weights_c(list(hcff_normalcost, hlm_normalcost), preferred = list(hcff_normalcost), conjunctions_heuristic = hcff_normalcost, strategy = maintain_fixed_size_probabilistic(initial_removal_mode = until_bound, base_probability = 0.02, target_growth_ratio = 1.50))
+Conducting lazy best first search with online learning of conjunctions, (real) bound = 2147483646
+29 initial landmarks, 12 goal landmarks
+|C| = 1705 (including 767 singletons)
+Total number of counters: 313407
+Conjunction growth ratio: 2.22295
+Counter growth ratio: 1.0616
+Counter size growth ratio: 1.17267
+Learning phases: 0
+Learning time: 0s
+Max learning time: 0s
+Counter growth: 1.0616
+Counter size growth: 1.17267
+Counter group growth: 1.19713
+Counter group size growth: 1.17267
+New conjunctions: 938
+Unregressable conjunctions: 35
+Unreachable conjunctions: 2
+Evaluations per second: -nan
+Finished initialization, t = 0s
+Initial heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 74
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 31
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 74
+[g=0, 1 evaluated, 0 expanded, t=510.02s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 65
+[g=1, 3 evaluated, 2 expanded, t=510.05s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 61
+[g=2, 4 evaluated, 3 expanded, t=510.052s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 29
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 60
+[g=3, 6 evaluated, 5 expanded, t=510.098s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 57
+[g=5, 9 evaluated, 8 expanded, t=510.125s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 28
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 55
+[g=7, 12 evaluated, 11 expanded, t=510.209s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 27
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 50
+[g=8, 13 evaluated, 12 expanded, t=510.23s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 26
+[g=9, 14 evaluated, 13 expanded, t=510.24s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 25
+[g=10, 15 evaluated, 14 expanded, t=510.26s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 24
+[g=11, 18 evaluated, 17 expanded, t=510.328s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 23
+[g=12, 20 evaluated, 19 expanded, t=510.333s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 22
+[g=13, 22 evaluated, 21 expanded, t=510.375s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 47
+[g=18, 46 evaluated, 44 expanded, t=510.627s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 21
+[g=23, 74 evaluated, 72 expanded, t=511.046s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 45
+[g=29, 123 evaluated, 121 expanded, t=511.751s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 44
+[g=31, 152 evaluated, 150 expanded, t=512.107s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 42
+[g=32, 153 evaluated, 151 expanded, t=512.12s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 41
+[g=35, 224 evaluated, 219 expanded, t=513.097s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 20
+[g=37, 225 evaluated, 220 expanded, t=513.111s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 19
+[g=38, 228 evaluated, 222 expanded, t=513.162s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 18
+[g=39, 229 evaluated, 223 expanded, t=513.189s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 17
+[g=40, 230 evaluated, 224 expanded, t=513.2s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 16
+[g=42, 232 evaluated, 226 expanded, t=513.22s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 15
+[g=43, 233 evaluated, 227 expanded, t=513.241s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 13
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 38
+[g=45, 235 evaluated, 229 expanded, t=513.265s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 12
+[g=46, 236 evaluated, 230 expanded, t=513.272s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 11
+[g=48, 238 evaluated, 232 expanded, t=513.304s, 307320 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true)): 10
+[g=49, 239 evaluated, 233 expanded, t=513.314s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 35
+[g=56, 253 evaluated, 246 expanded, t=513.49s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 34
+[g=66, 1022 evaluated, 961 expanded, t=522.826s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 33
+[g=74, 1933 evaluated, 1790 expanded, t=533.598s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 32
+[g=88, 3166 evaluated, 2950 expanded, t=548.233s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 31
+[g=54, 17260 evaluated, 16337 expanded, t=722.149s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 29
+[g=55, 17262 evaluated, 16339 expanded, t=722.181s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 26
+[g=68, 17333 evaluated, 16404 expanded, t=723.313s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 25
+[g=69, 17334 evaluated, 16405 expanded, t=723.326s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 23
+[g=70, 17336 evaluated, 16407 expanded, t=723.354s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 22
+[g=71, 17338 evaluated, 16408 expanded, t=723.359s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 21
+[g=106, 17629 evaluated, 16674 expanded, t=727.743s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 20
+[g=107, 17806 evaluated, 16837 expanded, t=730.416s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 18
+[g=108, 17807 evaluated, 16838 expanded, t=730.416s, 307320 KB]
+New best heuristic value for cff(seed = 42, cache_estimates = false, cost_type = plusone): 17
+[g=139, 20493 evaluated, 19327 expanded, t=762.712s, 307320 KB]
+Peak memory: 307320 KB
+caught signal 24 -- exiting
+returncode: -24
+
+Exit codes: [5, -24, -24]
+Command '['run-portfolio', '/planner/driver/portfolios/seq_sat_saarplan.py']' returned non-zero exit status 5

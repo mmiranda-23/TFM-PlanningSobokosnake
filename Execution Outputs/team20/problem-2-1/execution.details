@@ -1,0 +1,24 @@
+Plan found with cost: 20
+1. (move-thin-snake-and-first-eat pos1-0 pos2-0 dir-down)
+2. (move-fat-snake pos2-0 pos2-1 pos1-0 pos2-0 dir-right)
+3. (move-and-eat pos2-1 pos2-2 dir-right)
+4. (move-fat-snake pos2-2 pos1-2 pos2-0 pos2-1 dir-up)
+5. (move-and-eat pos1-2 pos0-2 dir-up)
+6. (move-fat-snake pos0-2 pos0-1 pos2-1 pos2-2 dir-left)
+7. (move-and-eat pos0-1 pos0-0 dir-left)
+8. (move-fat-snake pos0-0 pos1-0 pos2-2 pos1-2 dir-down)
+9. (move-and-eat pos1-0 pos1-1 dir-right)
+10. (move-fat-snake pos1-1 pos2-1 pos1-2 pos0-2 dir-down)
+11. (move-fat-snake pos2-1 pos2-2 pos0-2 pos0-1 dir-right)
+12. (move-fat-snake pos2-2 pos1-2 pos0-1 pos0-0 dir-up)
+13. (move-fat-snake-and-box pos1-2 pos1-3 pos0-0 pos1-0 pos1-4 dir-right)
+14. (move-fat-snake-and-box pos1-3 pos1-4 pos1-0 pos1-1 pos1-5 dir-right)
+15. (move-fat-snake pos1-4 pos2-4 pos1-1 pos2-1 dir-down)
+16. (move-and-eat pos2-4 pos2-5 dir-right)
+17. (move-box-and-eat pos2-5 pos1-5 pos0-5 dir-up)
+18. (move-and-eat pos1-5 pos1-6 dir-right)
+19. (move-fat-snake pos1-6 pos0-6 pos2-1 pos2-2 dir-up)
+20. (move-box-and-eat pos0-6 pos0-5 pos0-4 dir-left)
+Time: 0.033526
+Generated: 54
+Expanded: 36

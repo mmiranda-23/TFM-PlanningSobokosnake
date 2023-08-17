@@ -1,0 +1,93 @@
+Domain: /home/maria/Documents/team20/problem-8-1/domain.pddl Problem: /home/maria/Documents/team20/problem-8-1/problem-8-1.pddl
+Parsing...
+Parsing: [0.000s CPU, 0.007s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.010s wall-clock]
+Preparing model... [0.000s CPU, 0.004s wall-clock]
+Generated 137 rules.
+Computing model... [0.610s CPU, 0.623s wall-clock]
+42584 relevant atoms
+6997 auxiliary atoms
+49581 final queue length
+232253 total queue pushes
+Completing instantiation... [3.670s CPU, 3.714s wall-clock]
+goal relaxed reachable: True
+430 atoms
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Time limit reached, aborting invariant generation
+Finding invariants: [0.030s CPU, 0.025s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+267 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.030s wall-clock]
+Axioms 0
+Deterministic 41829 actions
+162 negated fluents created
+Invariants 274
+
+ Match tree built with 41829 nodes.
+
+PDDL problem description loaded: 
+	Domain: sobokosnake
+	Problem: sobokosnake-8-1
+	#Actions: 41829
+	#Fluents: 592
+Goals found: 1
+Goals_Edges found: 1
+Starting search with 1-BFWS...
+--[1 / 0]--
+--[1 / 4]--
+--[1 / 6]--
+--[1 / 10]--
+--[1 / 12]--
+--[1 / 16]--
+--[1 / 18]--
+--[1 / 21]--
+--[1 / 23]--
+--[1 / 27]--
+--[1 / 29]--
+--[1 / 31]--
+--[1 / 32]--
+--[1 / 35]--
+--[1 / 36]--
+--[1 / 38]--
+--[1 / 39]--
+Total time: 0.011835
+Nodes generated during search: 1255
+Nodes expanded during search: 1211
+Plan found with cost: NOTFOUND
+Fast-BFS search completed in 0.011835 secs
+Starting search with BFWS(novel,land,h_ff)...
+Landmarks found: 1
+Landmarks_Edges found: 1
+--[1 / 4294967295]--
+--[1 / 186355]--
+--[1 / 139991]--
+--[1 / 93627]--
+--[1 / 75926]--
+--[1 / 55188]--
+--[1 / 34450]--
+--[1 / 26525]--
+--[1 / 13712]--
+--[1 / 10675]--
+--[1 / 5787]--
+--[1 / 4601]--
+--[1 / 2750]--
+--[1 / 2229]--
+--[1 / 1564]--
+--[1 / 1043]--
+--[1 / 844]--
+--[1 / 611]--
+--[1 / 378]--
+--[1 / 289]--
+--[1 / 145]--
+--[1 / 111]--
+--[1 / 56]--

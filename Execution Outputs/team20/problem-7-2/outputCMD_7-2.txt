@@ -1,0 +1,130 @@
+Domain: /home/maria/Documents/team20/problem-7-2/domain.pddl Problem: /home/maria/Documents/team20/problem-7-2/problem-7-2.pddl
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.008s wall-clock]
+Preparing model... [0.010s CPU, 0.003s wall-clock]
+Generated 137 rules.
+Computing model... [0.200s CPU, 0.212s wall-clock]
+13798 relevant atoms
+4190 auxiliary atoms
+17988 final queue length
+75912 total queue pushes
+Completing instantiation... [1.080s CPU, 1.096s wall-clock]
+goal relaxed reachable: True
+257 atoms
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Time limit reached, aborting invariant generation
+Finding invariants: [0.010s CPU, 0.013s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+193 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.016s wall-clock]
+Axioms 0
+Deterministic 13342 actions
+103 negated fluents created
+Invariants 195
+
+ Match tree built with 13342 nodes.
+
+PDDL problem description loaded: 
+	Domain: sobokosnake
+	Problem: sobokosnake-7-2
+	#Actions: 13342
+	#Fluents: 360
+Goals found: 7
+Goals_Edges found: 7
+Starting search with 1-BFWS...
+--[7 / 0]--
+--[7 / 4]--
+--[7 / 6]--
+--[7 / 8]--
+--[6 / 0]--
+--[6 / 10]--
+--[6 / 13]--
+--[5 / 0]--
+--[5 / 17]--
+--[5 / 19]--
+--[5 / 22]--
+--[5 / 27]--
+--[5 / 30]--
+--[5 / 32]--
+--[5 / 37]--
+--[4 / 0]--
+--[4 / 41]--
+--[3 / 0]--
+--[3 / 4]--
+--[3 / 7]--
+--[3 / 16]--
+--[3 / 32]--
+--[3 / 40]--
+--[3 / 41]--
+--[3 / 45]--
+--[3 / 47]--
+--[2 / 0]--
+--[2 / 17]--
+--[1 / 0]--
+--[1 / 4]--
+--[1 / 7]--
+--[1 / 10]--
+--[1 / 14]--
+--[1 / 17]--
+--[1 / 18]--
+--[1 / 21]--
+--[1 / 23]--
+--[1 / 25]--
+--[1 / 27]--
+--[1 / 28]--
+--[1 / 29]--
+--[1 / 31]--
+--[1 / 35]--
+--[1 / 36]--
+--[1 / 37]--
+--[1 / 41]--
+--[1 / 44]--
+--[1 / 45]--
+--[1 / 50]--
+--[1 / 52]--
+--[1 / 54]--
+--[1 / 56]--
+--[1 / 58]--
+--[1 / 62]--
+--[1 / 63]--
+--[1 / 68]--
+Total time: 2.90144
+Nodes generated during search: 3343
+Nodes expanded during search: 3062
+Plan found with cost: NOTFOUND
+Fast-BFS search completed in 2.90144 secs
+Starting search with BFWS(novel,land,h_ff)...
+Landmarks found: 7
+Landmarks_Edges found: 7
+--[7 / 4294967295]--
+--[7 / 39]--
+--[7 / 36]--
+--[7 / 27]--
+--[6 / 27]--
+--[5 / 27]--
+--[5 / 25]--
+--[5 / 21]--
+--[4 / 21]--
+--[4 / 17]--
+--[3 / 17]--
+--[3 / 14]--
+--[3 / 13]--
+--[3 / 9]--
+--[3 / 8]--
+--[2 / 8]--
+--[2 / 7]--
+--[2 / 5]--
+--[2 / 3]--
+--[2 / 2]--
+--[1 / 2]--

@@ -1,0 +1,670 @@
+Domain: /home/maria/Documents/team20/problem-2-3/domain.pddl Problem: /home/maria/Documents/team20/problem-2-3/problem-2-3.pddl
+Parsing...
+Parsing: [0.000s CPU, 0.008s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.007s wall-clock]
+Preparing model... [0.010s CPU, 0.006s wall-clock]
+Generated 137 rules.
+Computing model... [0.110s CPU, 0.122s wall-clock]
+7299 relevant atoms
+3284 auxiliary atoms
+10583 final queue length
+39599 total queue pushes
+Completing instantiation... [0.480s CPU, 0.515s wall-clock]
+goal relaxed reachable: True
+225 atoms
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Time limit reached, aborting invariant generation
+Finding invariants: [0.010s CPU, 0.008s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+145 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.011s wall-clock]
+Axioms 0
+Deterministic 6898 actions
+93 negated fluents created
+Invariants 148
+
+ Match tree built with 6898 nodes.
+
+PDDL problem description loaded: 
+	Domain: sobokosnake
+	Problem: sobokosnake-2-3
+	#Actions: 6898
+	#Fluents: 318
+Goals found: 13
+Goals_Edges found: 13
+Starting search with 1-BFWS...
+--[13 / 0]--
+--[13 / 6]--
+--[13 / 8]--
+--[12 / 0]--
+--[12 / 12]--
+--[11 / 0]--
+--[11 / 6]--
+--[11 / 10]--
+--[10 / 0]--
+--[10 / 16]--
+--[9 / 0]--
+--[9 / 15]--
+--[8 / 0]--
+--[8 / 6]--
+--[8 / 7]--
+--[8 / 10]--
+--[8 / 12]--
+--[8 / 15]--
+--[7 / 0]--
+--[7 / 19]--
+--[6 / 0]--
+--[6 / 6]--
+--[5 / 0]--
+--[5 / 4]--
+--[4 / 0]--
+--[4 / 4]--
+--[4 / 5]--
+--[3 / 0]--
+--[3 / 4]--
+--[2 / 0]--
+--[2 / 4]--
+--[1 / 0]--
+--[1 / 4]--
+--[1 / 7]--
+--[1 / 9]--
+--[1 / 11]--
+--[1 / 13]--
+--[1 / 15]--
+--[1 / 17]--
+--[1 / 21]--
+--[0 / 0]--
+--[0 / 6]--
+Total time: 0.0959119
+Nodes generated during search: 117
+Nodes expanded during search: 103
+Plan found with cost: 55
+Fast-BFS search completed in 0.0959119 secs
+INFO     Running translator.
+INFO     translator input: ['/home/maria/Documents/team20/problem-2-3/domain.pddl', '/home/maria/Documents/team20/problem-2-3/problem-2-3.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 1799.98s
+INFO     translator memory limit: 8192 MB
+INFO     callstring: /usr/bin/python /planner/Fast-Downward-2018-2/builds/release64/bin/translate/translate.py /home/maria/Documents/team20/problem-2-3/domain.pddl /home/maria/Documents/team20/problem-2-3/problem-2-3.pddl
+time limit 1799.98 -> (1800, 1800)
+Parsing...
+Parsing: [0.010s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.005s wall-clock]
+Preparing model... [0.010s CPU, 0.002s wall-clock]
+Generated 137 rules.
+Computing model... [0.110s CPU, 0.117s wall-clock]
+7299 relevant atoms
+3284 auxiliary atoms
+10583 final queue length
+39599 total queue pushes
+Completing instantiation... [0.470s CPU, 0.488s wall-clock]
+Instantiating: [0.590s CPU, 0.616s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.020s CPU, 0.011s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+114 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.014s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.040s CPU, 0.033s wall-clock]
+Translating task: [5.010s CPU, 5.099s wall-clock]
+135528 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+4516 operators removed
+0 axioms removed
+2 propositions removed
+Detecting unreachable propositions: [2.890s CPU, 2.929s wall-clock]
+Reordering and filtering variables...
+117 of 117 variables necessary.
+1 of 4 mutex groups necessary.
+76062 of 76062 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.850s CPU, 0.863s wall-clock]
+Translator variables: 117
+Translator derived variables: 0
+Translator facts: 340
+Translator goal facts: 13
+Translator mutex groups: 1
+Translator total mutex groups size: 62
+Translator operators: 76062
+Translator axioms: 0
+Translator task size: 888088
+Translator peak memory: 314540 KB
+Writing output... [0.800s CPU, 0.814s wall-clock]
+Done! [10.240s CPU, 10.414s wall-clock]
+Building causal graph...
+The causal graph is not acyclic.
+117 variables of 117 necessary
+1 of 1 mutex groups necessary.
+76062 of 76062 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 340 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=13689, notReached=94681, spurious=7230
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=92564, notReached=15806, spurious=7230
+39364 operators are spurious because were not triggered
+Unreachable proposition: Atom thinsnake(pos0-5)
+Unreachable proposition: Atom thinsnake(pos0-6)
+Unreachable proposition: Atom thinsnake(pos1-4)
+Unreachable proposition: Atom thinsnake(pos1-5)
+Unreachable proposition: Atom thinsnake(pos1-6)
+Unreachable proposition: Atom thinsnake(pos2-4)
+Unreachable proposition: Atom thinsnake(pos2-6)
+Unreachable proposition: Atom thinsnake(pos3-0)
+Unreachable proposition: Atom thinsnake(pos3-1)
+Unreachable proposition: Atom thinsnake(pos3-2)
+Unreachable proposition: Atom thinsnake(pos3-4)
+Unreachable proposition: Atom thinsnake(pos3-6)
+Unreachable proposition: Atom thinsnake(pos4-0)
+Unreachable proposition: Atom thinsnake(pos4-2)
+Unreachable proposition: Atom thinsnake(pos4-4)
+Unreachable proposition: Atom thinsnake(pos4-6)
+Unreachable proposition: Atom thinsnake(pos5-0)
+Unreachable proposition: Atom thinsnake(pos5-1)
+Unreachable proposition: Atom thinsnake(pos5-2)
+Unreachable proposition: Atom thinsnake(pos5-4)
+Unreachable proposition: Atom thinsnake(pos5-5)
+Unreachable proposition: Atom thinsnake(pos5-6)
+H^2 mutexes added fw: 4916, unreachable: 22
+368 of 36698 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=82787, notReached=9777, spurious=23036
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=92460, notReached=104, spurious=23036
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 104, unreachable: 0
+0 of 36330 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=13689, notReached=78771, spurious=23140
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=92460, notReached=0, spurious=23140
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 0, unreachable: 0
+0 of 36330 operators detected as spurious
+Total mutex and disambiguation time: 12.0795 iterations: 3
+2511 of 2511 mutex groups necessary.
+36330 of 76062 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 36330
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 117
+2511 of 2511 mutex groups necessary.
+36330 of 36330 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+117 variables of 117 of 117 necessary
+The causal graph is not acyclic.
+117 variables of 117 necessary
+2511 of 2511 mutex groups necessary.
+36330 of 36330 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 117
+Preprocessor facts: 318
+Preprocessor derived variables: 0
+Preprocessor operators: 36330
+Preprocessor mutex groups: 2511
+Preprocessor task size: 443794
+Writing output...
+done
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--if-unit-cost', '--heuristic', 'hlm=lama_synergy(lm_rhw(reasonable_orders=true))', '--heuristic', 'hff=ff_synergy(hlm)', '--search', 'iterated([lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true,external_bound=55)', '--if-non-unit-cost', '--heuristic', 'hlm1=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))', '--heuristic', 'hff1=ff_synergy(hlm1)', '--heuristic', 'hlm2=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))', '--heuristic', 'hff2=ff_synergy(hlm2)', '--search', 'iterated([lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true,external_bound=55)', '--always']
+INFO     search time limit: 1770.09s
+INFO     search memory limit: 8192 MB
+INFO     search executable: /planner/Fast-Downward-2018-2/builds/release64/bin/downward
+INFO     callstring: /planner/Fast-Downward-2018-2/builds/release64/bin/downward --if-unit-cost --heuristic 'hlm=lama_synergy(lm_rhw(reasonable_orders=true))' --heuristic 'hff=ff_synergy(hlm)' --search 'iterated([lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true,external_bound=55)' --if-non-unit-cost --heuristic 'hlm1=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))' --heuristic 'hff1=ff_synergy(hlm1)' --heuristic 'hlm2=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))' --heuristic 'hff2=ff_synergy(hlm2)' --search 'iterated([lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true,external_bound=55)' --always --internal-plan-file sas_plan < output.sas
+time limit 1770.09 -> (1771, 1772)
+reading input... [t=0.000771019s]
+done reading input! [t=0.230435s]
+packing state variables...done! [t=0.235336s]
+Variables: 117
+FactPairs: 318
+Bytes per state: 20
+Building successor generator...done! [t=0.271163s]
+peak memory difference for root successor generator creation: 6140 KB
+time for root successor generation creation: 0.0358263s
+done initializing global data [t=0.272761s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 1.4682s
+Discovered 46 landmarks, of which 8 are disjunctive and 0 are conjunctive 
+57 edges
+Initializing LAMA-FF synergy master
+Initializing LAMA-FF synergy slave
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 5)
+Conducting lazy best first search, (real) bound = 55
+24 initial landmarks, 13 goal landmarks
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+New best heuristic value for ff_synergy(hlm): 26
+[g=0, 1 evaluated, 0 expanded, t=1.84553s, 84084 KB]
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+Initial heuristic value for ff_synergy(hlm): 26
+New best heuristic value for ff_synergy(hlm): 21
+[g=1, 2 evaluated, 1 expanded, t=1.85258s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 20
+[g=2, 3 evaluated, 2 expanded, t=1.86201s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 19
+[g=3, 4 evaluated, 3 expanded, t=1.86849s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+[g=4, 5 evaluated, 4 expanded, t=1.88963s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=5, 7 evaluated, 6 expanded, t=1.90006s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+New best heuristic value for ff_synergy(hlm): 18
+[g=6, 8 evaluated, 7 expanded, t=1.91901s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+New best heuristic value for ff_synergy(hlm): 17
+[g=7, 9 evaluated, 8 expanded, t=1.93092s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+New best heuristic value for ff_synergy(hlm): 16
+[g=8, 10 evaluated, 9 expanded, t=1.94118s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=12, 35 evaluated, 31 expanded, t=2.16928s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=13, 36 evaluated, 32 expanded, t=2.19011s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=14, 37 evaluated, 33 expanded, t=2.19011s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+[g=16, 41 evaluated, 36 expanded, t=2.23297s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 44 evaluated, 39 expanded, t=2.26345s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 49 evaluated, 44 expanded, t=2.30465s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=22, 57 evaluated, 51 expanded, t=2.39122s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+New best heuristic value for ff_synergy(hlm): 10
+[g=25, 60 evaluated, 54 expanded, t=2.42336s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+New best heuristic value for ff_synergy(hlm): 9
+[g=26, 61 evaluated, 55 expanded, t=2.42801s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=28, 78 evaluated, 71 expanded, t=2.5865s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=29, 79 evaluated, 72 expanded, t=2.5865s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=30, 80 evaluated, 73 expanded, t=2.59556s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 5
+[g=35, 89 evaluated, 81 expanded, t=2.65566s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+New best heuristic value for ff_synergy(hlm): 4
+[g=36, 90 evaluated, 82 expanded, t=2.65759s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 3
+[g=36, 149 evaluated, 138 expanded, t=3.18443s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 2
+[g=37, 150 evaluated, 139 expanded, t=3.18443s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 1
+[g=38, 151 evaluated, 140 expanded, t=3.19303s, 84084 KB]
+Solution found!
+Actual search time: 1.35864s [t=3.19303s]
+move-thin-snake pos1-2 pos2-2 dir-down (1)
+move-thin-snake-and-first-eat pos2-2 pos3-2 dir-down (1)
+move-and-eat pos3-2 pos3-1 dir-left (1)
+move-and-eat pos3-1 pos3-0 dir-left (1)
+move-fat-snake pos3-0 pos2-0 pos2-2 pos3-2 dir-up (1)
+move-fat-snake pos2-0 pos1-0 pos3-2 pos3-1 dir-up (1)
+move-fat-snake pos1-0 pos0-0 pos3-1 pos3-0 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos3-0 pos2-0 dir-right (1)
+move-fat-snake pos0-1 pos0-2 pos2-0 pos1-0 dir-right (1)
+move-fat-snake pos0-2 pos1-2 pos1-0 pos0-0 dir-down (1)
+move-fat-snake-and-box pos1-2 pos1-3 pos0-0 pos0-1 pos1-4 dir-right (1)
+move-box-and-eat pos1-3 pos1-4 pos1-5 dir-right (1)
+move-fat-snake pos1-4 pos2-4 pos0-1 pos0-2 dir-down (1)
+move-fat-snake pos2-4 pos3-4 pos0-2 pos1-2 dir-down (1)
+move-fat-snake pos3-4 pos4-4 pos1-2 pos1-3 dir-down (1)
+move-and-eat pos4-4 pos5-4 dir-down (1)
+move-fat-snake pos5-4 pos5-5 pos1-3 pos1-4 dir-right (1)
+move-and-eat pos5-5 pos5-6 dir-right (1)
+move-fat-snake pos5-6 pos4-6 pos1-4 pos2-4 dir-up (1)
+move-fat-snake pos4-6 pos3-6 pos2-4 pos3-4 dir-up (1)
+move-fat-snake pos3-6 pos2-6 pos3-4 pos4-4 dir-up (1)
+move-and-eat pos2-6 pos1-6 dir-up (1)
+move-box-and-eat pos1-6 pos1-5 pos1-4 dir-left (1)
+move-fat-snake-and-box pos1-5 pos1-4 pos4-4 pos5-4 pos1-3 dir-left (1)
+move-fat-snake-and-box pos1-4 pos1-3 pos5-4 pos5-5 pos1-2 dir-left (1)
+move-fat-snake pos1-3 pos0-3 pos5-5 pos5-6 dir-up (1)
+move-fat-snake pos0-3 pos0-2 pos5-6 pos4-6 dir-left (1)
+move-fat-snake pos0-2 pos0-1 pos4-6 pos3-6 dir-left (1)
+move-fat-snake pos0-1 pos0-0 pos3-6 pos2-6 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos2-6 pos1-6 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos1-6 pos1-5 dir-down (1)
+move-fat-snake pos2-0 pos3-0 pos1-5 pos1-4 dir-down (1)
+move-fat-snake pos3-0 pos3-1 pos1-4 pos1-3 dir-right (1)
+move-fat-snake pos3-1 pos3-2 pos1-3 pos0-3 dir-right (1)
+move-and-eat pos3-2 pos4-2 dir-down (1)
+move-and-eat pos4-2 pos5-2 dir-down (1)
+move-and-eat pos5-2 pos5-1 dir-left (1)
+move-and-eat pos5-1 pos5-0 dir-left (1)
+move-and-eat pos5-0 pos4-0 dir-up (1)
+Plan length: 39 step(s).
+Plan cost: 39
+Expanded 141 state(s).
+Reopened 0 state(s).
+Evaluated 152 state(s).
+Evaluations: 304
+Generated 181 state(s).
+Dead ends: 10 state(s).
+Number of registered states: 152
+Best solution cost so far: 39
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 3)
+Conducting lazy best first search, (real) bound = 39
+24 initial landmarks, 13 goal landmarks
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+New best heuristic value for ff_synergy(hlm): 26
+[g=0, 1 evaluated, 0 expanded, t=3.20397s, 84084 KB]
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+Initial heuristic value for ff_synergy(hlm): 26
+New best heuristic value for ff_synergy(hlm): 21
+[g=1, 2 evaluated, 1 expanded, t=3.2182s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 20
+[g=2, 3 evaluated, 2 expanded, t=3.22205s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 19
+[g=3, 4 evaluated, 3 expanded, t=3.23296s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+[g=4, 5 evaluated, 4 expanded, t=3.24268s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=5, 7 evaluated, 6 expanded, t=3.27031s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+New best heuristic value for ff_synergy(hlm): 18
+[g=6, 8 evaluated, 7 expanded, t=3.27399s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+New best heuristic value for ff_synergy(hlm): 17
+[g=7, 9 evaluated, 8 expanded, t=3.2857s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+New best heuristic value for ff_synergy(hlm): 16
+[g=8, 10 evaluated, 9 expanded, t=3.29517s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=12, 25 evaluated, 22 expanded, t=3.44321s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=13, 26 evaluated, 23 expanded, t=3.45217s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=14, 27 evaluated, 24 expanded, t=3.46473s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+[g=16, 31 evaluated, 27 expanded, t=3.49545s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 34 evaluated, 30 expanded, t=3.52606s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 40 evaluated, 36 expanded, t=3.58827s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=22, 48 evaluated, 43 expanded, t=3.67277s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+New best heuristic value for ff_synergy(hlm): 10
+[g=25, 51 evaluated, 46 expanded, t=3.70239s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+New best heuristic value for ff_synergy(hlm): 9
+[g=26, 52 evaluated, 47 expanded, t=3.71099s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=28, 72 evaluated, 66 expanded, t=3.89527s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=29, 73 evaluated, 67 expanded, t=3.89527s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=30, 74 evaluated, 68 expanded, t=3.90604s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 5
+[g=35, 83 evaluated, 76 expanded, t=3.95756s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+New best heuristic value for ff_synergy(hlm): 4
+[g=36, 84 evaluated, 77 expanded, t=3.95756s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 3
+[g=26, 137 evaluated, 125 expanded, t=4.39303s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 2
+[g=27, 138 evaluated, 126 expanded, t=4.39303s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 1
+[g=28, 139 evaluated, 127 expanded, t=4.40224s, 84084 KB]
+Solution found!
+Actual search time: 1.20922s [t=4.40224s]
+move-thin-snake-and-box pos1-2 pos1-3 pos1-4 dir-right (1)
+move-box-and-first-eat pos1-3 pos1-4 pos1-5 dir-right (1)
+move-fat-snake pos1-4 pos2-4 pos1-3 pos1-4 dir-down (1)
+move-fat-snake pos2-4 pos3-4 pos1-4 pos2-4 dir-down (1)
+move-fat-snake pos3-4 pos4-4 pos2-4 pos3-4 dir-down (1)
+move-and-eat pos4-4 pos5-4 dir-down (1)
+move-fat-snake pos5-4 pos5-5 pos3-4 pos4-4 dir-right (1)
+move-and-eat pos5-5 pos5-6 dir-right (1)
+move-fat-snake pos5-6 pos4-6 pos4-4 pos5-4 dir-up (1)
+move-fat-snake pos4-6 pos3-6 pos5-4 pos5-5 dir-up (1)
+move-fat-snake pos3-6 pos2-6 pos5-5 pos5-6 dir-up (1)
+move-and-eat pos2-6 pos1-6 dir-up (1)
+move-box-and-eat pos1-6 pos1-5 pos1-4 dir-left (1)
+move-fat-snake-and-box pos1-5 pos1-4 pos5-6 pos4-6 pos1-3 dir-left (1)
+move-fat-snake-and-box pos1-4 pos1-3 pos4-6 pos3-6 pos1-2 dir-left (1)
+move-fat-snake pos1-3 pos0-3 pos3-6 pos2-6 dir-up (1)
+move-fat-snake pos0-3 pos0-2 pos2-6 pos1-6 dir-left (1)
+move-fat-snake pos0-2 pos0-1 pos1-6 pos1-5 dir-left (1)
+move-fat-snake pos0-1 pos0-0 pos1-5 pos1-4 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-4 pos1-3 dir-down (1)
+move-fat-snake pos1-0 pos2-0 pos1-3 pos0-3 dir-down (1)
+move-and-eat pos2-0 pos3-0 dir-down (1)
+move-and-eat pos3-0 pos4-0 dir-down (1)
+move-and-eat pos4-0 pos5-0 dir-down (1)
+move-and-eat pos5-0 pos5-1 dir-right (1)
+move-and-eat pos5-1 pos5-2 dir-right (1)
+move-and-eat pos5-2 pos4-2 dir-up (1)
+move-and-eat pos4-2 pos3-2 dir-up (1)
+move-and-eat pos3-2 pos3-1 dir-left (1)
+Plan length: 29 step(s).
+Plan cost: 29
+Expanded 128 state(s).
+Reopened 0 state(s).
+Evaluated 140 state(s).
+Evaluations: 280
+Generated 164 state(s).
+Dead ends: 11 state(s).
+Number of registered states: 140
+Best solution cost so far: 29
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 2)
+Conducting lazy best first search, (real) bound = 29
+24 initial landmarks, 13 goal landmarks
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+New best heuristic value for ff_synergy(hlm): 26
+[g=0, 1 evaluated, 0 expanded, t=4.41109s, 84084 KB]
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+Initial heuristic value for ff_synergy(hlm): 26
+New best heuristic value for ff_synergy(hlm): 21
+[g=1, 2 evaluated, 1 expanded, t=4.42076s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 20
+[g=2, 3 evaluated, 2 expanded, t=4.43277s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 19
+[g=3, 4 evaluated, 3 expanded, t=4.44166s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+[g=4, 5 evaluated, 4 expanded, t=4.45952s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=5, 7 evaluated, 6 expanded, t=4.47245s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+New best heuristic value for ff_synergy(hlm): 18
+[g=6, 8 evaluated, 7 expanded, t=4.48421s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+New best heuristic value for ff_synergy(hlm): 17
+[g=7, 9 evaluated, 8 expanded, t=4.49332s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+New best heuristic value for ff_synergy(hlm): 16
+[g=8, 10 evaluated, 9 expanded, t=4.50414s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=12, 23 evaluated, 20 expanded, t=4.63414s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=13, 24 evaluated, 21 expanded, t=4.63877s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=14, 25 evaluated, 22 expanded, t=4.64878s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+[g=16, 29 evaluated, 25 expanded, t=4.69084s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 33 evaluated, 29 expanded, t=4.72709s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 39 evaluated, 35 expanded, t=4.78703s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=22, 49 evaluated, 44 expanded, t=4.88627s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+New best heuristic value for ff_synergy(hlm): 10
+[g=25, 55 evaluated, 50 expanded, t=4.94806s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+New best heuristic value for ff_synergy(hlm): 9
+[g=26, 56 evaluated, 51 expanded, t=4.95398s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=19, 78 evaluated, 71 expanded, t=5.15049s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=20, 79 evaluated, 72 expanded, t=5.15658s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 2
+[g=25, 89 evaluated, 81 expanded, t=5.20787s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=23, 94 evaluated, 85 expanded, t=5.25071s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 5
+[g=24, 95 evaluated, 86 expanded, t=5.25071s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 4
+[g=25, 96 evaluated, 87 expanded, t=5.26118s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 3
+[g=26, 97 evaluated, 88 expanded, t=5.26118s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 2
+[g=27, 98 evaluated, 89 expanded, t=5.27133s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+New best heuristic value for ff_synergy(hlm): 1
+[g=28, 99 evaluated, 90 expanded, t=5.27133s, 84084 KB]
+Completely explored state space -- no solution!
+Actual search time: 5.05717s [t=9.45941s]
+Expanded 539 state(s).
+Reopened 34 state(s).
+Evaluated 573 state(s).
+Evaluations: 1112
+Generated 678 state(s).
+Dead ends: 34 state(s).
+Number of registered states: 539
+Best solution cost so far: 29
+No solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 1)
+Conducting lazy best first search, (real) bound = 29
+24 initial landmarks, 13 goal landmarks
+New best heuristic value for ff_synergy(hlm): 26
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+[g=0, 1 evaluated, 0 expanded, t=9.47047s, 84084 KB]
+Initial heuristic value for ff_synergy(hlm): 26
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 22
+New best heuristic value for ff_synergy(hlm): 21
+[g=1, 2 evaluated, 1 expanded, t=9.47789s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 20
+[g=2, 3 evaluated, 2 expanded, t=9.49222s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 19
+[g=3, 5 evaluated, 4 expanded, t=9.51449s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 19
+[g=1, 6 evaluated, 5 expanded, t=9.51777s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 17
+[g=3, 10 evaluated, 9 expanded, t=9.56122s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=5, 16 evaluated, 15 expanded, t=9.62793s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 18
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+[g=6, 17 evaluated, 16 expanded, t=9.63149s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 17
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+[g=7, 18 evaluated, 17 expanded, t=9.64287s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 16
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+[g=8, 19 evaluated, 18 expanded, t=9.65296s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=10, 37 evaluated, 33 expanded, t=9.82817s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=11, 38 evaluated, 34 expanded, t=9.83015s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=12, 40 evaluated, 36 expanded, t=9.85946s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 12
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 11
+[g=13, 41 evaluated, 37 expanded, t=9.86035s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+[g=16, 94 evaluated, 87 expanded, t=10.3623s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 96 evaluated, 89 expanded, t=10.3814s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 9
+[g=18, 140 evaluated, 130 expanded, t=10.7878s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=19, 141 evaluated, 131 expanded, t=10.7878s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=20, 142 evaluated, 132 expanded, t=10.7991s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=23, 156 evaluated, 144 expanded, t=10.8911s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 157 evaluated, 145 expanded, t=10.9054s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 5
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=24, 160 evaluated, 148 expanded, t=10.9229s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 4
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+[g=25, 164 evaluated, 152 expanded, t=10.9546s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 3
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 4
+[g=26, 168 evaluated, 156 expanded, t=10.9837s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 2
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+[g=27, 172 evaluated, 159 expanded, t=11.0124s, 84084 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 2
+[g=27, 174 evaluated, 161 expanded, t=11.0262s, 84084 KB]
+New best heuristic value for ff_synergy(hlm): 1
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+[g=28, 176 evaluated, 163 expanded, t=11.0357s, 84084 KB]
+Completely explored state space -- no solution!
+Actual search time: 4.91403s [t=14.3734s]
+Expanded 512 state(s).
+Reopened 7 state(s).
+Evaluated 546 state(s).
+Evaluations: 1085
+Generated 645 state(s).
+Dead ends: 34 state(s).
+Number of registered states: 539
+Best solution cost so far: 29
+No solution found - keep searching
+Actual search time: 12.5391s [t=14.3734s]
+Cumulative statistics:
+Expanded 1320 state(s).
+Reopened 41 state(s).
+Evaluated 1411 state(s).
+Evaluations: 2781
+Generated 1668 state(s).
+Dead ends: 0 state(s).
+Search time: 12.5391s
+Total time: 14.3734s
+Solution found.
+Peak memory: 84084 KB

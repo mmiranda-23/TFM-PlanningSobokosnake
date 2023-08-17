@@ -1,0 +1,36 @@
+Bootstrap: docker
+From: ubuntu:xenial
+
+%post
+    ## Install all necessary dependencies.
+    apt-get update
+    apt-get -y install cmake g++ g++-multilib make python ca-certificates git
+    rm -rf /var/lib/apt/lists/*
+
+    git clone -b ipc-2018-seq-sat https://bitbucket.org/ipc2018-classical/team15.git /planner
+
+    ## Build your planner
+    cd /planner
+    ./build.py release64
+
+%runscript
+    ## The runscript is called whenever the container is used to solve
+    ## an instance.
+
+    DOMAINFILE=$1
+    PROBLEMFILE=$2
+    PLANFILE=$3
+
+    ## Call your planner.
+    /planner/plan.py $DOMAINFILE $PROBLEMFILE $PLANFILE
+
+## Update the following fields with meta data about your submission.
+## Please use the same field names and use only one line for each value.
+%labels
+Name        Cerberus
+Description Red-black planning heuristic with native support for conditional effects, h^2 mutexes, novelty heuristic for search guidance
+Authors     Michael Katz <michael.katz1@ibm.com>
+SupportsDerivedPredicates no
+SupportsQuantifiedPreconditions no
+SupportsQuantifiedEffects no
+

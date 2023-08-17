@@ -1,0 +1,45 @@
+INFO     Running translator.
+INFO     translator input: ['/home/maria/Documents/team45/problem-8-1/domain.pddl', '/home/maria/Documents/team45/problem-8-1/problem-8-1.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 1799.91s
+INFO     translator memory limit: 8192 MB
+INFO     callstring: /usr/bin/python /planner/builds/release64/bin/translate/translate.py /home/maria/Documents/team45/problem-8-1/domain.pddl /home/maria/Documents/team45/problem-8-1/problem-8-1.pddl
+time limit 1799.91 -> (1800, 1800)
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.007s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 137 rules.
+Computing model... [0.600s CPU, 0.608s wall-clock]
+42584 relevant atoms
+6997 auxiliary atoms
+49581 final queue length
+232253 total queue pushes
+Completing instantiation... [3.690s CPU, 3.764s wall-clock]
+Instantiating: [4.320s CPU, 4.395s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.020s CPU, 0.026s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+267 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.032s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.190s CPU, 0.204s wall-clock]
+Command '['/usr/bin/python', '/planner/builds/release64/bin/translate/translate.py', '/home/maria/Documents/team45/problem-8-1/domain.pddl', '/home/maria/Documents/team45/problem-8-1/problem-8-1.pddl']' returned non-zero exit status 1

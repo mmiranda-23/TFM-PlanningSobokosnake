@@ -1,0 +1,3125 @@
+INFO     Running translator.
+INFO     translator input: ['/home/maria/Documents/team45/problem-7-2/domain.pddl', '/home/maria/Documents/team45/problem-7-2/problem-7-2.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 1799.93s
+INFO     translator memory limit: 8192 MB
+INFO     callstring: /usr/bin/python /planner/builds/release64/bin/translate/translate.py /home/maria/Documents/team45/problem-7-2/domain.pddl /home/maria/Documents/team45/problem-7-2/problem-7-2.pddl
+time limit 1799.93 -> (1800, 1800)
+Parsing...
+Parsing: [0.010s CPU, 0.010s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.006s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 137 rules.
+Computing model... [0.220s CPU, 0.222s wall-clock]
+13798 relevant atoms
+4190 auxiliary atoms
+17988 final queue length
+75912 total queue pushes
+Completing instantiation... [1.060s CPU, 1.076s wall-clock]
+Instantiating: [1.280s CPU, 1.313s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.020s CPU, 0.020s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+161 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.023s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.010s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.050s CPU, 0.065s wall-clock]
+Translating task: [1.600s CPU, 1.612s wall-clock]
+33400 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+28 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.660s CPU, 0.664s wall-clock]
+Reordering and filtering variables...
+163 of 163 variables necessary.
+1 of 3 mutex groups necessary.
+15078 of 15078 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.250s CPU, 0.265s wall-clock]
+Translator variables: 163
+Translator derived variables: 0
+Translator facts: 419
+Translator goal facts: 7
+Translator mutex groups: 1
+Translator total mutex groups size: 64
+Translator operators: 15078
+Translator axioms: 0
+Translator task size: 196129
+Translator peak memory: 153988 KB
+Writing output... [0.190s CPU, 0.186s wall-clock]
+Done! [4.080s CPU, 4.120s wall-clock]
+INFO     Run task transformation (/planner/builds/h2-mutexes/bin/preprocess).
+INFO     callstring: /planner/builds/h2-mutexes/bin/preprocess < output.sas
+Building causal graph...
+The causal graph is not acyclic.
+163 variables of 163 necessary
+1 of 1 mutex groups necessary.
+15078 of 15078 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 419 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=26569, notReached=141534, spurious=7458
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=152484, notReached=15619, spurious=7458
+1899 operators are spurious because were not triggered
+Unreachable proposition: Atom thinsnake(pos0-3)
+Unreachable proposition: Atom thinsnake(pos0-4)
+Unreachable proposition: Atom thinsnake(pos1-2)
+Unreachable proposition: Atom thinsnake(pos1-3)
+Unreachable proposition: Atom thinsnake(pos1-4)
+Unreachable proposition: Atom thinsnake(pos2-1)
+Unreachable proposition: Atom thinsnake(pos2-3)
+Unreachable proposition: Atom thinsnake(pos3-1)
+Unreachable proposition: Atom thinsnake(pos3-3)
+Unreachable proposition: Atom thinsnake(pos5-3)
+Unreachable proposition: Atom thinsnake(pos5-5)
+H^2 mutexes added fw: 8502, unreachable: 11
+525 of 13179 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=139363, notReached=13121, spurious=23077
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=152472, notReached=12, spurious=23077
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 12, unreachable: 0
+0 of 12654 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=26569, notReached=125903, spurious=23089
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=152472, notReached=0, spurious=23089
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 0, unreachable: 0
+0 of 12654 operators detected as spurious
+Total mutex and disambiguation time: 3.38407 iterations: 3
+4258 of 4258 mutex groups necessary.
+12654 of 15078 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 12654
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 163
+4258 of 4258 mutex groups necessary.
+12654 of 12654 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+163 variables of 163 of 163 necessary
+The causal graph is not acyclic.
+163 variables of 163 necessary
+4258 of 4258 mutex groups necessary.
+12654 of 12654 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 163
+Preprocessor facts: 408
+Preprocessor derived variables: 0
+Preprocessor operators: 12654
+Preprocessor mutex groups: 4258
+Preprocessor task size: 175259
+Writing output...
+done
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: []
+INFO     search time limit: 1789.28s
+INFO     search memory limit: 8192 MB
+INFO     search executable: /planner/builds/release64/bin/downward
+INFO     search portfolio: /planner/driver/portfolios/seq_sat_fdss_2018.py
+Exit codes: <generator object run_nonoptimal at 0x7f364195d2d0>
+remaining time: 1789.28
+config 0: relative time 26, remaining 1583
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hlm,hff=lm_ff_syn(lm_rhw(reasonable_orders=true, lm_cost_type=one), transform=adapt_costs(one))', '--search', 'lazy(alt([single(hff), single(hff, pref_only=true), single(hlm), single(hlm, pref_only=true), type_based([hff, g()])], boost=1000), preferred=[hff,hlm], cost_type=one, reopen_closed=false, randomize_successors=True, preferred_successors_first=False, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 29.39 -> (30, 31)
+reading input... [t=0.00115006s]
+done reading input! [t=0.0918324s]
+packing state variables...done! [t=0.0921459s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.103166s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0110198s
+done initializing global data [t=0.103895s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.165068s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 8
+New best heuristic value for <missing>: 22
+[g=0, 1 evaluated, 0 expanded, t=0.308013s, 36276 KB]
+Initial heuristic value for <missing>: 8
+Initial heuristic value for <missing>: 22
+New best heuristic value for <missing>: 16
+[g=1, 2 evaluated, 1 expanded, t=0.308013s, 36276 KB]
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 13
+[g=2, 4 evaluated, 3 expanded, t=0.308013s, 36276 KB]
+New best heuristic value for <missing>: 6
+[g=8, 13 evaluated, 11 expanded, t=0.351127s, 36276 KB]
+New best heuristic value for <missing>: 10
+[g=10, 16 evaluated, 14 expanded, t=0.360494s, 36276 KB]
+New best heuristic value for <missing>: 9
+[g=11, 17 evaluated, 15 expanded, t=0.360494s, 36276 KB]
+New best heuristic value for <missing>: 4
+New best heuristic value for <missing>: 8
+[g=12, 19 evaluated, 17 expanded, t=0.360494s, 36276 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 7
+[g=13, 20 evaluated, 18 expanded, t=0.372586s, 36276 KB]
+New best heuristic value for <missing>: 6
+[g=51, 368 evaluated, 317 expanded, t=1.47707s, 36276 KB]
+New best heuristic value for <missing>: 5
+[g=37, 3726 evaluated, 3349 expanded, t=12.397s, 36276 KB]
+New best heuristic value for <missing>: 4
+[g=38, 3727 evaluated, 3350 expanded, t=12.397s, 36276 KB]
+New best heuristic value for <missing>: 3
+[g=39, 3728 evaluated, 3351 expanded, t=12.397s, 36276 KB]
+New best heuristic value for <missing>: 2
+New best heuristic value for <missing>: 2
+[g=40, 3729 evaluated, 3352 expanded, t=12.397s, 36276 KB]
+New best heuristic value for <missing>: 1
+[g=29, 15510 evaluated, 13175 expanded, t=47.665s, 38380 KB]
+Peak memory: 38512 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1736.32
+config 1: relative time 25, remaining 1557
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_rhw(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=true,lm_cost_type=2)', '--heuristic', 'hLM,hFF=lm_ff_syn(lmg,admissible=true,transform=adapt_costs(1))', '--search', 'lazy(alt([type_based([g()]),single(hLM),single(hLM,pref_only=true),single(hFF),single(hFF,pref_only=true)], boost=0),preferred=[hLM],reopen_closed=false,cost_type=2,bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 27.88 -> (28, 29)
+reading input... [t=0s]
+done reading input! [t=0.0876648s]
+packing state variables...done! [t=0.0905196s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0996784s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00915874s
+done initializing global data [t=0.0996784s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+Removing all orderings.
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.165113s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+0 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 22
+New best heuristic value for <missing>: 7
+[g=0, 1 evaluated, 0 expanded, t=0.297188s, 36324 KB]
+Initial heuristic value for <missing>: 22
+Initial heuristic value for <missing>: 7
+New best heuristic value for <missing>: 16
+[g=1, 3 evaluated, 2 expanded, t=0.306281s, 36324 KB]
+New best heuristic value for <missing>: 13
+New best heuristic value for <missing>: 6
+[g=2, 4 evaluated, 3 expanded, t=0.306281s, 36324 KB]
+New best heuristic value for <missing>: 5
+[g=8, 16 evaluated, 13 expanded, t=0.35247s, 36324 KB]
+New best heuristic value for <missing>: 10
+[g=10, 18 evaluated, 15 expanded, t=0.358353s, 36324 KB]
+New best heuristic value for <missing>: 9
+[g=11, 19 evaluated, 16 expanded, t=0.358353s, 36324 KB]
+New best heuristic value for <missing>: 8
+New best heuristic value for <missing>: 4
+[g=12, 20 evaluated, 17 expanded, t=0.358353s, 36324 KB]
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 3
+[g=13, 22 evaluated, 19 expanded, t=0.368907s, 36324 KB]
+New best heuristic value for <missing>: 6
+[g=23, 242 evaluated, 208 expanded, t=1.05117s, 36324 KB]
+New best heuristic value for <missing>: 5
+[g=25, 276 evaluated, 235 expanded, t=1.14813s, 36324 KB]
+New best heuristic value for <missing>: 4
+[g=26, 277 evaluated, 236 expanded, t=1.14813s, 36324 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 2
+[g=27, 278 evaluated, 237 expanded, t=1.14813s, 36324 KB]
+New best heuristic value for <missing>: 2
+[g=28, 279 evaluated, 238 expanded, t=1.14813s, 36324 KB]
+New best heuristic value for <missing>: 1
+[g=41, 3197 evaluated, 2610 expanded, t=8.94867s, 36324 KB]
+Peak memory: 37964 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1686.4
+config 2: relative time 135, remaining 1532
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hlm,hff=lm_ff_syn(lm_rhw(reasonable_orders=true, lm_cost_type=one), transform=adapt_costs(one))', '--search', 'lazy(alt([single(hff), single(hff, pref_only=true), single(hlm), single(hlm, pref_only=true)], boost=1000), preferred=[hff,hlm], cost_type=one, reopen_closed=false, randomize_successors=False, preferred_successors_first=True, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 148.61 -> (149, 150)
+reading input... [t=0s]
+done reading input! [t=0.0926788s]
+packing state variables...done! [t=0.0941174s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.102348s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00823024s
+done initializing global data [t=0.105147s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.189706s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 8
+New best heuristic value for <missing>: 22
+[g=0, 1 evaluated, 0 expanded, t=0.329322s, 36272 KB]
+Initial heuristic value for <missing>: 8
+Initial heuristic value for <missing>: 22
+New best heuristic value for <missing>: 16
+[g=1, 2 evaluated, 1 expanded, t=0.333769s, 36272 KB]
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 13
+[g=2, 4 evaluated, 3 expanded, t=0.333769s, 36272 KB]
+New best heuristic value for <missing>: 6
+[g=8, 13 evaluated, 11 expanded, t=0.377278s, 36272 KB]
+New best heuristic value for <missing>: 10
+[g=10, 15 evaluated, 13 expanded, t=0.390416s, 36272 KB]
+New best heuristic value for <missing>: 9
+[g=11, 16 evaluated, 14 expanded, t=0.390416s, 36272 KB]
+New best heuristic value for <missing>: 4
+New best heuristic value for <missing>: 8
+[g=12, 18 evaluated, 16 expanded, t=0.397221s, 36272 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 7
+[g=13, 19 evaluated, 17 expanded, t=0.397221s, 36272 KB]
+New best heuristic value for <missing>: 6
+[g=55, 373 evaluated, 320 expanded, t=1.61449s, 36272 KB]
+New best heuristic value for <missing>: 5
+[g=37, 3727 evaluated, 3350 expanded, t=13.2862s, 36272 KB]
+New best heuristic value for <missing>: 4
+[g=38, 3728 evaluated, 3351 expanded, t=13.2862s, 36272 KB]
+New best heuristic value for <missing>: 3
+[g=39, 3729 evaluated, 3352 expanded, t=13.2862s, 36272 KB]
+New best heuristic value for <missing>: 2
+New best heuristic value for <missing>: 2
+[g=40, 3730 evaluated, 3353 expanded, t=13.2862s, 36272 KB]
+New best heuristic value for <missing>: 1
+[g=29, 25665 evaluated, 21533 expanded, t=80.9196s, 38996 KB]
+Peak memory: 47492 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1420.8
+config 3: relative time 59, remaining 1397
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hff=ff(transform=adapt_costs(one))', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=2), transform=adapt_costs(one))', '--search', 'eager_greedy([hff, hlm], preferred=[hff, hlm], cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 60.01 -> (61, 62)
+reading input... [t=0s]
+done reading input! [t=0.0824227s]
+packing state variables...done! [t=0.091677s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.102701s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.011024s
+done initializing global data [t=0.103918s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.157627s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.678112s, 52276 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+Initial heuristic value for ff(transform = adapt_costs(one)): 22
+pruning method: none
+New best heuristic value for ff(transform = adapt_costs(one)): 16
+[g=1, 3 evaluated, 1 expanded, t=0.678112s, 52276 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 7
+New best heuristic value for ff(transform = adapt_costs(one)): 13
+[g=2, 5 evaluated, 2 expanded, t=0.69115s, 52276 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 6
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+[g=10, 22 evaluated, 13 expanded, t=0.741402s, 52276 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 5
+New best heuristic value for ff(transform = adapt_costs(one)): 11
+[g=11, 23 evaluated, 14 expanded, t=0.751004s, 52276 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+[g=18, 36 evaluated, 23 expanded, t=0.797374s, 52276 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+[g=21, 43 evaluated, 27 expanded, t=0.817905s, 52276 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 7
+[g=23, 46 evaluated, 29 expanded, t=0.824952s, 52276 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 4
+[g=24, 49 evaluated, 32 expanded, t=0.833562s, 52276 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+[g=25, 65 evaluated, 42 expanded, t=0.875677s, 52276 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+[g=26, 66 evaluated, 43 expanded, t=0.887534s, 52276 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+[g=27, 67 evaluated, 44 expanded, t=0.887534s, 52276 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 2
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+[g=28, 68 evaluated, 45 expanded, t=0.887534s, 52276 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 1
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+[g=29, 69 evaluated, 46 expanded, t=0.887534s, 52276 KB]
+Peak memory: 54148 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1312.12
+config 4: relative time 23, remaining 1338
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hlm,hff=lm_ff_syn(lm_rhw(reasonable_orders=true, lm_cost_type=one), transform=adapt_costs(one))', '--search', 'lazy(alt([single(hff), single(hff, pref_only=true), single(hlm), single(hlm, pref_only=true)], boost=1000), preferred=[hff,hlm], cost_type=one, reopen_closed=false, randomize_successors=True, preferred_successors_first=True, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 22.56 -> (23, 24)
+reading input... [t=0s]
+done reading input! [t=0.0920319s]
+packing state variables...done! [t=0.0938239s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.10172s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00789616s
+done initializing global data [t=0.105172s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.166382s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 8
+New best heuristic value for <missing>: 22
+[g=0, 1 evaluated, 0 expanded, t=0.31875s, 36272 KB]
+Initial heuristic value for <missing>: 8
+Initial heuristic value for <missing>: 22
+New best heuristic value for <missing>: 16
+[g=1, 2 evaluated, 1 expanded, t=0.31875s, 36272 KB]
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 13
+[g=2, 4 evaluated, 3 expanded, t=0.330216s, 36272 KB]
+New best heuristic value for <missing>: 6
+[g=8, 13 evaluated, 11 expanded, t=0.362192s, 36272 KB]
+New best heuristic value for <missing>: 10
+[g=10, 15 evaluated, 13 expanded, t=0.374162s, 36272 KB]
+New best heuristic value for <missing>: 9
+[g=11, 16 evaluated, 14 expanded, t=0.374162s, 36272 KB]
+New best heuristic value for <missing>: 4
+New best heuristic value for <missing>: 8
+[g=12, 18 evaluated, 16 expanded, t=0.382578s, 36272 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 7
+[g=13, 19 evaluated, 17 expanded, t=0.382578s, 36272 KB]
+New best heuristic value for <missing>: 6
+[g=53, 348 evaluated, 300 expanded, t=1.50465s, 36272 KB]
+New best heuristic value for <missing>: 5
+[g=37, 3723 evaluated, 3348 expanded, t=13.4706s, 36272 KB]
+New best heuristic value for <missing>: 4
+[g=38, 3724 evaluated, 3349 expanded, t=13.4706s, 36272 KB]
+New best heuristic value for <missing>: 3
+[g=39, 3725 evaluated, 3350 expanded, t=13.4706s, 36272 KB]
+New best heuristic value for <missing>: 2
+New best heuristic value for <missing>: 2
+[g=40, 3726 evaluated, 3351 expanded, t=13.4706s, 36272 KB]
+Peak memory: 37096 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1271.49
+config 5: relative time 57, remaining 1315
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_rhw(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=true,lm_cost_type=1)', '--heuristic', 'hCg=cg(adapt_costs(2))', '--heuristic', 'hLM,hFF=lm_ff_syn(lmg,admissible=true,transform=adapt_costs(2))', '--search', 'lazy(alt([single(sum([g(),weight(hLM, 10)])),single(sum([g(),weight(hLM, 10)]),pref_only=true),single(sum([g(),weight(hFF, 10)])),single(sum([g(),weight(hFF, 10)]),pref_only=true),single(sum([g(),weight(hCg, 10)])),single(sum([g(),weight(hCg, 10)]),pref_only=true)], boost=1000),preferred=[hLM,hCg],reopen_closed=false,cost_type=2,bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 55.11 -> (56, 57)
+reading input... [t=0s]
+done reading input! [t=0.0872716s]
+packing state variables...done! [t=0.0916415s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0971616s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00552014s
+done initializing global data [t=0.10238s]
+Initializing heuristic cache... building causal graph...done! [t=0.0567373s]
+done!
+Initializing causal graph heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+Removing all orderings.
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.164377s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+0 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for cg(adapt_costs(2)): 43
+New best heuristic value for <missing>: 22
+New best heuristic value for <missing>: 7
+[g=0, 1 evaluated, 0 expanded, t=0.470127s, 60032 KB]
+Initial heuristic value for cg(adapt_costs(2)): 43
+Initial heuristic value for <missing>: 22
+Initial heuristic value for <missing>: 7
+New best heuristic value for cg(adapt_costs(2)): 39
+New best heuristic value for <missing>: 16
+[g=1, 3 evaluated, 2 expanded, t=0.48222s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 27
+New best heuristic value for <missing>: 13
+New best heuristic value for <missing>: 6
+[g=2, 4 evaluated, 3 expanded, t=0.491942s, 60032 KB]
+New best heuristic value for <missing>: 5
+[g=8, 14 evaluated, 11 expanded, t=0.538977s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 26
+[g=9, 15 evaluated, 12 expanded, t=0.544574s, 60032 KB]
+New best heuristic value for <missing>: 10
+[g=10, 16 evaluated, 13 expanded, t=0.544574s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 22
+New best heuristic value for <missing>: 9
+[g=11, 17 evaluated, 14 expanded, t=0.544574s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 17
+New best heuristic value for <missing>: 8
+New best heuristic value for <missing>: 4
+[g=12, 18 evaluated, 15 expanded, t=0.554388s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 13
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 3
+[g=13, 19 evaluated, 16 expanded, t=0.554388s, 60032 KB]
+New best heuristic value for <missing>: 6
+[g=31, 124 evaluated, 104 expanded, t=0.984326s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 10
+New best heuristic value for <missing>: 5
+[g=26, 152 evaluated, 128 expanded, t=1.09306s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 7
+New best heuristic value for <missing>: 4
+[g=27, 153 evaluated, 129 expanded, t=1.09306s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 4
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 2
+[g=28, 154 evaluated, 130 expanded, t=1.09939s, 60032 KB]
+New best heuristic value for cg(adapt_costs(2)): 2
+New best heuristic value for <missing>: 2
+New best heuristic value for <missing>: 1
+[g=29, 155 evaluated, 131 expanded, t=1.09939s, 60032 KB]
+Peak memory: 63300 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1172.59
+config 6: relative time 17, remaining 1258
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hcea=cea(transform=adapt_costs(one))', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=2), transform=adapt_costs(one))', '--search', 'lazy_greedy([hcea, hlm], preferred=[hcea, hlm], cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 15.85 -> (16, 17)
+reading input... [t=0.00170855s]
+done reading input! [t=0.094852s]
+packing state variables...done! [t=0.0983738s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.104974s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00660012s
+done initializing global data [t=0.109478s]
+Initializing context-enhanced additive heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.166224s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+New best heuristic value for cea(transform = adapt_costs(one)): 45
+[g=0, 1 evaluated, 0 expanded, t=0.669203s, 88488 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+Initial heuristic value for cea(transform = adapt_costs(one)): 45
+New best heuristic value for cea(transform = adapt_costs(one)): 38
+[g=1, 3 evaluated, 2 expanded, t=0.715237s, 95480 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 7
+New best heuristic value for cea(transform = adapt_costs(one)): 35
+[g=2, 5 evaluated, 4 expanded, t=0.773459s, 99336 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 6
+[g=12, 46 evaluated, 44 expanded, t=1.79312s, 124976 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 32
+[g=17, 115 evaluated, 113 expanded, t=3.39756s, 132448 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 5
+[g=18, 117 evaluated, 115 expanded, t=3.44644s, 132592 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 30
+[g=19, 119 evaluated, 117 expanded, t=3.48092s, 133008 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 23
+[g=20, 120 evaluated, 118 expanded, t=3.49556s, 133560 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 20
+[g=23, 125 evaluated, 123 expanded, t=3.59052s, 135092 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 4
+[g=22, 591 evaluated, 586 expanded, t=13.7726s, 140048 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 17
+[g=27, 596 evaluated, 591 expanded, t=13.8429s, 140336 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 14
+[g=28, 597 evaluated, 592 expanded, t=13.8552s, 140336 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 11
+[g=29, 598 evaluated, 593 expanded, t=13.8643s, 140480 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 8
+[g=30, 599 evaluated, 594 expanded, t=13.8643s, 140480 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 3
+New best heuristic value for cea(transform = adapt_costs(one)): 5
+[g=31, 600 evaluated, 595 expanded, t=13.8643s, 140480 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 2
+New best heuristic value for cea(transform = adapt_costs(one)): 3
+[g=32, 601 evaluated, 596 expanded, t=13.875s, 140480 KB]
+Peak memory: 145892 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1144.21
+config 7: relative time 12, remaining 1241
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hadd=add(transform=adapt_costs(one))', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=2), transform=adapt_costs(one))', '--search', 'lazy(alt([type_based([g()]),single(hadd), single(hadd, pref_only=true), single(hlm), single(hlm, pref_only=true)]), preferred=[hadd, hlm], cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 11.06 -> (12, 13)
+reading input... [t=0s]
+done reading input! [t=0.0874486s]
+packing state variables...done! [t=0.0911226s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0995728s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00845023s
+done initializing global data [t=0.103595s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.154735s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+New best heuristic value for add(transform = adapt_costs(one)): 43
+[g=0, 1 evaluated, 0 expanded, t=0.682842s, 52280 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+Initial heuristic value for add(transform = adapt_costs(one)): 43
+New best heuristic value for add(transform = adapt_costs(one)): 40
+[g=1, 4 evaluated, 3 expanded, t=0.691361s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 36
+[g=3, 7 evaluated, 6 expanded, t=0.697912s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 7
+[g=4, 8 evaluated, 7 expanded, t=0.697912s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 31
+[g=6, 12 evaluated, 11 expanded, t=0.708933s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 25
+[g=7, 15 evaluated, 14 expanded, t=0.708933s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 6
+[g=8, 18 evaluated, 16 expanded, t=0.718807s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 24
+[g=11, 25 evaluated, 23 expanded, t=0.729719s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 23
+[g=16, 80 evaluated, 72 expanded, t=0.85139s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 5
+New best heuristic value for add(transform = adapt_costs(one)): 18
+[g=17, 82 evaluated, 74 expanded, t=0.855667s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 4
+[g=18, 85 evaluated, 77 expanded, t=0.855667s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 16
+[g=22, 90 evaluated, 82 expanded, t=0.864904s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 13
+[g=23, 91 evaluated, 83 expanded, t=0.864904s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 11
+[g=25, 132 evaluated, 116 expanded, t=0.948857s, 52280 KB]
+New best heuristic value for add(transform = adapt_costs(one)): 8
+[g=26, 133 evaluated, 117 expanded, t=0.948857s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 3
+New best heuristic value for add(transform = adapt_costs(one)): 5
+[g=27, 135 evaluated, 119 expanded, t=0.948857s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 2
+New best heuristic value for add(transform = adapt_costs(one)): 3
+[g=28, 136 evaluated, 120 expanded, t=0.948857s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 1
+New best heuristic value for add(transform = adapt_costs(one)): 2
+[g=29, 9486 evaluated, 7832 expanded, t=17.406s, 52280 KB]
+Peak memory: 52280 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1123.14
+config 8: relative time 26, remaining 1229
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hFF=ff(transform=adapt_costs(1))', '--search', 'lazy(alt([single(sum([g(),weight(hFF,10)])),single(sum([g(),weight(hFF,10)]),pref_only=true)],boost=2000),preferred=[hFF],reopen_closed=false,cost_type=1,bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 23.76 -> (24, 25)
+reading input... [t=0.00195082s]
+done reading input! [t=0.0846269s]
+packing state variables...done! [t=0.0926546s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.093009s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.000354325s
+done initializing global data [t=0.093009s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 2147483647
+New best heuristic value for ff(transform = adapt_costs(1)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.485888s, 51252 KB]
+Initial heuristic value for ff(transform = adapt_costs(1)): 22
+New best heuristic value for ff(transform = adapt_costs(1)): 16
+[g=1, 3 evaluated, 2 expanded, t=0.485888s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 13
+[g=2, 5 evaluated, 4 expanded, t=0.485888s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 12
+[g=11, 17 evaluated, 15 expanded, t=0.517751s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 11
+[g=11, 21 evaluated, 17 expanded, t=0.517751s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 10
+[g=18, 28 evaluated, 24 expanded, t=0.538416s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 9
+[g=21, 31 evaluated, 27 expanded, t=0.538416s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 7
+[g=23, 34 evaluated, 30 expanded, t=0.549028s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 6
+[g=39, 414 evaluated, 358 expanded, t=1.36036s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 5
+[g=55, 6039 evaluated, 5447 expanded, t=13.4928s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 4
+[g=56, 6040 evaluated, 5448 expanded, t=13.4928s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 3
+[g=57, 6041 evaluated, 5449 expanded, t=13.4928s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 2
+[g=58, 6042 evaluated, 5450 expanded, t=13.4928s, 51252 KB]
+Peak memory: 51252 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1080.23
+config 9: relative time 28, remaining 1203
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hcg=cg(transform=adapt_costs(one))', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=2), transform=adapt_costs(one))', '--search', 'eager(alt([type_based([g()]),single(hcg), single(hcg, pref_only=true), single(hlm), single(hlm, pref_only=true)]), preferred=[hcg, hlm], cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 25.14 -> (26, 27)
+reading input... [t=0s]
+done reading input! [t=0.0852587s]
+packing state variables...done! [t=0.0924421s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0957298s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00328776s
+done initializing global data [t=0.103283s]
+Initializing heuristic cache... building causal graph...done! [t=0.055802s]
+done!
+Initializing causal graph heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.15721s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for cg(transform = adapt_costs(one)): 43
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+[g=0, 1 evaluated, 0 expanded, t=0.481367s, 56996 KB]
+Initial heuristic value for cg(transform = adapt_costs(one)): 43
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+pruning method: none
+New best heuristic value for cg(transform = adapt_costs(one)): 39
+[g=1, 3 evaluated, 1 expanded, t=0.481367s, 56996 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 27
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 7
+[g=2, 5 evaluated, 2 expanded, t=0.481367s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 25
+[g=7, 28 evaluated, 15 expanded, t=0.515265s, 57128 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 6
+[g=8, 29 evaluated, 16 expanded, t=0.515265s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 24
+[g=11, 40 evaluated, 22 expanded, t=0.5236s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 23
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 5
+[g=18, 83 evaluated, 50 expanded, t=0.574674s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 20
+[g=20, 88 evaluated, 53 expanded, t=0.574674s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 19
+[g=21, 89 evaluated, 54 expanded, t=0.574674s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 18
+[g=22, 92 evaluated, 57 expanded, t=0.585355s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+[g=23, 94 evaluated, 59 expanded, t=0.585355s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 13
+[g=24, 95 evaluated, 60 expanded, t=0.585355s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 10
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 4
+[g=25, 98 evaluated, 63 expanded, t=0.596848s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 7
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 3
+[g=26, 99 evaluated, 64 expanded, t=0.596848s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+[g=31, 141 evaluated, 96 expanded, t=0.646876s, 57128 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 3
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 2
+[g=32, 142 evaluated, 97 expanded, t=0.648511s, 57128 KB]
+Peak memory: 61960 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 1034.28
+config 10: relative time 29, remaining 1175
+g bound: infinity
+next plan number: 1
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_rhw(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=false,lm_cost_type=2)', '--heuristic', 'hCea=cea(adapt_costs(2))', '--heuristic', 'hLM,hFF=lm_ff_syn(lmg,admissible=true,transform=adapt_costs(2))', '--search', 'lazy(alt([single(hLM),single(hLM,pref_only=true),single(hFF),single(hFF,pref_only=true),single(hCea),single(hCea,pref_only=true)], boost=0),preferred=[hLM,hCea],reopen_closed=false,cost_type=2,bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+time limit 25.53 -> (26, 27)
+reading input... [t=0s]
+done reading input! [t=0.0904611s]
+packing state variables...done! [t=0.093518s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0995227s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0060047s
+done initializing global data [t=0.103877s]
+Initializing context-enhanced additive heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.159246s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 2147483647
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for cea(adapt_costs(2)): 45
+New best heuristic value for <missing>: 22
+New best heuristic value for <missing>: 7
+[g=0, 1 evaluated, 0 expanded, t=0.666856s, 90276 KB]
+Initial heuristic value for cea(adapt_costs(2)): 45
+Initial heuristic value for <missing>: 22
+Initial heuristic value for <missing>: 7
+New best heuristic value for cea(adapt_costs(2)): 38
+New best heuristic value for <missing>: 16
+[g=1, 3 evaluated, 2 expanded, t=0.727667s, 97272 KB]
+New best heuristic value for cea(adapt_costs(2)): 35
+New best heuristic value for <missing>: 13
+New best heuristic value for <missing>: 6
+[g=2, 7 evaluated, 6 expanded, t=0.845196s, 104128 KB]
+New best heuristic value for <missing>: 12
+New best heuristic value for <missing>: 5
+[g=11, 29 evaluated, 24 expanded, t=1.38109s, 116440 KB]
+New best heuristic value for cea(adapt_costs(2)): 32
+[g=9, 36 evaluated, 29 expanded, t=1.51549s, 118392 KB]
+New best heuristic value for <missing>: 10
+[g=10, 37 evaluated, 30 expanded, t=1.55224s, 121564 KB]
+New best heuristic value for <missing>: 9
+[g=11, 38 evaluated, 31 expanded, t=1.57544s, 122432 KB]
+New best heuristic value for <missing>: 8
+New best heuristic value for <missing>: 4
+[g=12, 39 evaluated, 32 expanded, t=1.60514s, 123572 KB]
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 3
+[g=13, 41 evaluated, 34 expanded, t=1.64662s, 124168 KB]
+New best heuristic value for cea(adapt_costs(2)): 18
+[g=22, 82 evaluated, 72 expanded, t=2.53852s, 129096 KB]
+New best heuristic value for cea(adapt_costs(2)): 16
+[g=24, 86 evaluated, 75 expanded, t=2.59281s, 129272 KB]
+New best heuristic value for cea(adapt_costs(2)): 13
+New best heuristic value for <missing>: 6
+[g=25, 87 evaluated, 76 expanded, t=2.60336s, 129272 KB]
+New best heuristic value for cea(adapt_costs(2)): 10
+New best heuristic value for <missing>: 5
+[g=26, 88 evaluated, 77 expanded, t=2.60507s, 129272 KB]
+New best heuristic value for cea(adapt_costs(2)): 7
+New best heuristic value for <missing>: 4
+[g=27, 89 evaluated, 78 expanded, t=2.6187s, 129272 KB]
+New best heuristic value for cea(adapt_costs(2)): 4
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 2
+[g=28, 90 evaluated, 79 expanded, t=2.6187s, 129272 KB]
+New best heuristic value for cea(adapt_costs(2)): 2
+New best heuristic value for <missing>: 2
+New best heuristic value for <missing>: 1
+[g=29, 91 evaluated, 80 expanded, t=2.62839s, 129272 KB]
+New best heuristic value for cea(adapt_costs(2)): 1
+New best heuristic value for <missing>: 1
+[g=60, 2957 evaluated, 2533 expanded, t=42.5782s, 146844 KB]
+Solution found!
+Actual search time: 41.9865s [t=42.5794s]
+move-thin-snake pos6-2 pos6-1 dir-left (1)
+move-thin-snake pos6-1 pos5-1 dir-up (1)
+move-thin-snake-and-box pos5-1 pos4-1 pos3-1 dir-up (1)
+move-thin-snake pos4-1 pos4-0 dir-left (1)
+move-thin-snake-and-box pos4-0 pos5-0 pos6-0 dir-down (1)
+move-thin-snake pos5-0 pos4-0 dir-up (1)
+move-thin-snake pos4-0 pos4-1 dir-right (1)
+move-thin-snake pos4-1 pos5-1 dir-down (1)
+move-thin-snake pos5-1 pos6-1 dir-down (1)
+move-thin-snake pos6-1 pos6-2 dir-right (1)
+move-thin-snake pos6-2 pos6-3 dir-right (1)
+move-thin-snake-and-first-eat pos6-3 pos5-3 dir-up (1)
+move-fat-snake-and-box pos5-3 pos5-2 pos6-3 pos5-3 pos5-1 dir-left (1)
+move-fat-snake pos5-2 pos6-2 pos5-3 pos5-2 dir-down (1)
+move-fat-snake pos6-2 pos6-3 pos5-2 pos6-2 dir-right (1)
+move-fat-snake pos6-3 pos6-4 pos6-2 pos6-3 dir-right (1)
+move-fat-snake pos6-4 pos6-5 pos6-3 pos6-4 dir-right (1)
+move-and-eat pos6-5 pos5-5 dir-up (1)
+move-fat-snake-and-box pos5-5 pos5-4 pos6-4 pos6-5 pos5-3 dir-left (1)
+move-fat-snake pos5-4 pos6-4 pos6-5 pos5-5 dir-down (1)
+move-fat-snake pos6-4 pos6-3 pos5-5 pos5-4 dir-left (1)
+move-fat-snake pos6-3 pos6-2 pos5-4 pos6-4 dir-left (1)
+move-fat-snake pos6-2 pos5-2 pos6-4 pos6-3 dir-up (1)
+move-fat-snake-and-box pos5-2 pos5-1 pos6-3 pos6-2 pos5-0 dir-left (1)
+move-fat-snake pos5-1 pos4-1 pos6-2 pos5-2 dir-up (1)
+move-fat-snake pos4-1 pos4-0 pos5-2 pos5-1 dir-left (1)
+move-fat-snake pos4-0 pos3-0 pos5-1 pos4-1 dir-up (1)
+move-fat-snake pos3-0 pos2-0 pos4-1 pos4-0 dir-up (1)
+move-and-eat pos2-0 pos2-1 dir-right (1)
+move-box-and-eat pos2-1 pos3-1 pos4-1 dir-down (1)
+move-fat-snake-and-box pos3-1 pos4-1 pos4-0 pos3-0 pos5-1 dir-down (1)
+move-fat-snake pos4-1 pos4-0 pos3-0 pos2-0 dir-left (1)
+move-fat-snake pos4-0 pos3-0 pos2-0 pos2-1 dir-up (1)
+move-fat-snake pos3-0 pos2-0 pos2-1 pos3-1 dir-up (1)
+move-fat-snake pos2-0 pos1-0 pos3-1 pos4-1 dir-up (1)
+move-fat-snake pos1-0 pos0-0 pos4-1 pos4-0 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos4-0 pos3-0 dir-right (1)
+move-fat-snake-and-box pos0-1 pos1-1 pos3-0 pos2-0 pos2-1 dir-down (1)
+move-fat-snake-and-box pos1-1 pos2-1 pos2-0 pos1-0 pos3-1 dir-down (1)
+move-fat-snake pos2-1 pos2-0 pos1-0 pos0-0 dir-left (1)
+move-fat-snake pos2-0 pos1-0 pos0-0 pos0-1 dir-up (1)
+move-fat-snake pos1-0 pos0-0 pos0-1 pos1-1 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos1-1 pos2-1 dir-right (1)
+move-fat-snake-and-box pos0-1 pos0-2 pos2-1 pos2-0 pos0-3 dir-right (1)
+move-box-and-eat pos0-2 pos0-3 pos0-4 dir-right (1)
+move-fat-snake-and-box pos0-3 pos1-3 pos2-0 pos1-0 pos2-3 dir-down (1)
+move-fat-snake-and-box pos1-3 pos1-2 pos1-0 pos0-0 pos1-1 dir-left (1)
+move-fat-snake-and-box pos1-2 pos1-1 pos0-0 pos0-1 pos1-0 dir-left (1)
+move-fat-snake pos1-1 pos2-1 pos0-1 pos0-2 dir-down (1)
+move-fat-snake pos2-1 pos2-0 pos0-2 pos0-3 dir-left (1)
+move-fat-snake pos2-0 pos3-0 pos0-3 pos1-3 dir-down (1)
+move-fat-snake pos3-0 pos4-0 pos1-3 pos1-2 dir-down (1)
+move-fat-snake pos4-0 pos4-1 pos1-2 pos1-1 dir-right (1)
+move-fat-snake-and-box pos4-1 pos5-1 pos1-1 pos2-1 pos6-1 dir-down (1)
+move-fat-snake pos5-1 pos5-2 pos2-1 pos2-0 dir-right (1)
+move-fat-snake-and-box pos5-2 pos5-3 pos2-0 pos3-0 pos5-4 dir-right (1)
+move-fat-snake-and-box pos5-3 pos5-4 pos3-0 pos4-0 pos5-5 dir-right (1)
+move-fat-snake pos5-4 pos4-4 pos4-0 pos4-1 dir-up (1)
+move-fat-snake pos4-4 pos3-4 pos4-1 pos5-1 dir-up (1)
+move-and-eat pos3-4 pos3-3 dir-left (1)
+move-box-and-eat pos3-3 pos2-3 pos1-3 dir-up (1)
+Plan length: 61 step(s).
+Plan cost: 61
+Expanded 2534 state(s).
+Reopened 0 state(s).
+Evaluated 2958 state(s).
+Evaluations: 8028
+Generated 3928 state(s).
+Dead ends: 423 state(s).
+Number of registered states: 2958
+Int hash set load factor: 2958/4096 = 0.722168
+Int hash set resizes: 12
+Search time: 41.9865s
+Total time: 42.5794s
+Solution found.
+Peak memory: 146844 KB
+exitcode: 0
+
+plan manager: found new plan with cost 61
+remaining time: 991.69
+config 11: relative time 88, remaining 1146
+g bound: 61
+next plan number: 2
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hcea=cea(transform=adapt_costs(one))', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=2), transform=adapt_costs(one))', '--search', 'lazy_wastar([hcea, hlm], w=3, preferred=[hcea, hlm], cost_type=one, bound=61)', '--internal-previous-portfolio-plans', '1', '--internal-plan-file', 'sas_plan']
+time limit 76.15 -> (77, 78)
+reading input... [t=0s]
+done reading input! [t=0.0865643s]
+packing state variables...done! [t=0.0902981s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0973882s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00709006s
+done initializing global data [t=0.0973882s]
+Initializing context-enhanced additive heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.158712s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Conducting lazy best first search, (real) bound = 61
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+New best heuristic value for cea(transform = adapt_costs(one)): 45
+[g=0, 1 evaluated, 0 expanded, t=0.647136s, 88488 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+Initial heuristic value for cea(transform = adapt_costs(one)): 45
+New best heuristic value for cea(transform = adapt_costs(one)): 38
+[g=1, 3 evaluated, 2 expanded, t=0.694689s, 95488 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 7
+New best heuristic value for cea(transform = adapt_costs(one)): 35
+[g=2, 5 evaluated, 4 expanded, t=0.750902s, 99260 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 6
+[g=14, 90 evaluated, 88 expanded, 1 reopened, t=2.78981s, 131712 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 31
+[g=16, 94 evaluated, 92 expanded, 2 reopened, t=2.84965s, 133084 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 5
+[g=18, 128 evaluated, 126 expanded, 2 reopened, t=3.60981s, 134628 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 30
+[g=19, 130 evaluated, 128 expanded, 2 reopened, t=3.64595s, 134772 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 23
+[g=20, 132 evaluated, 130 expanded, 2 reopened, t=3.68373s, 134772 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 20
+[g=23, 138 evaluated, 136 expanded, 2 reopened, t=3.80318s, 135608 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 4
+[g=12, 1822 evaluated, 1811 expanded, 49 reopened, t=39.6333s, 147220 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 3
+[g=13, 1823 evaluated, 1812 expanded, 49 reopened, t=39.6571s, 147652 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 19
+[g=31, 1913 evaluated, 1902 expanded, 49 reopened, t=41.3405s, 148808 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 16
+[g=32, 1914 evaluated, 1903 expanded, 49 reopened, t=41.3463s, 148808 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 13
+[g=33, 1916 evaluated, 1905 expanded, 49 reopened, t=41.3727s, 148808 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 10
+[g=34, 1917 evaluated, 1906 expanded, 49 reopened, t=41.375s, 148808 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 7
+[g=35, 1918 evaluated, 1907 expanded, 49 reopened, t=41.375s, 148808 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 2
+New best heuristic value for cea(transform = adapt_costs(one)): 4
+[g=36, 1919 evaluated, 1908 expanded, 49 reopened, t=41.375s, 148808 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 1
+New best heuristic value for cea(transform = adapt_costs(one)): 2
+[g=37, 1920 evaluated, 1909 expanded, 49 reopened, t=41.3883s, 148808 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 1
+[g=58, 6005 evaluated, 5870 expanded, 85 reopened, t=104.301s, 155416 KB]
+Solution found!
+Actual search time: 103.714s [t=104.301s]
+move-thin-snake pos6-2 pos6-1 dir-left (1)
+move-thin-snake pos6-1 pos5-1 dir-up (1)
+move-thin-snake-and-box pos5-1 pos4-1 pos3-1 dir-up (1)
+move-thin-snake pos4-1 pos4-0 dir-left (1)
+move-thin-snake-and-box pos4-0 pos5-0 pos6-0 dir-down (1)
+move-thin-snake pos5-0 pos5-1 dir-right (1)
+move-thin-snake pos5-1 pos6-1 dir-down (1)
+move-thin-snake pos6-1 pos6-2 dir-right (1)
+move-thin-snake pos6-2 pos6-3 dir-right (1)
+move-thin-snake-and-first-eat pos6-3 pos5-3 dir-up (1)
+move-fat-snake-and-box pos5-3 pos5-2 pos6-3 pos5-3 pos5-1 dir-left (1)
+move-fat-snake pos5-2 pos6-2 pos5-3 pos5-2 dir-down (1)
+move-fat-snake pos6-2 pos6-3 pos5-2 pos6-2 dir-right (1)
+move-fat-snake pos6-3 pos6-4 pos6-2 pos6-3 dir-right (1)
+move-fat-snake pos6-4 pos6-5 pos6-3 pos6-4 dir-right (1)
+move-and-eat pos6-5 pos5-5 dir-up (1)
+move-fat-snake-and-box pos5-5 pos5-4 pos6-4 pos6-5 pos5-3 dir-left (1)
+move-fat-snake pos5-4 pos6-4 pos6-5 pos5-5 dir-down (1)
+move-fat-snake pos6-4 pos6-3 pos5-5 pos5-4 dir-left (1)
+move-fat-snake pos6-3 pos6-2 pos5-4 pos6-4 dir-left (1)
+move-fat-snake pos6-2 pos5-2 pos6-4 pos6-3 dir-up (1)
+move-fat-snake-and-box pos5-2 pos5-1 pos6-3 pos6-2 pos5-0 dir-left (1)
+move-fat-snake pos5-1 pos4-1 pos6-2 pos5-2 dir-up (1)
+move-fat-snake pos4-1 pos4-0 pos5-2 pos5-1 dir-left (1)
+move-fat-snake pos4-0 pos3-0 pos5-1 pos4-1 dir-up (1)
+move-fat-snake pos3-0 pos2-0 pos4-1 pos4-0 dir-up (1)
+move-and-eat pos2-0 pos2-1 dir-right (1)
+move-box-and-eat pos2-1 pos3-1 pos4-1 dir-down (1)
+move-fat-snake-and-box pos3-1 pos4-1 pos4-0 pos3-0 pos5-1 dir-down (1)
+move-fat-snake pos4-1 pos4-0 pos3-0 pos2-0 dir-left (1)
+move-fat-snake pos4-0 pos3-0 pos2-0 pos2-1 dir-up (1)
+move-fat-snake pos3-0 pos2-0 pos2-1 pos3-1 dir-up (1)
+move-fat-snake pos2-0 pos1-0 pos3-1 pos4-1 dir-up (1)
+move-fat-snake pos1-0 pos0-0 pos4-1 pos4-0 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos4-0 pos3-0 dir-right (1)
+move-fat-snake-and-box pos0-1 pos1-1 pos3-0 pos2-0 pos2-1 dir-down (1)
+move-fat-snake-and-box pos1-1 pos2-1 pos2-0 pos1-0 pos3-1 dir-down (1)
+move-fat-snake pos2-1 pos2-0 pos1-0 pos0-0 dir-left (1)
+move-fat-snake pos2-0 pos1-0 pos0-0 pos0-1 dir-up (1)
+move-fat-snake pos1-0 pos0-0 pos0-1 pos1-1 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos1-1 pos2-1 dir-right (1)
+move-fat-snake-and-box pos0-1 pos0-2 pos2-1 pos2-0 pos0-3 dir-right (1)
+move-box-and-eat pos0-2 pos0-3 pos0-4 dir-right (1)
+move-fat-snake-and-box pos0-3 pos1-3 pos2-0 pos1-0 pos2-3 dir-down (1)
+move-fat-snake-and-box pos1-3 pos1-2 pos1-0 pos0-0 pos1-1 dir-left (1)
+move-fat-snake-and-box pos1-2 pos1-1 pos0-0 pos0-1 pos1-0 dir-left (1)
+move-fat-snake pos1-1 pos2-1 pos0-1 pos0-2 dir-down (1)
+move-fat-snake pos2-1 pos2-0 pos0-2 pos0-3 dir-left (1)
+move-fat-snake pos2-0 pos3-0 pos0-3 pos1-3 dir-down (1)
+move-fat-snake pos3-0 pos4-0 pos1-3 pos1-2 dir-down (1)
+move-fat-snake pos4-0 pos4-1 pos1-2 pos1-1 dir-right (1)
+move-fat-snake-and-box pos4-1 pos5-1 pos1-1 pos2-1 pos6-1 dir-down (1)
+move-fat-snake pos5-1 pos5-2 pos2-1 pos2-0 dir-right (1)
+move-fat-snake-and-box pos5-2 pos5-3 pos2-0 pos3-0 pos5-4 dir-right (1)
+move-fat-snake-and-box pos5-3 pos5-4 pos3-0 pos4-0 pos5-5 dir-right (1)
+move-fat-snake pos5-4 pos4-4 pos4-0 pos4-1 dir-up (1)
+move-fat-snake pos4-4 pos3-4 pos4-1 pos5-1 dir-up (1)
+move-and-eat pos3-4 pos3-3 dir-left (1)
+move-box-and-eat pos3-3 pos2-3 pos1-3 dir-up (1)
+Plan length: 59 step(s).
+Plan cost: 59
+Expanded 5871 state(s).
+Reopened 85 state(s).
+Evaluated 6006 state(s).
+Evaluations: 11927
+Generated 9726 state(s).
+Dead ends: 134 state(s).
+Number of registered states: 5921
+Int hash set load factor: 5921/8192 = 0.722778
+Int hash set resizes: 13
+Search time: 103.714s
+Total time: 104.301s
+Solution found.
+Peak memory: 155416 KB
+exitcode: 0
+
+plan manager: found new plan with cost 59
+remaining time: 887.37
+config 12: relative time 8, remaining 1058
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hCg=cg(adapt_costs(1))', '--heuristic', 'hFF=ff(adapt_costs(1))', '--search', 'lazy(alt([single(sum([g(),weight(hFF,10)])),single(sum([g(),weight(hFF,10)]),pref_only=true),single(sum([g(),weight(hCg, 10)])),single(sum([g(),weight(hCg,10)]),pref_only=true)],boost=100),preferred=[hCg],reopen_closed=false,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 6.71 -> (7, 8)
+reading input... [t=0.00175035s]
+done reading input! [t=0.0823371s]
+packing state variables...done! [t=0.0914857s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0934189s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00193322s
+done initializing global data [t=0.104156s]
+Initializing heuristic cache... building causal graph...done! [t=0.0519304s]
+done!
+Initializing causal graph heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for ff(adapt_costs(1)): 22
+New best heuristic value for cg(adapt_costs(1)): 43
+[g=0, 1 evaluated, 0 expanded, t=0.659222s, 75124 KB]
+Initial heuristic value for ff(adapt_costs(1)): 22
+Initial heuristic value for cg(adapt_costs(1)): 43
+New best heuristic value for ff(adapt_costs(1)): 16
+New best heuristic value for cg(adapt_costs(1)): 39
+[g=1, 3 evaluated, 2 expanded, t=0.669105s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 13
+New best heuristic value for cg(adapt_costs(1)): 27
+[g=2, 4 evaluated, 3 expanded, t=0.669105s, 75124 KB]
+New best heuristic value for cg(adapt_costs(1)): 26
+[g=9, 16 evaluated, 13 expanded, t=0.712482s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 10
+[g=10, 17 evaluated, 14 expanded, t=0.712482s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 9
+New best heuristic value for cg(adapt_costs(1)): 22
+[g=11, 18 evaluated, 15 expanded, t=0.712482s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 8
+New best heuristic value for cg(adapt_costs(1)): 17
+[g=12, 19 evaluated, 16 expanded, t=0.721735s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 7
+New best heuristic value for cg(adapt_costs(1)): 13
+[g=13, 20 evaluated, 17 expanded, t=0.721735s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 6
+[g=25, 98 evaluated, 80 expanded, t=0.952687s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 5
+New best heuristic value for cg(adapt_costs(1)): 10
+[g=26, 99 evaluated, 81 expanded, t=0.952687s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 4
+New best heuristic value for cg(adapt_costs(1)): 7
+[g=27, 100 evaluated, 82 expanded, t=0.958321s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 3
+New best heuristic value for cg(adapt_costs(1)): 4
+[g=28, 101 evaluated, 83 expanded, t=0.958321s, 75124 KB]
+New best heuristic value for ff(adapt_costs(1)): 2
+New best heuristic value for cg(adapt_costs(1)): 2
+[g=29, 102 evaluated, 84 expanded, t=0.958321s, 75124 KB]
+Peak memory: 75124 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 874.92
+config 13: relative time 54, remaining 1050
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hGoalCount=goalcount(transform=adapt_costs(2))', '--heuristic', 'hFF=ff(transform=adapt_costs(0))', '--search', 'lazy(alt([single(sum([g(),weight(hFF,10)])),single(sum([g(),weight(hFF,10)]),pref_only=true),single(sum([g(),weight(hGoalCount,10)])),single(sum([g(),weight(hGoalCount,10)]),pref_only=true)],boost=2000),preferred=[hFF,hGoalCount],reopen_closed=false,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 45.00 -> (45, 46)
+reading input... [t=0s]
+done reading input! [t=0.0806867s]
+packing state variables...done! [t=0.0900817s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0917881s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00170642s
+done initializing global data [t=0.102234s]
+Initializing goal count heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for goalcount(transform = adapt_costs(2)): 7
+New best heuristic value for ff(transform = adapt_costs(0)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.490935s, 51252 KB]
+Initial heuristic value for goalcount(transform = adapt_costs(2)): 7
+Initial heuristic value for ff(transform = adapt_costs(0)): 22
+New best heuristic value for ff(transform = adapt_costs(0)): 16
+[g=1, 3 evaluated, 2 expanded, t=0.490935s, 51252 KB]
+New best heuristic value for goalcount(transform = adapt_costs(2)): 6
+New best heuristic value for ff(transform = adapt_costs(0)): 13
+[g=2, 5 evaluated, 4 expanded, t=0.497119s, 51252 KB]
+New best heuristic value for goalcount(transform = adapt_costs(2)): 5
+New best heuristic value for ff(transform = adapt_costs(0)): 12
+[g=11, 19 evaluated, 17 expanded, t=0.528245s, 51252 KB]
+New best heuristic value for goalcount(transform = adapt_costs(2)): 4
+New best heuristic value for ff(transform = adapt_costs(0)): 11
+[g=11, 24 evaluated, 20 expanded, t=0.53904s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 10
+[g=18, 32 evaluated, 28 expanded, t=0.53904s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 9
+[g=21, 35 evaluated, 31 expanded, t=0.561182s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 7
+[g=23, 38 evaluated, 34 expanded, t=0.561182s, 51252 KB]
+New best heuristic value for goalcount(transform = adapt_costs(2)): 3
+[g=24, 39 evaluated, 35 expanded, t=0.572113s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 6
+[g=41, 467 evaluated, 402 expanded, t=1.45365s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 5
+[g=37, 1241 evaluated, 1088 expanded, t=3.12515s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 4
+[g=38, 1242 evaluated, 1089 expanded, t=3.12515s, 51252 KB]
+New best heuristic value for goalcount(transform = adapt_costs(2)): 2
+New best heuristic value for ff(transform = adapt_costs(0)): 3
+[g=39, 1243 evaluated, 1090 expanded, t=3.12515s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 2
+[g=40, 1244 evaluated, 1091 expanded, t=3.12515s, 51252 KB]
+New best heuristic value for goalcount(transform = adapt_costs(2)): 1
+[g=55, 14270 evaluated, 12766 expanded, t=31.2327s, 51252 KB]
+Peak memory: 51252 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 794.73
+config 14: relative time 24, remaining 996
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hff=ff(transform=adapt_costs(one))', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=2), transform=adapt_costs(one))', '--search', 'eager(alt([type_based([g()]),single(sum([g(), weight(hff, 3)])), single(sum([g(), weight(hff, 3)]), pref_only=true), single(sum([g(), weight(hlm, 3)])), single(sum([g(), weight(hlm, 3)]), pref_only=true)]), preferred=[hff, hlm], cost_type=one, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 19.15 -> (20, 21)
+reading input... [t=0.00157042s]
+done reading input! [t=0.104335s]
+packing state variables...done! [t=0.106638s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.134672s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0280337s
+done initializing global data [t=0.13824s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.188911s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Conducting best first search without reopening closed nodes, (real) bound = 59
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.774891s, 52280 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+Initial heuristic value for ff(transform = adapt_costs(one)): 22
+pruning method: none
+New best heuristic value for ff(transform = adapt_costs(one)): 16
+[g=1, 3 evaluated, 1 expanded, t=0.774891s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 7
+New best heuristic value for ff(transform = adapt_costs(one)): 13
+[g=2, 5 evaluated, 2 expanded, t=0.789427s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 6
+[g=8, 25 evaluated, 13 expanded, t=0.859383s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+[g=7, 32 evaluated, 17 expanded, t=0.877401s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 11
+[g=13, 123 evaluated, 80 expanded, t=1.24986s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+[g=14, 125 evaluated, 81 expanded, t=1.25887s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+[g=15, 126 evaluated, 82 expanded, t=1.26182s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 5
+New best heuristic value for ff(transform = adapt_costs(one)): 8
+[g=19, 134 evaluated, 86 expanded, t=1.2828s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 4
+[g=20, 137 evaluated, 88 expanded, t=1.29387s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 7
+[g=19, 153 evaluated, 97 expanded, t=1.35752s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 3
+[g=13, 217 evaluated, 139 expanded, t=1.59496s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+[g=26, 235 evaluated, 151 expanded, t=1.66143s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+[g=27, 236 evaluated, 152 expanded, t=1.66143s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+[g=28, 238 evaluated, 154 expanded, t=1.67267s, 52280 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+[g=29, 240 evaluated, 155 expanded, t=1.67267s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 2
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+[g=30, 243 evaluated, 157 expanded, t=1.67975s, 52280 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 1
+[g=29, 323 evaluated, 211 expanded, t=2.00614s, 52280 KB]
+Peak memory: 52280 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 759.18
+config 15: relative time 29, remaining 972
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_rhw(reasonable_orders=false, only_causal_landmarks=false, disjunctive_landmarks=false, conjunctive_landmarks=true, no_orders=false, lm_cost_type=2)', '--heuristic', 'hLM, hFF=lm_ff_syn(lmg, admissible=false, transform=adapt_costs(1))', '--heuristic', 'hBlind=blind()', '--search', 'lazy(alt([type_based([g()]),single(sum([g(), weight(hBlind, 2)])), single(sum([g(), weight(hBlind, 2)]), pref_only=true), single(sum([g(), weight(hLM, 2)])), single(sum([g(), weight(hLM, 2)]), pref_only=true), single(sum([g(), weight(hFF, 2)])), single(sum([g(), weight(hFF, 2)]), pref_only=true)], boost=4419), preferred=[hLM], reopen_closed=true, cost_type=1, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 22.65 -> (23, 24)
+reading input... [t=0s]
+done reading input! [t=0.0871967s]
+packing state variables...done! [t=0.091658s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0986829s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00702493s
+done initializing global data [t=0.0986829s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+Discarding 1 disjunctive landmarks
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.157265s
+Discovered 18 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+11 edges
+Initializing LAMA-FF synergy object
+Initializing blind search heuristic...
+Conducting lazy best first search, (real) bound = 59
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 22
+New best heuristic value for blind: 1
+[g=0, 1 evaluated, 0 expanded, t=0.296801s, 36232 KB]
+Initial heuristic value for <missing>: 7
+Initial heuristic value for <missing>: 22
+Initial heuristic value for blind: 1
+New best heuristic value for <missing>: 16
+[g=1, 3 evaluated, 2 expanded, t=0.307424s, 36232 KB]
+New best heuristic value for <missing>: 6
+New best heuristic value for <missing>: 13
+[g=2, 4 evaluated, 3 expanded, t=0.307424s, 36232 KB]
+New best heuristic value for <missing>: 5
+[g=8, 18 evaluated, 14 expanded, t=0.362883s, 36232 KB]
+New best heuristic value for <missing>: 10
+[g=10, 20 evaluated, 16 expanded, t=0.362883s, 36232 KB]
+New best heuristic value for <missing>: 9
+[g=11, 21 evaluated, 17 expanded, t=0.368893s, 36232 KB]
+New best heuristic value for <missing>: 4
+New best heuristic value for <missing>: 8
+[g=12, 22 evaluated, 18 expanded, t=0.368893s, 36232 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 7
+[g=13, 23 evaluated, 19 expanded, t=0.368893s, 36232 KB]
+New best heuristic value for <missing>: 6
+[g=23, 204 evaluated, 180 expanded, 2 reopened, t=1.02856s, 36232 KB]
+New best heuristic value for <missing>: 5
+[g=32, 272 evaluated, 238 expanded, 2 reopened, t=1.24693s, 36232 KB]
+New best heuristic value for <missing>: 4
+[g=33, 273 evaluated, 239 expanded, 2 reopened, t=1.24693s, 36232 KB]
+New best heuristic value for <missing>: 2
+New best heuristic value for <missing>: 3
+[g=34, 274 evaluated, 240 expanded, 2 reopened, t=1.25301s, 36232 KB]
+New best heuristic value for <missing>: 1
+New best heuristic value for <missing>: 2
+[g=35, 275 evaluated, 241 expanded, 2 reopened, t=1.25301s, 36232 KB]
+Peak memory: 37472 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 718.07
+config 16: relative time 30, remaining 943
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hff=ff(transform=adapt_costs(one))', '--search', 'lazy_wastar([hff],  w=3,  preferred=[hff], cost_type=one, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 22.84 -> (23, 24)
+reading input... [t=0s]
+done reading input! [t=0.0854885s]
+packing state variables...done! [t=0.0909662s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0948909s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00392468s
+done initializing global data [t=0.101352s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.493994s, 51256 KB]
+Initial heuristic value for ff(transform = adapt_costs(one)): 22
+New best heuristic value for ff(transform = adapt_costs(one)): 16
+[g=1, 3 evaluated, 2 expanded, t=0.493994s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 13
+[g=2, 5 evaluated, 4 expanded, t=0.502874s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+[g=11, 17 evaluated, 15 expanded, t=0.523641s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 11
+[g=11, 21 evaluated, 17 expanded, t=0.523641s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+[g=18, 28 evaluated, 24 expanded, t=0.545529s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+[g=21, 31 evaluated, 27 expanded, t=0.556727s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 7
+[g=23, 34 evaluated, 30 expanded, t=0.556727s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+[g=31, 1468 evaluated, 1296 expanded, 9 reopened, t=3.6085s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+[g=37, 5332 evaluated, 4796 expanded, 66 reopened, t=11.7018s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+[g=38, 5333 evaluated, 4797 expanded, 66 reopened, t=11.7018s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+[g=39, 5334 evaluated, 4798 expanded, 66 reopened, t=11.7068s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+[g=40, 5335 evaluated, 4799 expanded, 66 reopened, t=11.7068s, 51256 KB]
+Peak memory: 51256 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 677.41
+config 17: relative time 28, remaining 913
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hCg=cg(transform=adapt_costs(2))', '--search', 'lazy(alt([type_based([g()]),single(hCg),single(hCg,pref_only=true)], boost=0),preferred=[hCg],reopen_closed=true,cost_type=2,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 20.77 -> (21, 22)
+reading input... [t=0s]
+done reading input! [t=0.083016s]
+packing state variables...done! [t=0.0900495s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.094741s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00469143s
+done initializing global data [t=0.102343s]
+Initializing heuristic cache... building causal graph...done! [t=0.0548942s]
+done!
+Initializing causal graph heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for cg(transform = adapt_costs(2)): 43
+[g=0, 1 evaluated, 0 expanded, t=0.282067s, 45840 KB]
+Initial heuristic value for cg(transform = adapt_costs(2)): 43
+New best heuristic value for cg(transform = adapt_costs(2)): 39
+[g=1, 4 evaluated, 3 expanded, t=0.292536s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 27
+[g=2, 5 evaluated, 4 expanded, t=0.292536s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 26
+[g=9, 18 evaluated, 17 expanded, t=0.307264s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 22
+[g=11, 20 evaluated, 19 expanded, t=0.307264s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 17
+[g=12, 21 evaluated, 20 expanded, t=0.307264s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 13
+[g=13, 22 evaluated, 21 expanded, t=0.307264s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 11
+[g=14, 23 evaluated, 22 expanded, t=0.307264s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 10
+[g=22, 116 evaluated, 115 expanded, t=0.38648s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 7
+[g=23, 117 evaluated, 116 expanded, t=0.38648s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 6
+[g=24, 118 evaluated, 117 expanded, t=0.38648s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 4
+[g=28, 1136 evaluated, 1135 expanded, 72 reopened, t=1.1788s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(2)): 2
+[g=29, 1137 evaluated, 1136 expanded, 72 reopened, t=1.1788s, 45840 KB]
+Peak memory: 45840 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 640.03
+config 18: relative time 58, remaining 885
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hcg=cg(transform=adapt_costs(one))', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true, lm_cost_type=2), transform=adapt_costs(one))', '--search', 'lazy(alt([type_based([g()]),single(sum([g(), weight(hcg, 3)])), single(sum([g(), weight(hcg, 3)]), pref_only=true), single(sum([g(), weight(hlm, 3)])), single(sum([g(), weight(hlm, 3)]), pref_only=true)]), preferred=[hcg, hlm], cost_type=one, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 41.95 -> (42, 43)
+reading input... [t=0s]
+done reading input! [t=0.0874453s]
+packing state variables...done! [t=0.093042s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0963365s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00329451s
+done initializing global data [t=0.10347s]
+Initializing heuristic cache... building causal graph...done! [t=0.0565436s]
+done!
+Initializing causal graph heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.155458s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Conducting lazy best first search, (real) bound = 59
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+New best heuristic value for cg(transform = adapt_costs(one)): 43
+[g=0, 1 evaluated, 0 expanded, t=0.474441s, 58000 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 8
+Initial heuristic value for cg(transform = adapt_costs(one)): 43
+New best heuristic value for cg(transform = adapt_costs(one)): 39
+[g=1, 4 evaluated, 3 expanded, t=0.474441s, 58000 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 7
+New best heuristic value for cg(transform = adapt_costs(one)): 27
+[g=2, 5 evaluated, 4 expanded, t=0.474441s, 58000 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 6
+[g=8, 14 evaluated, 12 expanded, t=0.483627s, 58000 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 26
+[g=9, 16 evaluated, 14 expanded, t=0.483627s, 58000 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+[g=11, 19 evaluated, 17 expanded, t=0.483627s, 58000 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 4
+New best heuristic value for cg(transform = adapt_costs(one)): 17
+[g=12, 20 evaluated, 18 expanded, t=0.483627s, 58000 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 3
+New best heuristic value for cg(transform = adapt_costs(one)): 13
+[g=13, 21 evaluated, 19 expanded, t=0.495149s, 58000 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+[g=14, 22 evaluated, 20 expanded, t=0.495149s, 58000 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 10
+[g=21, 338 evaluated, 332 expanded, t=0.762787s, 58000 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 7
+[g=22, 339 evaluated, 333 expanded, t=0.762787s, 58000 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+[g=39, 837 evaluated, 826 expanded, t=1.16227s, 58000 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 2
+New best heuristic value for cg(transform = adapt_costs(one)): 3
+[g=40, 839 evaluated, 828 expanded, t=1.16227s, 58000 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = 2), transform = adapt_costs(one)): 1
+New best heuristic value for cg(transform = adapt_costs(one)): 2
+[g=29, 4863 evaluated, 4785 expanded, t=4.34401s, 58000 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 1
+[g=58, 77927 evaluated, 76845 expanded, t=62.5098s, 69060 KB]
+Peak memory: 70948 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 565.88
+config 19: relative time 26, remaining 827
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hCea=cea(transform=adapt_costs(1))', '--heuristic', 'hFF=ff(transform=adapt_costs(2))', '--heuristic', 'hBlind=blind()', '--search', 'eager(alt([single(sum([g(),weight(hBlind,10)])),single(sum([g(),weight(hBlind,10)]),pref_only=true),single(sum([g(),weight(hFF,10)])),single(sum([g(),weight(hFF,10)]),pref_only=true),single(sum([g(),weight(hCea,10)])),single(sum([g(),weight(hCea,10)]),pref_only=true)],boost=536),preferred=[hFF],reopen_closed=false,cost_type=0,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 17.79 -> (18, 19)
+reading input... [t=0s]
+done reading input! [t=0.0917792s]
+packing state variables...done! [t=0.0938485s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.103665s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00981684s
+done initializing global data [t=0.103665s]
+Initializing context-enhanced additive heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing blind search heuristic...
+Conducting best first search without reopening closed nodes, (real) bound = 59
+New best heuristic value for cea(transform = adapt_costs(1)): 45
+New best heuristic value for blind: 1
+New best heuristic value for ff(transform = adapt_costs(2)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.844986s, 86900 KB]
+Initial heuristic value for cea(transform = adapt_costs(1)): 45
+Initial heuristic value for blind: 1
+Initial heuristic value for ff(transform = adapt_costs(2)): 22
+pruning method: none
+New best heuristic value for cea(transform = adapt_costs(1)): 38
+New best heuristic value for ff(transform = adapt_costs(2)): 16
+[g=1, 3 evaluated, 1 expanded, t=0.906297s, 93916 KB]
+New best heuristic value for cea(transform = adapt_costs(1)): 35
+New best heuristic value for ff(transform = adapt_costs(2)): 13
+[g=2, 5 evaluated, 2 expanded, t=0.954062s, 97776 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 12
+[g=7, 39 evaluated, 20 expanded, t=1.85547s, 115588 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 10
+[g=10, 73 evaluated, 40 expanded, t=2.73282s, 123252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 8
+[g=15, 97 evaluated, 54 expanded, t=3.31584s, 125192 KB]
+New best heuristic value for cea(transform = adapt_costs(1)): 33
+[g=13, 108 evaluated, 62 expanded, t=3.54764s, 128236 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 7
+[g=16, 121 evaluated, 70 expanded, t=3.84939s, 130548 KB]
+New best heuristic value for cea(transform = adapt_costs(1)): 31
+[g=19, 140 evaluated, 84 expanded, t=4.27747s, 131764 KB]
+New best heuristic value for cea(transform = adapt_costs(1)): 27
+[g=20, 141 evaluated, 85 expanded, t=4.3003s, 131908 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 6
+[g=30, 373 evaluated, 238 expanded, t=9.37249s, 140752 KB]
+New best heuristic value for cea(transform = adapt_costs(1)): 25
+[g=33, 845 evaluated, 559 expanded, t=19.1141s, 143616 KB]
+Peak memory: 144736 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 533.93
+config 20: relative time 27, remaining 801
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hcea=cea(transform=adapt_costs(one))', '--search', 'eager_greedy([hcea], preferred=[hcea], cost_type=one, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 18.00 -> (18, 19)
+reading input... [t=0s]
+done reading input! [t=0.0874899s]
+packing state variables...done! [t=0.0909345s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0960885s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00515407s
+done initializing global data [t=0.101391s]
+Initializing context-enhanced additive heuristic...
+Conducting best first search without reopening closed nodes, (real) bound = 59
+New best heuristic value for cea(transform = adapt_costs(one)): 45
+[g=0, 1 evaluated, 0 expanded, t=0.456359s, 70096 KB]
+Initial heuristic value for cea(transform = adapt_costs(one)): 45
+pruning method: none
+New best heuristic value for cea(transform = adapt_costs(one)): 38
+[g=1, 3 evaluated, 1 expanded, t=0.529571s, 77164 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 35
+[g=2, 5 evaluated, 2 expanded, t=0.596318s, 80956 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 27
+[g=10, 59 evaluated, 35 expanded, t=2.69977s, 110220 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 26
+[g=20, 86 evaluated, 52 expanded, t=3.68038s, 115136 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 22
+[g=21, 88 evaluated, 53 expanded, t=3.71992s, 115408 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 18
+[g=22, 90 evaluated, 54 expanded, t=3.75842s, 115600 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 16
+[g=32, 360 evaluated, 248 expanded, t=13.2612s, 123824 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 13
+[g=33, 361 evaluated, 249 expanded, t=13.2764s, 123824 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 10
+[g=34, 363 evaluated, 250 expanded, t=13.3101s, 123824 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 7
+[g=35, 365 evaluated, 251 expanded, t=13.3332s, 123824 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 4
+[g=36, 366 evaluated, 252 expanded, t=13.3332s, 123960 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 2
+[g=37, 367 evaluated, 253 expanded, t=13.3414s, 124096 KB]
+New best heuristic value for cea(transform = adapt_costs(one)): 1
+[g=58, 433 evaluated, 302 expanded, t=14.3171s, 126200 KB]
+Peak memory: 127884 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 502.04
+config 21: relative time 50, remaining 774
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hff=ff(transform=adapt_costs(one))', '--search', 'eager(alt([single(sum([g(),  weight(hff,  3)])), single(sum([g(), weight(hff, 3)]), pref_only=true)]), preferred=[hff], cost_type=one, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 32.43 -> (33, 34)
+reading input... [t=0s]
+done reading input! [t=0.0900797s]
+packing state variables...done! [t=0.0912582s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.100465s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00920632s
+done initializing global data [t=0.102558s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting best first search without reopening closed nodes, (real) bound = 59
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.504494s, 51252 KB]
+Initial heuristic value for ff(transform = adapt_costs(one)): 22
+pruning method: none
+New best heuristic value for ff(transform = adapt_costs(one)): 16
+[g=1, 3 evaluated, 1 expanded, t=0.504494s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 13
+[g=2, 5 evaluated, 2 expanded, t=0.51472s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+[g=10, 20 evaluated, 12 expanded, t=0.56777s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 11
+[g=11, 21 evaluated, 13 expanded, t=0.576243s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+[g=18, 37 evaluated, 23 expanded, t=0.629874s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+[g=21, 43 evaluated, 26 expanded, t=0.639645s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 7
+[g=23, 46 evaluated, 28 expanded, t=0.651696s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+[g=25, 61 evaluated, 37 expanded, t=0.691806s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+[g=26, 62 evaluated, 38 expanded, t=0.691806s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+[g=27, 63 evaluated, 39 expanded, t=0.705654s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+[g=28, 64 evaluated, 40 expanded, t=0.705654s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+[g=29, 65 evaluated, 41 expanded, t=0.705654s, 51252 KB]
+Peak memory: 51252 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 443.17
+config 22: relative time 28, remaining 724
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hGoalCount=goalcount(transform=adapt_costs(1))', '--heuristic', 'hFF=ff(transform=adapt_costs(2))', '--heuristic', 'hBlind=blind()', '--heuristic', 'hCg=cg(transform=adapt_costs(0))', '--search', 'lazy(alt([type_based([g()]),single(sum([weight(g(), 2), weight(hBlind, 3)])), single(sum([weight(g(), 2), weight(hBlind, 3)]), pref_only=true), single(sum([weight(g(), 2), weight(hFF, 3)])), single(sum([weight(g(), 2), weight(hFF, 3)]), pref_only=true), single(sum([weight(g(), 2), weight(hCg, 3)])), single(sum([weight(g(), 2), weight(hCg, 3)]), pref_only=true), single(sum([weight(g(), 2), weight(hGoalCount, 3)])), single(sum([weight(g(), 2), weight(hGoalCount, 3)]), pref_only=true)], boost=3662), preferred=[hFF], reopen_closed=true, cost_type=0, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 17.14 -> (18, 19)
+reading input... [t=0s]
+done reading input! [t=0.0827941s]
+packing state variables...done! [t=0.0918709s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0942723s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0024014s
+done initializing global data [t=0.103103s]
+Initializing goal count heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing blind search heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0.0542381s]
+done!
+Initializing causal graph heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for cg(transform = adapt_costs(0)): 43
+New best heuristic value for blind: 1
+New best heuristic value for goalcount(transform = adapt_costs(1)): 7
+New best heuristic value for ff(transform = adapt_costs(2)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.673996s, 62500 KB]
+Initial heuristic value for cg(transform = adapt_costs(0)): 43
+Initial heuristic value for blind: 1
+Initial heuristic value for goalcount(transform = adapt_costs(1)): 7
+Initial heuristic value for ff(transform = adapt_costs(2)): 22
+New best heuristic value for cg(transform = adapt_costs(0)): 39
+New best heuristic value for ff(transform = adapt_costs(2)): 16
+[g=1, 4 evaluated, 3 expanded, t=0.673996s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 27
+New best heuristic value for goalcount(transform = adapt_costs(1)): 6
+New best heuristic value for ff(transform = adapt_costs(2)): 13
+[g=2, 6 evaluated, 5 expanded, t=0.699513s, 62500 KB]
+New best heuristic value for goalcount(transform = adapt_costs(1)): 5
+[g=8, 19 evaluated, 17 expanded, t=0.737562s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 25
+New best heuristic value for ff(transform = adapt_costs(2)): 12
+[g=8, 35 evaluated, 30 expanded, t=0.789935s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 24
+[g=9, 51 evaluated, 44 expanded, t=0.854985s, 62500 KB]
+New best heuristic value for goalcount(transform = adapt_costs(1)): 4
+New best heuristic value for ff(transform = adapt_costs(2)): 11
+[g=11, 119 evaluated, 106 expanded, 1 reopened, t=1.08558s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 22
+[g=12, 120 evaluated, 107 expanded, 1 reopened, t=1.08558s, 62500 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 10
+[g=10, 157 evaluated, 140 expanded, 1 reopened, t=1.22168s, 62500 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 9
+[g=11, 158 evaluated, 141 expanded, 1 reopened, t=1.22168s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 17
+New best heuristic value for ff(transform = adapt_costs(2)): 8
+[g=12, 159 evaluated, 142 expanded, 1 reopened, t=1.22168s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 13
+New best heuristic value for goalcount(transform = adapt_costs(1)): 3
+New best heuristic value for ff(transform = adapt_costs(2)): 7
+[g=13, 160 evaluated, 143 expanded, 1 reopened, t=1.23138s, 62500 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 6
+[g=23, 998 evaluated, 879 expanded, 9 reopened, t=4.02533s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 10
+[g=28, 1839 evaluated, 1622 expanded, 13 reopened, t=6.82031s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 7
+New best heuristic value for goalcount(transform = adapt_costs(1)): 2
+[g=29, 1840 evaluated, 1623 expanded, 13 reopened, t=6.82031s, 62500 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 5
+[g=37, 5946 evaluated, 5308 expanded, 38 reopened, t=20.6082s, 62500 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 4
+[g=38, 5947 evaluated, 5309 expanded, 38 reopened, t=20.6083s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 5
+New best heuristic value for ff(transform = adapt_costs(2)): 3
+[g=39, 5948 evaluated, 5310 expanded, 38 reopened, t=20.6083s, 62500 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 3
+New best heuristic value for ff(transform = adapt_costs(2)): 2
+[g=40, 5949 evaluated, 5311 expanded, 38 reopened, t=20.6083s, 62500 KB]
+Peak memory: 62500 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 411.49
+config 23: relative time 29, remaining 696
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hGoalCount=goalcount(transform=adapt_costs(1))', '--heuristic', 'hFF=ff(transform=adapt_costs(2))', '--heuristic', 'hBlind=blind()', '--heuristic', 'hCg=cg(transform=adapt_costs(0))', '--search', 'lazy(alt([single(sum([weight(g(),2),weight(hBlind,3)])),single(sum([weight(g(),2),weight(hBlind,3)]),pref_only=true),single(sum([weight(g(),2),weight(hFF,3)])),single(sum([weight(g(),2),weight(hFF,3)]),pref_only=true),single(sum([weight(g(),2),weight(hCg,3)])),single(sum([weight(g(),2),weight(hCg,3)]),pref_only=true),single(sum([weight(g(),2),weight(hGoalCount,3)])),single(sum([weight(g(),2),weight(hGoalCount,3)]),pref_only=true)],boost=3662),preferred=[hFF],reopen_closed=true,cost_type=0,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 17.15 -> (18, 19)
+reading input... [t=0s]
+done reading input! [t=0.0842687s]
+packing state variables...done! [t=0.0912994s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.095154s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0038546s
+done initializing global data [t=0.102168s]
+Initializing goal count heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing blind search heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0.0535129s]
+done!
+Initializing causal graph heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for cg(transform = adapt_costs(0)): 43
+New best heuristic value for goalcount(transform = adapt_costs(1)): 7
+New best heuristic value for blind: 1
+New best heuristic value for ff(transform = adapt_costs(2)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.664906s, 62472 KB]
+Initial heuristic value for cg(transform = adapt_costs(0)): 43
+Initial heuristic value for goalcount(transform = adapt_costs(1)): 7
+Initial heuristic value for blind: 1
+Initial heuristic value for ff(transform = adapt_costs(2)): 22
+New best heuristic value for cg(transform = adapt_costs(0)): 39
+New best heuristic value for ff(transform = adapt_costs(2)): 16
+[g=1, 3 evaluated, 2 expanded, t=0.67573s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 27
+New best heuristic value for goalcount(transform = adapt_costs(1)): 6
+New best heuristic value for ff(transform = adapt_costs(2)): 13
+[g=2, 6 evaluated, 5 expanded, t=0.685161s, 62472 KB]
+New best heuristic value for goalcount(transform = adapt_costs(1)): 5
+[g=8, 25 evaluated, 22 expanded, t=0.758612s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 25
+New best heuristic value for ff(transform = adapt_costs(2)): 12
+[g=8, 31 evaluated, 27 expanded, t=0.76838s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 24
+[g=9, 51 evaluated, 44 expanded, t=0.843199s, 62472 KB]
+New best heuristic value for goalcount(transform = adapt_costs(1)): 4
+New best heuristic value for ff(transform = adapt_costs(2)): 11
+[g=11, 119 evaluated, 106 expanded, 1 reopened, t=1.07379s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 22
+[g=12, 120 evaluated, 107 expanded, 1 reopened, t=1.07379s, 62472 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 10
+[g=10, 157 evaluated, 140 expanded, 1 reopened, t=1.2119s, 62472 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 9
+[g=11, 159 evaluated, 142 expanded, 1 reopened, t=1.21863s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 17
+New best heuristic value for ff(transform = adapt_costs(2)): 8
+[g=12, 160 evaluated, 143 expanded, 1 reopened, t=1.21863s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 13
+New best heuristic value for goalcount(transform = adapt_costs(1)): 3
+New best heuristic value for ff(transform = adapt_costs(2)): 7
+[g=13, 162 evaluated, 145 expanded, 1 reopened, t=1.21863s, 62472 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 6
+[g=23, 998 evaluated, 879 expanded, 9 reopened, t=4.00256s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 10
+[g=28, 1839 evaluated, 1622 expanded, 13 reopened, t=6.82817s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 7
+New best heuristic value for goalcount(transform = adapt_costs(1)): 2
+[g=29, 1840 evaluated, 1623 expanded, 13 reopened, t=6.82817s, 62472 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 5
+[g=37, 5946 evaluated, 5308 expanded, 38 reopened, t=20.5508s, 62472 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 4
+[g=38, 5947 evaluated, 5309 expanded, 38 reopened, t=20.5508s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 5
+New best heuristic value for ff(transform = adapt_costs(2)): 3
+[g=39, 5948 evaluated, 5310 expanded, 38 reopened, t=20.5566s, 62472 KB]
+New best heuristic value for cg(transform = adapt_costs(0)): 3
+New best heuristic value for ff(transform = adapt_costs(2)): 2
+[g=40, 5949 evaluated, 5311 expanded, 38 reopened, t=20.5566s, 62472 KB]
+Peak memory: 62472 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 379.92
+config 24: relative time 21, remaining 667
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hCg=cg(adapt_costs(2))', '--search', 'lazy(alt([single(sum([g(),weight(hCg, 10)])),single(sum([g(),weight(hCg, 10)]),pref_only=true)], boost=0),preferred=[hCg],reopen_closed=false,cost_type=2,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 11.96 -> (12, 13)
+reading input... [t=0s]
+done reading input! [t=0.0902108s]
+packing state variables...done! [t=0.0934895s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0992015s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00571205s
+done initializing global data [t=0.104585s]
+Initializing heuristic cache... building causal graph...done! [t=0.0574361s]
+done!
+Initializing causal graph heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for cg(adapt_costs(2)): 43
+[g=0, 1 evaluated, 0 expanded, t=0.298194s, 45700 KB]
+Initial heuristic value for cg(adapt_costs(2)): 43
+New best heuristic value for cg(adapt_costs(2)): 39
+[g=1, 3 evaluated, 2 expanded, t=0.298194s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 27
+[g=2, 4 evaluated, 3 expanded, t=0.310405s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 26
+[g=9, 13 evaluated, 11 expanded, t=0.310405s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 22
+[g=11, 15 evaluated, 13 expanded, t=0.319566s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 17
+[g=12, 16 evaluated, 14 expanded, t=0.319566s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 13
+[g=13, 17 evaluated, 15 expanded, t=0.319566s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 11
+[g=14, 18 evaluated, 16 expanded, t=0.319566s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 10
+[g=23, 119 evaluated, 116 expanded, t=0.404999s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 7
+[g=24, 120 evaluated, 117 expanded, t=0.404999s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 5
+[g=29, 209 evaluated, 204 expanded, t=0.473045s, 45700 KB]
+New best heuristic value for cg(adapt_costs(2)): 3
+[g=30, 210 evaluated, 205 expanded, t=0.473045s, 45700 KB]
+Peak memory: 45700 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 358.97
+config 25: relative time 21, remaining 646
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hcg=cg(transform=adapt_costs(one))', '--search', 'eager(alt([single(sum([g(),  weight(hcg,  3)])), single(sum([g(), weight(hcg, 3)]), pref_only=true)]), preferred=[hcg], cost_type=one, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 11.67 -> (12, 13)
+reading input... [t=0s]
+done reading input! [t=0.097699s]
+packing state variables...done! [t=0.0981516s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.10746s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00930833s
+done initializing global data [t=0.11003s]
+Initializing heuristic cache... building causal graph...done! [t=0.0795997s]
+done!
+Initializing causal graph heuristic...
+Conducting best first search without reopening closed nodes, (real) bound = 59
+New best heuristic value for cg(transform = adapt_costs(one)): 43
+[g=0, 1 evaluated, 0 expanded, t=0.345111s, 45840 KB]
+Initial heuristic value for cg(transform = adapt_costs(one)): 43
+pruning method: none
+New best heuristic value for cg(transform = adapt_costs(one)): 39
+[g=1, 3 evaluated, 1 expanded, t=0.345111s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 27
+[g=2, 5 evaluated, 2 expanded, t=0.353946s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 26
+[g=9, 21 evaluated, 12 expanded, t=0.385132s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+[g=11, 25 evaluated, 14 expanded, t=0.385132s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 17
+[g=12, 26 evaluated, 15 expanded, t=0.396822s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 13
+[g=13, 27 evaluated, 16 expanded, t=0.396822s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+[g=14, 28 evaluated, 17 expanded, t=0.396822s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 9
+[g=26, 163 evaluated, 111 expanded, t=0.661258s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 8
+[g=32, 192 evaluated, 133 expanded, t=0.709342s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+[g=33, 193 evaluated, 134 expanded, t=0.709342s, 45840 KB]
+New best heuristic value for cg(transform = adapt_costs(one)): 3
+[g=34, 194 evaluated, 135 expanded, t=0.709342s, 45840 KB]
+Peak memory: 45840 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 337.88
+config 26: relative time 24, remaining 625
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_rhw(reasonable_orders=true,only_causal_landmarks=true,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=false)', '--heuristic', 'hBlind=blind()', '--heuristic', 'hAdd=add(transform=adapt_costs(0))', '--heuristic', 'hLM=lmcount(lmg,admissible=false,pref=true,transform=adapt_costs(2))', '--heuristic', 'hFF=ff(transform=adapt_costs(0))', '--search', 'lazy(alt([single(sum([weight(g(),2),weight(hBlind,3)])),single(sum([weight(g(),2),weight(hBlind,3)]),pref_only=true),single(sum([weight(g(),2),weight(hFF,3)])),single(sum([weight(g(),2),weight(hFF,3)]),pref_only=true),single(sum([weight(g(),2),weight(hLM,3)])),single(sum([weight(g(),2),weight(hLM,3)]),pref_only=true),single(sum([weight(g(),2),weight(hAdd,3)])),single(sum([weight(g(),2),weight(hAdd,3)]),pref_only=true)],boost=2474),preferred=[hAdd],reopen_closed=false,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 12.97 -> (13, 14)
+reading input... [t=0s]
+done reading input! [t=0.0915722s]
+packing state variables...done! [t=0.100441s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.112101s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0116604s
+done initializing global data [t=0.115271s]
+Initializing blind search heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+Discarded 0 non-causal landmarks
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.252133s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 59
+11 initial landmarks, 7 goal landmarks
+New best heuristic value for add(transform = adapt_costs(0)): 43
+New best heuristic value for blind: 1
+New best heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 8
+New best heuristic value for ff(transform = adapt_costs(0)): 22
+[g=0, 1 evaluated, 0 expanded, t=1.21487s, 88788 KB]
+Initial heuristic value for add(transform = adapt_costs(0)): 43
+Initial heuristic value for blind: 1
+Initial heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 8
+Initial heuristic value for ff(transform = adapt_costs(0)): 22
+New best heuristic value for add(transform = adapt_costs(0)): 40
+New best heuristic value for ff(transform = adapt_costs(0)): 16
+[g=1, 3 evaluated, 2 expanded, t=1.22541s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 27
+New best heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 7
+New best heuristic value for ff(transform = adapt_costs(0)): 13
+[g=2, 6 evaluated, 5 expanded, t=1.24577s, 88788 KB]
+New best heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 6
+[g=8, 25 evaluated, 22 expanded, t=1.37307s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 25
+New best heuristic value for ff(transform = adapt_costs(0)): 12
+[g=8, 30 evaluated, 26 expanded, t=1.39424s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 24
+[g=9, 48 evaluated, 42 expanded, t=1.52572s, 88788 KB]
+New best heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 5
+New best heuristic value for ff(transform = adapt_costs(0)): 11
+[g=11, 114 evaluated, 102 expanded, t=1.95714s, 88788 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 10
+[g=10, 159 evaluated, 141 expanded, t=2.26365s, 88788 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 9
+[g=11, 160 evaluated, 142 expanded, t=2.26365s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 19
+New best heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 4
+New best heuristic value for ff(transform = adapt_costs(0)): 8
+[g=12, 161 evaluated, 143 expanded, t=2.26365s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 15
+New best heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 3
+New best heuristic value for ff(transform = adapt_costs(0)): 7
+[g=13, 162 evaluated, 144 expanded, t=2.27694s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 14
+[g=23, 637 evaluated, 558 expanded, t=5.3878s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 13
+New best heuristic value for ff(transform = adapt_costs(0)): 6
+[g=25, 1366 evaluated, 1199 expanded, t=10.5005s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 10
+[g=28, 2794 evaluated, 2474 expanded, t=20.5983s, 88788 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 7
+New best heuristic value for lmcount(lmg, admissible = false, pref = true, transform = adapt_costs(2)): 2
+[g=29, 2795 evaluated, 2475 expanded, t=20.6048s, 88788 KB]
+Peak memory: 88788 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 314.97
+config 27: relative time 28, remaining 601
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hBlind=blind()', '--heuristic', 'hAdd=add(transform=adapt_costs(0))', '--heuristic', 'hCg=cg(transform=adapt_costs(1))', '--heuristic', 'hHMax=hmax()', '--search', 'eager(alt([tiebreaking([sum([g(),weight(hBlind,7)]),hBlind]),tiebreaking([sum([g(),weight(hHMax,7)]),hHMax]),tiebreaking([sum([g(),weight(hAdd,7)]),hAdd]),tiebreaking([sum([g(),weight(hCg,7)]),hCg])],boost=2142),preferred=[],reopen_closed=true,cost_type=0,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 14.67 -> (15, 16)
+reading input... [t=0s]
+done reading input! [t=0.0876089s]
+packing state variables...done! [t=0.0922665s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0970753s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00480876s
+done initializing global data [t=0.0970753s]
+Initializing blind search heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0.0518732s]
+done!
+Initializing causal graph heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing HSP max heuristic...
+Conducting best first search with reopening closed nodes, (real) bound = 59
+New best heuristic value for cg(transform = adapt_costs(1)): 43
+New best heuristic value for add(transform = adapt_costs(0)): 43
+New best heuristic value for hmax: 9
+New best heuristic value for blind: 1
+[g=0, 1 evaluated, 0 expanded, t=1.02838s, 91896 KB]
+Initial heuristic value for cg(transform = adapt_costs(1)): 43
+Initial heuristic value for add(transform = adapt_costs(0)): 43
+Initial heuristic value for hmax: 9
+Initial heuristic value for blind: 1
+pruning method: none
+New best heuristic value for hmax: 8
+[g=1, 2 evaluated, 1 expanded, t=1.03729s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 39
+New best heuristic value for add(transform = adapt_costs(0)): 40
+[g=1, 3 evaluated, 1 expanded, t=1.03729s, 91896 KB]
+New best heuristic value for hmax: 7
+[g=2, 5 evaluated, 2 expanded, t=1.06072s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 27
+New best heuristic value for add(transform = adapt_costs(0)): 27
+[g=2, 7 evaluated, 3 expanded, t=1.06864s, 91896 KB]
+New best heuristic value for hmax: 6
+[g=3, 14 evaluated, 7 expanded, t=1.10873s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 26
+[g=9, 55 evaluated, 27 expanded, t=1.34465s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 22
+New best heuristic value for add(transform = adapt_costs(0)): 24
+[g=11, 59 evaluated, 29 expanded, t=1.36628s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 17
+New best heuristic value for add(transform = adapt_costs(0)): 19
+[g=12, 60 evaluated, 30 expanded, t=1.37152s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 13
+New best heuristic value for add(transform = adapt_costs(0)): 15
+[g=13, 62 evaluated, 32 expanded, t=1.38236s, 91896 KB]
+New best heuristic value for add(transform = adapt_costs(0)): 13
+[g=21, 177 evaluated, 102 expanded, t=2.03358s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 11
+New best heuristic value for add(transform = adapt_costs(0)): 11
+New best heuristic value for hmax: 5
+[g=37, 335 evaluated, 201 expanded, t=2.88874s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 8
+New best heuristic value for add(transform = adapt_costs(0)): 8
+New best heuristic value for hmax: 4
+[g=38, 337 evaluated, 203 expanded, t=2.90058s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 5
+New best heuristic value for add(transform = adapt_costs(0)): 5
+New best heuristic value for hmax: 3
+[g=39, 338 evaluated, 204 expanded, t=2.90058s, 91896 KB]
+New best heuristic value for cg(transform = adapt_costs(1)): 3
+New best heuristic value for add(transform = adapt_costs(0)): 3
+New best heuristic value for hmax: 2
+[g=40, 339 evaluated, 205 expanded, t=2.90709s, 91896 KB]
+Peak memory: 91896 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 288.76
+config 28: relative time 28, remaining 573
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hAdd=add(transform=adapt_costs(2))', '--heuristic', 'hFF=ff(transform=adapt_costs(0))', '--search', 'lazy(alt([tiebreaking([sum([weight(g(),4),weight(hFF,5)]),hFF]),tiebreaking([sum([weight(g(),4),weight(hFF,5)]),hFF],pref_only=true),tiebreaking([sum([weight(g(),4),weight(hAdd,5)]),hAdd]),tiebreaking([sum([weight(g(),4),weight(hAdd,5)]),hAdd],pref_only=true)],boost=2537),preferred=[hFF,hAdd],reopen_closed=true,cost_type=0,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 14.11 -> (15, 16)
+reading input... [t=0s]
+done reading input! [t=0.0874365s]
+packing state variables...done! [t=0.0924105s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0961843s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00377379s
+done initializing global data [t=0.10276s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for add(transform = adapt_costs(2)): 43
+New best heuristic value for ff(transform = adapt_costs(0)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.883669s, 68048 KB]
+Initial heuristic value for add(transform = adapt_costs(2)): 43
+Initial heuristic value for ff(transform = adapt_costs(0)): 22
+New best heuristic value for add(transform = adapt_costs(2)): 40
+New best heuristic value for ff(transform = adapt_costs(0)): 16
+[g=1, 3 evaluated, 2 expanded, t=0.895655s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 27
+New best heuristic value for ff(transform = adapt_costs(0)): 13
+[g=2, 5 evaluated, 4 expanded, t=0.900124s, 68048 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 12
+[g=11, 25 evaluated, 22 expanded, t=0.983923s, 68048 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 11
+[g=11, 30 evaluated, 25 expanded, t=1.00661s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 25
+[g=8, 44 evaluated, 37 expanded, t=1.05614s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 24
+[g=9, 58 evaluated, 49 expanded, t=1.12182s, 68048 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 10
+[g=10, 100 evaluated, 84 expanded, t=1.29642s, 68048 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 9
+[g=11, 101 evaluated, 85 expanded, t=1.29642s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 19
+New best heuristic value for ff(transform = adapt_costs(0)): 8
+[g=12, 102 evaluated, 86 expanded, t=1.29642s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 15
+New best heuristic value for ff(transform = adapt_costs(0)): 7
+[g=13, 103 evaluated, 87 expanded, t=1.30933s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 14
+[g=23, 239 evaluated, 209 expanded, 1 reopened, t=1.89333s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 13
+New best heuristic value for ff(transform = adapt_costs(0)): 6
+[g=25, 432 evaluated, 376 expanded, 2 reopened, t=2.77044s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 10
+[g=28, 1767 evaluated, 1550 expanded, 17 reopened, t=8.37341s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 7
+[g=29, 1768 evaluated, 1551 expanded, 17 reopened, t=8.37341s, 68048 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 5
+[g=43, 4276 evaluated, 3791 expanded, 54 reopened, t=19.0101s, 68048 KB]
+New best heuristic value for ff(transform = adapt_costs(0)): 4
+[g=44, 4278 evaluated, 3793 expanded, 54 reopened, t=19.0184s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 5
+New best heuristic value for ff(transform = adapt_costs(0)): 3
+[g=45, 4280 evaluated, 3795 expanded, 54 reopened, t=19.0249s, 68048 KB]
+New best heuristic value for add(transform = adapt_costs(2)): 3
+New best heuristic value for ff(transform = adapt_costs(0)): 2
+[g=46, 4282 evaluated, 3797 expanded, 54 reopened, t=19.0249s, 68048 KB]
+Peak memory: 68048 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 262.4
+config 29: relative time 53, remaining 545
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_hm(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=false,no_orders=true,m=1,lm_cost_type=0)', '--heuristic', 'hLM,hFF=lm_ff_syn(lmg,admissible=true,transform=transform=adapt_costs(2))', '--search', 'lazy(alt([type_based([g()]),single(hLM),single(hLM,pref_only=true),single(hFF),single(hFF,pref_only=true)], boost=5000),preferred=[hLM],reopen_closed=false,cost_type=0,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 25.52 -> (26, 27)
+reading input... [t=0s]
+done reading input! [t=0.0872191s]
+packing state variables...done! [t=0.0924715s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0990334s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0065619s
+done initializing global data [t=0.0990334s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+h^m landmarks m=1
+Using 408 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+Level 7 completed.
+Level 8 completed.
+Level 9 completed.
+Level 10 completed.
+Level 11 completed.
+Level 12 completed.
+Level 13 completed.
+h^m landmarks computed.
+Removing all orderings.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.158078s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 59
+22 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 22
+New best heuristic value for <missing>: 7
+[g=0, 1 evaluated, 0 expanded, t=0.298226s, 39068 KB]
+Initial heuristic value for <missing>: 22
+Initial heuristic value for <missing>: 7
+New best heuristic value for <missing>: 16
+[g=1, 3 evaluated, 2 expanded, t=0.308401s, 39068 KB]
+New best heuristic value for <missing>: 13
+New best heuristic value for <missing>: 6
+[g=2, 4 evaluated, 3 expanded, t=0.308401s, 39068 KB]
+New best heuristic value for <missing>: 5
+[g=8, 18 evaluated, 14 expanded, t=0.362415s, 39068 KB]
+New best heuristic value for <missing>: 10
+[g=10, 20 evaluated, 16 expanded, t=0.362415s, 39068 KB]
+New best heuristic value for <missing>: 9
+[g=11, 21 evaluated, 17 expanded, t=0.369332s, 39068 KB]
+New best heuristic value for <missing>: 8
+New best heuristic value for <missing>: 4
+[g=12, 22 evaluated, 18 expanded, t=0.369332s, 39068 KB]
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 3
+[g=13, 23 evaluated, 19 expanded, t=0.369332s, 39068 KB]
+New best heuristic value for <missing>: 6
+[g=27, 116 evaluated, 96 expanded, t=0.665363s, 39068 KB]
+New best heuristic value for <missing>: 5
+[g=35, 816 evaluated, 707 expanded, t=2.83871s, 39068 KB]
+New best heuristic value for <missing>: 4
+[g=36, 817 evaluated, 708 expanded, t=2.83871s, 39068 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 2
+[g=37, 818 evaluated, 709 expanded, t=2.84491s, 39068 KB]
+New best heuristic value for <missing>: 2
+[g=38, 819 evaluated, 710 expanded, t=2.84491s, 39068 KB]
+New best heuristic value for <missing>: 1
+[g=29, 2015 evaluated, 1737 expanded, t=6.47474s, 39068 KB]
+Peak memory: 39068 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 216.3
+config 30: relative time 29, remaining 492
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hFF=ff(adapt_costs(1))', '--search', 'lazy(alt([single(sum([weight(g(), 2),weight(hFF, 3)])),single(sum([weight(g(), 2),weight(hFF, 3)]),pref_only=true)], boost=5000),preferred=[hFF],reopen_closed=true,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 12.75 -> (13, 14)
+reading input... [t=0s]
+done reading input! [t=0.0857593s]
+packing state variables...done! [t=0.0935907s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0948647s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00127398s
+done initializing global data [t=0.103856s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for ff(adapt_costs(1)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.491037s, 51252 KB]
+Initial heuristic value for ff(adapt_costs(1)): 22
+New best heuristic value for ff(adapt_costs(1)): 16
+[g=1, 3 evaluated, 2 expanded, t=0.491037s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 13
+[g=2, 5 evaluated, 4 expanded, t=0.500985s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 12
+[g=11, 17 evaluated, 15 expanded, t=0.522038s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 11
+[g=11, 21 evaluated, 17 expanded, t=0.533065s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 10
+[g=18, 36 evaluated, 32 expanded, t=0.565059s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 9
+[g=21, 39 evaluated, 35 expanded, t=0.576583s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 7
+[g=23, 42 evaluated, 38 expanded, t=0.576583s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 6
+[g=27, 586 evaluated, 516 expanded, 2 reopened, t=1.71681s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 5
+[g=37, 5258 evaluated, 4742 expanded, 69 reopened, t=13.5331s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 4
+[g=38, 5259 evaluated, 4743 expanded, 69 reopened, t=13.5361s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 3
+[g=39, 5260 evaluated, 4744 expanded, 69 reopened, t=13.5361s, 51252 KB]
+New best heuristic value for ff(adapt_costs(1)): 2
+[g=40, 5261 evaluated, 4745 expanded, 69 reopened, t=13.5361s, 51252 KB]
+Peak memory: 51252 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 193.67
+config 31: relative time 27, remaining 463
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hBlind=blind()', '--heuristic', 'hFF=ff(transform=adapt_costs(1))', '--search', 'eager(alt([single(sum([g(),weight(hBlind,2)])),single(sum([g(),weight(hFF,2)]))],boost=4480),preferred=[],reopen_closed=true,cost_type=0,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 11.29 -> (12, 13)
+reading input... [t=0s]
+done reading input! [t=0.0876899s]
+packing state variables...done! [t=0.095094s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.108008s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0129145s
+done initializing global data [t=0.108008s]
+Initializing blind search heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting best first search with reopening closed nodes, (real) bound = 59
+New best heuristic value for ff(transform = adapt_costs(1)): 22
+New best heuristic value for blind: 1
+[g=0, 1 evaluated, 0 expanded, t=0.506369s, 51256 KB]
+Initial heuristic value for ff(transform = adapt_costs(1)): 22
+Initial heuristic value for blind: 1
+pruning method: none
+New best heuristic value for ff(transform = adapt_costs(1)): 16
+[g=1, 3 evaluated, 1 expanded, t=0.506369s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 13
+[g=2, 5 evaluated, 2 expanded, t=0.506369s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 12
+[g=7, 32 evaluated, 17 expanded, t=0.558935s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 11
+[g=13, 115 evaluated, 65 expanded, t=0.729231s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 10
+[g=14, 119 evaluated, 67 expanded, t=0.737139s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 9
+[g=15, 121 evaluated, 69 expanded, t=0.737139s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 8
+[g=19, 170 evaluated, 100 expanded, t=0.840838s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 7
+[g=13, 609 evaluated, 394 expanded, t=1.76614s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 6
+[g=25, 1553 evaluated, 1008 expanded, t=3.74804s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 5
+[g=26, 1554 evaluated, 1009 expanded, t=3.74804s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 4
+[g=27, 1555 evaluated, 1010 expanded, t=3.74804s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 3
+[g=28, 1556 evaluated, 1011 expanded, t=3.74804s, 51256 KB]
+New best heuristic value for ff(transform = adapt_costs(1)): 2
+[g=29, 1557 evaluated, 1012 expanded, t=3.75556s, 51256 KB]
+Peak memory: 51256 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 172.85
+config 32: relative time 29, remaining 436
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_hm(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=false,no_orders=true,m=1,lm_cost_type=1)', '--heuristic', 'hLM,hFF=lm_ff_syn(lmg,admissible=true,transform=adapt_costs(0))', '--search', 'lazy(alt([type_based([g()]),single(hLM),single(hLM,pref_only=true),single(hFF),single(hFF,pref_only=true)], boost=1000),preferred=[hLM,hFF],reopen_closed=false,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 11.50 -> (12, 13)
+reading input... [t=0s]
+done reading input! [t=0.0837491s]
+packing state variables...done! [t=0.0897683s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0956311s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00586275s
+done initializing global data [t=0.0956311s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+h^m landmarks m=1
+Using 408 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+Level 7 completed.
+Level 8 completed.
+Level 9 completed.
+Level 10 completed.
+Level 11 completed.
+Level 12 completed.
+Level 13 completed.
+h^m landmarks computed.
+Removing all orderings.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.159756s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 59
+22 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 22
+New best heuristic value for <missing>: 7
+[g=0, 1 evaluated, 0 expanded, t=0.297244s, 39068 KB]
+Initial heuristic value for <missing>: 22
+Initial heuristic value for <missing>: 7
+New best heuristic value for <missing>: 16
+[g=1, 4 evaluated, 3 expanded, t=0.30938s, 39068 KB]
+New best heuristic value for <missing>: 13
+New best heuristic value for <missing>: 6
+[g=2, 6 evaluated, 5 expanded, t=0.30938s, 39068 KB]
+New best heuristic value for <missing>: 12
+New best heuristic value for <missing>: 5
+[g=11, 20 evaluated, 18 expanded, t=0.368849s, 39068 KB]
+New best heuristic value for <missing>: 11
+New best heuristic value for <missing>: 4
+[g=11, 24 evaluated, 20 expanded, t=0.372384s, 39068 KB]
+New best heuristic value for <missing>: 10
+[g=18, 31 evaluated, 27 expanded, t=0.404189s, 39068 KB]
+New best heuristic value for <missing>: 9
+[g=21, 34 evaluated, 30 expanded, t=0.413089s, 39068 KB]
+New best heuristic value for <missing>: 7
+[g=23, 37 evaluated, 33 expanded, t=0.424156s, 39068 KB]
+New best heuristic value for <missing>: 3
+[g=24, 38 evaluated, 34 expanded, t=0.424156s, 39068 KB]
+New best heuristic value for <missing>: 6
+[g=39, 353 evaluated, 305 expanded, t=1.4742s, 39068 KB]
+New best heuristic value for <missing>: 5
+[g=37, 3722 evaluated, 3347 expanded, t=13.0156s, 39068 KB]
+New best heuristic value for <missing>: 4
+[g=38, 3723 evaluated, 3348 expanded, t=13.0156s, 39068 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 2
+[g=39, 3724 evaluated, 3349 expanded, t=13.0207s, 39068 KB]
+New best heuristic value for <missing>: 2
+[g=40, 3725 evaluated, 3350 expanded, t=13.0207s, 39068 KB]
+Peak memory: 39068 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 151.96
+config 33: relative time 54, remaining 407
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_hm(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=false,m=1,lm_cost_type=2)', '--heuristic', 'hLM,hFF=lm_ff_syn(lmg,admissible=true,transform=adapt_costs(0))', '--search', 'lazy(alt([tiebreaking([sum([g(),weight(hLM, 10)]),hLM]),tiebreaking([sum([g(),weight(hLM, 10)]),hLM],pref_only=true),tiebreaking([sum([g(),weight(hFF, 10)]),hFF]),tiebreaking([sum([g(),weight(hFF, 10)]),hFF],pref_only=true)], boost=200),preferred=[hLM],reopen_closed=true,cost_type=2,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 20.16 -> (21, 22)
+reading input... [t=0s]
+done reading input! [t=0.08217s]
+packing state variables...done! [t=0.0904448s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.102058s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.011613s
+done initializing global data [t=0.102058s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+h^m landmarks m=1
+Using 408 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+Level 7 completed.
+Level 8 completed.
+Level 9 completed.
+Level 10 completed.
+Level 11 completed.
+Level 12 completed.
+Level 13 completed.
+h^m landmarks computed.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.163697s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+28 edges
+Initializing LAMA-FF synergy object
+Conducting lazy best first search, (real) bound = 59
+22 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 7
+New best heuristic value for <missing>: 22
+[g=0, 1 evaluated, 0 expanded, t=0.301321s, 39076 KB]
+Initial heuristic value for <missing>: 7
+Initial heuristic value for <missing>: 22
+New best heuristic value for <missing>: 16
+[g=1, 3 evaluated, 2 expanded, t=0.312673s, 39076 KB]
+New best heuristic value for <missing>: 6
+New best heuristic value for <missing>: 13
+[g=2, 4 evaluated, 3 expanded, t=0.312673s, 39076 KB]
+New best heuristic value for <missing>: 5
+[g=8, 14 evaluated, 11 expanded, t=0.355903s, 39076 KB]
+New best heuristic value for <missing>: 10
+[g=10, 16 evaluated, 13 expanded, t=0.355903s, 39076 KB]
+New best heuristic value for <missing>: 9
+[g=11, 17 evaluated, 14 expanded, t=0.364408s, 39076 KB]
+New best heuristic value for <missing>: 4
+New best heuristic value for <missing>: 8
+[g=12, 18 evaluated, 15 expanded, t=0.364408s, 39076 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for <missing>: 7
+[g=13, 19 evaluated, 16 expanded, t=0.364408s, 39076 KB]
+New best heuristic value for <missing>: 6
+[g=31, 126 evaluated, 105 expanded, t=0.708757s, 39076 KB]
+New best heuristic value for <missing>: 5
+[g=26, 154 evaluated, 129 expanded, t=0.804227s, 39076 KB]
+New best heuristic value for <missing>: 4
+[g=27, 155 evaluated, 130 expanded, t=0.804227s, 39076 KB]
+New best heuristic value for <missing>: 2
+New best heuristic value for <missing>: 3
+[g=28, 156 evaluated, 131 expanded, t=0.804227s, 39076 KB]
+New best heuristic value for <missing>: 1
+New best heuristic value for <missing>: 2
+[g=29, 157 evaluated, 132 expanded, t=0.812425s, 39076 KB]
+Peak memory: 39076 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 114.73
+config 34: relative time 87, remaining 353
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_hm(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=false,no_orders=true,m=1)', '--heuristic', 'hCg=cg(adapt_costs(1))', '--heuristic', 'hLM=lmcount(lmg,admissible=true)', '--search', 'lazy(alt([single(hLM),single(hLM,pref_only=true),single(hCg),single(hCg,pref_only=true)], boost=0),preferred=[hCg],reopen_closed=false,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 28.28 -> (29, 30)
+reading input... [t=0s]
+done reading input! [t=0.0837191s]
+packing state variables...done! [t=0.0915s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0937562s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00225625s
+done initializing global data [t=0.103478s]
+Initializing heuristic cache... building causal graph...done! [t=0.0523533s]
+done!
+Initializing causal graph heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+h^m landmarks m=1
+Using 408 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+Level 7 completed.
+Level 8 completed.
+Level 9 completed.
+Level 10 completed.
+Level 11 completed.
+Level 12 completed.
+Level 13 completed.
+h^m landmarks computed.
+Removing all orderings.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.154473s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+Conducting lazy best first search, (real) bound = 59
+22 initial landmarks, 7 goal landmarks
+New best heuristic value for cg(adapt_costs(1)): 43
+New best heuristic value for lmcount(lmg, admissible = true): 7
+[g=0, 1 evaluated, 0 expanded, t=0.469993s, 62792 KB]
+Initial heuristic value for cg(adapt_costs(1)): 43
+Initial heuristic value for lmcount(lmg, admissible = true): 7
+New best heuristic value for cg(adapt_costs(1)): 39
+[g=1, 3 evaluated, 2 expanded, t=0.469993s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 27
+New best heuristic value for lmcount(lmg, admissible = true): 6
+[g=2, 4 evaluated, 3 expanded, t=0.469993s, 62792 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 5
+[g=8, 14 evaluated, 13 expanded, t=0.48202s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 26
+[g=9, 15 evaluated, 14 expanded, t=0.48202s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 22
+[g=11, 17 evaluated, 16 expanded, t=0.48202s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 17
+New best heuristic value for lmcount(lmg, admissible = true): 4
+[g=12, 18 evaluated, 17 expanded, t=0.48202s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 13
+New best heuristic value for lmcount(lmg, admissible = true): 3
+[g=13, 19 evaluated, 18 expanded, t=0.48202s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 11
+[g=14, 20 evaluated, 19 expanded, t=0.48202s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 10
+[g=25, 99 evaluated, 98 expanded, t=0.551416s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 7
+[g=26, 100 evaluated, 99 expanded, t=0.551416s, 62792 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 2
+[g=27, 101 evaluated, 100 expanded, t=0.551416s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 6
+[g=32, 128 evaluated, 127 expanded, t=0.565784s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 4
+[g=36, 262 evaluated, 261 expanded, t=0.679699s, 62792 KB]
+New best heuristic value for cg(adapt_costs(1)): 2
+New best heuristic value for lmcount(lmg, admissible = true): 1
+[g=37, 263 evaluated, 262 expanded, t=0.679699s, 62792 KB]
+Peak memory: 65848 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 63.69
+config 35: relative time 30, remaining 266
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_exhaust(reasonable_orders=false, only_causal_landmarks=false, disjunctive_landmarks=true, conjunctive_landmarks=true, no_orders=false)', '--heuristic', 'hFF=ff(transform=adapt_costs(2))', '--heuristic', 'hHMax=hmax()', '--heuristic', 'hBlind=blind()', '--heuristic', 'hLM=lmcount(lmg, admissible=true, pref=false, transform=adapt_costs(1))', '--search', 'lazy(alt([type_based([g()]),single(sum([g(), weight(hBlind, 3)])), single(sum([g(), weight(hBlind, 3)]), pref_only=true), single(sum([g(), weight(hFF, 3)])), single(sum([g(), weight(hFF, 3)]), pref_only=true), single(sum([g(), weight(hLM, 3)])), single(sum([g(), weight(hLM, 3)]), pref_only=true), single(sum([g(), weight(hHMax, 3)])), single(sum([g(), weight(hHMax, 3)]), pref_only=true)], boost=3052), preferred=[hFF], reopen_closed=true, cost_type=0, bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 7.18 -> (8, 9)
+reading input... [t=0s]
+done reading input! [t=0.0880564s]
+packing state variables...done! [t=0.0924121s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0995936s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00718149s
+done initializing global data [t=0.104307s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing HSP max heuristic...
+Initializing blind search heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks by testing all facts with RPG method
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 2.43545s
+Discovered 186 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+Conducting lazy best first search, (real) bound = 59
+163 initial landmarks, 7 goal landmarks
+New best heuristic value for blind: 1
+New best heuristic value for hmax: 9
+New best heuristic value for ff(transform = adapt_costs(2)): 22
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(1)): 9
+[g=0, 1 evaluated, 0 expanded, t=3.36644s, 69772 KB]
+Initial heuristic value for blind: 1
+Initial heuristic value for hmax: 9
+Initial heuristic value for ff(transform = adapt_costs(2)): 22
+Initial heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(1)): 9
+New best heuristic value for hmax: 8
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(1)): 8
+[g=1, 2 evaluated, 1 expanded, t=3.37568s, 69904 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 16
+[g=1, 3 evaluated, 2 expanded, t=3.37568s, 69904 KB]
+New best heuristic value for hmax: 7
+[g=2, 4 evaluated, 3 expanded, t=3.37568s, 69904 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 13
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(1)): 7
+[g=2, 7 evaluated, 6 expanded, t=3.40005s, 69904 KB]
+New best heuristic value for hmax: 6
+[g=3, 13 evaluated, 11 expanded, t=3.42575s, 69904 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 12
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(1)): 6
+[g=8, 26 evaluated, 24 expanded, t=3.47903s, 69904 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 10
+[g=10, 155 evaluated, 144 expanded, 1 reopened, t=4.09176s, 69904 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 8
+[g=15, 170 evaluated, 158 expanded, 1 reopened, t=4.16272s, 70036 KB]
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(1)): 5
+[g=16, 172 evaluated, 160 expanded, 1 reopened, t=4.16683s, 70036 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 7
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(1)): 4
+[g=13, 181 evaluated, 168 expanded, 1 reopened, t=4.2115s, 70036 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 6
+[g=29, 1168 evaluated, 1035 expanded, 8 reopened, t=8.60929s, 70300 KB]
+Peak memory: 70564 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 49.17
+config 36: relative time 56, remaining 236
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--heuristic', 'hFF=ff(transform=adapt_costs(2))', '--search', 'lazy(alt([tiebreaking([sum([g(),hFF]),hFF]),tiebreaking([sum([g(),hFF]),hFF],pref_only=true)],boost=432),preferred=[hFF],reopen_closed=true,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 11.67 -> (12, 13)
+reading input... [t=0s]
+done reading input! [t=0.0813287s]
+packing state variables...done! [t=0.09133s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.10318s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0113697s
+done initializing global data [t=0.10318s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Conducting lazy best first search, (real) bound = 59
+New best heuristic value for ff(transform = adapt_costs(2)): 22
+[g=0, 1 evaluated, 0 expanded, t=0.520283s, 51252 KB]
+Initial heuristic value for ff(transform = adapt_costs(2)): 22
+New best heuristic value for ff(transform = adapt_costs(2)): 16
+[g=1, 3 evaluated, 2 expanded, t=0.520283s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 13
+[g=2, 5 evaluated, 4 expanded, t=0.529844s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 12
+[g=11, 18 evaluated, 16 expanded, t=0.559816s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 11
+[g=11, 22 evaluated, 18 expanded, t=0.559816s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 10
+[g=17, 118 evaluated, 107 expanded, t=0.795731s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 9
+[g=18, 119 evaluated, 108 expanded, t=0.795731s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 8
+[g=19, 120 evaluated, 109 expanded, t=0.795731s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 7
+[g=19, 124 evaluated, 111 expanded, t=0.806014s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 6
+[g=27, 1402 evaluated, 1247 expanded, 5 reopened, t=3.63143s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 5
+[g=26, 4432 evaluated, 3930 expanded, 85 reopened, t=9.92613s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 4
+[g=27, 4433 evaluated, 3931 expanded, 85 reopened, t=9.92613s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 3
+[g=28, 4434 evaluated, 3932 expanded, 85 reopened, t=9.92613s, 51252 KB]
+New best heuristic value for ff(transform = adapt_costs(2)): 2
+[g=29, 4435 evaluated, 3933 expanded, 85 reopened, t=9.93198s, 51252 KB]
+Peak memory: 51252 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 27.88
+config 37: relative time 19, remaining 180
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_merged([lm_rhw(),lm_hm(m=1)],only_causal_landmarks=false,disjunctive_landmarks=false,conjunctive_landmarks=true,no_orders=false)', '--heuristic', 'hFF=ff(adapt_costs(0))', '--heuristic', 'hLM=lmcount(lmg,admissible=true)', '--search', 'lazy(alt([single(sum([g(),weight(hFF, 10)])),single(sum([g(),weight(hFF, 10)]),pref_only=true),single(sum([g(),weight(hLM, 10)])),single(sum([g(),weight(hLM, 10)]),pref_only=true)], boost=500),preferred=[hFF],reopen_closed=false,cost_type=2,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 2.94 -> (3, 4)
+reading input... [t=0s]
+done reading input! [t=0.0864719s]
+packing state variables...done! [t=0.0939057s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0959978s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0020921s
+done initializing global data [t=0.0959978s]
+Simplifying 83394 unary operators... done! [83394 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Merging 2 landmark graphs
+Generating landmarks using the RPG/SAS+ approach
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.167089s
+Discovered 19 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+12 edges
+h^m landmarks m=1
+Using 408 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+Level 7 completed.
+Level 8 completed.
+Level 9 completed.
+Level 10 completed.
+Level 11 completed.
+Level 12 completed.
+Level 13 completed.
+h^m landmarks computed.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.155771s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+28 edges
+Adding simple landmarks
+Adding disjunctive landmarks
+Adding orderings
+Discarding 1 disjunctive landmarks
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.491064s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+28 edges
+Conducting lazy best first search, (real) bound = 59
+22 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lmg, admissible = true): 7
+New best heuristic value for ff(adapt_costs(0)): 22
+[g=0, 1 evaluated, 0 expanded, t=1.00435s, 57176 KB]
+Initial heuristic value for lmcount(lmg, admissible = true): 7
+Initial heuristic value for ff(adapt_costs(0)): 22
+New best heuristic value for ff(adapt_costs(0)): 16
+[g=1, 3 evaluated, 2 expanded, t=1.00435s, 57176 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 6
+New best heuristic value for ff(adapt_costs(0)): 13
+[g=2, 5 evaluated, 4 expanded, t=1.01293s, 57176 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 5
+New best heuristic value for ff(adapt_costs(0)): 12
+[g=11, 19 evaluated, 17 expanded, t=1.04656s, 57176 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 4
+New best heuristic value for ff(adapt_costs(0)): 11
+[g=11, 24 evaluated, 20 expanded, t=1.05377s, 57176 KB]
+New best heuristic value for ff(adapt_costs(0)): 10
+[g=18, 32 evaluated, 28 expanded, t=1.06543s, 57176 KB]
+New best heuristic value for ff(adapt_costs(0)): 9
+[g=21, 35 evaluated, 31 expanded, t=1.07582s, 57176 KB]
+New best heuristic value for ff(adapt_costs(0)): 7
+[g=23, 38 evaluated, 34 expanded, t=1.07582s, 57176 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 3
+[g=24, 39 evaluated, 35 expanded, t=1.08551s, 57176 KB]
+New best heuristic value for ff(adapt_costs(0)): 6
+[g=41, 467 evaluated, 402 expanded, t=1.98037s, 57176 KB]
+New best heuristic value for ff(adapt_costs(0)): 5
+[g=37, 1241 evaluated, 1088 expanded, t=3.65973s, 57176 KB]
+New best heuristic value for ff(adapt_costs(0)): 4
+[g=38, 1242 evaluated, 1089 expanded, t=3.65973s, 57176 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 2
+New best heuristic value for ff(adapt_costs(0)): 3
+[g=39, 1243 evaluated, 1090 expanded, t=3.65973s, 57176 KB]
+New best heuristic value for ff(adapt_costs(0)): 2
+[g=40, 1244 evaluated, 1091 expanded, t=3.65973s, 57176 KB]
+Peak memory: 57176 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 22.54
+config 38: relative time 56, remaining 161
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_exhaust(reasonable_orders=false,only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=false,lm_cost_type=1)', '--heuristic', 'hGoalCount=goalcount(transform=adapt_costs(2))', '--heuristic', 'hLM,hFF=lm_ff_syn(lmg,admissible=false,transform=adapt_costs(0))', '--heuristic', 'hBlind=blind()', '--search', 'eager(alt([tiebreaking([sum([weight(g(),8),weight(hBlind,9)]),hBlind]),tiebreaking([sum([weight(g(),8),weight(hLM,9)]),hLM]),tiebreaking([sum([weight(g(),8),weight(hFF,9)]),hFF]),tiebreaking([sum([weight(g(),8),weight(hGoalCount,9)]),hGoalCount])],boost=2005),preferred=[],reopen_closed=true,cost_type=0,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 7.84 -> (8, 9)
+reading input... [t=0s]
+done reading input! [t=0.091701s]
+packing state variables...done! [t=0.0925992s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.100374s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00777477s
+done initializing global data [t=0.102977s]
+Initializing goal count heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks by testing all facts with RPG method
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 2.52289s
+Discovered 186 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+Initializing LAMA-FF synergy object
+Initializing blind search heuristic...
+Conducting best first search with reopening closed nodes, (real) bound = 59
+163 initial landmarks, 7 goal landmarks
+New best heuristic value for <missing>: 22
+New best heuristic value for blind: 1
+New best heuristic value for goalcount(transform = adapt_costs(2)): 7
+New best heuristic value for <missing>: 23
+[g=0, 1 evaluated, 0 expanded, t=2.65981s, 39164 KB]
+Initial heuristic value for <missing>: 22
+Initial heuristic value for blind: 1
+Initial heuristic value for goalcount(transform = adapt_costs(2)): 7
+Initial heuristic value for <missing>: 23
+pruning method: none
+New best heuristic value for <missing>: 22
+[g=1, 2 evaluated, 1 expanded, t=2.66578s, 39164 KB]
+New best heuristic value for <missing>: 16
+[g=1, 3 evaluated, 1 expanded, t=2.66578s, 39164 KB]
+New best heuristic value for <missing>: 13
+New best heuristic value for goalcount(transform = adapt_costs(2)): 6
+New best heuristic value for <missing>: 19
+[g=2, 7 evaluated, 3 expanded, t=2.6816s, 39164 KB]
+New best heuristic value for <missing>: 12
+[g=7, 29 evaluated, 15 expanded, t=2.75743s, 39164 KB]
+New best heuristic value for goalcount(transform = adapt_costs(2)): 5
+New best heuristic value for <missing>: 16
+[g=8, 35 evaluated, 18 expanded, t=2.77023s, 39164 KB]
+New best heuristic value for <missing>: 11
+[g=13, 155 evaluated, 94 expanded, t=3.18405s, 39164 KB]
+New best heuristic value for <missing>: 10
+[g=14, 157 evaluated, 95 expanded, t=3.19185s, 39164 KB]
+New best heuristic value for <missing>: 9
+[g=15, 160 evaluated, 97 expanded, t=3.19776s, 39164 KB]
+New best heuristic value for <missing>: 8
+New best heuristic value for goalcount(transform = adapt_costs(2)): 4
+New best heuristic value for <missing>: 13
+[g=12, 264 evaluated, 161 expanded, t=3.54812s, 39164 KB]
+New best heuristic value for <missing>: 7
+New best heuristic value for goalcount(transform = adapt_costs(2)): 3
+New best heuristic value for <missing>: 10
+[g=13, 265 evaluated, 162 expanded, t=3.55124s, 39164 KB]
+New best heuristic value for <missing>: 6
+[g=21, 1833 evaluated, 1220 expanded, t=8.88954s, 39164 KB]
+New best heuristic value for <missing>: 5
+[g=25, 3037 evaluated, 2034 expanded, 2 reopened, t=13.1423s, 39164 KB]
+New best heuristic value for <missing>: 4
+New best heuristic value for <missing>: 9
+[g=26, 3040 evaluated, 2037 expanded, 2 reopened, t=13.1506s, 39164 KB]
+New best heuristic value for <missing>: 3
+New best heuristic value for goalcount(transform = adapt_costs(2)): 2
+New best heuristic value for <missing>: 6
+[g=27, 3043 evaluated, 2039 expanded, 2 reopened, t=13.1597s, 39164 KB]
+New best heuristic value for <missing>: 2
+[g=28, 3045 evaluated, 2041 expanded, 2 reopened, t=13.1597s, 39164 KB]
+Peak memory: 39164 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 8.62
+config 39: relative time 24, remaining 105
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_zg(reasonable_orders=false,only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=true)', '--heuristic', 'hLM=lmcount(lmg,admissible=true,pref=false,transform=adapt_costs(0))', '--search', 'eager(single(sum([g(),weight(hLM,3)])),preferred=[],reopen_closed=true,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 1.97 -> (2, 3)
+reading input... [t=0s]
+done reading input! [t=0.0817812s]
+packing state variables...done! [t=0.0903299s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.0921148s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.00178489s
+done initializing global data [t=0.101774s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using Zhu/Givan label propagation
+Removing all orderings.
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.525403s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+Conducting best first search with reopening closed nodes, (real) bound = 59
+22 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 7
+[g=0, 1 evaluated, 0 expanded, t=0.664823s, 34488 KB]
+Initial heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 7
+pruning method: none
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 6
+[g=2, 7 evaluated, 3 expanded, t=0.664823s, 34488 KB]
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 5
+[g=6, 23 evaluated, 13 expanded, t=0.664823s, 34488 KB]
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 4
+[g=7, 24 evaluated, 14 expanded, t=0.664823s, 34488 KB]
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 3
+[g=13, 244 evaluated, 171 expanded, 2 reopened, t=0.664823s, 34488 KB]
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 2
+[g=21, 3174 evaluated, 2352 expanded, 5 reopened, t=0.731758s, 34488 KB]
+New best heuristic value for lmcount(lmg, admissible = true, pref = false, transform = adapt_costs(0)): 1
+[g=29, 13221 evaluated, 10365 expanded, 35 reopened, t=0.949321s, 35284 KB]
+Peak memory: 50272 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: 5.06
+config 40: relative time 81, remaining 81
+g bound: 59
+next plan number: 3
+args: ['/planner/builds/release64/bin/downward', '--landmarks', 'lmg=lm_hm(only_causal_landmarks=false,disjunctive_landmarks=true,conjunctive_landmarks=true,no_orders=true,m=1)', '--heuristic', 'hLM=lmcount(lmg,admissible=true)', '--search', 'eager(single(sum([g(),weight(hLM, 5)])),preferred=[],reopen_closed=true,cost_type=1,bound=59)', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', 'sas_plan']
+time limit 5.06 -> (6, 7)
+reading input... [t=0s]
+done reading input! [t=0.083547s]
+packing state variables...done! [t=0.0915449s]
+Variables: 163
+FactPairs: 408
+Bytes per state: 24
+Building successor generator...done! [t=0.102479s]
+peak memory difference for root successor generator creation: 2596 KB
+time for root successor generation creation: 0.0109339s
+done initializing global data [t=0.102479s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+h^m landmarks m=1
+Using 408 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+Level 7 completed.
+Level 8 completed.
+Level 9 completed.
+Level 10 completed.
+Level 11 completed.
+Level 12 completed.
+Level 13 completed.
+h^m landmarks computed.
+Removing all orderings.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.151295s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+Conducting best first search with reopening closed nodes, (real) bound = 59
+22 initial landmarks, 7 goal landmarks
+New best heuristic value for lmcount(lmg, admissible = true): 7
+[g=0, 1 evaluated, 0 expanded, t=0.277891s, 39068 KB]
+Initial heuristic value for lmcount(lmg, admissible = true): 7
+pruning method: none
+New best heuristic value for lmcount(lmg, admissible = true): 6
+[g=2, 7 evaluated, 3 expanded, t=0.277891s, 39068 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 5
+[g=6, 18 evaluated, 10 expanded, t=0.28931s, 39068 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 4
+[g=7, 19 evaluated, 11 expanded, t=0.28931s, 39068 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 3
+[g=13, 54 evaluated, 38 expanded, t=0.28931s, 39068 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 2
+[g=23, 667 evaluated, 511 expanded, 5 reopened, t=0.299229s, 39068 KB]
+New best heuristic value for lmcount(lmg, admissible = true): 1
+[g=29, 1974 evaluated, 1502 expanded, 16 reopened, t=0.329812s, 39068 KB]
+Peak memory: 86568 KB
+caught signal 24 -- exiting
+exitcode: -24
+
+remaining time: -5.41
+config 0: relative time 29, remaining 117

@@ -1,0 +1,590 @@
+['/planner/fast-downward.py', '--build', 'release64', '--plan-file', 'sas_plan', '--transform-task', 'preprocess', '/home/maria/Documents/team15/problem-6-1/domain.pddl', '/home/maria/Documents/team15/problem-6-1/problem-6-1.pddl', '--if-unit-cost', '--heuristic', 'hrb=RB(dag=from_coloring, extract_plan=true)', '--heuristic', 'hn=novelty(eval=hrb)', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=ONE))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb]), single(hrb,pref_only=true), single(hlm), single(hlm,pref_only=true)], boost=1000),preferred=[hrb,hlm]),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=5),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=3),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=2),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--if-non-unit-cost', '--heuristic', 'hrb1=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(one))', '--heuristic', 'hn=novelty(eval=hrb1)', '--heuristic', 'hlm1=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))', '--heuristic', 'hrb2=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(plusone))', '--heuristic', 'hlm2=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb1]), single(hrb1,pref_only=true), single(hlm1), single(hlm1,pref_only=true)], boost=1000), preferred=[hrb1,hlm1],\n                            cost_type=one,reopen_closed=false),\n                lazy_greedy([hrb2,hlm2],preferred=[hrb2,hlm2],\n                            reopen_closed=false),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=5),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=3),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=2),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--always']
+Deleting existing plans
+INFO     Running translator.
+INFO     translator input: ['/home/maria/Documents/team15/problem-6-1/domain.pddl', '/home/maria/Documents/team15/problem-6-1/problem-6-1.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 1799.93s
+INFO     translator memory limit: 8192 MB
+INFO     callstring: /usr/bin/python /planner/builds/release64/bin/translate/translate.py /home/maria/Documents/team15/problem-6-1/domain.pddl /home/maria/Documents/team15/problem-6-1/problem-6-1.pddl
+time limit 1799.93 -> (1800, 1800)
+Parsing...
+Parsing: [0.000s CPU, 0.008s wall-clock]
+Normalizing task... [0.010s CPU, 0.003s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.009s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 137 rules.
+Computing model... [0.070s CPU, 0.076s wall-clock]
+2441 relevant atoms
+1955 auxiliary atoms
+4396 final queue length
+12901 total queue pushes
+Completing instantiation... [0.210s CPU, 0.233s wall-clock]
+Instantiating: [0.300s CPU, 0.324s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.020s CPU, 0.021s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+72 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.024s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.010s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.019s wall-clock]
+Translating task: [0.460s CPU, 0.491s wall-clock]
+4597 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+11 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.210s CPU, 0.245s wall-clock]
+Reordering and filtering variables...
+74 of 74 variables necessary.
+1 of 3 mutex groups necessary.
+2624 of 2624 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.060s CPU, 0.063s wall-clock]
+Translator variables: 74
+Translator derived variables: 0
+Translator facts: 208
+Translator goal facts: 5
+Translator mutex groups: 1
+Translator total mutex groups size: 42
+Translator operators: 2624
+Translator axioms: 0
+Translator task size: 28356
+Translator peak memory: 44436 KB
+Writing output... [0.050s CPU, 0.048s wall-clock]
+Done! [1.130s CPU, 1.216s wall-clock]
+INFO     Run task transformation (preprocess).
+INFO     Absolute path: /planner/builds/release64/bin/preprocess
+INFO     callstring: /planner/builds/release64/bin/preprocess < output.sas
+Building causal graph...
+The causal graph is not acyclic.
+74 variables of 74 necessary
+1 of 1 mutex groups necessary.
+2624 of 2624 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 208 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=5476, notReached=34578, spurious=3210
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=33865, notReached=6189, spurious=3210
+737 operators are spurious because were not triggered
+Unreachable proposition: Atom nextsnake(pos1-3, pos0-3)
+Unreachable proposition: Atom tailsnake(pos0-3)
+Unreachable proposition: Atom thinsnake(pos0-0)
+Unreachable proposition: Atom thinsnake(pos0-1)
+Unreachable proposition: Atom thinsnake(pos0-3)
+Unreachable proposition: Atom thinsnake(pos1-0)
+Unreachable proposition: Atom thinsnake(pos1-1)
+Unreachable proposition: Atom thinsnake(pos2-1)
+Unreachable proposition: Atom thinsnake(pos3-0)
+Unreachable proposition: Atom thinsnake(pos3-1)
+Unreachable proposition: Atom thinsnake(pos4-1)
+H^2 mutexes added fw: 2844, unreachable: 11
+104 of 1887 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=22200, notReached=11665, spurious=9399
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=33821, notReached=44, spurious=9399
+3 operators are spurious because were not triggered
+H^2 mutexes added bw: 44, unreachable: 0
+0 of 1780 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=5476, notReached=28345, spurious=9443
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=33801, notReached=20, spurious=9443
+4 operators are spurious because were not triggered
+H^2 mutexes added fw: 20, unreachable: 0
+0 of 1776 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=21935, notReached=11866, spurious=9463
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=33801, notReached=0, spurious=9463
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 0, unreachable: 0
+0 of 1776 operators detected as spurious
+Total mutex and disambiguation time: 0.638456 iterations: 4
+1455 of 1455 mutex groups necessary.
+1776 of 2624 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 1776
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 74
+1455 of 1455 mutex groups necessary.
+1776 of 1776 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+73 variables of 74 of 74 necessary
+The causal graph is not acyclic.
+72 variables of 73 necessary
+1407 of 1455 mutex groups necessary.
+1776 of 1776 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 72
+Preprocessor facts: 194
+Preprocessor derived variables: 0
+Preprocessor operators: 1776
+Preprocessor mutex groups: 1407
+Preprocessor task size: 22561
+Writing output...
+done
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--if-unit-cost', '--heuristic', 'hrb=RB(dag=from_coloring, extract_plan=true)', '--heuristic', 'hn=novelty(eval=hrb)', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=ONE))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb]), single(hrb,pref_only=true), single(hlm), single(hlm,pref_only=true)], boost=1000),preferred=[hrb,hlm]),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=5),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=3),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=2),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--if-non-unit-cost', '--heuristic', 'hrb1=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(one))', '--heuristic', 'hn=novelty(eval=hrb1)', '--heuristic', 'hlm1=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))', '--heuristic', 'hrb2=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(plusone))', '--heuristic', 'hlm2=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb1]), single(hrb1,pref_only=true), single(hlm1), single(hlm1,pref_only=true)], boost=1000), preferred=[hrb1,hlm1],\n                            cost_type=one,reopen_closed=false),\n                lazy_greedy([hrb2,hlm2],preferred=[hrb2,hlm2],\n                            reopen_closed=false),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=5),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=3),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=2),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--always']
+INFO     search time limit: 1797.5s
+INFO     search memory limit: 8192 MB
+INFO     search executable: /planner/builds/release64/bin/downward
+INFO     callstring: /planner/builds/release64/bin/downward --if-unit-cost --heuristic 'hrb=RB(dag=from_coloring, extract_plan=true)' --heuristic 'hn=novelty(eval=hrb)' --heuristic 'hlm=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=ONE))' --search 'iterated([
+                lazy(open=alt([tiebreaking([hn, hrb]), single(hrb,pref_only=true), single(hlm), single(hlm,pref_only=true)], boost=1000),preferred=[hrb,hlm]),
+                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=5),
+                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=3),
+                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=2),
+                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=1)
+                ], bound=infinity, repeat_last=true, continue_on_fail=true)' --if-non-unit-cost --heuristic 'hrb1=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(one))' --heuristic 'hn=novelty(eval=hrb1)' --heuristic 'hlm1=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))' --heuristic 'hrb2=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(plusone))' --heuristic 'hlm2=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))' --search 'iterated([
+                lazy(open=alt([tiebreaking([hn, hrb1]), single(hrb1,pref_only=true), single(hlm1), single(hlm1,pref_only=true)], boost=1000), preferred=[hrb1,hlm1],
+                            cost_type=one,reopen_closed=false),
+                lazy_greedy([hrb2,hlm2],preferred=[hrb2,hlm2],
+                            reopen_closed=false),
+                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=5),
+                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=3),
+                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=2),
+                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=1)
+                ], bound=infinity, repeat_last=true, continue_on_fail=true)' --always --internal-plan-file sas_plan < output.sas
+time limit 1797.50 -> (1798, 1799)
+reading input... [t=0s]
+done reading input! [t=0.0193438s]
+packing state variables...done! [t=0.0245719s]
+Variables: 72
+FactPairs: 194
+Bytes per state: 12
+Building successor generator...done! [t=0.0245719s]
+peak memory difference for root successor generator creation: 364 KB
+time for root successor generation creation: 0s
+done initializing global data [t=0.0245719s]
+Simplifying 10258 unary operators... done! [10258 unary operators]
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing extended DTGs
+Initializing Red-Black Fact Following heuristic...
+Initializing novelty heuristic...
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.0305946s
+Discovered 21 landmarks, of which 2 are disjunctive and 0 are conjunctive 
+38 edges
+Starting search: lazy(open = alt(list(tiebreaking(list(hn, hrb)), single(hrb, pref_only = true), single(hlm), single(hlm, pref_only = true)), boost = 1000), preferred = list(hrb, hlm))
+Conducting lazy best first search, (real) bound = 2147483647
+12 initial landmarks, 5 goal landmarks
+Attempting to extract plan from the heuristic
+Running A* instead of Dijkstra. Using the distances ignoring outside conditions for heuristic estimates.
+Initializing Red-Black task...
+Initializing Red-Black task core...
+Adding 1776 operators to extended DTGs
+Checking invertibility...
+Done checking invertibility
+Number of invertible variables is 0
+Finished initializing Red-Black task core at time step [t=0.0998375s]
+Finished initializing Red-Black task at time step [t=0.0998375s]
+No black variables found -- running FF heuristic.
+Plan extraction: 1
+Finished initializing Red-Black Fact Following heuristic at time step [t=0.0998375s]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+New best heuristic value for novelty(eval = hrb): 0
+[g=0, 1 evaluated, 0 expanded, t=0.0998375s, 12708 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+Initial heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+Initial heuristic value for novelty(eval = hrb): 0
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 10
+[g=1, 3 evaluated, 2 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 8
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 9
+[g=2, 4 evaluated, 3 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 8
+[g=3, 5 evaluated, 4 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 7
+[g=4, 7 evaluated, 6 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 7
+[g=7, 12 evaluated, 11 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 6
+[g=8, 14 evaluated, 13 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 5
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 5
+[g=9, 15 evaluated, 14 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 4
+[g=10, 16 evaluated, 15 expanded, t=0.0998375s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 3
+[g=11, 17 evaluated, 16 expanded, t=0.112092s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 2
+[g=19, 57 evaluated, 50 expanded, t=0.112092s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 4
+[g=46, 190 evaluated, 167 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 3
+[g=47, 191 evaluated, 168 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 2
+[g=48, 194 evaluated, 171 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 1
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 1
+[g=49, 195 evaluated, 172 expanded, t=0.131519s, 12708 KB]
+Solution found!
+Actual search time: 0.0397824s [t=0.131519s]
+move-thin-snake pos5-0 pos6-0 dir-down (1)
+move-thin-snake pos6-0 pos6-1 dir-right (1)
+move-thin-snake pos6-1 pos6-2 dir-right (1)
+move-thin-snake pos6-2 pos6-3 dir-right (1)
+move-thin-snake pos6-3 pos5-3 dir-up (1)
+move-thin-snake pos5-3 pos4-3 dir-up (1)
+move-thin-snake pos4-3 pos3-3 dir-up (1)
+move-thin-snake pos3-3 pos2-3 dir-up (1)
+move-thin-snake pos2-3 pos1-3 dir-up (1)
+move-thin-snake pos1-3 pos1-2 dir-left (1)
+move-thin-snake-and-first-eat pos1-2 pos1-1 dir-left (1)
+move-fat-snake pos1-1 pos0-1 pos1-2 pos1-1 dir-up (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-1 pos0-1 dir-down (1)
+move-fat-snake pos1-0 pos1-1 pos0-1 pos0-0 dir-right (1)
+move-fat-snake pos1-1 pos1-2 pos0-0 pos1-0 dir-right (1)
+move-fat-snake pos1-2 pos1-3 pos1-0 pos1-1 dir-right (1)
+move-fat-snake pos1-3 pos2-3 pos1-1 pos1-2 dir-down (1)
+move-fat-snake pos2-3 pos3-3 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos3-3 pos4-3 pos1-3 pos2-3 dir-down (1)
+move-fat-snake pos4-3 pos5-3 pos2-3 pos3-3 dir-down (1)
+move-fat-snake pos5-3 pos6-3 pos3-3 pos4-3 dir-down (1)
+move-fat-snake pos6-3 pos6-2 pos4-3 pos5-3 dir-left (1)
+move-fat-snake pos6-2 pos6-1 pos5-3 pos6-3 dir-left (1)
+move-fat-snake pos6-1 pos6-0 pos6-3 pos6-2 dir-left (1)
+move-fat-snake pos6-0 pos5-0 pos6-2 pos6-1 dir-up (1)
+move-fat-snake pos5-0 pos4-0 pos6-1 pos6-0 dir-up (1)
+move-and-eat pos4-0 pos3-0 dir-up (1)
+move-fat-snake pos3-0 pos3-1 pos6-0 pos5-0 dir-right (1)
+move-fat-snake pos3-1 pos2-1 pos5-0 pos4-0 dir-up (1)
+move-fat-snake pos2-1 pos1-1 pos4-0 pos3-0 dir-up (1)
+move-fat-snake pos1-1 pos1-2 pos3-0 pos3-1 dir-right (1)
+move-fat-snake pos1-2 pos1-3 pos3-1 pos2-1 dir-right (1)
+move-fat-snake pos1-3 pos2-3 pos2-1 pos1-1 dir-down (1)
+move-fat-snake pos2-3 pos3-3 pos1-1 pos1-2 dir-down (1)
+move-fat-snake pos3-3 pos4-3 pos1-2 pos1-3 dir-down (1)
+move-fat-snake pos4-3 pos5-3 pos1-3 pos2-3 dir-down (1)
+move-fat-snake pos5-3 pos6-3 pos2-3 pos3-3 dir-down (1)
+move-fat-snake pos6-3 pos6-2 pos3-3 pos4-3 dir-left (1)
+move-fat-snake pos6-2 pos6-1 pos4-3 pos5-3 dir-left (1)
+move-fat-snake pos6-1 pos6-0 pos5-3 pos6-3 dir-left (1)
+move-fat-snake pos6-0 pos5-0 pos6-3 pos6-2 dir-up (1)
+move-fat-snake pos5-0 pos4-0 pos6-2 pos6-1 dir-up (1)
+move-and-eat pos4-0 pos4-1 dir-right (1)
+move-fat-snake pos4-1 pos3-1 pos6-1 pos6-0 dir-up (1)
+move-fat-snake pos3-1 pos2-1 pos6-0 pos5-0 dir-up (1)
+move-fat-snake pos2-1 pos1-1 pos5-0 pos4-0 dir-up (1)
+move-fat-snake pos1-1 pos1-2 pos4-0 pos4-1 dir-right (1)
+move-fat-snake pos1-2 pos1-3 pos4-1 pos3-1 dir-right (1)
+move-and-eat pos1-3 pos0-3 dir-up (1)
+Plan length: 50 step(s).
+Plan cost: 50
+Expanded 173 state(s).
+Reopened 0 state(s).
+Evaluated 196 state(s).
+Evaluations: 370
+Generated 232 state(s).
+Dead ends: 22 state(s).
+Number of registered states: 196
+Best solution cost so far: 50
+Solution found - keep searching
+Starting search: lazy_wastar(list(hrb, hlm), preferred = list(hrb, hlm), w = 5)
+Conducting lazy best first search, (real) bound = 50
+12 initial landmarks, 5 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+[g=0, 1 evaluated, 0 expanded, t=0.131519s, 12708 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+Initial heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 10
+[g=1, 3 evaluated, 2 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 8
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 9
+[g=2, 4 evaluated, 3 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 8
+[g=3, 5 evaluated, 4 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 7
+[g=4, 7 evaluated, 6 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 7
+[g=7, 10 evaluated, 9 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 6
+[g=8, 11 evaluated, 10 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 5
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 5
+[g=9, 12 evaluated, 11 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 4
+[g=10, 13 evaluated, 12 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 3
+[g=11, 14 evaluated, 13 expanded, t=0.131519s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 2
+[g=29, 156 evaluated, 142 expanded, 3 reopened, t=0.151431s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 4
+[g=42, 199 evaluated, 179 expanded, 3 reopened, t=0.163009s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 3
+[g=43, 201 evaluated, 181 expanded, 3 reopened, t=0.163009s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 2
+[g=44, 203 evaluated, 183 expanded, 3 reopened, t=0.163009s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 1
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 1
+[g=45, 205 evaluated, 185 expanded, 3 reopened, t=0.163009s, 12708 KB]
+Solution found!
+Actual search time: 0.0314901s [t=0.163009s]
+move-thin-snake pos5-0 pos6-0 dir-down (1)
+move-thin-snake pos6-0 pos6-1 dir-right (1)
+move-thin-snake pos6-1 pos6-2 dir-right (1)
+move-thin-snake pos6-2 pos6-3 dir-right (1)
+move-thin-snake pos6-3 pos5-3 dir-up (1)
+move-thin-snake pos5-3 pos4-3 dir-up (1)
+move-thin-snake pos4-3 pos3-3 dir-up (1)
+move-thin-snake pos3-3 pos2-3 dir-up (1)
+move-thin-snake pos2-3 pos1-3 dir-up (1)
+move-thin-snake pos1-3 pos1-2 dir-left (1)
+move-thin-snake-and-first-eat pos1-2 pos1-1 dir-left (1)
+move-fat-snake pos1-1 pos0-1 pos1-2 pos1-1 dir-up (1)
+move-and-eat pos0-1 pos0-0 dir-left (1)
+move-fat-snake pos0-0 pos1-0 pos1-1 pos0-1 dir-down (1)
+move-fat-snake pos1-0 pos1-1 pos0-1 pos0-0 dir-right (1)
+move-fat-snake pos1-1 pos2-1 pos0-0 pos1-0 dir-down (1)
+move-fat-snake pos2-1 pos3-1 pos1-0 pos1-1 dir-down (1)
+move-and-eat pos3-1 pos3-0 dir-left (1)
+move-fat-snake pos3-0 pos4-0 pos1-1 pos2-1 dir-down (1)
+move-fat-snake pos4-0 pos5-0 pos2-1 pos3-1 dir-down (1)
+move-fat-snake pos5-0 pos6-0 pos3-1 pos3-0 dir-down (1)
+move-fat-snake pos6-0 pos6-1 pos3-0 pos4-0 dir-right (1)
+move-fat-snake pos6-1 pos6-2 pos4-0 pos5-0 dir-right (1)
+move-fat-snake pos6-2 pos6-3 pos5-0 pos6-0 dir-right (1)
+move-fat-snake pos6-3 pos5-3 pos6-0 pos6-1 dir-up (1)
+move-fat-snake pos5-3 pos4-3 pos6-1 pos6-2 dir-up (1)
+move-fat-snake pos4-3 pos3-3 pos6-2 pos6-3 dir-up (1)
+move-fat-snake pos3-3 pos2-3 pos6-3 pos5-3 dir-up (1)
+move-fat-snake pos2-3 pos1-3 pos5-3 pos4-3 dir-up (1)
+move-fat-snake pos1-3 pos1-2 pos4-3 pos3-3 dir-left (1)
+move-fat-snake pos1-2 pos1-1 pos3-3 pos2-3 dir-left (1)
+move-fat-snake pos1-1 pos2-1 pos2-3 pos1-3 dir-down (1)
+move-fat-snake pos2-1 pos3-1 pos1-3 pos1-2 dir-down (1)
+move-and-eat pos3-1 pos4-1 dir-down (1)
+move-fat-snake pos4-1 pos4-0 pos1-2 pos1-1 dir-left (1)
+move-fat-snake pos4-0 pos5-0 pos1-1 pos2-1 dir-down (1)
+move-fat-snake pos5-0 pos6-0 pos2-1 pos3-1 dir-down (1)
+move-fat-snake pos6-0 pos6-1 pos3-1 pos4-1 dir-right (1)
+move-fat-snake pos6-1 pos6-2 pos4-1 pos4-0 dir-right (1)
+move-fat-snake pos6-2 pos6-3 pos4-0 pos5-0 dir-right (1)
+move-fat-snake pos6-3 pos5-3 pos5-0 pos6-0 dir-up (1)
+move-fat-snake pos5-3 pos4-3 pos6-0 pos6-1 dir-up (1)
+move-fat-snake pos4-3 pos3-3 pos6-1 pos6-2 dir-up (1)
+move-fat-snake pos3-3 pos2-3 pos6-2 pos6-3 dir-up (1)
+move-fat-snake pos2-3 pos1-3 pos6-3 pos5-3 dir-up (1)
+move-and-eat pos1-3 pos0-3 dir-up (1)
+Plan length: 46 step(s).
+Plan cost: 46
+Expanded 186 state(s).
+Reopened 3 state(s).
+Evaluated 206 state(s).
+Evaluations: 390
+Generated 254 state(s).
+Dead ends: 19 state(s).
+Number of registered states: 203
+Best solution cost so far: 46
+Solution found - keep searching
+Starting search: lazy_wastar(list(hrb, hlm), preferred = list(hrb, hlm), w = 3)
+Conducting lazy best first search, (real) bound = 46
+12 initial landmarks, 5 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+[g=0, 1 evaluated, 0 expanded, t=0.164739s, 12708 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+Initial heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 10
+[g=1, 3 evaluated, 2 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 8
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 9
+[g=2, 4 evaluated, 3 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 8
+[g=3, 5 evaluated, 4 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 7
+[g=4, 7 evaluated, 6 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 7
+[g=7, 10 evaluated, 9 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 6
+[g=8, 11 evaluated, 10 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 5
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 5
+[g=9, 12 evaluated, 11 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 4
+[g=10, 13 evaluated, 12 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 3
+[g=11, 14 evaluated, 13 expanded, t=0.164739s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 2
+[g=29, 137 evaluated, 125 expanded, t=0.184683s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 4
+[g=42, 240 evaluated, 216 expanded, 2 reopened, t=0.191141s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 3
+[g=43, 241 evaluated, 217 expanded, 2 reopened, t=0.191141s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 2
+[g=44, 242 evaluated, 218 expanded, 2 reopened, t=0.191141s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 1
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 1
+[g=45, 243 evaluated, 219 expanded, 2 reopened, t=0.191141s, 12708 KB]
+Completely explored state space -- no solution!
+Actual search time: 0.0432596s [t=0.207999s]
+Expanded 318 state(s).
+Reopened 28 state(s).
+Evaluated 346 state(s).
+Evaluations: 636
+Generated 413 state(s).
+Dead ends: 28 state(s).
+Number of registered states: 318
+Best solution cost so far: 46
+No solution found - keep searching
+Starting search: lazy_wastar(list(hrb, hlm), preferred = list(hrb, hlm), w = 2)
+Conducting lazy best first search, (real) bound = 46
+12 initial landmarks, 5 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+[g=0, 1 evaluated, 0 expanded, t=0.207999s, 12708 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+Initial heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 10
+[g=1, 3 evaluated, 2 expanded, t=0.207999s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 8
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 9
+[g=2, 4 evaluated, 3 expanded, t=0.207999s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 8
+[g=3, 5 evaluated, 4 expanded, t=0.207999s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 7
+[g=4, 7 evaluated, 6 expanded, t=0.207999s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 7
+[g=7, 16 evaluated, 15 expanded, t=0.207999s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 6
+[g=8, 17 evaluated, 16 expanded, t=0.207999s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 5
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 5
+[g=9, 18 evaluated, 17 expanded, t=0.207999s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 4
+[g=10, 19 evaluated, 18 expanded, t=0.219379s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 3
+[g=11, 20 evaluated, 19 expanded, t=0.219379s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 2
+[g=29, 144 evaluated, 130 expanded, t=0.228736s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 4
+[g=42, 237 evaluated, 213 expanded, t=0.242311s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 3
+[g=43, 238 evaluated, 214 expanded, t=0.242311s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 2
+[g=44, 240 evaluated, 216 expanded, t=0.242311s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 1
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 1
+[g=45, 242 evaluated, 218 expanded, t=0.242311s, 12708 KB]
+Completely explored state space -- no solution!
+Actual search time: 0.0433719s [t=0.251371s]
+Expanded 316 state(s).
+Reopened 26 state(s).
+Evaluated 344 state(s).
+Evaluations: 634
+Generated 411 state(s).
+Dead ends: 28 state(s).
+Number of registered states: 318
+Best solution cost so far: 46
+No solution found - keep searching
+Starting search: lazy_wastar(list(hrb, hlm), preferred = list(hrb, hlm), w = 1)
+Conducting lazy best first search, (real) bound = 46
+12 initial landmarks, 5 goal landmarks
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+[g=0, 1 evaluated, 0 expanded, t=0.251371s, 12708 KB]
+Initial heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 9
+Initial heuristic value for rb(dag = from_coloring, extract_plan = true): 19
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 10
+[g=1, 3 evaluated, 2 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 8
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 9
+[g=2, 4 evaluated, 3 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 8
+[g=3, 7 evaluated, 6 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 7
+[g=4, 10 evaluated, 9 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 6
+[g=5, 14 evaluated, 13 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 7
+[g=7, 19 evaluated, 18 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 5
+[g=6, 20 evaluated, 19 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 6
+[g=8, 23 evaluated, 22 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 5
+[g=9, 27 evaluated, 26 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 4
+[g=7, 28 evaluated, 27 expanded, t=0.263763s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 3
+[g=11, 38 evaluated, 35 expanded, t=0.2722s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 2
+[g=29, 181 evaluated, 165 expanded, t=0.299991s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 4
+[g=42, 241 evaluated, 217 expanded, t=0.299991s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 3
+[g=43, 242 evaluated, 218 expanded, t=0.307594s, 12708 KB]
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 2
+[g=44, 243 evaluated, 219 expanded, t=0.307594s, 12708 KB]
+New best heuristic value for lmcount(lm_rhw(reasonable_orders = true, lm_cost_type = one)): 1
+New best heuristic value for rb(dag = from_coloring, extract_plan = true): 1
+[g=45, 245 evaluated, 221 expanded, t=0.307594s, 12708 KB]
+Completely explored state space -- no solution!
+Actual search time: 0.0679734s [t=0.319344s]
+Expanded 316 state(s).
+Reopened 26 state(s).
+Evaluated 344 state(s).
+Evaluations: 634
+Generated 411 state(s).
+Dead ends: 28 state(s).
+Number of registered states: 318
+Best solution cost so far: 46
+No solution found - keep searching
+Actual search time: 0.227608s [t=0.319344s]
+Cumulative statistics:
+Expanded 1309 state(s).
+Reopened 83 state(s).
+Evaluated 1436 state(s).
+Evaluations: 2664
+Generated 1721 state(s).
+Dead ends: 0 state(s).
+Search time: 0.227608s
+Total time: 0.319344s
+Solution found.
+Peak memory: 12708 KB

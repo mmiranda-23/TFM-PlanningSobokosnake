@@ -108,7 +108,42 @@ sudo singularity build planner_team43.img Singularity_team43
     ulimit -t 1800                           
     ulimit -v 8388608
     singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_3-2.txt
+        
+    mkdir team43/problem-4-1
+    mkdir team43/problem-4-1/tmp 
+    cp Problems/domain.pddl team43/problem-4-1 
+    cp Problems/problem-4-1.pddl team43/problem-4-1 
+    RUNDIR="$(pwd)/team43/problem-4-1"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-4-1.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_4-1.txt
     
+    mkdir team43/problem-4-2
+    mkdir team43/problem-4-2/tmp 
+    cp Problems/domain.pddl team43/problem-4-2 
+    cp Problems/problem-4-2.pddl team43/problem-4-2 
+    RUNDIR="$(pwd)/team43/problem-4-2"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-4-2.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_4-2.txt
+    
+    mkdir team43/problem-5-1 
+    mkdir team43/problem-5-1/tmp
+    cp Problems/domain.pddl team43/problem-5-1 
+    cp Problems/problem-5-1.pddl team43/problem-5-1 
+    RUNDIR="$(pwd)/team43/problem-5-1"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-5-1.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_5-1.txt
 
     mkdir team43/problem-6-1 
     mkdir team43/problem-6-1/tmp
@@ -193,6 +228,18 @@ sudo singularity build planner_team43.img Singularity_team43
     ulimit -t 1800                           
     ulimit -v 8388608
     singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_7-2.txt
+    
+    mkdir team43/problem-7-3 
+    mkdir team43/problem-7-3/tmp
+    cp Problems/domain.pddl team43/problem-7-3 
+    cp Problems/problem-7-3.pddl team43/problem-7-3 
+    RUNDIR="$(pwd)/team43/problem-7-3"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-7-3.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_7-3.txt
 
     mkdir team43/problem-8-1 
     mkdir team43/problem-8-1/tmp
@@ -205,3 +252,15 @@ sudo singularity build planner_team43.img Singularity_team43
     ulimit -t 1800                           
     ulimit -v 8388608
     singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_8-1.txt
+
+    mkdir team43/problem-8-2 
+    mkdir team43/problem-8-2/tmp
+    cp Problems/domain.pddl team43/problem-8-2 
+    cp Problems/problem-8-2.pddl team43/problem-8-2 
+    RUNDIR="$(pwd)/team43/problem-8-2"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-8-2.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_team43.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_8-2.txt

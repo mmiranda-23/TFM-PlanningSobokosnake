@@ -1,0 +1,231 @@
+INFO     Running translator.
+INFO     translator inputs: ['/home/maria/Documents/team2/problem-4-1/domain.pddl', '/home/maria/Documents/team2/problem-4-1/problem-4-1.pddl']
+INFO     translator arguments: []
+Parsing...
+Parsing: [0.010s CPU, 0.007s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.012s wall-clock]
+Preparing model... [0.010s CPU, 0.007s wall-clock]
+Generated 347 rules.
+Computing model... [0.450s CPU, 0.471s wall-clock]
+22981 relevant atoms
+12051 auxiliary atoms
+35032 final queue length
+131492 total queue pushes
+Completing instantiation... [2.590s CPU, 2.681s wall-clock]
+Instantiating: [3.090s CPU, 3.188s wall-clock]
+Computing fact groups...
+Finding invariants...
+19 initial candidates
+Finding invariants: [0.030s CPU, 0.032s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+174 uncovered facts
+Choosing groups: [0.000s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.040s CPU, 0.038s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.140s CPU, 0.140s wall-clock]
+Translating task: [30.600s CPU, 30.970s wall-clock]
+874975 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+539 operators removed
+1 propositions removed
+Detecting unreachable propositions: [4.950s CPU, 5.054s wall-clock]
+Translator variables: 177
+Translator derived variables: 0
+Translator facts: 517
+Translator goal facts: 9
+Translator mutex groups: 4
+Translator total mutex groups size: 255
+Translator operators: 470834
+Translator axioms: 0
+Translator task size: 5609833
+Translator peak memory: 1050492 KB
+Writing output... [5.870s CPU, 6.001s wall-clock]
+Done! [45.180s CPU, 45.891s wall-clock]
+INFO     Running preprocessor.
+INFO     preprocessor input: output.sas
+INFO     preprocessor arguments: ['--h2-time-limit', '30']
+Building causal graph...
+The causal graph is not acyclic.
+177 variables of 177 necessary
+1 of 4 mutex groups necessary.
+470834 of 470834 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 517 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=31329, notReached=220844, spurious=15116
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=219167, notReached=33006, spurious=15116
+209379 operators are spurious because were not triggered
+Unreachable proposition: Atom isbox(pos4-8)
+Unreachable proposition: Atom isbox(pos7-8)
+Unreachable proposition: Atom nextsnake(pos5-8, pos4-8)
+Unreachable proposition: Atom tailsnake(pos4-8)
+Unreachable proposition: Atom thinsnake(pos0-0)
+Unreachable proposition: Atom thinsnake(pos0-1)
+Unreachable proposition: Atom thinsnake(pos0-2)
+Unreachable proposition: Atom thinsnake(pos0-4)
+Unreachable proposition: Atom thinsnake(pos0-5)
+Unreachable proposition: Atom thinsnake(pos0-6)
+Unreachable proposition: Atom thinsnake(pos1-0)
+Unreachable proposition: Atom thinsnake(pos1-1)
+Unreachable proposition: Atom thinsnake(pos1-2)
+Unreachable proposition: Atom thinsnake(pos1-4)
+Unreachable proposition: Atom thinsnake(pos1-5)
+Unreachable proposition: Atom thinsnake(pos1-6)
+Unreachable proposition: Atom thinsnake(pos2-0)
+Unreachable proposition: Atom thinsnake(pos2-1)
+Unreachable proposition: Atom thinsnake(pos2-4)
+Unreachable proposition: Atom thinsnake(pos2-5)
+Unreachable proposition: Atom thinsnake(pos2-6)
+Unreachable proposition: Atom thinsnake(pos3-5)
+H^2 mutexes added fw: 15430, unreachable: 22
+3522 of 261455 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=198858, notReached=20309, spurious=48122
+Initialize m_ops bw
+Computing mutexes...
+h^mutexes could not be computed (building time)
+Total mutex and disambiguation time: 54.9772 iterations: 2
+7716 of 7716 mutex groups necessary.
+257933 of 470834 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 257933
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 177
+7716 of 7716 mutex groups necessary.
+257933 of 257933 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+176 variables of 177 of 177 necessary
+The causal graph is not acyclic.
+175 variables of 176 necessary
+7567 of 7716 mutex groups necessary.
+257933 of 257933 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor variables: 175
+Preprocessor facts: 492
+Preprocessor derived variables: 0
+Preprocessor operators: 257933
+Preprocessor mutex groups: 7567
+Preprocessor task size: 3119966
+Writing output...
+done
+INFO     Running search.
+INFO     search input: output
+INFO     search executable: /planner/src/search/downward-release
+INFO     search portfolio: /planner/src/driver/portfolios/seq_sat_ds.py
+External time limits: 1800, 1800
+Internal time limit: 1800
+External memory limits: 8589934592, 8589934592
+Internal memory limit: 8000000000
+remaining time at start: 1619.35
+remaining time: 1619.35
+config 0: relative time 100, remaining 1800
+g bound: infinity
+next plan number: 1
+args: ['/planner/src/search/downward-release', '--decoupling', 'fork(search_type=sat, pruning=cost_frontier(irrelevance=TRANSITIONS), max_leaf_size=1000000)', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 89.96 -> (90, 91)
+using frontier pruning method
+performing irrelevance analysis in leaf factors
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using fork factoring profile
+reading input... [t=0.01s]
+Simplifying transitions... done!
+done reading input! [t=20.93s]
+building causal graph...done! [t=21.19s]
+factoring time 0.02s
+Error while factoring planning task!
+No factoring found!
+Search stopped without finding a solution.
+Peak memory: 1698704 KB
+returncode: 5
+
+remaining time: 1598.01
+config 1: relative time 1000, remaining 1700
+g bound: infinity
+next plan number: 1
+args: ['/planner/src/search/downward-release', '--decoupling', 'portfolio(fallback_on_abstain=true, overwrite_options=true, choose_max_leaves=true,          factorings=[fork(search_type=sat, max_leaf_size=1000000), ifork(search_type=sat, max_leaf_size=1000000), incarcs(search_type=sat, max_leaf_size=100000)])', '--heuristic', 'hff=ff(cost_type=one)', '--search', 'lazy_greedy(hff, preferred=hff, cost_type=one, bound=infinity, symmetry=symmetry_state_pruning(lex_prices=false, lex_num_states=false, lex_goal_cost=false))', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+timeout: 940.01 -> (941, 942)
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 1000000
+using default pruning method: BasicPruning
+using inverted-fork factoring profile
+performing decoupled satisficing search
+maximum leaf factor size 100000
+using default pruning method: BasicPruning
+using incident-arcs factoring profile
+performing Star Decoupled A* search
+using default pruning method: BasicPruning
+using factoring portfolio
+reading input... [t=0s]
+Simplifying transitions... done!
+done reading input! [t=21.05s]
+building causal graph...done! [t=21.3s]
+factoring time 0.33s
+No factoring found, falling back to standard search.
+Variables: 175
+Bytes per state: 24
+done! [t=21.65s]
+done initalizing global data [t=21.65s]
+Creating symmetry graph stabilizing goal only and using orbit search.
+Initializing symmetry 
+Using Bliss to find group generators
+Got 1 group generators, time step: [t=22.27s]
+Number of generators: 1
+done initializing symmetries [t=22.27s]
+Conducting lazy best first search, (real) bound = 2147483647
+Initializing FF heuristic...
+Initializing additive heuristic...
+Simplifying 1512716 unary operators... done! [1511828 unary operators]
+Best heuristic value: 37 [g=0, 1 evaluated, 0 expanded, t=36.11s, 2252984 KB]
+Best heuristic value: 34 [g=3, 6 evaluated, 5 expanded, t=37.07s, 2252984 KB]
+Best heuristic value: 31 [g=4, 7 evaluated, 6 expanded, t=37.26s, 2252984 KB]
+Best heuristic value: 27 [g=6, 9 evaluated, 8 expanded, t=37.63s, 2252984 KB]
+Best heuristic value: 26 [g=7, 10 evaluated, 9 expanded, t=37.8s, 2252984 KB]
+Best heuristic value: 24 [g=8, 13 evaluated, 12 expanded, t=38.29s, 2252984 KB]
+Best heuristic value: 23 [g=12, 22 evaluated, 21 expanded, t=39.91s, 2252984 KB]
+Best heuristic value: 22 [g=13, 23 evaluated, 22 expanded, t=40.07s, 2252984 KB]
+Best heuristic value: 21 [g=14, 24 evaluated, 23 expanded, t=40.24s, 2252984 KB]
+Best heuristic value: 20 [g=15, 25 evaluated, 24 expanded, t=40.41s, 2252984 KB]
+Best heuristic value: 19 [g=16, 26 evaluated, 25 expanded, t=40.59s, 2252984 KB]
+Best heuristic value: 18 [g=17, 27 evaluated, 26 expanded, t=40.75s, 2252984 KB]
+Best heuristic value: 17 [g=18, 28 evaluated, 27 expanded, t=40.89s, 2252984 KB]
+Best heuristic value: 16 [g=19, 29 evaluated, 28 expanded, t=41.03s, 2252984 KB]
+Best heuristic value: 15 [g=20, 30 evaluated, 29 expanded, t=41.16s, 2252984 KB]
+returncode: -24
+
+remaining time: -46.5
+config 2: relative time 700, remaining 700
+Exit codes: [5, -24]
+Command '['run-portfolio', '/planner/src/driver/portfolios/seq_sat_ds.py']' returned non-zero exit status 5

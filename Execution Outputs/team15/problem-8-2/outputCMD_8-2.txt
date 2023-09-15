@@ -1,0 +1,96 @@
+['/planner/fast-downward.py', '--build', 'release64', '--plan-file', 'sas_plan', '--transform-task', 'preprocess', '/home/maria/Documents/team15/problem-8-2/domain.pddl', '/home/maria/Documents/team15/problem-8-2/problem-8-2.pddl', '--if-unit-cost', '--heuristic', 'hrb=RB(dag=from_coloring, extract_plan=true)', '--heuristic', 'hn=novelty(eval=hrb)', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=ONE))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb]), single(hrb,pref_only=true), single(hlm), single(hlm,pref_only=true)], boost=1000),preferred=[hrb,hlm]),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=5),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=3),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=2),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--if-non-unit-cost', '--heuristic', 'hrb1=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(one))', '--heuristic', 'hn=novelty(eval=hrb1)', '--heuristic', 'hlm1=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))', '--heuristic', 'hrb2=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(plusone))', '--heuristic', 'hlm2=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb1]), single(hrb1,pref_only=true), single(hlm1), single(hlm1,pref_only=true)], boost=1000), preferred=[hrb1,hlm1],\n                            cost_type=one,reopen_closed=false),\n                lazy_greedy([hrb2,hlm2],preferred=[hrb2,hlm2],\n                            reopen_closed=false),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=5),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=3),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=2),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--always']
+Deleting existing plans
+INFO     Running translator.
+INFO     translator input: ['/home/maria/Documents/team15/problem-8-2/domain.pddl', '/home/maria/Documents/team15/problem-8-2/problem-8-2.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 1799.96s
+INFO     translator memory limit: 8192 MB
+INFO     callstring: /usr/bin/python /planner/builds/release64/bin/translate/translate.py /home/maria/Documents/team15/problem-8-2/domain.pddl /home/maria/Documents/team15/problem-8-2/problem-8-2.pddl
+time limit 1799.96 -> (1800, 1800)
+Parsing...
+Parsing: [0.010s CPU, 0.019s wall-clock]
+Normalizing task... [0.010s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.020s CPU, 0.023s wall-clock]
+Preparing model... [0.010s CPU, 0.008s wall-clock]
+Generated 347 rules.
+Computing model... [0.980s CPU, 1.007s wall-clock]
+40306 relevant atoms
+15278 auxiliary atoms
+55584 final queue length
+227824 total queue pushes
+Completing instantiation... [4.950s CPU, 5.010s wall-clock]
+Instantiating: [5.990s CPU, 6.069s wall-clock]
+Computing fact groups...
+Finding invariants...
+19 initial candidates
+Finding invariants: [0.080s CPU, 0.081s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+265 uncovered facts
+Choosing groups: [0.000s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.090s CPU, 0.090s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.250s CPU, 0.257s wall-clock]
+Command '['/usr/bin/python', '/planner/builds/release64/bin/translate/translate.py', '/home/maria/Documents/team15/problem-8-2/domain.pddl', '/home/maria/Documents/team15/problem-8-2/problem-8-2.pddl']' returned non-zero exit status 1
+INFO     Running translator.
+INFO     translator input: ['/home/maria/Documents/team15/problem-8-2/domain.pddl', '/home/maria/Documents/team15/problem-8-2/problem-8-2.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 1799.99s
+INFO     translator memory limit: 8192 MB
+INFO     callstring: /usr/bin/python /planner/builds/release64/bin/translate/translate.py /home/maria/Documents/team15/problem-8-2/domain.pddl /home/maria/Documents/team15/problem-8-2/problem-8-2.pddl
+time limit 1799.99 -> (1800, 1800)
+Parsing...
+Parsing: [0.020s CPU, 0.026s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.015s wall-clock]
+Preparing model... [0.000s CPU, 0.006s wall-clock]
+Generated 347 rules.
+Computing model... [0.960s CPU, 0.972s wall-clock]
+40306 relevant atoms
+15278 auxiliary atoms
+55584 final queue length
+227824 total queue pushes
+Completing instantiation... [4.750s CPU, 4.842s wall-clock]
+Instantiating: [5.760s CPU, 5.861s wall-clock]
+Computing fact groups...
+Finding invariants...
+19 initial candidates
+Finding invariants: [0.070s CPU, 0.068s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+265 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.070s CPU, 0.076s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.010s CPU, 0.002s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.002s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.250s CPU, 0.261s wall-clock]
+Command '['/usr/bin/python', '/planner/builds/release64/bin/translate/translate.py', '/home/maria/Documents/team15/problem-8-2/domain.pddl', '/home/maria/Documents/team15/problem-8-2/problem-8-2.pddl']' returned non-zero exit status 1
+Error running with transform-task option, trying without
+best cost: infinity
+number of previous plans: 0
+['/planner/fast-downward.py', '--build', 'release64', '--plan-file', 'sas_plan', 'output.sas', '--if-unit-cost', '--heuristic', 'hrb=RB(dag=from_coloring, extract_plan=true)', '--heuristic', 'hn=novelty(eval=hrb)', '--heuristic', 'hlm=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=ONE))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb]), single(hrb,pref_only=true), single(hlm), single(hlm,pref_only=true)], boost=1000),preferred=[hrb,hlm]),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=5),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=3),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=2),\n                lazy_wastar([hrb,hlm],preferred=[hrb,hlm],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--if-non-unit-cost', '--heuristic', 'hrb1=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(one))', '--heuristic', 'hn=novelty(eval=hrb1)', '--heuristic', 'hlm1=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))', '--heuristic', 'hrb2=RB(dag=from_coloring, extract_plan=true, transform=adapt_costs(plusone))', '--heuristic', 'hlm2=lmcount(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))', '--search', 'iterated([\n                lazy(open=alt([tiebreaking([hn, hrb1]), single(hrb1,pref_only=true), single(hlm1), single(hlm1,pref_only=true)], boost=1000), preferred=[hrb1,hlm1],\n                            cost_type=one,reopen_closed=false),\n                lazy_greedy([hrb2,hlm2],preferred=[hrb2,hlm2],\n                            reopen_closed=false),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=5),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=3),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=2),\n                lazy_wastar([hrb2,hlm2],preferred=[hrb2,hlm2],w=1)\n                ], bound=infinity, repeat_last=true, continue_on_fail=true)', '--always']

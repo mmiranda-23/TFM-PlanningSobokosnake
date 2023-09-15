@@ -110,6 +110,42 @@ sudo singularity build planner_teamlama.img Singularity_lama
     ulimit -v 8388608
     singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_3-2.txt
         
+    mkdir teamlama/problem-4-1
+    mkdir teamlama/problem-4-1/tmp 
+    cp Problems/domain.pddl teamlama/problem-4-1 
+    cp Problems/problem-4-1.pddl teamlama/problem-4-1 
+    RUNDIR="$(pwd)/teamlama/problem-4-1"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-4-1.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_4-1.txt
+        
+    mkdir teamlama/problem-4-2
+    mkdir teamlama/problem-4-2/tmp 
+    cp Problems/domain.pddl teamlama/problem-4-2 
+    cp Problems/problem-4-2.pddl teamlama/problem-4-2 
+    RUNDIR="$(pwd)/teamlama/problem-4-2"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-4-2.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_4-2.txt
+        
+    mkdir teamlama/problem-5-1 
+    mkdir teamlama/problem-5-1/tmp
+    cp Problems/domain.pddl teamlama/problem-5-1 
+    cp Problems/problem-5-1.pddl teamlama/problem-5-1 
+    RUNDIR="$(pwd)/teamlama/problem-5-1"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-5-1.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_5-1.txt
+        
     mkdir teamlama/problem-6-1 
     mkdir teamlama/problem-6-1/tmp
     cp Problems/domain.pddl teamlama/problem-6-1 
@@ -193,6 +229,18 @@ sudo singularity build planner_teamlama.img Singularity_lama
     ulimit -t 1800                           
     ulimit -v 8388608
     singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_7-2.txt
+        
+    mkdir teamlama/problem-7-3 
+    mkdir teamlama/problem-7-3/tmp
+    cp Problems/domain.pddl teamlama/problem-7-3 
+    cp Problems/problem-7-3.pddl teamlama/problem-7-3 
+    RUNDIR="$(pwd)/teamlama/problem-7-3"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-7-3.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_7-3.txt
     
     mkdir teamlama/problem-8-1 
     mkdir teamlama/problem-8-1/tmp
@@ -205,3 +253,15 @@ sudo singularity build planner_teamlama.img Singularity_lama
     ulimit -t 1800                           
     ulimit -v 8388608
     singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_8-1.txt
+
+    mkdir teamlama/problem-8-2 
+    mkdir teamlama/problem-8-2/tmp
+    cp Problems/domain.pddl teamlama/problem-8-2 
+    cp Problems/problem-8-2.pddl teamlama/problem-8-2 
+    RUNDIR="$(pwd)/teamlama/problem-8-2"
+    DOMAIN="$RUNDIR/domain.pddl"
+    PROBLEM="$RUNDIR/problem-8-2.pddl"
+    ABS_TMP_DIR="$RUNDIR/tmp"
+    ulimit -t 1800                           
+    ulimit -v 8388608
+    singularity run -C -B $ABS_TMP_DIR:/tmp -H $RUNDIR planner_teamlama.img $DOMAIN $PROBLEM sas_plan > $RUNDIR/outputCMD_8-2.txt

@@ -1,0 +1,808 @@
+INFO     Running translator.
+INFO     translator input: ['/home/maria/Documents/teamlama/problem-7-3/domain.pddl', '/home/maria/Documents/teamlama/problem-7-3/problem-7-3.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: 1799.88s
+INFO     translator memory limit: 8192 MB
+INFO     callstring: /usr/bin/python /planner/builds/release64/bin/translate/translate.py /home/maria/Documents/teamlama/problem-7-3/domain.pddl /home/maria/Documents/teamlama/problem-7-3/problem-7-3.pddl
+time limit 1799.88 -> (1800, 1800)
+Parsing...
+Parsing: [0.010s CPU, 0.024s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.012s wall-clock]
+Preparing model... [0.010s CPU, 0.006s wall-clock]
+Generated 347 rules.
+Computing model... [0.400s CPU, 0.419s wall-clock]
+23026 relevant atoms
+12351 auxiliary atoms
+35377 final queue length
+131917 total queue pushes
+Completing instantiation... [1.990s CPU, 2.109s wall-clock]
+Instantiating: [2.430s CPU, 2.560s wall-clock]
+Computing fact groups...
+Finding invariants...
+19 initial candidates
+Finding invariants: [0.030s CPU, 0.037s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+223 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.040s CPU, 0.043s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.110s CPU, 0.111s wall-clock]
+Translating task: [2.830s CPU, 2.983s wall-clock]
+58698 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+59 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [1.140s CPU, 1.194s wall-clock]
+Reordering and filtering variables...
+225 of 225 variables necessary.
+2 of 4 mutex groups necessary.
+27928 of 27928 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.470s CPU, 0.495s wall-clock]
+Translator variables: 225
+Translator derived variables: 0
+Translator facts: 591
+Translator goal facts: 18
+Translator mutex groups: 2
+Translator total mutex groups size: 192
+Translator operators: 27928
+Translator axioms: 0
+Translator task size: 354057
+Translator peak memory: 241864 KB
+Writing output... [0.370s CPU, 0.391s wall-clock]
+Done! [7.370s CPU, 7.770s wall-clock]
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--if-unit-cost', '--heuristic', 'hlm=lama_synergy(lm_rhw(reasonable_orders=true))', '--heuristic', 'hff=ff_synergy(hlm)', '--search', 'iterated([lazy_greedy([hff,hlm],preferred=[hff,hlm]),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true)', '--if-non-unit-cost', '--heuristic', 'hlm1=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))', '--heuristic', 'hff1=ff_synergy(hlm1)', '--heuristic', 'hlm2=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))', '--heuristic', 'hff2=ff_synergy(hlm2)', '--search', 'iterated([lazy_greedy([hff1,hlm1],preferred=[hff1,hlm1],cost_type=one,reopen_closed=false),lazy_greedy([hff2,hlm2],preferred=[hff2,hlm2],reopen_closed=false),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true)', '--always']
+INFO     search time limit: 1792.38s
+INFO     search memory limit: 8192 MB
+INFO     search executable: /planner/builds/release64/bin/downward
+INFO     callstring: /planner/builds/release64/bin/downward --if-unit-cost --heuristic 'hlm=lama_synergy(lm_rhw(reasonable_orders=true))' --heuristic 'hff=ff_synergy(hlm)' --search 'iterated([lazy_greedy([hff,hlm],preferred=[hff,hlm]),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true)' --if-non-unit-cost --heuristic 'hlm1=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=one),transform=adapt_costs(one))' --heuristic 'hff1=ff_synergy(hlm1)' --heuristic 'hlm2=lama_synergy(lm_rhw(reasonable_orders=true,lm_cost_type=plusone),transform=adapt_costs(plusone))' --heuristic 'hff2=ff_synergy(hlm2)' --search 'iterated([lazy_greedy([hff1,hlm1],preferred=[hff1,hlm1],cost_type=one,reopen_closed=false),lazy_greedy([hff2,hlm2],preferred=[hff2,hlm2],reopen_closed=false),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true)' --always --internal-plan-file sas_plan < output.sas
+time limit 1792.38 -> (1793, 1794)
+reading input... [t=0.0012196s]
+done reading input! [t=0.196669s]
+packing state variables...done! [t=0.202013s]
+Variables: 225
+FactPairs: 591
+Bytes per state: 32
+Building successor generator...done! [t=0.217281s]
+peak memory difference for root successor generator creation: 7080 KB
+time for root successor generation creation: 0.015268s
+done initializing global data [t=0.223186s]
+Initializing Exploration...
+Initializing landmarks count heuristic...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.962366s
+Discovered 48 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+35 edges
+Initializing LAMA-FF synergy master
+Initializing LAMA-FF synergy slave
+Starting search: lazy_greedy(list(hff, hlm), preferred = list(hff, hlm))
+Conducting lazy best first search, (real) bound = 2147483647
+30 initial landmarks, 18 goal landmarks
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+New best heuristic value for ff_synergy(hlm): 25
+[g=0, 1 evaluated, 0 expanded, t=1.26434s, 68276 KB]
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+Initial heuristic value for ff_synergy(hlm): 25
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 17
+[g=1, 3 evaluated, 2 expanded, t=1.27528s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=2, 5 evaluated, 4 expanded, t=1.29545s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 15
+[g=4, 9 evaluated, 8 expanded, t=1.33626s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+[g=7, 12 evaluated, 11 expanded, t=1.36704s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 24
+[g=9, 17 evaluated, 15 expanded, t=1.39713s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+[g=10, 19 evaluated, 16 expanded, t=1.41771s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+New best heuristic value for ff_synergy(hlm): 22
+[g=11, 20 evaluated, 17 expanded, t=1.42821s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 11
+[g=13, 23 evaluated, 20 expanded, t=1.46237s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+[g=14, 24 evaluated, 21 expanded, t=1.4684s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 9
+New best heuristic value for ff_synergy(hlm): 20
+[g=15, 25 evaluated, 22 expanded, t=1.47906s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 19
+[g=16, 26 evaluated, 23 expanded, t=1.48907s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 27 evaluated, 24 expanded, t=1.49891s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 33 evaluated, 29 expanded, t=1.56106s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=21, 34 evaluated, 30 expanded, t=1.57044s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+[g=22, 35 evaluated, 31 expanded, t=1.58024s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 18
+[g=25, 77 evaluated, 67 expanded, t=1.97222s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 4
+[g=35, 93 evaluated, 81 expanded, t=2.12442s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+[g=36, 95 evaluated, 83 expanded, t=2.14476s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 17
+[g=51, 246 evaluated, 211 expanded, t=3.55981s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 16
+[g=15, 461 evaluated, 392 expanded, t=5.58016s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=16, 463 evaluated, 394 expanded, t=5.60157s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=57, 843 evaluated, 718 expanded, t=9.25514s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=23, 1589 evaluated, 1330 expanded, t=16.3182s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 12
+[g=24, 1590 evaluated, 1331 expanded, t=16.3257s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 11
+[g=35, 2356 evaluated, 1850 expanded, t=23.2946s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 10
+[g=36, 2357 evaluated, 1851 expanded, t=23.3021s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 9
+[g=37, 2358 evaluated, 1852 expanded, t=23.3021s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=38, 2359 evaluated, 1853 expanded, t=23.3118s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=39, 2360 evaluated, 1854 expanded, t=23.3224s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=40, 2361 evaluated, 1855 expanded, t=23.3224s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 5
+[g=41, 2362 evaluated, 1856 expanded, t=23.3345s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 2
+[g=58, 2413 evaluated, 1899 expanded, t=23.7928s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 4
+[g=59, 2414 evaluated, 1900 expanded, t=23.7928s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 3
+[g=60, 2415 evaluated, 1901 expanded, t=23.8042s, 68276 KB]
+New best heuristic value for ff_synergy(hlm): 2
+[g=61, 2416 evaluated, 1902 expanded, t=23.8042s, 68276 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+[g=214, 38431 evaluated, 30585 expanded, t=381.447s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 1
+[g=226, 38444 evaluated, 30598 expanded, t=381.564s, 71804 KB]
+Solution found!
+Actual search time: 380.309s [t=381.564s]
+move-thin-snake pos1-6 pos0-6 dir-up (1)
+move-thin-snake pos0-6 pos0-5 dir-left (1)
+move-thin-snake-and-first-eat pos0-5 pos1-5 dir-down (1)
+move-fat-snake pos1-5 pos1-6 pos0-5 pos1-5 dir-right (1)
+move-fat-snake pos1-6 pos0-6 pos1-5 pos1-6 dir-up (1)
+move-and-eat pos0-6 pos0-7 dir-right (1)
+move-and-eat pos0-7 pos0-8 dir-right (1)
+move-and-eat pos0-8 pos0-9 dir-right (1)
+move-fat-snake pos0-9 pos0-10 pos1-6 pos0-6 dir-right (1)
+move-fat-snake pos0-10 pos1-10 pos0-6 pos0-7 dir-down (1)
+move-fat-snake-and-box pos1-10 pos2-10 pos0-7 pos0-8 pos3-10 dir-down (1)
+move-fat-snake-and-box pos2-10 pos2-9 pos0-8 pos0-9 pos2-8 dir-left (1)
+move-fat-snake pos2-9 pos3-9 pos0-9 pos0-10 dir-down (1)
+move-fat-snake pos3-9 pos3-8 pos0-10 pos1-10 dir-left (1)
+move-fat-snake pos3-8 pos3-7 pos1-10 pos2-10 dir-left (1)
+move-fat-snake pos3-7 pos4-7 pos2-10 pos2-9 dir-down (1)
+move-fat-snake pos4-7 pos4-8 pos2-9 pos3-9 dir-right (1)
+move-fat-snake pos4-8 pos4-9 pos3-9 pos3-8 dir-right (1)
+move-fat-snake pos4-9 pos3-9 pos3-8 pos3-7 dir-up (1)
+move-fat-snake pos3-9 pos3-8 pos3-7 pos4-7 dir-left (1)
+move-fat-snake-and-box pos3-8 pos2-8 pos4-7 pos4-8 pos1-8 dir-up (1)
+move-fat-snake pos2-8 pos2-9 pos4-8 pos4-9 dir-right (1)
+move-fat-snake pos2-9 pos2-10 pos4-9 pos3-9 dir-right (1)
+move-fat-snake pos2-10 pos1-10 pos3-9 pos3-8 dir-up (1)
+move-fat-snake pos1-10 pos0-10 pos3-8 pos2-8 dir-up (1)
+move-fat-snake pos0-10 pos0-9 pos2-8 pos2-9 dir-left (1)
+move-fat-snake pos0-9 pos0-8 pos2-9 pos2-10 dir-left (1)
+move-box-and-eat pos0-8 pos1-8 pos2-8 dir-down (1)
+move-fat-snake-and-box pos1-8 pos2-8 pos2-10 pos1-10 pos3-8 dir-down (1)
+move-fat-snake pos2-8 pos2-9 pos1-10 pos0-10 dir-right (1)
+move-fat-snake pos2-9 pos2-10 pos0-10 pos0-9 dir-right (1)
+move-fat-snake pos2-10 pos1-10 pos0-9 pos0-8 dir-up (1)
+move-fat-snake pos1-10 pos0-10 pos0-8 pos1-8 dir-up (1)
+move-fat-snake pos0-10 pos0-11 pos1-8 pos2-8 dir-right (1)
+move-fat-snake pos0-11 pos0-12 pos2-8 pos2-9 dir-right (1)
+move-fat-snake pos0-12 pos1-12 pos2-9 pos2-10 dir-down (1)
+move-fat-snake pos1-12 pos2-12 pos2-10 pos1-10 dir-down (1)
+move-fat-snake-and-box pos2-12 pos2-11 pos1-10 pos0-10 pos2-10 dir-left (1)
+move-fat-snake-and-box pos2-11 pos2-10 pos0-10 pos0-11 pos2-9 dir-left (1)
+move-fat-snake-and-box pos2-10 pos2-9 pos0-11 pos0-12 pos2-8 dir-left (1)
+move-fat-snake pos2-9 pos3-9 pos0-12 pos1-12 dir-down (1)
+move-fat-snake-and-box pos3-9 pos3-8 pos1-12 pos2-12 pos3-7 dir-left (1)
+move-fat-snake pos3-8 pos4-8 pos2-12 pos2-11 dir-down (1)
+move-fat-snake pos4-8 pos4-9 pos2-11 pos2-10 dir-right (1)
+move-fat-snake pos4-9 pos4-10 pos2-10 pos2-9 dir-right (1)
+move-fat-snake-and-box pos4-10 pos3-10 pos2-9 pos3-9 pos2-10 dir-up (1)
+move-fat-snake-and-box pos3-10 pos2-10 pos3-9 pos3-8 pos1-10 dir-up (1)
+move-fat-snake pos2-10 pos2-11 pos3-8 pos4-8 dir-right (1)
+move-fat-snake pos2-11 pos2-12 pos4-8 pos4-9 dir-right (1)
+move-fat-snake pos2-12 pos1-12 pos4-9 pos4-10 dir-up (1)
+move-fat-snake pos1-12 pos0-12 pos4-10 pos3-10 dir-up (1)
+move-fat-snake pos0-12 pos0-11 pos3-10 pos2-10 dir-left (1)
+move-fat-snake pos0-11 pos0-10 pos2-10 pos2-11 dir-left (1)
+move-fat-snake pos0-10 pos0-9 pos2-11 pos2-12 dir-left (1)
+move-fat-snake pos0-9 pos0-8 pos2-12 pos1-12 dir-left (1)
+move-fat-snake pos0-8 pos1-8 pos1-12 pos0-12 dir-down (1)
+move-fat-snake-and-box pos1-8 pos2-8 pos0-12 pos0-11 pos3-8 dir-down (1)
+move-fat-snake pos2-8 pos2-9 pos0-11 pos0-10 dir-right (1)
+move-fat-snake pos2-9 pos2-10 pos0-10 pos0-9 dir-right (1)
+move-fat-snake pos2-10 pos3-10 pos0-9 pos0-8 dir-down (1)
+move-fat-snake pos3-10 pos3-9 pos0-8 pos1-8 dir-left (1)
+move-fat-snake pos3-9 pos4-9 pos1-8 pos2-8 dir-down (1)
+move-fat-snake pos4-9 pos4-8 pos2-8 pos2-9 dir-left (1)
+move-fat-snake-and-box pos4-8 pos3-8 pos2-9 pos2-10 pos2-8 dir-up (1)
+move-fat-snake-and-box pos3-8 pos2-8 pos2-10 pos3-10 pos1-8 dir-up (1)
+move-fat-snake pos2-8 pos2-9 pos3-10 pos3-9 dir-right (1)
+move-fat-snake pos2-9 pos2-10 pos3-9 pos4-9 dir-right (1)
+move-fat-snake pos2-10 pos2-11 pos4-9 pos4-8 dir-right (1)
+move-fat-snake pos2-11 pos2-12 pos4-8 pos3-8 dir-right (1)
+move-fat-snake pos2-12 pos1-12 pos3-8 pos2-8 dir-up (1)
+move-fat-snake pos1-12 pos0-12 pos2-8 pos2-9 dir-up (1)
+move-fat-snake pos0-12 pos0-11 pos2-9 pos2-10 dir-left (1)
+move-fat-snake pos0-11 pos0-10 pos2-10 pos2-11 dir-left (1)
+move-fat-snake-and-box pos0-10 pos1-10 pos2-11 pos2-12 pos2-10 dir-down (1)
+move-fat-snake-and-box pos1-10 pos2-10 pos2-12 pos1-12 pos3-10 dir-down (1)
+move-fat-snake pos2-10 pos2-11 pos1-12 pos0-12 dir-right (1)
+move-fat-snake pos2-11 pos2-12 pos0-12 pos0-11 dir-right (1)
+move-fat-snake pos2-12 pos1-12 pos0-11 pos0-10 dir-up (1)
+move-fat-snake pos1-12 pos0-12 pos0-10 pos1-10 dir-up (1)
+move-fat-snake pos0-12 pos0-11 pos1-10 pos2-10 dir-left (1)
+move-fat-snake pos0-11 pos0-10 pos2-10 pos2-11 dir-left (1)
+move-fat-snake pos0-10 pos0-9 pos2-11 pos2-12 dir-left (1)
+move-fat-snake pos0-9 pos0-8 pos2-12 pos1-12 dir-left (1)
+move-fat-snake-and-box pos0-8 pos1-8 pos1-12 pos0-12 pos2-8 dir-down (1)
+move-fat-snake-and-box pos1-8 pos2-8 pos0-12 pos0-11 pos3-8 dir-down (1)
+move-fat-snake pos2-8 pos2-9 pos0-11 pos0-10 dir-right (1)
+move-fat-snake pos2-9 pos2-10 pos0-10 pos0-9 dir-right (1)
+move-fat-snake pos2-10 pos1-10 pos0-9 pos0-8 dir-up (1)
+move-fat-snake pos1-10 pos0-10 pos0-8 pos1-8 dir-up (1)
+move-fat-snake pos0-10 pos0-11 pos1-8 pos2-8 dir-right (1)
+move-fat-snake pos0-11 pos0-12 pos2-8 pos2-9 dir-right (1)
+move-fat-snake pos0-12 pos1-12 pos2-9 pos2-10 dir-down (1)
+move-fat-snake pos1-12 pos2-12 pos2-10 pos1-10 dir-down (1)
+move-fat-snake pos2-12 pos2-11 pos1-10 pos0-10 dir-left (1)
+move-fat-snake pos2-11 pos2-10 pos0-10 pos0-11 dir-left (1)
+move-fat-snake pos2-10 pos2-9 pos0-11 pos0-12 dir-left (1)
+move-fat-snake pos2-9 pos2-8 pos0-12 pos1-12 dir-left (1)
+move-fat-snake-and-box pos2-8 pos3-8 pos1-12 pos2-12 pos4-8 dir-down (1)
+move-fat-snake pos3-8 pos3-9 pos2-12 pos2-11 dir-right (1)
+move-fat-snake pos3-9 pos4-9 pos2-11 pos2-10 dir-down (1)
+move-fat-snake pos4-9 pos4-10 pos2-10 pos2-9 dir-right (1)
+move-fat-snake-and-box pos4-10 pos3-10 pos2-9 pos2-8 pos2-10 dir-up (1)
+move-fat-snake-and-box pos3-10 pos2-10 pos2-8 pos3-8 pos1-10 dir-up (1)
+move-fat-snake pos2-10 pos2-11 pos3-8 pos3-9 dir-right (1)
+move-fat-snake pos2-11 pos2-12 pos3-9 pos4-9 dir-right (1)
+move-fat-snake pos2-12 pos1-12 pos4-9 pos4-10 dir-up (1)
+move-fat-snake pos1-12 pos0-12 pos4-10 pos3-10 dir-up (1)
+move-fat-snake pos0-12 pos0-11 pos3-10 pos2-10 dir-left (1)
+move-fat-snake pos0-11 pos0-10 pos2-10 pos2-11 dir-left (1)
+move-fat-snake-and-box pos0-10 pos1-10 pos2-11 pos2-12 pos2-10 dir-down (1)
+move-fat-snake-and-box pos1-10 pos2-10 pos2-12 pos1-12 pos3-10 dir-down (1)
+move-fat-snake pos2-10 pos2-9 pos1-12 pos0-12 dir-left (1)
+move-fat-snake pos2-9 pos3-9 pos0-12 pos0-11 dir-down (1)
+move-fat-snake pos3-9 pos4-9 pos0-11 pos0-10 dir-down (1)
+move-fat-snake-and-box pos4-9 pos4-8 pos0-10 pos1-10 pos4-7 dir-left (1)
+move-fat-snake pos4-8 pos3-8 pos1-10 pos2-10 dir-up (1)
+move-fat-snake pos3-8 pos2-8 pos2-10 pos2-9 dir-up (1)
+move-fat-snake pos2-8 pos1-8 pos2-9 pos3-9 dir-up (1)
+move-fat-snake pos1-8 pos0-8 pos3-9 pos4-9 dir-up (1)
+move-fat-snake pos0-8 pos0-7 pos4-9 pos4-8 dir-left (1)
+move-fat-snake pos0-7 pos0-6 pos4-8 pos3-8 dir-left (1)
+move-fat-snake pos0-6 pos1-6 pos3-8 pos2-8 dir-down (1)
+move-fat-snake pos1-6 pos1-5 pos2-8 pos1-8 dir-left (1)
+move-and-eat pos1-5 pos2-5 dir-down (1)
+move-fat-snake pos2-5 pos3-5 pos1-8 pos0-8 dir-down (1)
+move-and-eat pos3-5 pos4-5 dir-down (1)
+move-fat-snake pos4-5 pos4-4 pos0-8 pos0-7 dir-left (1)
+move-fat-snake-and-box pos4-4 pos4-3 pos0-7 pos0-6 pos4-2 dir-left (1)
+move-box-and-eat pos4-3 pos4-2 pos4-1 dir-left (1)
+move-fat-snake pos4-2 pos3-2 pos0-6 pos1-6 dir-up (1)
+move-fat-snake-and-box pos3-2 pos2-2 pos1-6 pos1-5 pos1-2 dir-up (1)
+move-and-eat pos2-2 pos2-1 dir-left (1)
+move-and-eat pos2-1 pos2-0 dir-left (1)
+move-fat-snake pos2-0 pos1-0 pos1-5 pos2-5 dir-up (1)
+move-and-eat pos1-0 pos0-0 dir-up (1)
+move-and-eat pos0-0 pos0-1 dir-right (1)
+move-and-eat pos0-1 pos0-2 dir-right (1)
+move-fat-snake-and-box pos0-2 pos0-3 pos2-5 pos3-5 pos0-4 dir-right (1)
+move-box-and-eat pos0-3 pos0-4 pos0-5 dir-right (1)
+move-fat-snake-and-box pos0-4 pos0-5 pos3-5 pos4-5 pos0-6 dir-right (1)
+move-fat-snake pos0-5 pos1-5 pos4-5 pos4-4 dir-down (1)
+move-fat-snake pos1-5 pos2-5 pos4-4 pos4-3 dir-down (1)
+move-fat-snake pos2-5 pos3-5 pos4-3 pos4-2 dir-down (1)
+move-and-eat pos3-5 pos3-4 dir-left (1)
+move-fat-snake pos3-4 pos4-4 pos4-2 pos3-2 dir-down (1)
+move-fat-snake pos4-4 pos4-3 pos3-2 pos2-2 dir-left (1)
+move-fat-snake pos4-3 pos4-2 pos2-2 pos2-1 dir-left (1)
+move-fat-snake pos4-2 pos3-2 pos2-1 pos2-0 dir-up (1)
+move-fat-snake pos3-2 pos2-2 pos2-0 pos1-0 dir-up (1)
+move-fat-snake pos2-2 pos2-1 pos1-0 pos0-0 dir-left (1)
+move-fat-snake pos2-1 pos2-0 pos0-0 pos0-1 dir-left (1)
+move-fat-snake pos2-0 pos1-0 pos0-1 pos0-2 dir-up (1)
+move-fat-snake pos1-0 pos0-0 pos0-2 pos0-3 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos0-3 pos0-4 dir-right (1)
+move-fat-snake pos0-1 pos0-2 pos0-4 pos0-5 dir-right (1)
+move-fat-snake pos0-2 pos0-3 pos0-5 pos1-5 dir-right (1)
+move-fat-snake pos0-3 pos0-4 pos1-5 pos2-5 dir-right (1)
+move-fat-snake pos0-4 pos0-5 pos2-5 pos3-5 dir-right (1)
+move-fat-snake-and-box pos0-5 pos0-6 pos3-5 pos3-4 pos0-7 dir-right (1)
+move-fat-snake pos0-6 pos1-6 pos3-4 pos4-4 dir-down (1)
+move-fat-snake pos1-6 pos1-5 pos4-4 pos4-3 dir-left (1)
+move-fat-snake pos1-5 pos2-5 pos4-3 pos4-2 dir-down (1)
+move-fat-snake pos2-5 pos3-5 pos4-2 pos3-2 dir-down (1)
+move-fat-snake pos3-5 pos4-5 pos3-2 pos2-2 dir-down (1)
+move-fat-snake pos4-5 pos4-4 pos2-2 pos2-1 dir-left (1)
+move-fat-snake pos4-4 pos4-3 pos2-1 pos2-0 dir-left (1)
+move-fat-snake pos4-3 pos4-2 pos2-0 pos1-0 dir-left (1)
+move-fat-snake pos4-2 pos3-2 pos1-0 pos0-0 dir-up (1)
+move-fat-snake pos3-2 pos2-2 pos0-0 pos0-1 dir-up (1)
+move-fat-snake pos2-2 pos2-1 pos0-1 pos0-2 dir-left (1)
+move-fat-snake pos2-1 pos2-0 pos0-2 pos0-3 dir-left (1)
+move-fat-snake pos2-0 pos1-0 pos0-3 pos0-4 dir-up (1)
+move-fat-snake pos1-0 pos0-0 pos0-4 pos0-5 dir-up (1)
+move-fat-snake pos0-0 pos0-1 pos0-5 pos0-6 dir-right (1)
+move-fat-snake pos0-1 pos0-2 pos0-6 pos1-6 dir-right (1)
+move-fat-snake pos0-2 pos0-3 pos1-6 pos1-5 dir-right (1)
+move-fat-snake pos0-3 pos0-4 pos1-5 pos2-5 dir-right (1)
+move-fat-snake pos0-4 pos0-5 pos2-5 pos3-5 dir-right (1)
+move-fat-snake pos0-5 pos1-5 pos3-5 pos4-5 dir-down (1)
+move-fat-snake pos1-5 pos1-6 pos4-5 pos4-4 dir-right (1)
+move-fat-snake pos1-6 pos0-6 pos4-4 pos4-3 dir-up (1)
+move-fat-snake-and-box pos0-6 pos0-7 pos4-3 pos4-2 pos0-8 dir-right (1)
+move-fat-snake-and-box pos0-7 pos0-8 pos4-2 pos3-2 pos0-9 dir-right (1)
+move-fat-snake pos0-8 pos1-8 pos3-2 pos2-2 dir-down (1)
+move-fat-snake pos1-8 pos2-8 pos2-2 pos2-1 dir-down (1)
+move-fat-snake pos2-8 pos2-9 pos2-1 pos2-0 dir-right (1)
+move-fat-snake pos2-9 pos3-9 pos2-0 pos1-0 dir-down (1)
+move-fat-snake pos3-9 pos3-8 pos1-0 pos0-0 dir-left (1)
+move-fat-snake pos3-8 pos4-8 pos0-0 pos0-1 dir-down (1)
+move-fat-snake pos4-8 pos4-9 pos0-1 pos0-2 dir-right (1)
+move-fat-snake pos4-9 pos4-10 pos0-2 pos0-3 dir-right (1)
+move-fat-snake-and-box pos4-10 pos3-10 pos0-3 pos0-4 pos2-10 dir-up (1)
+move-fat-snake-and-box pos3-10 pos2-10 pos0-4 pos0-5 pos1-10 dir-up (1)
+move-fat-snake pos2-10 pos2-11 pos0-5 pos1-5 dir-right (1)
+move-fat-snake pos2-11 pos2-12 pos1-5 pos1-6 dir-right (1)
+move-fat-snake pos2-12 pos1-12 pos1-6 pos0-6 dir-up (1)
+move-fat-snake pos1-12 pos0-12 pos0-6 pos0-7 dir-up (1)
+move-fat-snake pos0-12 pos0-11 pos0-7 pos0-8 dir-left (1)
+move-fat-snake pos0-11 pos0-10 pos0-8 pos1-8 dir-left (1)
+move-fat-snake-and-box pos0-10 pos0-9 pos1-8 pos2-8 pos0-8 dir-left (1)
+move-fat-snake-and-box pos0-9 pos0-8 pos2-8 pos2-9 pos0-7 dir-left (1)
+move-fat-snake-and-box pos0-8 pos0-7 pos2-9 pos3-9 pos0-6 dir-left (1)
+move-fat-snake-and-box pos0-7 pos0-6 pos3-9 pos3-8 pos0-5 dir-left (1)
+move-fat-snake-and-box pos0-6 pos0-5 pos3-8 pos4-8 pos0-4 dir-left (1)
+move-fat-snake-and-box pos0-5 pos0-4 pos4-8 pos4-9 pos0-3 dir-left (1)
+move-fat-snake-and-box pos0-4 pos0-3 pos4-9 pos4-10 pos0-2 dir-left (1)
+move-fat-snake-and-box pos0-3 pos0-2 pos4-10 pos3-10 pos0-1 dir-left (1)
+move-fat-snake-and-box pos0-2 pos1-2 pos3-10 pos2-10 pos2-2 dir-down (1)
+move-fat-snake-and-box pos1-2 pos2-2 pos2-10 pos2-11 pos3-2 dir-down (1)
+move-fat-snake pos2-2 pos2-1 pos2-11 pos2-12 dir-left (1)
+move-fat-snake pos2-1 pos2-0 pos2-12 pos1-12 dir-left (1)
+move-fat-snake pos2-0 pos3-0 pos1-12 pos0-12 dir-down (1)
+move-and-eat pos3-0 pos4-0 dir-down (1)
+move-box-and-eat pos4-0 pos4-1 pos4-2 dir-right (1)
+move-fat-snake-and-box pos4-1 pos4-2 pos0-12 pos0-11 pos4-3 dir-right (1)
+move-fat-snake-and-box pos4-2 pos4-3 pos0-11 pos0-10 pos4-4 dir-right (1)
+move-fat-snake-and-box pos4-3 pos4-4 pos0-10 pos0-9 pos4-5 dir-right (1)
+move-fat-snake pos4-4 pos3-4 pos0-9 pos0-8 dir-up (1)
+move-fat-snake pos3-4 pos3-5 pos0-8 pos0-7 dir-right (1)
+move-fat-snake pos3-5 pos2-5 pos0-7 pos0-6 dir-up (1)
+move-fat-snake pos2-5 pos1-5 pos0-6 pos0-5 dir-up (1)
+move-fat-snake pos1-5 pos1-6 pos0-5 pos0-4 dir-right (1)
+move-fat-snake pos1-6 pos0-6 pos0-4 pos0-3 dir-up (1)
+move-fat-snake pos0-6 pos0-5 pos0-3 pos0-2 dir-left (1)
+move-fat-snake pos0-5 pos0-4 pos0-2 pos1-2 dir-left (1)
+move-fat-snake pos0-4 pos0-3 pos1-2 pos2-2 dir-left (1)
+move-and-eat pos0-3 pos1-3 dir-down (1)
+Plan length: 227 step(s).
+Plan cost: 227
+Expanded 30599 state(s).
+Reopened 0 state(s).
+Evaluated 38445 state(s).
+Evaluations: 76890
+Generated 42305 state(s).
+Dead ends: 7845 state(s).
+Number of registered states: 38445
+Int hash set load factor: 38445/65536 = 0.586624
+Int hash set resizes: 16
+Best solution cost so far: 227
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 5)
+Conducting lazy best first search, (real) bound = 227
+30 initial landmarks, 18 goal landmarks
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+New best heuristic value for ff_synergy(hlm): 25
+[g=0, 1 evaluated, 0 expanded, t=381.574s, 71804 KB]
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+Initial heuristic value for ff_synergy(hlm): 25
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 17
+[g=1, 3 evaluated, 2 expanded, t=381.604s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=2, 5 evaluated, 4 expanded, t=381.625s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 15
+[g=4, 9 evaluated, 8 expanded, t=381.665s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+[g=7, 12 evaluated, 11 expanded, t=381.687s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 24
+[g=9, 17 evaluated, 15 expanded, t=381.728s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+[g=10, 19 evaluated, 16 expanded, t=381.748s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+New best heuristic value for ff_synergy(hlm): 22
+[g=11, 20 evaluated, 17 expanded, t=381.758s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 11
+[g=13, 23 evaluated, 20 expanded, t=381.789s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+[g=14, 24 evaluated, 21 expanded, t=381.799s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 9
+New best heuristic value for ff_synergy(hlm): 20
+[g=15, 25 evaluated, 22 expanded, t=381.809s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 19
+[g=16, 26 evaluated, 23 expanded, t=381.825s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 27 evaluated, 24 expanded, t=381.835s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 33 evaluated, 29 expanded, t=381.896s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=21, 35 evaluated, 30 expanded, t=381.907s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+[g=22, 36 evaluated, 31 expanded, t=381.927s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 18
+[g=25, 83 evaluated, 73 expanded, t=382.407s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 4
+[g=35, 113 evaluated, 98 expanded, t=382.681s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+[g=36, 115 evaluated, 100 expanded, t=382.701s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 16
+[g=15, 223 evaluated, 190 expanded, t=383.784s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=16, 225 evaluated, 192 expanded, t=383.804s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=53, 1196 evaluated, 1014 expanded, 3 reopened, t=394.553s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=23, 1558 evaluated, 1309 expanded, 3 reopened, t=398.727s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 12
+[g=24, 1559 evaluated, 1310 expanded, 3 reopened, t=398.735s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 11
+[g=35, 2024 evaluated, 1625 expanded, 3 reopened, t=403.628s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 10
+[g=36, 2025 evaluated, 1626 expanded, 3 reopened, t=403.628s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 9
+[g=37, 2026 evaluated, 1627 expanded, 3 reopened, t=403.647s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=38, 2027 evaluated, 1628 expanded, 3 reopened, t=403.654s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=39, 2028 evaluated, 1629 expanded, 3 reopened, t=403.655s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=40, 2029 evaluated, 1630 expanded, 3 reopened, t=403.669s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 5
+[g=41, 2030 evaluated, 1631 expanded, 3 reopened, t=403.676s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 2
+[g=58, 2091 evaluated, 1681 expanded, 3 reopened, t=404.315s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 4
+[g=59, 2092 evaluated, 1682 expanded, 3 reopened, t=404.315s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 3
+[g=60, 2093 evaluated, 1683 expanded, 3 reopened, t=404.33s, 71804 KB]
+New best heuristic value for ff_synergy(hlm): 2
+[g=61, 2095 evaluated, 1685 expanded, 3 reopened, t=404.348s, 71804 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+[g=100, 65915 evaluated, 54997 expanded, 9792 reopened, t=1132.1s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 1
+[g=108, 65923 evaluated, 55005 expanded, 9792 reopened, t=1132.17s, 74468 KB]
+Solution found!
+Actual search time: 750.622s [t=1132.19s]
+move-thin-snake pos1-6 pos0-6 dir-up (1)
+move-thin-snake-and-first-eat pos0-6 pos0-7 dir-right (1)
+move-and-eat pos0-7 pos0-8 dir-right (1)
+move-and-eat pos0-8 pos0-9 dir-right (1)
+move-fat-snake pos0-9 pos0-10 pos0-6 pos0-7 dir-right (1)
+move-fat-snake pos0-10 pos1-10 pos0-7 pos0-8 dir-down (1)
+move-fat-snake-and-box pos1-10 pos2-10 pos0-8 pos0-9 pos3-10 dir-down (1)
+move-fat-snake-and-box pos2-10 pos3-10 pos0-9 pos0-10 pos4-10 dir-down (1)
+move-fat-snake pos3-10 pos3-9 pos0-10 pos1-10 dir-left (1)
+move-fat-snake pos3-9 pos4-9 pos1-10 pos2-10 dir-down (1)
+move-fat-snake pos4-9 pos4-8 pos2-10 pos3-10 dir-left (1)
+move-fat-snake pos4-8 pos3-8 pos3-10 pos3-9 dir-up (1)
+move-fat-snake pos3-8 pos2-8 pos3-9 pos4-9 dir-up (1)
+move-fat-snake-and-box pos2-8 pos2-9 pos4-9 pos4-8 pos2-10 dir-right (1)
+move-fat-snake pos2-9 pos3-9 pos4-8 pos3-8 dir-down (1)
+move-fat-snake pos3-9 pos4-9 pos3-8 pos2-8 dir-down (1)
+move-fat-snake pos4-9 pos4-8 pos2-8 pos2-9 dir-left (1)
+move-fat-snake pos4-8 pos4-7 pos2-9 pos3-9 dir-left (1)
+move-fat-snake pos4-7 pos3-7 pos3-9 pos4-9 dir-up (1)
+move-fat-snake pos3-7 pos3-8 pos4-9 pos4-8 dir-right (1)
+move-fat-snake pos3-8 pos3-9 pos4-8 pos4-7 dir-right (1)
+move-fat-snake pos3-9 pos3-10 pos4-7 pos3-7 dir-right (1)
+move-fat-snake-and-box pos3-10 pos2-10 pos3-7 pos3-8 pos1-10 dir-up (1)
+move-fat-snake pos2-10 pos2-9 pos3-8 pos3-9 dir-left (1)
+move-fat-snake pos2-9 pos2-8 pos3-9 pos3-10 dir-left (1)
+move-and-eat pos2-8 pos1-8 dir-up (1)
+move-fat-snake pos1-8 pos0-8 pos3-10 pos2-10 dir-up (1)
+move-fat-snake pos0-8 pos0-9 pos2-10 pos2-9 dir-right (1)
+move-fat-snake pos0-9 pos0-10 pos2-9 pos2-8 dir-right (1)
+move-fat-snake pos0-10 pos0-11 pos2-8 pos1-8 dir-right (1)
+move-fat-snake pos0-11 pos0-12 pos1-8 pos0-8 dir-right (1)
+move-fat-snake pos0-12 pos1-12 pos0-8 pos0-9 dir-down (1)
+move-fat-snake pos1-12 pos2-12 pos0-9 pos0-10 dir-down (1)
+move-fat-snake-and-box pos2-12 pos2-11 pos0-10 pos0-11 pos2-10 dir-left (1)
+move-fat-snake-and-box pos2-11 pos2-10 pos0-11 pos0-12 pos2-9 dir-left (1)
+move-fat-snake pos2-10 pos3-10 pos0-12 pos1-12 dir-down (1)
+move-fat-snake pos3-10 pos3-9 pos1-12 pos2-12 dir-left (1)
+move-fat-snake pos3-9 pos3-8 pos2-12 pos2-11 dir-left (1)
+move-fat-snake pos3-8 pos2-8 pos2-11 pos2-10 dir-up (1)
+move-fat-snake pos2-8 pos1-8 pos2-10 pos3-10 dir-up (1)
+move-fat-snake pos1-8 pos0-8 pos3-10 pos3-9 dir-up (1)
+move-fat-snake pos0-8 pos0-7 pos3-9 pos3-8 dir-left (1)
+move-fat-snake pos0-7 pos0-6 pos3-8 pos2-8 dir-left (1)
+move-fat-snake pos0-6 pos1-6 pos2-8 pos1-8 dir-down (1)
+move-and-eat pos1-6 pos1-5 dir-left (1)
+move-and-eat pos1-5 pos2-5 dir-down (1)
+move-fat-snake pos2-5 pos3-5 pos1-8 pos0-8 dir-down (1)
+move-and-eat pos3-5 pos4-5 dir-down (1)
+move-fat-snake pos4-5 pos4-4 pos0-8 pos0-7 dir-left (1)
+move-fat-snake-and-box pos4-4 pos4-3 pos0-7 pos0-6 pos4-2 dir-left (1)
+move-box-and-eat pos4-3 pos4-2 pos4-1 dir-left (1)
+move-fat-snake pos4-2 pos3-2 pos0-6 pos1-6 dir-up (1)
+move-fat-snake-and-box pos3-2 pos2-2 pos1-6 pos1-5 pos1-2 dir-up (1)
+move-and-eat pos2-2 pos2-1 dir-left (1)
+move-and-eat pos2-1 pos2-0 dir-left (1)
+move-fat-snake pos2-0 pos1-0 pos1-5 pos2-5 dir-up (1)
+move-and-eat pos1-0 pos0-0 dir-up (1)
+move-and-eat pos0-0 pos0-1 dir-right (1)
+move-and-eat pos0-1 pos0-2 dir-right (1)
+move-fat-snake-and-box pos0-2 pos0-3 pos2-5 pos3-5 pos0-4 dir-right (1)
+move-box-and-eat pos0-3 pos0-4 pos0-5 dir-right (1)
+move-fat-snake-and-box pos0-4 pos0-5 pos3-5 pos4-5 pos0-6 dir-right (1)
+move-fat-snake-and-box pos0-5 pos0-6 pos4-5 pos4-4 pos0-7 dir-right (1)
+move-fat-snake-and-box pos0-6 pos0-7 pos4-4 pos4-3 pos0-8 dir-right (1)
+move-fat-snake-and-box pos0-7 pos0-8 pos4-3 pos4-2 pos0-9 dir-right (1)
+move-fat-snake pos0-8 pos1-8 pos4-2 pos3-2 dir-down (1)
+move-fat-snake pos1-8 pos2-8 pos3-2 pos2-2 dir-down (1)
+move-fat-snake pos2-8 pos3-8 pos2-2 pos2-1 dir-down (1)
+move-fat-snake pos3-8 pos3-7 pos2-1 pos2-0 dir-left (1)
+move-fat-snake pos3-7 pos4-7 pos2-0 pos1-0 dir-down (1)
+move-fat-snake pos4-7 pos4-8 pos1-0 pos0-0 dir-right (1)
+move-fat-snake pos4-8 pos4-9 pos0-0 pos0-1 dir-right (1)
+move-fat-snake pos4-9 pos3-9 pos0-1 pos0-2 dir-up (1)
+move-fat-snake pos3-9 pos3-10 pos0-2 pos0-3 dir-right (1)
+move-fat-snake pos3-10 pos2-10 pos0-3 pos0-4 dir-up (1)
+move-fat-snake pos2-10 pos2-11 pos0-4 pos0-5 dir-right (1)
+move-fat-snake pos2-11 pos2-12 pos0-5 pos0-6 dir-right (1)
+move-fat-snake pos2-12 pos1-12 pos0-6 pos0-7 dir-up (1)
+move-fat-snake pos1-12 pos0-12 pos0-7 pos0-8 dir-up (1)
+move-fat-snake pos0-12 pos0-11 pos0-8 pos1-8 dir-left (1)
+move-fat-snake pos0-11 pos0-10 pos1-8 pos2-8 dir-left (1)
+move-fat-snake-and-box pos0-10 pos0-9 pos2-8 pos3-8 pos0-8 dir-left (1)
+move-fat-snake-and-box pos0-9 pos0-8 pos3-8 pos3-7 pos0-7 dir-left (1)
+move-fat-snake-and-box pos0-8 pos0-7 pos3-7 pos4-7 pos0-6 dir-left (1)
+move-fat-snake-and-box pos0-7 pos0-6 pos4-7 pos4-8 pos0-5 dir-left (1)
+move-fat-snake-and-box pos0-6 pos0-5 pos4-8 pos4-9 pos0-4 dir-left (1)
+move-fat-snake-and-box pos0-5 pos0-4 pos4-9 pos3-9 pos0-3 dir-left (1)
+move-fat-snake-and-box pos0-4 pos0-3 pos3-9 pos3-10 pos0-2 dir-left (1)
+move-fat-snake-and-box pos0-3 pos0-2 pos3-10 pos2-10 pos0-1 dir-left (1)
+move-fat-snake-and-box pos0-2 pos1-2 pos2-10 pos2-11 pos2-2 dir-down (1)
+move-fat-snake-and-box pos1-2 pos2-2 pos2-11 pos2-12 pos3-2 dir-down (1)
+move-fat-snake pos2-2 pos2-1 pos2-12 pos1-12 dir-left (1)
+move-fat-snake pos2-1 pos2-0 pos1-12 pos0-12 dir-left (1)
+move-fat-snake pos2-0 pos3-0 pos0-12 pos0-11 dir-down (1)
+move-and-eat pos3-0 pos4-0 dir-down (1)
+move-box-and-eat pos4-0 pos4-1 pos4-2 dir-right (1)
+move-fat-snake-and-box pos4-1 pos4-2 pos0-11 pos0-10 pos4-3 dir-right (1)
+move-fat-snake-and-box pos4-2 pos4-3 pos0-10 pos0-9 pos4-4 dir-right (1)
+move-fat-snake-and-box pos4-3 pos4-4 pos0-9 pos0-8 pos4-5 dir-right (1)
+move-and-eat pos4-4 pos3-4 dir-up (1)
+move-fat-snake pos3-4 pos3-5 pos0-8 pos0-7 dir-right (1)
+move-fat-snake pos3-5 pos2-5 pos0-7 pos0-6 dir-up (1)
+move-fat-snake pos2-5 pos1-5 pos0-6 pos0-5 dir-up (1)
+move-fat-snake pos1-5 pos1-6 pos0-5 pos0-4 dir-right (1)
+move-fat-snake pos1-6 pos0-6 pos0-4 pos0-3 dir-up (1)
+move-fat-snake pos0-6 pos0-5 pos0-3 pos0-2 dir-left (1)
+move-fat-snake pos0-5 pos0-4 pos0-2 pos1-2 dir-left (1)
+move-fat-snake pos0-4 pos0-3 pos1-2 pos2-2 dir-left (1)
+move-and-eat pos0-3 pos1-3 dir-down (1)
+Plan length: 109 step(s).
+Plan cost: 109
+Expanded 55007 state(s).
+Reopened 9792 state(s).
+Evaluated 65925 state(s).
+Evaluations: 122058
+Generated 77284 state(s).
+Dead ends: 10917 state(s).
+Number of registered states: 56133
+Int hash set load factor: 56133/65536 = 0.856522
+Int hash set resizes: 16
+Best solution cost so far: 109
+Solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 3)
+Conducting lazy best first search, (real) bound = 109
+30 initial landmarks, 18 goal landmarks
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+New best heuristic value for ff_synergy(hlm): 27
+[g=0, 1 evaluated, 0 expanded, t=1132.19s, 74468 KB]
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+Initial heuristic value for ff_synergy(hlm): 27
+New best heuristic value for ff_synergy(hlm): 24
+[g=1, 2 evaluated, 1 expanded, t=1132.21s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 17
+[g=2, 4 evaluated, 3 expanded, t=1132.23s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=3, 5 evaluated, 4 expanded, t=1132.24s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 15
+[g=4, 6 evaluated, 5 expanded, t=1132.25s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+[g=7, 30 evaluated, 27 expanded, t=1132.51s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+New best heuristic value for ff_synergy(hlm): 23
+[g=10, 35 evaluated, 30 expanded, t=1132.56s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+New best heuristic value for ff_synergy(hlm): 22
+[g=11, 36 evaluated, 31 expanded, t=1132.56s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 11
+[g=13, 39 evaluated, 34 expanded, t=1132.59s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+New best heuristic value for ff_synergy(hlm): 20
+[g=14, 40 evaluated, 35 expanded, t=1132.6s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 9
+[g=15, 41 evaluated, 36 expanded, t=1132.62s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 19
+[g=16, 42 evaluated, 37 expanded, t=1132.63s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 43 evaluated, 38 expanded, t=1132.64s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 52 evaluated, 45 expanded, t=1132.74s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=21, 54 evaluated, 47 expanded, t=1132.76s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+[g=22, 56 evaluated, 49 expanded, t=1132.79s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 18
+[g=25, 122 evaluated, 107 expanded, t=1133.62s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 17
+[g=17, 247 evaluated, 209 expanded, t=1135.25s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=22, 269 evaluated, 228 expanded, t=1135.48s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 4
+[g=35, 524 evaluated, 446 expanded, t=1138.52s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+[g=36, 526 evaluated, 448 expanded, t=1138.55s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=35, 604 evaluated, 521 expanded, t=1139.5s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=23, 1684 evaluated, 1424 expanded, 1 reopened, t=1151.47s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 12
+[g=24, 1685 evaluated, 1425 expanded, 1 reopened, t=1151.47s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 11
+[g=41, 2014 evaluated, 1653 expanded, 1 reopened, t=1154.5s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 9
+[g=43, 2194 evaluated, 1790 expanded, 1 reopened, t=1156.17s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=38, 2480 evaluated, 2038 expanded, 1 reopened, t=1159.13s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=39, 2481 evaluated, 2039 expanded, 1 reopened, t=1159.14s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=40, 2482 evaluated, 2040 expanded, 1 reopened, t=1159.14s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 5
+[g=41, 2483 evaluated, 2041 expanded, 1 reopened, t=1159.14s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 2
+[g=58, 2544 evaluated, 2091 expanded, 1 reopened, t=1159.75s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 4
+[g=59, 2546 evaluated, 2093 expanded, 1 reopened, t=1159.77s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 3
+[g=60, 2547 evaluated, 2094 expanded, 1 reopened, t=1159.77s, 74468 KB]
+New best heuristic value for ff_synergy(hlm): 2
+[g=61, 2548 evaluated, 2095 expanded, 1 reopened, t=1159.78s, 74468 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+[g=100, 79413 evaluated, 65903 expanded, 7539 reopened, t=1954.09s, 77076 KB]
+New best heuristic value for ff_synergy(hlm): 1
+[g=108, 79422 evaluated, 65911 expanded, 7539 reopened, t=1954.16s, 77076 KB]
+Completely explored state space -- no solution!
+Actual search time: 1649.14s [t=2781.32s]
+Expanded 131868 state(s).
+Reopened 15263 state(s).
+Evaluated 159008 state(s).
+Evaluations: 302753
+Generated 183890 state(s).
+Dead ends: 27140 state(s).
+Number of registered states: 143745
+Int hash set load factor: 143745/262144 = 0.548344
+Int hash set resizes: 18
+Best solution cost so far: 109
+No solution found - keep searching
+Starting search: lazy_wastar(list(hff, hlm), preferred = list(hff, hlm), w = 2)
+Conducting lazy best first search, (real) bound = 109
+30 initial landmarks, 18 goal landmarks
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+New best heuristic value for ff_synergy(hlm): 27
+[g=0, 1 evaluated, 0 expanded, t=2781.34s, 86976 KB]
+Initial heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 18
+Initial heuristic value for ff_synergy(hlm): 27
+New best heuristic value for ff_synergy(hlm): 24
+[g=1, 2 evaluated, 1 expanded, t=2781.36s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 17
+[g=2, 4 evaluated, 3 expanded, t=2781.38s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 16
+[g=2, 7 evaluated, 6 expanded, t=2781.41s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 15
+[g=4, 11 evaluated, 10 expanded, t=2781.45s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 14
+[g=7, 24 evaluated, 21 expanded, t=2781.57s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 13
+New best heuristic value for ff_synergy(hlm): 23
+[g=10, 66 evaluated, 57 expanded, t=2781.99s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 12
+New best heuristic value for ff_synergy(hlm): 22
+[g=11, 68 evaluated, 59 expanded, t=2782.01s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 11
+[g=13, 87 evaluated, 75 expanded, t=2782.2s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 10
+New best heuristic value for ff_synergy(hlm): 20
+[g=14, 88 evaluated, 76 expanded, t=2782.22s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 9
+[g=15, 89 evaluated, 77 expanded, t=2782.22s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 19
+[g=16, 90 evaluated, 78 expanded, t=2782.24s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 8
+[g=17, 91 evaluated, 79 expanded, t=2782.24s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 7
+[g=20, 98 evaluated, 85 expanded, t=2782.33s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 6
+[g=21, 100 evaluated, 86 expanded, t=2782.35s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 5
+[g=22, 102 evaluated, 88 expanded, t=2782.37s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 16
+[g=15, 133 evaluated, 116 expanded, t=2782.72s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 15
+[g=16, 134 evaluated, 117 expanded, t=2782.73s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 14
+[g=35, 638 evaluated, 546 expanded, t=2788.24s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 4
+[g=35, 669 evaluated, 572 expanded, t=2788.56s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 3
+[g=36, 671 evaluated, 574 expanded, t=2788.58s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 13
+[g=23, 1677 evaluated, 1418 expanded, t=2799.58s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 12
+[g=24, 1678 evaluated, 1419 expanded, t=2799.58s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 11
+[g=41, 2529 evaluated, 2116 expanded, 2 reopened, t=2808.63s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 10
+[g=36, 5335 evaluated, 4445 expanded, 97 reopened, t=2838.82s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 9
+[g=37, 5336 evaluated, 4446 expanded, 97 reopened, t=2838.83s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 8
+[g=38, 5337 evaluated, 4447 expanded, 97 reopened, t=2838.83s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 7
+[g=39, 5338 evaluated, 4448 expanded, 97 reopened, t=2838.84s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 6
+[g=40, 5339 evaluated, 4449 expanded, 97 reopened, t=2838.86s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 5
+[g=41, 5340 evaluated, 4450 expanded, 97 reopened, t=2838.86s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 2
+[g=58, 5401 evaluated, 4500 expanded, 97 reopened, t=2839.52s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 4
+[g=59, 5403 evaluated, 4502 expanded, 97 reopened, t=2839.54s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 3
+[g=60, 5404 evaluated, 4503 expanded, 97 reopened, t=2839.54s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 2
+[g=61, 5405 evaluated, 4504 expanded, 97 reopened, t=2839.54s, 86976 KB]
+New best heuristic value for lama_synergy(lm_rhw(reasonable_orders = true)): 1
+[g=100, 88746 evaluated, 73565 expanded, 7162 reopened, t=3680.76s, 86976 KB]
+New best heuristic value for ff_synergy(hlm): 1
+[g=108, 88754 evaluated, 73573 expanded, 7162 reopened, t=3680.83s, 86976 KB]
+Peak memory: 86976 KB
+caught signal 24 -- exiting

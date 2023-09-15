@@ -1,0 +1,72 @@
+Domain: /home/maria/Documents/team20/problem-8-2/domain.pddl Problem: /home/maria/Documents/team20/problem-8-2/problem-8-2.pddl
+Parsing...
+Parsing: [0.010s CPU, 0.014s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.010s CPU, 0.017s wall-clock]
+Preparing model... [0.010s CPU, 0.006s wall-clock]
+Generated 347 rules.
+Computing model... [0.890s CPU, 0.887s wall-clock]
+40306 relevant atoms
+15278 auxiliary atoms
+55584 final queue length
+227824 total queue pushes
+Completing instantiation... [3.970s CPU, 4.031s wall-clock]
+goal relaxed reachable: True
+431 atoms
+Computing fact groups...
+Finding invariants...
+19 initial candidates
+Time limit reached, aborting invariant generation
+Finding invariants: [0.030s CPU, 0.021s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+376 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.002s wall-clock]
+Computing fact groups: [0.030s CPU, 0.026s wall-clock]
+Axioms 0
+Deterministic 39545 actions
+162 negated fluents created
+Invariants 377
+
+ Match tree built with 39545 nodes.
+
+PDDL problem description loaded: 
+	Domain: sobokosnake
+	Problem: sobokosnake-8-2
+	#Actions: 39545
+	#Fluents: 593
+Goals found: 1
+Goals_Edges found: 1
+Starting search with 1-BFWS...
+--[1 / 0]--
+--[1 / 4]--
+--[1 / 8]--
+--[1 / 14]--
+--[1 / 18]--
+--[1 / 20]--
+--[1 / 21]--
+--[1 / 23]--
+--[1 / 25]--
+--[1 / 26]--
+--[1 / 27]--
+--[1 / 30]--
+Total time: 0.00270686
+Nodes generated during search: 481
+Nodes expanded during search: 459
+Plan found with cost: NOTFOUND
+Fast-BFS search completed in 0.00270686 secs
+Starting search with BFWS(novel,land,h_ff)...
+Landmarks found: 1
+Landmarks_Edges found: 1
+--[1 / 4294967295]--
+--[1 / 1294390]--
+--[1 / 1128248]--
+--[1 / 962106]--
+--[1 / 795964]--
+--[1 / 629822]--
+--[1 / 463680]--

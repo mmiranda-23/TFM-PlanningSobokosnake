@@ -246,18 +246,6 @@
     (blocked pos7-5)
 )
 (:goal
-(and
     (not (ispoint pos0-0))
-    (not (ishole pos1-0))
-    (not (ishole pos2-0))
-    (not (ishole pos3-0))
-    (not (ishole pos4-0))
-    (not (ishole pos5-0))
-    (not (ishole pos6-0))
-    (not (ishole pos7-2))
-    (not (ishole pos7-3))
-    (not (ishole pos7-4))
-    (not (ishole pos7-5))
-)
 )
 )
